@@ -376,7 +376,7 @@ def changes_page(kind: str = "", domain: str = "", page: int = 1):
 moved policy URL or an expired security.txt is visible rather than implied.</p>
 <form class="filters" method="get" action="/changes">
   <input class="search" type="search" name="domain" value="{web.esc(domain)}" placeholder="Filter by domain">
-  <select name="kind">{web.options(kinds, kind, lambda v: v[1] if isinstance(v, tuple) else v)}</select>
+  <select name="kind">{web.options(kinds, kind)}</select>
   <button class="btn btn-primary" type="submit">Filter</button>
   <a class="btn btn-ghost" href="/changes">Reset</a>
 </form>

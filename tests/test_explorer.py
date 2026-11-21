@@ -46,6 +46,13 @@ def test_explore_search(client):
     assert "zapier.com" in body and "shopify.com" not in body
 
 
+def test_sort_select_posts_real_values(client):
+    _seed()
+    body = client.get("/explore?sort=updated_at").text
+    assert '<option value="updated_at" selected>Sort: recently updated</option>' in body
+    assert "('domain'" not in body
+
+
 def test_program_page(client):
     _seed()
     r = client.get("/program/zapier.com")

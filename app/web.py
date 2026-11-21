@@ -82,11 +82,13 @@ def pager(filters: dict, page_no: int, total: int) -> str:
     return "".join(bits)
 
 
-def options(values, selected, label=lambda v: v) -> str:
+def options(values, selected, label=None) -> str:
+    """Build <option> tags. Items may be plain values or (value, label) pairs."""
     out = []
     for v in values:
-        sel = " selected" if str(v) == str(selected) else ""
-        out.append(f'<option value="{esc(v)}"{sel}>{esc(label(v))}</option>')
+        val, text = (v[0], v[1]) if isinstance(v, tuple) else (v, (label(v) if label else v))
+        sel = " selected" if str(val) == str(selected) else ""
+        out.append(f'<option value="{esc(val)}"{sel}>{esc(text)}</option>')
     return "".join(out)
 
 
@@ -115,7 +117,7 @@ def filter_form(f: dict, by_platform: dict) -> str:
   <select name="sort">
     {options([('domain', 'Sort: domain'), ('updated_at', 'Sort: recently updated'),
               ('expiry', 'Sort: expiry state'), ('expires_on', 'Sort: expires on')],
-             (f.get('sort', 'domain'), None), lambda v: v[1] if isinstance(v, tuple) else v)}
+             f.get('sort', 'domain'))}
   </select>
   <button class="btn btn-primary" type="submit">Filter</button>
   <a class="btn btn-ghost" href="/explore">Reset</a>
