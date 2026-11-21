@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+tranco1m.csv
+cache/
