@@ -24,8 +24,16 @@ DIRECTORY = [
 ]
 
 
+HITS = [{
+    "domain": "api-eu.floqast.app", "found_at": "https://api-eu.floqast.app/.well-known/security.txt",
+    "source": "securitytxt", "emails": ["security@floqast.com"], "contact_urls": [],
+    "policy": None, "expiry": "valid", "expires_on": "2027-01-01", "tls_verified": True,
+}]
+
+
 def build(tmp: Path) -> tuple[dict, dict]:
     (tmp / "disclose_directory.json").write_text(json.dumps(DIRECTORY))
+    (tmp / "hits.jsonl").write_text("".join(json.dumps(r) + "\n" for r in HITS))
     env = dict(os.environ, VDP_DATA=str(tmp))
     out = subprocess.run([sys.executable, str(ROOT / "bin" / "build_dataset.py")],
                          capture_output=True, text=True, env=env, cwd=str(ROOT))
@@ -46,6 +54,22 @@ def test_duplicate_records_become_one_program(tmp_path):
     assert row["policy"] == "https://api-eu.floqast.app/.well-known/security.txt"
     # the folded stub must not drag the maturity down
     assert row["disclose_score"] == 45.0
+
+
+def test_subdomain_row_folds_into_the_corporate_domain(tmp_path):
+    """Our own crawl found the security.txt on api-eu.floqast.app. The directory
+    says that file belongs to FloQast, so the subdomain row folds in rather than
+    sitting beside the company as a second program."""
+    programs, summary = build(tmp_path)
+
+    assert "api-eu.floqast.app" not in programs
+    assert "floqast.app" not in programs
+    assert summary["disclose_folded_domains"] == 1
+
+    row = programs["floqast.com"]
+    assert set(row["sources"]) == {"disclose-directory", "securitytxt"}
+    assert row["securitytxt_url"] == "https://api-eu.floqast.app/.well-known/security.txt"
+    assert row["expiry"] == "valid"
 
 
 def test_same_name_on_different_domains_stays_separate(tmp_path):

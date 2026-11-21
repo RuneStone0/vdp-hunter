@@ -199,6 +199,7 @@ def merge_disclose_directory(programs, directory):
       reporting portfolio, not one company's program.
     """
     mapped, skipped_nodomain, skipped_shared = [], 0, 0
+    folded_domains = []
     host_orgs = {}
     for d in directory:
         key = directory_host(d)
@@ -219,6 +220,31 @@ def merge_disclose_directory(programs, directory):
         p = programs.get(key)
         if p is None:
             p = programs[key] = base_program(key)
+        # the directory ties one policy URL to one organisation: if the file was
+        # served from a different domain (api-eu.floqast.app) and that domain has
+        # no evidence beyond our own crawl, fold it into the corporate domain
+        # instead of leaving two rows for one company
+        policy_key = None
+        if d.get("policy_url"):
+            ph = host_of(d["policy_url"])
+            if ph and not is_ip(ph):
+                policy_key = registrable(ph)
+        if policy_key and policy_key != key and policy_key in programs:
+            old = programs[policy_key]
+            old_sources = set(old.get("sources") or [])
+            if old_sources <= {"securitytxt", "disclose-directory", "czds"}:
+                for fld in ("emails", "contact_urls"):
+                    p[fld] = sorted(set(list(p.get(fld) or []) + list(old.get(fld) or [])))
+                p["policy"] = p.get("policy") or old.get("policy")
+                p["securitytxt_url"] = p.get("securitytxt_url") or old.get("securitytxt_url")
+                p["expiry"] = p.get("expiry") or old.get("expiry")
+                p["expires_on"] = p.get("expires_on") or old.get("expires_on")
+                p["sources"] = sorted(old_sources | set(p.get("sources") or []))
+                if old.get("first_seen") and (not p.get("first_seen")
+                                              or old["first_seen"] < p["first_seen"]):
+                    p["first_seen"] = old["first_seen"]
+                del programs[policy_key]
+                folded_domains.append(policy_key)
         p["sources"] = sorted(set(list(p.get("sources") or []) + ["disclose-directory"]))
         if p.get("name") in (None, key) and d.get("name"):
             p["name"] = d["name"]
@@ -240,7 +266,8 @@ def merge_disclose_directory(programs, directory):
             p["disclose_maturity"] = d.get("maturity")
             p["disclose_score"] = d.get("score")
     return {"mapped": len(mapped), "skipped_nodomain": skipped_nodomain,
-            "skipped_shared": skipped_shared, "shared_hosts": sorted(shared)}
+            "skipped_shared": skipped_shared, "shared_hosts": sorted(shared),
+            "folded_domains": folded_domains}
 
 
 def main():
@@ -385,6 +412,7 @@ def main():
                       "disclose_mapped": disclose["mapped"],
                       "disclose_skipped_nodomain": disclose["skipped_nodomain"],
                       "disclose_skipped_shared_host": disclose["skipped_shared"],
+                      "disclose_folded_domains": len(disclose["folded_domains"]),
                       "disclose_shared_hosts": disclose["shared_hosts"][:10]}, indent=1))
 
 

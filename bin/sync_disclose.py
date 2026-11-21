@@ -92,6 +92,8 @@ def main() -> int:
                       "skipped_nodomain": stats["skipped_nodomain"],
                       "skipped_shared_host": stats["skipped_shared"],
                       "programs_with_directory_source": with_dir,
+                      "folded_subdomain_rows": len(stats["folded_domains"]),
+                      "folded_examples": stats["folded_domains"][:5],
                       "shared_hosts": stats["shared_hosts"][:15],
                       "out": args.out}, indent=1))
     return 0

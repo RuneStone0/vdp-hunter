@@ -306,7 +306,10 @@ def reload_dataset(prune_directory: bool = False, key: dict = Depends(admin)):
     return envelope(store.ingest(
         programs, run_kind="reload",
         allow_removal=prune_directory,
-        prune_only_sources={"disclose-directory"} if prune_directory else None))
+        # a duplicate created by an earlier merge can carry the crawl source as
+        # well, so both discovery sources are prunable; platform rows never are
+        prune_only_sources=({"disclose-directory", "securitytxt"}
+                            if prune_directory else None)))
 
 
 @app.post("/admin/scan", tags=["admin"], summary="Trigger one scan cycle now")
