@@ -11,7 +11,23 @@ def _row(domain, sources):
             "in_scope_domains": []}
 
 
-def test_prune_only_removes_rows_from_that_source():
+def _platform_row(domain):
+    row = _row(domain, ["hackerone"])
+    row["platforms"] = ["hackerone"]
+    return row
+
+
+def test_dotless_platform_rows_are_retired(client):
+    main.store.ingest([_platform_row("floqast"), _platform_row("acme.com")],
+                      record_changes=False)
+    res = main.store.ingest([_platform_row("acme.com")], record_changes=True,
+                            allow_removal=True, prune_dotless_platform=True)
+    assert res["removed"] == 1
+    assert main.store.get("floqast") is None
+    assert main.store.get("acme.com") is not None
+
+
+def test_prune_only_removes_rows_from_that_source(client):
     main.store.ingest([_row("dir-only.example", ["disclose-directory"]),
                        _row("crawled.example", ["securitytxt"]),
                        _row("both.example", ["disclose-directory", "securitytxt"])],

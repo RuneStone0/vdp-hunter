@@ -187,6 +187,34 @@ def fold_directory(directory):
                  "in": len(directory), "out": len(out)}
 
 
+def platform_domain(prog):
+    """A platform handle is not a domain: resolve the company's real domain from
+    the program's own website, then from its in-scope assets.
+
+    Returns None when the program publishes nothing host-shaped, which is the
+    honest outcome for a handle like "20 minuten".
+    """
+    website = prog.get("website") or ""
+    if is_url(website):
+        host = host_of(website)
+        if host and not is_ip(host) and not is_platform_host(host):
+            return registrable(host)
+    for target in ((prog.get("targets") or {}).get("in_scope") or []):
+        if target.get("asset_type") not in ("URL", "WILDCARD", "DOMAIN"):
+            continue
+        ident = (target.get("asset_identifier") or "").strip()
+        if not ident:
+            continue
+        if "://" in ident:
+            host = host_of(ident)
+        else:
+            host = ident.replace("*.", "").split("/")[0].split(":")[0]
+        if not host or "*" in host or is_ip(host) or is_platform_host(host):
+            continue
+        return registrable(host)
+    return None
+
+
 def merge_disclose_directory(programs, directory):
     """Fold directory.disclose.io orgs into the program map, in place.
 
@@ -333,6 +361,7 @@ def main():
     disclose = merge_disclose_directory(programs, directory)
 
     # 3) platform data
+    skipped_handles = 0
     for fname, plat in (("hackerone_data.json", "hackerone"), ("bugcrowd_data.json", "bugcrowd"),
                         ("intigriti_data.json", "intigriti"), ("yeswehack_data.json", "yeswehack")):
         for prog in load_json(fname, []):
@@ -340,7 +369,13 @@ def main():
                 continue
             if prog.get("disabled") is True or str(prog.get("status", "")).lower() in ("closed", "disabled"):
                 continue
-            p = get(registrable(prog.get("company_handle") or prog.get("handle") or prog.get("name") or ""))
+            key = registrable(prog.get("company_handle") or prog.get("handle") or prog.get("name") or "")
+            if "." not in key:
+                key = platform_domain(prog)
+                if not key:
+                    skipped_handles += 1
+                    continue
+            p = get(key)
             p["sources"].append(plat)
             p["platforms"].append(plat)
             if p["name"] == p["domain"]:
@@ -405,6 +440,7 @@ def main():
     print(json.dumps({"total": len(ordered), "novel_vs_known": len(novel),
                       "added": len(added), "removed": len(removed), "changed": len(changed),
                       "platform_hosted": sum(1 for p in ordered if p["platforms"]),
+                      "platform_handles_undomainable": skipped_handles,
                       "disclose_orgs_in": fold_stats["in"],
                       "disclose_orgs_folded": fold_stats["folded"],
                       "disclose_orgs_kept_apart": fold_stats["kept_apart"],

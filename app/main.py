@@ -309,7 +309,8 @@ def reload_dataset(prune_directory: bool = False, key: dict = Depends(admin)):
         # a duplicate created by an earlier merge can carry the crawl source as
         # well, so both discovery sources are prunable; platform rows never are
         prune_only_sources=({"disclose-directory", "securitytxt"}
-                            if prune_directory else None)))
+                            if prune_directory else None),
+        prune_dotless_platform=prune_directory))
 
 
 @app.post("/admin/scan", tags=["admin"], summary="Trigger one scan cycle now")

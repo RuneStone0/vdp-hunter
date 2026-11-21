@@ -103,7 +103,8 @@ class Store:
     def ingest(self, programs: list[dict], run_kind: str = "rebuild",
                chunk: tuple[int, int] | None = None, probes: int = 0,
                hits: int = 0, note: str = "", record_changes: bool = True,
-               allow_removal: bool = False, prune_only_sources=None) -> dict:
+               allow_removal: bool = False, prune_only_sources=None,
+               prune_dotless_platform: bool = False) -> dict:
         """Upsert a full dataset snapshot and record the delta against the stored state."""
         started = now()
         ts = started
@@ -153,13 +154,23 @@ class Store:
             # an incremental cycle only re-probes a slice, so everything outside the slice is
             # absent. Deleting on absence would erase the dataset a little more every cycle.
             if allow_removal:
+                # a platform company handle that is not a domain ("floqast",
+                # "abb") cannot live in a domain-keyed dataset; it is retired
+                # only when platform data proves it, never a crawled row
+                dotless = set()
+                if prune_dotless_platform:
+                    dotless = {d for d in prev
+                               if "." not in d and d not in new
+                               and (_load(prev[d].get("platforms")) or [])}
                 # prune_only_sources keeps a prune surgical: only rows whose every
                 # source is in that set may be deleted, so a refresh of one source
                 # can never erase a crawl or platform discovery.
                 if prune_only_sources:
                     allowed = set(prune_only_sources)
                     removed = [d for d in removed
-                               if set(_load(prev[d].get("sources")) or []) <= allowed]
+                               if d in dotless
+                               or set(_load(prev[d].get("sources")) or []) <= allowed]
+                removed = sorted(set(removed) | dotless)
                 for d in removed:
                     c.execute("DELETE FROM programs WHERE domain=?", (d,))
                     c.execute("INSERT INTO changes(ts,run_id,kind,domain,fields,before,after) "
