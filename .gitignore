@@ -1,4 +1,14 @@
 __pycache__/
 *.pyc
+.venv/
+logs/
 tranco1m.csv
 cache/
+
+# upstream raw dumps: regenerable with bin/fetch_upstream.sh
+data/hackerone_data.json
+data/bugcrowd_data.json
+data/intigriti_data.json
+data/yeswehack_data.json
+data/diodb.json
+data/domains.txt
