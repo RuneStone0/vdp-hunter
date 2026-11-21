@@ -8,6 +8,13 @@ preview.html
 __pycache__
 *.pyc
 
+# zone-file pipeline: built locally, not needed in the image
+go/
+zones/
+bin/go/
+data/domains-*.txt
+data/hits-czds.jsonl
+
 # local state and regenerable dumps
 data/*.db
 data/*.db-*

@@ -80,11 +80,12 @@ def admin(key: dict = Depends(auth)) -> dict:
     return key
 
 
-def envelope(data, total=None, limit=None, offset=None) -> dict:
+def envelope(data, total=None, limit=None, offset=None, **extra) -> dict:
     meta = {"generated_at": now(), "count": len(data) if isinstance(data, list) else 1}
     if total is not None:
         meta.update({"total": total, "limit": limit, "offset": offset,
                      "has_more": (offset or 0) + len(data) < total})
+    meta.update(extra)
     return {"data": data, "meta": meta}
 
 
@@ -185,8 +186,11 @@ def list_programs(
     sort: str = Query("domain", pattern="^(domain|expiry|expires_on|updated_at)$"),
     key: dict = Depends(auth),
 ):
-    rows, total = store.query(q, platform, source, bounty, expiry, limit, offset, sort)
-    return envelope(rows, total, limit, offset)
+    free = key["tier"] == "free"
+    rows, total = store.query(q, platform, source, bounty, expiry, limit, offset, sort,
+                              platform_only=free)
+    return envelope(rows, total, limit, offset,
+                    **({"free_tier_restricted": True} if free else {}))
 
 
 @app.get("/v1/programs/{domain}", tags=["programs"], summary="One program, with its history",
@@ -195,6 +199,10 @@ def get_program(domain: str, key: dict = Depends(auth)):
     p = store.get(domain.lower())
     if not p:
         raise HTTPException(404, f"No program for {domain}")
+    if key["tier"] == "free" and not (p.get("platforms") or []):
+        raise HTTPException(403, "This program is part of the paid dataset: it publishes a "
+                                 "security.txt but is not listed on any commercial platform. "
+                                 "A paid key covers it.")
     return envelope(p)
 
 
@@ -209,8 +217,10 @@ def list_changes(
     key: dict = Depends(auth),
 ):
     kinds = [kind] if kind else None
-    rows, total = store.changes(since, kinds, domain, limit, offset)
-    return envelope(rows, total, limit, offset)
+    free = key["tier"] == "free"
+    rows, total = store.changes(since, kinds, domain, limit, offset, platform_only=free)
+    return envelope(rows, total, limit, offset,
+                    **({"free_tier_restricted": True} if free else {}))
 
 
 @app.get("/v1/changes/{change_id}", tags=["changes"], summary="One change record",

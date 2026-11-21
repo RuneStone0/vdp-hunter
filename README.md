@@ -18,6 +18,21 @@ Two free datasets cover most of the market, and neither one covers all of it:
 publishes a security.txt is by definition inviting reports, and that file is
 public, structured, and cheap to check.
 
+## Zone-file pipeline (paid dataset)
+
+The Tranco crawl only sees domains that are already popular. CZDS zone files are the
+authoritative list of every registered name under a gTLD, which is how the unlisted
+programs get found. The Go tools live in `go/`; see [docs/czds.md](docs/czds.md).
+
+```bash
+./bin/go/czds  -tlds io,ai,dev -out zones      # download (needs CZDS_USER/CZDS_PASS)
+./bin/go/zonex -in zones/io.zone.gz -tld io -out data/domains-io.txt
+./bin/go/probe -in data/domains-io.txt -out data/hits-czds.jsonl -workers 200 -source czds
+```
+
+Rows from this pipeline carry `source: "czds"`. Free API keys see only platform
+programs; paid keys see everything.
+
 ## Measured baseline
 
 Tranco top-1M seed, 2026-11-21, 58,259 domains probed end to end at 23 domains/s

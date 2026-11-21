@@ -176,10 +176,14 @@ class Store:
                 "changed": len(changed), "absent": len(removed)}
 
     def query(self, q=None, platform=None, source=None, bounty=None, expiry=None,
-              limit=100, offset=0, sort="domain", self_managed=False):
+              limit=100, offset=0, sort="domain", self_managed=False,
+              platform_only=False):
         where, args = [], []
         if self_managed:
             where.append("(platforms IS NULL OR platforms IN ('[]', ''))")
+        if platform_only:
+            # free tier: only programs the commercial platforms already publish
+            where.append("(platforms IS NOT NULL AND platforms NOT IN ('[]', ''))")
         if q:
             where.append("(domain LIKE ? OR name LIKE ? OR policy LIKE ?)")
             args += [f"%{q}%"] * 3
@@ -216,7 +220,8 @@ class Store:
         p["history"] = [_change(r) for r in hist]
         return p
 
-    def changes(self, since=None, kinds=None, domain=None, limit=200, offset=0):
+    def changes(self, since=None, kinds=None, domain=None, limit=200, offset=0,
+                platform_only=False):
         where, args = [], []
         if since:
             where.append("ts>=?")
@@ -227,6 +232,9 @@ class Store:
         if domain:
             where.append("domain=?")
             args.append(domain)
+        if platform_only:
+            where.append("domain IN (SELECT domain FROM programs "
+                         "WHERE platforms IS NOT NULL AND platforms NOT IN ('[]', ''))")
         clause = ("WHERE " + " AND ".join(where)) if where else ""
         with self.conn() as c:
             total = c.execute(f"SELECT COUNT(*) n FROM changes {clause}", args).fetchone()["n"]

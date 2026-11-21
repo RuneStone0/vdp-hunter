@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>vdp-hunter · pricing</title>
-<meta name="description" content="vdp-hunter pricing: one plan, $99 a month, every feature included. No tiers, no setup fees, cancel any time.">
+<meta name="description" content="vdp-hunter pricing: the programs listed on HackerOne, Bugcrowd and Intigriti are free. The unlisted ones, found by scanning ICANN zone files and security.txt, are $99 a month.">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
@@ -26,23 +26,38 @@
   </header>
 
   <p class="eyebrow">Pricing</p>
-  <h1 style="font-size:clamp(1.8rem,3.4vw,2.6rem)">One plan. One price. Everything in it.</h1>
-  <p class="lede">The dataset is {{programs}} programs and counting, refreshed continuously.
-  Every customer gets the same dataset, the same limits and the same features. The only
-  number on this page is the price.</p>
+  <h1 style="font-size:clamp(1.8rem,3.4vw,2.6rem)">The programs everyone lists are free. The ones nobody lists are the product.</h1>
+  <p class="lede">HackerOne, Bugcrowd, Intigriti and YesWeHack publish their own program lists. Scraping those lists
+  is not a business, so we give that data away. What you pay for is the {{self_managed}} programs that publish a
+  security.txt or sit in an ICANN zone file and appear on none of those platforms. Unknown targets, less competition,
+  and a real chance of being the first researcher in.</p>
 
   <section>
-    <div class="price-grid single">
+    <div class="price-grid">
+      <div class="price">
+        <h3>Free</h3>
+        <div class="amount">$0<span> / month</span></div>
+        <div class="mono-small">Key on request, issued the same day.</div>
+        <ul>
+          <li>Every program listed on HackerOne, Bugcrowd, Intigriti and YesWeHack</li>
+          <li>In-scope assets as the platforms publish them</li>
+          <li>120 requests / minute</li>
+          <li>JSON and CSV export</li>
+          <li>Attribution required</li>
+        </ul>
+        <a class="btn" href="mailto:api@vdphunter.com?subject=vdp-hunter%20free%20key">Request a free key</a>
+      </div>
+
       <div class="price featured">
         <h3>vdp-hunter</h3>
         <div class="amount">$99<span> / month</span></div>
         <div class="mono-small">Billed monthly. Cancel any time.</div>
         <ul>
-          <li>Full dataset, all filters, no row caps</li>
-          <li>2,000 requests / minute per key</li>
+          <li>Everything in Free, plus:</li>
+          <li><strong>The unlisted programs</strong>: {{self_managed}} companies with a live security.txt that no platform lists</li>
+          <li>ICANN zone-file discovery, refreshed as zone files land</li>
           <li>Complete change history, not a window</li>
-          <li>JSON, CSV and bulk export</li>
-          <li>Per-program history and diff feed</li>
+          <li>2,000 requests / minute per key</li>
           <li>Commercial use, no attribution required</li>
           <li>Email support, one business day</li>
         </ul>
@@ -54,29 +69,36 @@
   </section>
 
   <section>
+    <h2>How the unlisted dataset is built</h2>
+    <div class="cards">
+      <div class="card"><h3>Zone files</h3><p>ICANN's Centralized Zone Data Service hands out the authoritative name list for each gTLD: every registered domain, not a popularity ranking. Parsed in minutes, one apex name per line.</p></div>
+      <div class="card"><h3>security.txt</h3><p>Every apex name is asked for <code>/.well-known/security.txt</code> per RFC 9116. A hit is a company that has written down how to report a vulnerability, whether or not it pays a bounty.</p></div>
+      <div class="card"><h3>The diff</h3><p>Each pass is compared with the last. New programs, changed policies, expired files: all of it lands in the change feed, the same way the free data does.</p></div>
+    </div>
+  </section>
+
+  <section>
     <h2>What is not on the invoice</h2>
     <div class="cards">
       <div class="card"><h3>No setup fee</h3><p>Nothing to pay before the dataset is in your hands. Keys are issued the same day.</p></div>
       <div class="card"><h3>No usage metering</h3><p>Request volume is capped at 2,000 per minute and never billed. No overage charges, no surprise line items.</p></div>
-      <div class="card"><h3>No upgrade path</h3><p>There is nothing to upgrade to. One plan means no negotiation, no sales call, no locked capability.</p></div>
+      <div class="card"><h3>No tiers to decode</h3><p>One paid plan. Free is free. There is no enterprise door to knock on and no number hidden behind a call.</p></div>
     </div>
   </section>
 
   <section>
     <h2>Questions</h2>
     <div class="cards">
-      <div class="card"><h3>How is the data sourced?</h3><p>Platform data comes from public program listings and the open bounty-targets-data feed. The self-managed layer comes from our own RFC 9116 crawl, which reads only files organizations publish for exactly this purpose. Sources are attributed on every row.</p></div>
-      <div class="card"><h3>How fresh is it?</h3><p>The crawl runs continuously on a 15-minute cycle and upstream platform data refreshes daily. Every API response carries <code>generated_at</code> and the coverage position.</p></div>
-      <div class="card"><h3>Can I self-host?</h3><p>Yes. The code is MIT licensed and the repo includes the crawler, the merge pipeline and this API. You supply your own crawl budget.</p></div>
-      <div class="card"><h3>Do you offer refunds?</h3><p>Yes. Cancel any time, and if the dataset is wrong for your use case within the first 14 days, that month is refunded in full.</p></div>
-      <div class="card"><h3>How do I get a key?</h3><p>Email us with your use case. Keys are issued the same day during business hours, evaluation keys included.</p></div>
-      <div class="card"><h3>Is there an SLA?</h3><p>No separate agreement to sign. The service targets 99.5% monthly uptime for every customer; if it misses, tell us and we make it right.</p></div>
+      <div class="card"><h3>Is a security.txt the same as a bug bounty?</h3><p>No. It means the company has a disclosure process. Some pay, some only say thank you. The <code>bounty</code> filter separates confirmed payers from the rest, and every row shows what the file actually says.</p></div>
+      <div class="card"><h3>Where does the free data come from?</h3><p>The public program lists, refreshed daily, via the bounty-targets-data project. It is the same data you can collect yourself, which is why it is free.</p></div>
+      <div class="card"><h3>Can I cancel?</h3><p>Any time, from the same email thread that issued the key. No call, no retention offer.</p></div>
+      <div class="card"><h3>Do you scan aggressively?</h3><p>One request per domain per path, two paths, a documented user agent, and transport failures are retried at lower concurrency rather than hammered. Rate limits are published in the docs.</p></div>
     </div>
   </section>
 
   <footer>
-    <div>vdp-hunter · <a href="/guide">docs</a> · <a href="/openapi.json">openapi.json</a></div>
-    <div>Data as of {{generated_at}}</div>
+    <p>vdp-hunter: RFC 9116 discovery and program data. Data as of {{generated_at}}.</p>
+    <p class="mono-small">Code MIT. <a href="/openapi.json">openapi.json</a> · <a href="/docs">API reference</a></p>
   </footer>
 </div>
 </body>

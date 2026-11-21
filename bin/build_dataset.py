@@ -102,7 +102,7 @@ def main():
                 hits[r["domain"]] = r
     for domain, r in hits.items():
         p = get(registrable(domain))
-        p["sources"].append("securitytxt")
+        p["sources"].append(r.get("source") or "securitytxt")
         p["securitytxt_url"] = r.get("found_at")
         p["emails"] = sorted(set(p["emails"]) | set(r.get("emails") or []))
         p["contact_urls"] = sorted(set(p["contact_urls"]) | set(r.get("contact_urls") or []))

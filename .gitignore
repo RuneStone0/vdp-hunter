@@ -13,7 +13,16 @@ data/yeswehack_data.json
 data/diodb.json
 data/domains.txt
 
+# CZDS zone files and crawl output: large, regenerable, licence-bound
+zones/
+bin/go/
+data/domains-*.txt
+data/hits-czds.jsonl
+
 data/app.env
 data/vdp.db
 data/*.db-wal
 data/*.db-shm
+
+# in-chat preview artifacts
+preview*.html
