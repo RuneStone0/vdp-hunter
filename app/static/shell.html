@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="shell">
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">VH</div>
+      <div class="brand-name">vdp-hunter</div>
+    </div>
+    <nav>
+      {{nav}}
+    </nav>
+  </header>
+
+{{body}}
+
+  <footer>
+    <div>vdp-hunter · <a href="/guide">docs</a> · <a href="/openapi.json">openapi.json</a> · MIT</div>
+    <div>Data as of {{generated_at}}</div>
+  </footer>
+</div>
+</body>
+</html>

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>vdp-hunter · pricing</title>
-<meta name="description" content="vdp-hunter API pricing: free evaluation tier, Pro for production monitoring, Enterprise for custom scope and webhooks.">
+<meta name="description" content="vdp-hunter pricing: one plan, $99 a month, every feature included. No tiers, no setup fees, cancel any time.">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
@@ -17,6 +17,7 @@
     </div>
     <nav>
       <a href="/">Home</a>
+      <a href="/explore">Explore</a>
       <a href="/guide">Docs</a>
       <a href="/docs">API reference</a>
       <a href="/pricing">Pricing</a>
@@ -25,67 +26,39 @@
   </header>
 
   <p class="eyebrow">Pricing</p>
-  <h1 style="font-size:clamp(1.8rem,3.4vw,2.6rem)">Start free. Pay when it monitors for you.</h1>
+  <h1 style="font-size:clamp(1.8rem,3.4vw,2.6rem)">One plan. One price. Everything in it.</h1>
   <p class="lede">The dataset is {{programs}} programs and counting, refreshed continuously.
-  Keys are issued manually so we can keep abuse out and keep the crawl polite.</p>
+  Every customer gets the same dataset, the same limits and the same features. The only
+  number on this page is the price.</p>
 
   <section>
-    <div class="price-grid">
-      <div class="price">
-        <h3>Free</h3>
-        <div class="amount">$0</div>
-        <div class="mono-small">Evaluation and research</div>
-        <ul>
-          <li>120 requests / minute</li>
-          <li>Current dataset, all filters</li>
-          <li>30 days of change history</li>
-          <li>Attribution: link to vdp-hunter</li>
-        </ul>
-        <a class="btn btn-ghost" href="mailto:api@vdphunter.com?subject=vdp-hunter%20free%20key">Request a key</a>
-      </div>
+    <div class="price-grid single">
       <div class="price featured">
-        <h3>Pro</h3>
+        <h3>vdp-hunter</h3>
         <div class="amount">$99<span> / month</span></div>
-        <div class="mono-small">Production monitoring</div>
+        <div class="mono-small">Billed monthly. Cancel any time.</div>
         <ul>
-          <li>2,000 requests / minute</li>
-          <li>Full change history</li>
-          <li>CSV and JSON bulk export</li>
-          <li>Email support, 1 business day</li>
-          <li>Commercial use</li>
+          <li>Full dataset, all filters, no row caps</li>
+          <li>2,000 requests / minute per key</li>
+          <li>Complete change history, not a window</li>
+          <li>JSON, CSV and bulk export</li>
+          <li>Per-program history and diff feed</li>
+          <li>Commercial use, no attribution required</li>
+          <li>Email support, one business day</li>
         </ul>
-        <a class="btn btn-primary" href="mailto:api@vdphunter.com?subject=vdp-hunter%20Pro">Start with Pro</a>
-      </div>
-      <div class="price">
-        <h3>Enterprise</h3>
-        <div class="amount">Talk to us</div>
-        <div class="mono-small">Custom scope and SLAs</div>
-        <ul>
-          <li>Negotiated rate limits</li>
-          <li>Webhooks when a program appears</li>
-          <li>Custom crawl scope beyond Tranco</li>
-          <li>Historical backfill</li>
-          <li>Named contact, uptime SLA</li>
-        </ul>
-        <a class="btn btn-ghost" href="mailto:api@vdphunter.com?subject=vdp-hunter%20Enterprise">Contact us</a>
+        <a class="btn btn-primary" href="mailto:api@vdphunter.com?subject=vdp-hunter%20key">Request a key</a>
+        <p class="mono-small" style="margin-top:14px">Try it first: a 14-day evaluation key is free.
+        If it is not right for you inside those 14 days, the month is refunded.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>What every tier gets</h2>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Capability</th><th>Free</th><th>Pro</th><th>Enterprise</th></tr></thead>
-        <tbody>
-          <tr><td>Programs endpoint with all filters</td><td class="pill pill-good">Yes</td><td class="pill pill-good">Yes</td><td class="pill pill-good">Yes</td></tr>
-          <tr><td>Change feed</td><td>30 days</td><td>Full</td><td>Full + backfill</td></tr>
-          <tr><td>Per-program history</td><td>20 events</td><td>Full</td><td>Full</td></tr>
-          <tr><td>CSV export</td><td class="pill pill-bad">No</td><td class="pill pill-good">Yes</td><td class="pill pill-good">Yes</td></tr>
-          <tr><td>Webhooks on new programs</td><td class="pill pill-bad">No</td><td class="pill pill-bad">No</td><td class="pill pill-good">Yes</td></tr>
-          <tr><td>Commercial use</td><td>Attribution</td><td class="pill pill-good">Yes</td><td class="pill pill-good">Yes</td></tr>
-        </tbody>
-      </table>
+    <h2>What is not on the invoice</h2>
+    <div class="cards">
+      <div class="card"><h3>No setup fee</h3><p>Nothing to pay before the dataset is in your hands. Keys are issued the same day.</p></div>
+      <div class="card"><h3>No usage metering</h3><p>Request volume is capped at 2,000 per minute and never billed. No overage charges, no surprise line items.</p></div>
+      <div class="card"><h3>No upgrade path</h3><p>There is nothing to upgrade to. One plan means no negotiation, no sales call, no locked capability.</p></div>
     </div>
   </section>
 
@@ -93,11 +66,11 @@
     <h2>Questions</h2>
     <div class="cards">
       <div class="card"><h3>How is the data sourced?</h3><p>Platform data comes from public program listings and the open bounty-targets-data feed. The self-managed layer comes from our own RFC 9116 crawl, which reads only files organizations publish for exactly this purpose. Sources are attributed on every row.</p></div>
-      <div class="card"><h3>How fresh is it?</h3><p>The crawl runs continuously on a 15-minute cycle and upstream platform data refreshes daily. Each API response carries <code>generated_at</code> and the coverage position.</p></div>
+      <div class="card"><h3>How fresh is it?</h3><p>The crawl runs continuously on a 15-minute cycle and upstream platform data refreshes daily. Every API response carries <code>generated_at</code> and the coverage position.</p></div>
       <div class="card"><h3>Can I self-host?</h3><p>Yes. The code is MIT licensed and the repo includes the crawler, the merge pipeline and this API. You supply your own crawl budget.</p></div>
-      <div class="card"><h3>Do you offer refunds?</h3><p>Pro is monthly and cancellable any time. If the dataset is wrong for your use case within the first 14 days, we refund the month.</p></div>
-      <div class="card"><h3>How do I get a key?</h3><p>Email us with your use case and expected volume. Keys are issued the same day during business hours.</p></div>
-      <div class="card"><h3>Is there an SLA?</h3><p>Enterprise only. Pro targets 99.5% monthly uptime with no credit schedule.</p></div>
+      <div class="card"><h3>Do you offer refunds?</h3><p>Yes. Cancel any time, and if the dataset is wrong for your use case within the first 14 days, that month is refunded in full.</p></div>
+      <div class="card"><h3>How do I get a key?</h3><p>Email us with your use case. Keys are issued the same day during business hours, evaluation keys included.</p></div>
+      <div class="card"><h3>Is there an SLA?</h3><p>No separate agreement to sign. The service targets 99.5% monthly uptime for every customer; if it misses, tell us and we make it right.</p></div>
     </div>
   </section>
 

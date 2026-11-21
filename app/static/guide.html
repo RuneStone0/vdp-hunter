@@ -17,6 +17,8 @@
     </div>
     <nav>
       <a href="/">Home</a>
+      <a href="/explore">Explore</a>
+      <a href="/changes">Changes</a>
       <a href="/guide">Docs</a>
       <a href="/docs">API reference</a>
       <a href="/pricing">Pricing</a>
@@ -52,10 +54,10 @@ http://localhost:8110              # self-hosted from the repo</pre>
   <section id="auth">
     <h2>Authentication</h2>
     <p class="sub">Pass your key in the <code>X-API-Key</code> header. Keys are issued per
-    customer and tier; revoking a key takes effect immediately.</p>
+    customer, and every customer has the same limits. Revoking a key takes effect immediately.</p>
 <pre>curl -s "$BASE/v1/programs?limit=1" -H "X-API-Key: $VDP_KEY"</pre>
-    <p class="sub">Requests without a key return <code>401</code>. Requests above your tier's
-    limit return <code>429</code>. The <code>/health</code> endpoint and the documentation pages
+    <p class="sub">Requests without a key return <code>401</code>. Requests above the
+    rate limit return <code>429</code>. The <code>/health</code> endpoint and the documentation pages
     need no key.</p>
   </section>
 
@@ -63,11 +65,9 @@ http://localhost:8110              # self-hosted from the repo</pre>
     <h2>Rate limits</h2>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Tier</th><th>Requests / minute</th><th>History</th><th>Bulk export</th></tr></thead>
+        <thead><tr><th>Plan</th><th>Requests / minute</th><th>History</th><th>Bulk export</th></tr></thead>
         <tbody>
-          <tr><td>Free</td><td>120</td><td>30 days</td><td>No</td></tr>
-          <tr><td>Pro</td><td>2,000</td><td>Full</td><td>Yes</td></tr>
-          <tr><td>Enterprise</td><td>Negotiated</td><td>Full, plus backfill</td><td>Yes, plus webhooks</td></tr>
+          <tr><td>Every customer</td><td>2,000</td><td>Full</td><td>Yes</td></tr>
         </tbody>
       </table>
     </div>
@@ -166,8 +166,7 @@ http://localhost:8110              # self-hosted from the repo</pre>
     top of the list and wraps, so every domain is revisited.</p>
     <p class="sub">Current coverage and the last scan run are exposed at
     <code>GET /v1/stats</code> and <code>GET /v1/runs</code>.</p>
-    <div class="note">Historical depth shown here reflects the current tier. Enterprise accounts can
-    request a full backfill.</div>
+    <div class="note">Every key sees the full history. There is no window and no backfill to buy.</div>
   </section>
 
   <footer>

@@ -116,7 +116,7 @@ scanner that keeps crawling, and the public pages.
 |---|---|
 | `/` | Landing page with live counts |
 | `/guide` | Developer guide: auth, filters, change feed, data model, errors |
-| `/pricing` | Tiers and key request |
+| `/pricing` | One flat plan and key request |
 | `/docs` | Swagger UI |
 | `/redoc` | ReDoc |
 | `/openapi.json` | OpenAPI 3.1 contract |
@@ -125,7 +125,7 @@ scanner that keeps crawling, and the public pages.
 | `/v1/stats`, `/v1/sources`, `/v1/runs` | Coverage and provenance |
 | `/admin/keys`, `/admin/scan` | Key issuance and manual scan trigger (admin key) |
 
-Auth is `X-API-Key` with per-tier rate limits (free 120/min, pro 2,000/min). The scanner
+Auth is `X-API-Key`. Every paying key gets the same limits: 2,000 requests per minute. The scanner
 runs a cycle on startup and then every `VDP_INTERVAL` seconds: crawl next Tranco slice,
 rebuild dataset, diff against the stored snapshot, write a `runs` row.
 

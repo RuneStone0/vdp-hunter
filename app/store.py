@@ -176,8 +176,10 @@ class Store:
                 "changed": len(changed), "absent": len(removed)}
 
     def query(self, q=None, platform=None, source=None, bounty=None, expiry=None,
-              limit=100, offset=0, sort="domain"):
+              limit=100, offset=0, sort="domain", self_managed=False):
         where, args = [], []
+        if self_managed:
+            where.append("(platforms IS NULL OR platforms IN ('[]', ''))")
         if q:
             where.append("(domain LIKE ? OR name LIKE ? OR policy LIKE ?)")
             args += [f"%{q}%"] * 3

@@ -18,7 +18,7 @@ upstream dumps ───────────────┴─> bin/build_da
                                                                  └─ runs     (scan log)
                                                                         │
                                    app/main.py (FastAPI) ───────────────┘
-                                   ├─ /v1/* JSON API (X-API-Key, tiers)
+                                   ├─ /v1/* JSON API (X-API-Key, one paid tier)
                                    ├─ /openapi.json, /docs, /redoc
                                    └─ /, /guide, /pricing
 ```

@@ -307,6 +307,91 @@ def render(name: str, extra: dict | None = None) -> HTMLResponse:
     return HTMLResponse(html)
 
 
+SHELL = (ROOT / "app" / "static" / "shell.html").read_text(encoding="utf-8")
+
+
+def shell_page(active: str, title: str, description: str, body: str) -> HTMLResponse:
+    """Render a page through the shared shell (nav, footer, live counts)."""
+    from . import web
+
+    st = store.stats()
+    html_out = (web.page(SHELL, title=title, description=description, active=active, body=body)
+                .replace("{{generated_at}}", st["generated_at"][:16].replace("T", " ") + " UTC"))
+    return HTMLResponse(html_out)
+
+
+@app.get("/explore", include_in_schema=False, response_class=HTMLResponse)
+def explore(q: str = "", platform: str = "", source: str = "", bounty: str = "",
+            expiry: str = "", sort: str = "domain", page: int = 1):
+    from . import web
+
+    st = store.stats()
+    page = max(1, page)
+    filters = {"q": q, "platform": platform, "source": source, "bounty": bounty,
+               "expiry": expiry, "sort": sort}
+    rows, total = store.query(
+        q=q or None, source=source or None, bounty=bounty or None, expiry=expiry or None,
+        limit=web.PER_PAGE, offset=(page - 1) * web.PER_PAGE, sort=sort,
+        self_managed=(platform == "self"),
+        **({} if platform in ("", "self") else {"platform": platform}))
+    first = 0 if not rows else (page - 1) * web.PER_PAGE + 1
+    last = (page - 1) * web.PER_PAGE + len(rows)
+    body = f"""<p class="eyebrow">Data explorer</p>
+<h1 style="font-size:clamp(1.6rem,3vw,2.2rem)">{st['programs']:,} disclosure programs, searchable</h1>
+<p class="lede">Every row carries where it came from, when it was last probed, and whether the
+program pays. Click a domain for the full record and its change history.</p>
+{web.filter_form(filters, st.get("by_platform") or {})}
+<div class="summary"><span>Showing {first:,}&ndash;{last:,} of {total:,} matching programs</span>
+<span><a href="/changes">Recent changes &rarr;</a></span></div>
+{web.rows_table(rows)}
+{web.pager(filters, page, total)}"""
+    return shell_page("/explore", "vdp-hunter · explore the dataset",
+                      "Search and filter vulnerability disclosure programs by platform, bounty, "
+                      "expiry and source.", body)
+
+
+@app.get("/program/{domain}", include_in_schema=False, response_class=HTMLResponse)
+def program_page(domain: str):
+    from . import web
+
+    p = store.get(domain)
+    if not p:
+        raise HTTPException(404, f"No program {domain}")
+    return shell_page("/explore", f"{domain} · vdp-hunter",
+                      f"Disclosure policy, contacts and change history for {domain}.",
+                      web.program_body(p))
+
+
+@app.get("/changes", include_in_schema=False, response_class=HTMLResponse)
+def changes_page(kind: str = "", domain: str = "", page: int = 1):
+    from . import web
+
+    page = max(1, page)
+    rows, total = store.changes(None, [kind] if kind else None, domain or None,
+                                limit=web.PER_PAGE, offset=(page - 1) * web.PER_PAGE)
+    kinds = [("", "Any kind"), ("added", "Added"), ("changed", "Changed"), ("removed", "Removed")]
+    body = f"""<p class="eyebrow">Change feed</p>
+<h1 style="font-size:clamp(1.6rem,3vw,2.2rem)">What changed, and what it was before</h1>
+<p class="lede">Every diff the scanner records, newest first. Field-level before and after, so a
+moved policy URL or an expired security.txt is visible rather than implied.</p>
+<form class="filters" method="get" action="/changes">
+  <input class="search" type="search" name="domain" value="{web.esc(domain)}" placeholder="Filter by domain">
+  <select name="kind">{web.options(kinds, kind, lambda v: v[1] if isinstance(v, tuple) else v)}</select>
+  <button class="btn btn-primary" type="submit">Filter</button>
+  <a class="btn btn-ghost" href="/changes">Reset</a>
+</form>
+<div class="summary"><span>{total:,} change records</span>
+<span><a href="/explore">&larr; explore the dataset</a></span></div>
+{web.change_list(rows) or '<p class="empty">No changes recorded for those filters yet.</p>'}
+<div class="pager">
+  {f'<a href="/changes?page={page - 1}&kind={web.esc(kind)}&domain={web.esc(domain)}">&lsaquo; prev</a>' if page > 1 else ''}
+  <span class="pager-pos">page {page}</span>
+  {f'<a href="/changes?page={page + 1}&kind={web.esc(kind)}&domain={web.esc(domain)}">next &rsaquo;</a>' if total > page * web.PER_PAGE else ''}
+</div>"""
+    return shell_page("/changes", "vdp-hunter · change feed",
+                      "Field-level diffs for every disclosure program we track.", body)
+
+
 @app.get("/", include_in_schema=False, response_class=HTMLResponse)
 def index():
     return render("index.html")
@@ -331,6 +416,15 @@ def robots():
 async def not_found(request: Request, exc):
     if request.url.path.startswith(("/v1/", "/admin/")):
         return JSONResponse({"detail": str(exc.detail)}, status_code=404)
-    return RedirectResponse("/", status_code=302)
+    from . import web
+
+    st = store.stats()
+    body = ('<p class="eyebrow">404</p><h1>Nothing here</h1>'
+            f'<p class="lede">{web.esc(str(exc.detail))}. Try the '
+            '<a href="/explore">explorer</a> instead.</p>')
+    html_out = (web.page(SHELL, title="vdp-hunter · not found",
+                         description="Page not found.", active="", body=body)
+                .replace("{{generated_at}}", st["generated_at"][:16].replace("T", " ") + " UTC"))
+    return HTMLResponse(html_out, status_code=404)
 
 app.mount('/assets', StaticFiles(directory=str(ROOT / 'app' / 'static')), name='assets')
