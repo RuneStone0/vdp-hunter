@@ -31,6 +31,29 @@ to be conservative:
 5. Everything else merges into the existing row for that registrable domain, so
    `www.example.com` and `example.com` are one program, not two.
 
+### Two records, one company
+
+The directory is submission-based, so the same organisation can appear twice: a
+security.txt discovery on a subdomain, plus a hand-entered stub with no links.
+FloQast is the worked example:
+
+| Record | Policy | Contact | Level |
+|---|---|---|---|
+| `floqast-650148` | `https://api-eu.floqast.app/.well-known/security.txt` | security@floqast.com | L2 |
+| `floqast-697488` | none | none | L1 |
+
+`fold_directory()` merges records with the same normalised name when one side has
+no domain or both resolve to the same one, so the stub folds into the real record.
+`name_anchored_email()` then picks the corporate domain: because the contact is
+security@floqast.com and the org name appears in that domain, the row lands on
+floqast.com rather than on the security.txt subdomain. Across the current mirror
+this folds 49 records and leaves 31 name collisions apart, because same name does
+not mean same company (coop.co.uk and coop.no are different retailers).
+
+A row discovered independently by our own crawl is not deleted by this: if a
+security.txt really is served on a subdomain, that domain keeps its row and its
+history.
+
 Measured on the 2026-11-21 mirror:
 
 | Outcome | Rows |

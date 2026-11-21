@@ -289,7 +289,7 @@ def revoke_key(key_value: str = Query(..., alias="key"), key: dict = Depends(adm
 
 
 @app.post("/admin/reload", tags=["admin"], summary="Re-ingest data/programs.json without crawling")
-def reload_dataset(key: dict = Depends(admin)):
+def reload_dataset(prune_directory: bool = False, key: dict = Depends(admin)):
     import json
     # seed/ is the copy baked into the image from git, so it is the one a
     # redeploy actually updates. data/ is a mounted volume that can hold a stale
@@ -298,7 +298,15 @@ def reload_dataset(key: dict = Depends(admin)):
                  if p.exists()), None)
     if not seed:
         raise HTTPException(503, "no programs.json in data/ or seed/")
-    return envelope(store.ingest(json.load(open(seed, encoding="utf-8")), run_kind="reload"))
+    # prune_directory deletes programs that only ever came from the disclose.io
+    # directory and are absent from this snapshot, which is how a dedupe fix
+    # removes the duplicate rows an earlier merge created. It cannot touch rows
+    # that any other source contributed to.
+    programs = json.load(open(seed, encoding="utf-8"))
+    return envelope(store.ingest(
+        programs, run_kind="reload",
+        allow_removal=prune_directory,
+        prune_only_sources={"disclose-directory"} if prune_directory else None))
 
 
 @app.post("/admin/scan", tags=["admin"], summary="Trigger one scan cycle now")

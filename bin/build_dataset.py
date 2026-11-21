@@ -97,6 +97,96 @@ def is_platform_host(host):
     return any(host == ph or host.endswith("." + ph) for ph in PLATFORM_HOSTS.values())
 
 
+FREE_MAIL = {"gmail.com", "googlemail.com", "yahoo.com", "hotmail.com", "outlook.com",
+             "live.com", "proton.me", "protonmail.com", "icloud.com", "aol.com", "gmx.de",
+             "web.de", "mail.ru", "yandex.ru", "qq.com", "163.com", "zoho.com"}
+
+
+def normalize_name(name):
+    """Org names differ only by case, spacing and punctuation between records."""
+    return re.sub(r"[^a-z0-9]+", "", (name or "").lower())
+
+
+def name_anchored_email(d):
+    """The corporate domain, when the org's own contact address proves it.
+
+    A contact of security@floqast.com is evidence that floqast.com is the company
+    domain, stronger than a policy URL published on api-eu.floqast.app. Only
+    trusted when the org name is inside the mail domain: that keeps shared desks
+    like cvd@z-cert.nl from claiming an unrelated organisation.
+    """
+    contact = (d.get("contact") or "").strip()
+    if "@" not in contact or is_url(contact):
+        return None
+    host = host_of("https://" + contact.split("@")[-1].strip().strip(">"))
+    if not host or is_ip(host) or is_platform_host(host):
+        return None
+    key = registrable(host)
+    name = normalize_name(d.get("name"))
+    if key in FREE_MAIL or len(name) < 3:
+        return None
+    if name not in normalize_name(key.replace(".", "")):
+        return None
+    return key
+
+
+def directory_host(d):
+    """Where this directory row's program lives: name-anchored email, else policy."""
+    anchored = name_anchored_email(d)
+    if anchored:
+        return anchored
+    url = d.get("policy_url")
+    if not url and is_url(d.get("contact")):
+        url = d["contact"]
+    host = host_of(url)
+    if not host or is_ip(host) or is_platform_host(host):
+        return None
+    return registrable(host)
+
+
+def fold_directory(directory):
+    """Collapse records that describe the same organisation.
+
+    The directory is submission-based, so one company can appear twice: once as a
+    security.txt discovery on a subdomain, once as a hand-entered stub with no
+    links at all (FloQast has exactly this pair). Records fold only when one side
+    has no domain, or both resolve to the same domain: coop.co.uk and coop.no are
+    different companies and must stay separate.
+    """
+    groups = {}
+    for d in directory:
+        groups.setdefault(normalize_name(d.get("name")), []).append(d)
+    out, folded, kept_apart = [], 0, 0
+    for _, rows in groups.items():
+        if len(rows) == 1:
+            out.append(rows[0])
+            continue
+        rows = sorted(rows, key=lambda r: (r.get("maturity_level") or 0,
+                                           r.get("score") or 0,
+                                           bool(r.get("policy_url"))), reverse=True)
+        base = dict(rows[0])
+        for other in rows[1:]:
+            hb, ho = directory_host(base), directory_host(other)
+            if hb and ho and hb != ho:
+                out.append(other)  # genuinely different hosts: keep both
+                kept_apart += 1
+                continue
+            folded += 1
+            for field in ("policy_url",):
+                if not base.get(field) and other.get(field):
+                    base[field] = other[field]
+            if not base.get("contact") and other.get("contact"):
+                base["contact"] = other["contact"]
+            base["maturity_level"] = max(base.get("maturity_level") or 0,
+                                         other.get("maturity_level") or 0)
+            base["maturity"] = base.get("maturity") or other.get("maturity")
+            base["score"] = max(base.get("score") or 0, other.get("score") or 0)
+            base.setdefault("slugs", []).append(other.get("slug"))
+        out.append(base)
+    return out, {"folded": folded, "kept_apart": kept_apart,
+                 "in": len(directory), "out": len(out)}
+
+
 def merge_disclose_directory(programs, directory):
     """Fold directory.disclose.io orgs into the program map, in place.
 
@@ -111,24 +201,17 @@ def merge_disclose_directory(programs, directory):
     mapped, skipped_nodomain, skipped_shared = [], 0, 0
     host_orgs = {}
     for d in directory:
-        url = d.get("policy_url")
-        if not url and is_url(d.get("contact")):
-            url = d["contact"]
-        host = host_of(url)
-        if not host or is_ip(host) or is_platform_host(host):
+        key = directory_host(d)
+        if not key:
             skipped_nodomain += 1
             continue
-        host_orgs.setdefault(registrable(host), set()).add((d.get("name") or host).lower())
+        host_orgs.setdefault(key, set()).add((d.get("name") or key).lower())
     shared = {h for h, names in host_orgs.items() if len(names) >= 3}
 
     for d in directory:
-        url = d.get("policy_url")
-        if not url and is_url(d.get("contact")):
-            url = d["contact"]
-        host = host_of(url)
-        if not host or is_ip(host) or is_platform_host(host):
+        key = directory_host(d)
+        if not key:
             continue
-        key = registrable(host)
         if key in shared:
             skipped_shared += 1
             continue
@@ -219,6 +302,7 @@ def main():
 
     # 2b) disclose.io directory (~28k orgs): the public directory behind diodb.
     directory = load_json("disclose_directory.json", [])
+    directory, fold_stats = fold_directory(directory)
     disclose = merge_disclose_directory(programs, directory)
 
     # 3) platform data
@@ -294,6 +378,9 @@ def main():
     print(json.dumps({"total": len(ordered), "novel_vs_known": len(novel),
                       "added": len(added), "removed": len(removed), "changed": len(changed),
                       "platform_hosted": sum(1 for p in ordered if p["platforms"]),
+                      "disclose_orgs_in": fold_stats["in"],
+                      "disclose_orgs_folded": fold_stats["folded"],
+                      "disclose_orgs_kept_apart": fold_stats["kept_apart"],
                       "disclose_orgs": len(directory),
                       "disclose_mapped": disclose["mapped"],
                       "disclose_skipped_nodomain": disclose["skipped_nodomain"],

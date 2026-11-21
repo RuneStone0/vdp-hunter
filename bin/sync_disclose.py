@@ -22,7 +22,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "bin"))
 
-from build_dataset import base_program, merge_disclose_directory  # noqa: E402
+from build_dataset import (base_program, fold_directory,  # noqa: E402
+                           merge_disclose_directory)
 
 DATA = Path(os.environ.get("VDP_DATA", ROOT / "data"))
 
@@ -72,6 +73,7 @@ def main() -> int:
     before = len(programs)
 
     directory = json.loads(Path(args.directory).read_text(encoding="utf-8"))
+    directory, fold_stats = fold_directory(directory)
     stats = merge_disclose_directory(programs, directory)
 
     ordered = sorted(programs.values(), key=lambda p: p["domain"])
@@ -82,6 +84,9 @@ def main() -> int:
     with_dir = sum(1 for p in ordered if "disclose-directory" in (p.get("sources") or []))
     print(json.dumps({"live_programs": before, "after": len(ordered),
                       "new_from_directory": len(ordered) - before,
+                      "directory_orgs_in": fold_stats["in"],
+                      "directory_orgs_folded": fold_stats["folded"],
+                      "directory_orgs_kept_apart": fold_stats["kept_apart"],
                       "directory_orgs": len(directory),
                       "merged_rows": stats["mapped"],
                       "skipped_nodomain": stats["skipped_nodomain"],
