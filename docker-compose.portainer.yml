@@ -1,0 +1,32 @@
+# Portainer stack for vdp-hunter.
+# Deploy from the public repo: Stacks -> Add stack -> Repository
+#   Repository URL: https://github.com/RuneStone0/vdp-hunter
+#   Compose path:   docker-compose.portainer.yml
+# Set VDP_ADMIN_KEY as a stack environment variable before deploying.
+services:
+  vdp-hunter:
+    build:
+      context: .
+    image: vdp-hunter:latest
+    container_name: vdp-hunter
+    restart: unless-stopped
+    ports:
+      - "8118:8110"
+    environment:
+      VDP_ADMIN_KEY: ${VDP_ADMIN_KEY:?set VDP_ADMIN_KEY in the stack environment}
+      VDP_PORT: "8110"
+      VDP_SCAN_ENABLED: "1"
+      VDP_CHUNK: "2000"
+      VDP_INTERVAL: "900"
+      VDP_BOOTSTRAP: "1"
+    volumes:
+      - vdp_data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8110/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+volumes:
+  vdp_data:
