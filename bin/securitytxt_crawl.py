@@ -145,7 +145,7 @@ async def fetch_one(session, domain):
     return rec
 
 
-async def worker(queue, session, out_fh, stats, total):
+async def worker(queue, session, out_fh, stats, total, misses=None):
     while True:
         domain = await queue.get()
         if domain is None:
@@ -155,6 +155,9 @@ async def worker(queue, session, out_fh, stats, total):
             rec = await fetch_one(session, domain)
         except Exception as e:  # noqa: BLE001
             rec = {"domain": domain, "errors": [type(e).__name__]}
+        if not rec.get("found_at") and rec.get("errors") and misses is not None:
+            # a connection/DNS failure is not evidence of absence: retry it
+            misses.append(domain)
         if rec.get("found_at"):
             stats["hits"] += 1
             if rec.get("expiry") == "valid":
@@ -188,6 +191,18 @@ def load_domains(path, limit, offset):
     return domains
 
 
+async def run_pass(domains, concurrency, session, out_fh, stats, misses):
+    queue = asyncio.Queue(maxsize=max(concurrency * 4, 8))
+    workers = [asyncio.create_task(worker(queue, session, out_fh, stats, len(domains), misses))
+               for _ in range(concurrency)]
+    for d in domains:
+        await queue.put(d)
+    for _ in workers:
+        await queue.put(None)
+    await queue.join()
+    await asyncio.gather(*workers)
+
+
 async def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", required=True)
@@ -213,22 +228,29 @@ async def main():
         domains = [d for d in domains if d not in seen]
     print(f"{len(domains)} domains queued, {len(seen)} already in {args.out}", flush=True)
 
-    queue = asyncio.Queue(maxsize=args.concurrency * 4)
-    stats = {"done": 0, "hits": 0, "valid": 0, "bounty_field": 0, "t0": time.time()}
-    timeout = aiohttp.ClientTimeout(total=8, connect=4, sock_read=4)
-    conn = aiohttp.TCPConnector(limit=args.concurrency, limit_per_host=1)
+    stats = {"done": 0, "hits": 0, "valid": 0, "bounty_field": 0, "t0": time.time(),
+             "retried": 0, "recovered": 0}
+    timeout = aiohttp.ClientTimeout(total=12, connect=8, sock_read=8)
+    conn = aiohttp.TCPConnector(limit=args.concurrency, limit_per_host=1, ttl_dns_cache=300)
     headers = {"User-Agent": UA, "Accept": "text/plain,*/*;q=0.5"}
 
     async with aiohttp.ClientSession(timeout=timeout, connector=conn, headers=headers) as session:
         with open(args.out, "a", encoding="utf-8") as out_fh:
-            workers = [asyncio.create_task(worker(queue, session, out_fh, stats, len(domains)))
-                       for _ in range(args.concurrency)]
-            for d in domains:
-                await queue.put(d)
-            for _ in workers:
-                await queue.put(None)
-            await queue.join()
-            await asyncio.gather(*workers)
+            misses = []
+            await run_pass(domains, args.concurrency, session, out_fh, stats, misses)
+            # Two slower passes over anything that failed at the transport layer. Under load
+            # a DNS or connect failure looks exactly like "no security.txt", and it is not:
+            # retrying turns silent undercounts into real hits.
+            for attempt in (1, 2):
+                if not misses:
+                    break
+                retry = sorted(set(misses))
+                misses = []
+                print(f"retry pass {attempt}: {len(retry)} domains with transport errors", flush=True)
+                before = stats["hits"]
+                stats["retried"] += len(retry)
+                await run_pass(retry, max(4, min(12, args.concurrency)), session, out_fh, stats, misses)
+                stats["recovered"] += stats["hits"] - before
 
     took = time.time() - stats["t0"]
     print(json.dumps({**stats, "seconds": round(took, 1),

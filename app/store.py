@@ -110,6 +110,8 @@ class Store:
         with self.conn() as c:
             prev = {r["domain"]: dict(r) for r in c.execute("SELECT * FROM programs")}
             new = {p["domain"]: p for p in programs}
+            new = {d: _carry_forward(prev[d], p) if d in prev else p
+                   for d, p in new.items()}
 
             added = sorted(set(new) - set(prev))
             removed = sorted(set(prev) - set(new))
@@ -263,6 +265,32 @@ class Store:
 
 def _jsonok(v):
     return bool(v) and v not in ("null",)
+
+
+EMPTY = (None, "", [], {})
+
+
+def _carry_forward(prev_row: dict, prog: dict) -> dict:
+    """A snapshot built from a partial crawl only adds knowledge, never erases it.
+
+    A cycle re-probes a slice of domains. A domain that came back from upstream data
+    with no live probe this time (or that simply did not answer) must not wipe the
+    policy, expiry or contact details an earlier probe established: absence of a fresh
+    probe is not evidence that the field disappeared. `sources` is unioned so provenance
+    accumulates instead of flipping between datasets.
+    """
+    out = dict(prog)
+    for f in FIELDS:
+        old, new = _load(prev_row.get(f)), prog.get(f)
+        if f == "sources":
+            out[f] = sorted({*(old or []), *(new or [])})
+            continue
+        if f == "tls_verified":
+            out[f] = new if new else old
+            continue
+        if new in EMPTY and old not in EMPTY:
+            out[f] = old
+    return out
 
 
 def _dump(v):
