@@ -14,6 +14,8 @@ zones/
 bin/go/
 data/domains-*.txt
 data/hits-czds.jsonl
+data/disclose_directory.json
+data/cache/
 
 # local state and regenerable dumps
 data/*.db

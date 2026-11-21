@@ -19,6 +19,10 @@ bin/go/
 data/domains-*.txt
 data/hits-czds.jsonl
 
+# directory.disclose.io mirror: regenerable with bin/fetch_disclose_directory.py
+data/disclose_directory.json
+data/cache/
+
 data/app.env
 data/vdp.db
 data/*.db-wal

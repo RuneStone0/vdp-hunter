@@ -177,7 +177,7 @@ class Store:
 
     def query(self, q=None, platform=None, source=None, bounty=None, expiry=None,
               limit=100, offset=0, sort="domain", self_managed=False,
-              platform_only=False):
+              platform_only=False, safe_harbor=None):
         where, args = [], []
         if self_managed:
             where.append("(platforms IS NULL OR platforms IN ('[]', ''))")
@@ -200,6 +200,9 @@ class Store:
         if expiry:
             where.append("expiry=?")
             args.append(expiry)
+        if safe_harbor:
+            where.append("safe_harbor=?")
+            args.append(safe_harbor)
         clause = ("WHERE " + " AND ".join(where)) if where else ""
         sort = sort if sort in ("domain", "expiry", "expires_on", "updated_at") else "domain"
         with self.conn() as c:

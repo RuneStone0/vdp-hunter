@@ -181,6 +181,9 @@ def list_programs(
                                description="'yes' = confirmed paying, 'no' = rest"),
     expiry: str | None = Query(None, pattern="^(valid|expired|missing)$",
                                description="security.txt Expires state"),
+    safe_harbor: str | None = Query(None, pattern="^(full|partial|none)$",
+                                    description="'full' = explicit authorisation and law "
+                                                "exemptions, 'partial' = promises no legal action"),
     limit: int = Query(100, ge=1, le=1000),
     offset: int = Query(0, ge=0),
     sort: str = Query("domain", pattern="^(domain|expiry|expires_on|updated_at)$"),
@@ -188,7 +191,7 @@ def list_programs(
 ):
     free = key["tier"] == "free"
     rows, total = store.query(q, platform, source, bounty, expiry, limit, offset, sort,
-                              platform_only=free)
+                              platform_only=free, safe_harbor=safe_harbor)
     return envelope(rows, total, limit, offset,
                     **({"free_tier_restricted": True} if free else {}))
 
@@ -288,9 +291,12 @@ def revoke_key(key_value: str = Query(..., alias="key"), key: dict = Depends(adm
 @app.post("/admin/reload", tags=["admin"], summary="Re-ingest data/programs.json without crawling")
 def reload_dataset(key: dict = Depends(admin)):
     import json
-    seed = ROOT / "data" / "programs.json"
-    if not seed.exists():
-        raise HTTPException(503, "data/programs.json missing")
+    # data/ is a mounted volume in the container, so the freshly built image's
+    # copy lives in seed/: fall back to it rather than failing with a 503
+    seed = next((p for p in (ROOT / "data" / "programs.json", ROOT / "seed" / "programs.json")
+                 if p.exists()), None)
+    if not seed:
+        raise HTTPException(503, "no programs.json in data/ or seed/")
     return envelope(store.ingest(json.load(open(seed, encoding="utf-8")), run_kind="reload"))
 
 
@@ -332,15 +338,16 @@ def shell_page(active: str, title: str, description: str, body: str) -> HTMLResp
 
 @app.get("/explore", include_in_schema=False, response_class=HTMLResponse)
 def explore(q: str = "", platform: str = "", source: str = "", bounty: str = "",
-            expiry: str = "", sort: str = "domain", page: int = 1):
+            expiry: str = "", safe_harbor: str = "", sort: str = "domain", page: int = 1):
     from . import web
 
     st = store.stats()
     page = max(1, page)
     filters = {"q": q, "platform": platform, "source": source, "bounty": bounty,
-               "expiry": expiry, "sort": sort}
+               "expiry": expiry, "safe_harbor": safe_harbor, "sort": sort}
     rows, total = store.query(
         q=q or None, source=source or None, bounty=bounty or None, expiry=expiry or None,
+        safe_harbor=safe_harbor or None,
         limit=web.PER_PAGE, offset=(page - 1) * web.PER_PAGE, sort=sort,
         self_managed=(platform == "self"),
         **({} if platform in ("", "self") else {"platform": platform}))

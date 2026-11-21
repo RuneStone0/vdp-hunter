@@ -106,6 +106,11 @@ def filter_form(f: dict, by_platform: dict) -> str:
     <option value="">Bounty or not</option>
     {options(['yes', 'no'], f.get('bounty'), lambda v: 'Pays a bounty' if v == 'yes' else 'No bounty / VDP only')}
   </select>
+  <select name="safe_harbor">
+    <option value="">Any safe harbor</option>
+    {options([('full', 'Full safe harbor'), ('partial', 'No legal action promised'),
+              ('none', 'No safe harbor')], f.get('safe_harbor'))}
+  </select>
   <select name="expiry">
     <option value="">Any expiry</option>
     {options(['valid', 'missing', 'expired', 'unknown'], f.get('expiry'), lambda v: EXPIRY_LABEL[v])}

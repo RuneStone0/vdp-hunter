@@ -74,7 +74,90 @@ def base_program(key):
     return {"domain": key, "name": key, "sources": [], "platforms": [], "policy": None,
             "emails": [], "contact_urls": [], "expires_on": None, "expiry": None,
             "offers_bounty": None, "safe_harbor": None, "securitytxt_url": None,
-            "first_seen": None, "tls_verified": None}
+            "first_seen": None, "tls_verified": None,
+            "disclose_maturity": None, "disclose_score": None}
+
+
+def is_url(value):
+    return str(value or "").lower().startswith(("http://", "https://"))
+
+
+def is_ip(host):
+    """A policy URL on a bare IP is not a domain anyone can attribute."""
+    host = (host or "").strip("[]")
+    return bool(re.fullmatch(r"\d{1,3}(\.\d{1,3}){3}", host)) or ":" in host
+
+
+def is_platform_host(host):
+    host = (host or "").lower()
+    if not host:
+        return True
+    if host.endswith("disclose.io") or host.endswith("disclosebot.io"):
+        return True
+    return any(host == ph or host.endswith("." + ph) for ph in PLATFORM_HOSTS.values())
+
+
+def merge_disclose_directory(programs, directory):
+    """Fold directory.disclose.io orgs into the program map, in place.
+
+    Org-level rows carry no domain, so a domain is only derived from a policy or
+    contact URL. Two guards keep the attribution honest:
+
+    * an email domain is not proof of ownership (cvd@z-cert.nl is a shared
+      reporting desk covering dozens of Dutch municipalities), and
+    * a host claimed by three or more distinct organisations is a shared
+      reporting portfolio, not one company's program.
+    """
+    mapped, skipped_nodomain, skipped_shared = [], 0, 0
+    host_orgs = {}
+    for d in directory:
+        url = d.get("policy_url")
+        if not url and is_url(d.get("contact")):
+            url = d["contact"]
+        host = host_of(url)
+        if not host or is_ip(host) or is_platform_host(host):
+            skipped_nodomain += 1
+            continue
+        host_orgs.setdefault(registrable(host), set()).add((d.get("name") or host).lower())
+    shared = {h for h, names in host_orgs.items() if len(names) >= 3}
+
+    for d in directory:
+        url = d.get("policy_url")
+        if not url and is_url(d.get("contact")):
+            url = d["contact"]
+        host = host_of(url)
+        if not host or is_ip(host) or is_platform_host(host):
+            continue
+        key = registrable(host)
+        if key in shared:
+            skipped_shared += 1
+            continue
+        mapped.append(key)
+        p = programs.get(key)
+        if p is None:
+            p = programs[key] = base_program(key)
+        p["sources"] = sorted(set(list(p.get("sources") or []) + ["disclose-directory"]))
+        if p.get("name") in (None, key) and d.get("name"):
+            p["name"] = d["name"]
+        p["policy"] = p.get("policy") or d.get("policy_url")
+        contact = (d.get("contact") or "").strip()
+        if "@" in contact and not contact.lower().startswith("http"):
+            p["emails"] = sorted(set(list(p.get("emails") or []) + [contact]))
+        elif is_url(contact):
+            p["contact_urls"] = sorted(set(list(p.get("contact_urls") or []) + [contact]))
+        if d.get("maturity_level"):
+            level = int(d["maturity_level"])
+            # their ladder: L3 promises no legal action, L4/L5 add explicit
+            # authorisation and law exemptions. That is safe_harbor, so fold it
+            # into the field the API already exposes instead of a new column.
+            if level >= 4:
+                p["safe_harbor"] = "full"
+            elif level == 3 and not p.get("safe_harbor"):
+                p["safe_harbor"] = "partial"
+            p["disclose_maturity"] = d.get("maturity")
+            p["disclose_score"] = d.get("score")
+    return {"mapped": len(mapped), "skipped_nodomain": skipped_nodomain,
+            "skipped_shared": skipped_shared, "shared_hosts": sorted(shared)}
 
 
 def main():
@@ -133,6 +216,10 @@ def main():
             p["safe_harbor"] = d["safe_harbor"]
         if d.get("contact_email") and "@" in d["contact_email"]:
             p["emails"] = sorted(set(p["emails"]) | {d["contact_email"]})
+
+    # 2b) disclose.io directory (~28k orgs): the public directory behind diodb.
+    directory = load_json("disclose_directory.json", [])
+    disclose = merge_disclose_directory(programs, directory)
 
     # 3) platform data
     for fname, plat in (("hackerone_data.json", "hackerone"), ("bugcrowd_data.json", "bugcrowd"),
@@ -206,7 +293,12 @@ def main():
 
     print(json.dumps({"total": len(ordered), "novel_vs_known": len(novel),
                       "added": len(added), "removed": len(removed), "changed": len(changed),
-                      "platform_hosted": sum(1 for p in ordered if p["platforms"])}, indent=1))
+                      "platform_hosted": sum(1 for p in ordered if p["platforms"]),
+                      "disclose_orgs": len(directory),
+                      "disclose_mapped": disclose["mapped"],
+                      "disclose_skipped_nodomain": disclose["skipped_nodomain"],
+                      "disclose_skipped_shared_host": disclose["skipped_shared"],
+                      "disclose_shared_hosts": disclose["shared_hosts"][:10]}, indent=1))
 
 
 if __name__ == "__main__":

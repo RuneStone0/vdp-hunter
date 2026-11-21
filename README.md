@@ -33,6 +33,13 @@ programs get found. The Go tools live in `go/`; see [docs/czds.md](docs/czds.md)
 Rows from this pipeline carry `source: "czds"`. Free API keys see only platform
 programs; paid keys see everything.
 
+## Sources
+
+Five sources merge into one row per registrable domain: the commercial platform
+lists, disclose.io's diodb feed, the disclose.io directory (28k orgs), the RFC 9116
+crawl and the CZDS zone-file pipeline. Attribution rules and current counts are in
+[docs/sources.md](docs/sources.md).
+
 ## Measured baseline
 
 Tranco top-1M seed, 2026-11-21, 58,259 domains probed end to end at 23 domains/s
