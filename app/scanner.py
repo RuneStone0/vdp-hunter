@@ -89,10 +89,13 @@ class Scanner:
                      timeout=900)
                 programs = json.load(open(os.path.join(self.root, "data", "programs.json"),
                                           encoding="utf-8"))
+                # a virgin install has nothing to diff against: seed silently
+                seed_only = self.store.stats()["programs"] == 0
                 delta = self.store.ingest(programs, run_kind="crawl",
                                           chunk=(offset, chunk),
                                           probes=stats.get("done", chunk),
-                                          hits=stats.get("hits", 0))
+                                          hits=stats.get("hits", 0),
+                                          record_changes=not seed_only)
                 self.store.set_state("coverage_offset", str(offset + chunk))
                 self.status.update({"state": "idle", "cycles": self.status["cycles"] + 1,
                                     "last_cycle_at": now(), "last_delta": delta,
