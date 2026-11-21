@@ -33,9 +33,11 @@ Tranco top-1M seed, 2026-11-21, 58,259 domains probed end to end (22.5 minutes a
 Of the 611: 335 unexpired, 225 with no `Expires` field at all, 52 already expired,
 79 served over an unverified TLS chain. After matching against diodb (by policy /
 security.txt host and program name) and against every platform program and scope
-list, **457 programs appear in no existing dataset**, and **240 of those are
-unexpired with a usable contact or policy**. Examples: Anthropic, Allianz,
-Bloomberg, Booking.com, Calendly, Ancestry, AWS VDP, 9GAG, Academia.edu.
+list, 525 program rows have no match. 124 of those still point at a platform URL
+that the name join missed, leaving **401 programs in no existing dataset**, and
+**216 of those are unexpired, self-managed, and have a usable contact or policy**.
+Examples: Anthropic, Allianz, Bloomberg, Booking.com, Calendly, Ancestry, AWS VDP,
+9GAG, Academia.edu.
 
 Adoption collapses below the top 10k, so the full list is worth roughly 1,500 to
 2,500 more hits, not tens of thousands.
