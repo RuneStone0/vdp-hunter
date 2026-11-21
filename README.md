@@ -20,20 +20,31 @@ public, structured, and cheap to check.
 
 ## Measured baseline from the first runs
 
-Tranco top-1M seed, head of the list, 2026-11-21:
+Tranco top-1M seed, 2026-11-21, 58,259 domains probed end to end (22.5 minutes at
+37 domains/s and 300 connections):
 
-| Slice | Domains probed | security.txt found | Unexpired | Hits/1k |
-|---|---|---|---|---|
-| top 300 | 300 | 72 | 36 | 240 |
-| ranks 301-5,300 | 5,000 | 265 | 150 | 53 |
-| ranks 5,301-8,300 | 3,000 | 106 | 48 | 35 |
-| **total** | **8,300** | **443** | **234** | **53** |
+| Rank band | Domains probed | security.txt found | Hits per 1k |
+|---|---|---|---|
+| 1 - 1,000 | 1,000 | 216 | 216 |
+| 1,001 - 10,000 | 9,000 | 267 | 30 |
+| 10,001 - 58,259 | 48,259 | 128 | 2.7 |
+| **total** | **58,259** | **611** | **10.5** |
 
-Of those 443 hits, 153 are unexpired, have a policy URL or security mailbox, and
-appear in neither diodb nor any platform's program or scope list (examples:
-Anthropic, Bloomberg, Booking.com, Calendly, Ancestry, AWS VDP). Adoption falls
-off fast below the top few thousand domains, so the full 1M tail is where the
-volume is, at a much lower hit rate.
+Of the 611: 335 unexpired, 225 with no `Expires` field at all, 52 already expired,
+79 served over an unverified TLS chain. After matching against diodb (by policy /
+security.txt host and program name) and against every platform program and scope
+list, **457 programs appear in no existing dataset**, and **240 of those are
+unexpired with a usable contact or policy**. Examples: Anthropic, Allianz,
+Bloomberg, Booking.com, Calendly, Ancestry, AWS VDP, 9GAG, Academia.edu.
+
+Adoption collapses below the top 10k, so the full list is worth roughly 1,500 to
+2,500 more hits, not tens of thousands.
+
+Second channel, measured on 400 domains at ranks 20k-20.4k: conventional page
+probing (`/security`, `/responsible-disclosure`, `/bug-bounty`, ...) found 5
+signals, 1.25 per 100 domains, at 7 potential requests per domain versus 2 for
+security.txt. Real pages (ISPsystem, Termius) but poor yield, so it stays a
+targeted add-on rather than the main crawl.
 
 ## How it works
 
