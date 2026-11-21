@@ -1,212 +1,180 @@
 # VDP dataset changes, 2026-11-21
 
-Programs: 2605 total, 367 not in any known list, 905 on a bounty platform.
+Programs: 2763 total, 525 not in any known list, 905 on a bounty platform.
 
-## New programs (200)
+## New programs (158)
 
-- `0x.org` 0x -> https://docs.0x.org/developer-resources/bounties
-- `123contactform.com` 123 Contact Form -> http://www.123contactform.com/security-acknowledgements.htm
-- `123formbuilder.com` 123FormBuilder -> https://security.123formbuilder.com
-- `1mg.com` 1mg.com -> ['bugbounty@1mg.com']
-- `1win_com` 1win -> []
-- `20 minuten` 20 Minuten -> []
-- `23andme.com` 23andme -> https://www.23andme.com/security-report/
-- `23andme_bbp` 23andMe Bug Bounty -> []
-- `24sessions.com` 24sessions -> https://www.24sessions.com/responsible-disclosure
-- `305.nl` keeping.nl -> https://305.nl/en/terms-and-conditions/security/
-- `3cx` 3CX -> []
-- `3ds outscale` 3DS OUTSCALE -> []
-- `3ds.com` Dassault Systemes SE (3DS) -> https://www.3ds.com/vulnerability-reporting/
-- `3gpp.org` 3GPP -> https://www.3gpp.org/coordinated-vulnerability-disclosure-cvd
-- `4chan.org` 4chan -> https://www.4chan.org/security
-- `55 degrees` 55 Degrees -> []
-- `6sense-vdp` 6sense VDP -> []
-- `84codes.com` 84codes -> https://www.84codes.com/security/
-- `8x8-bounty` 8x8 -> []
-- `98point6.com` 98 Point 6 -> https://www.98point6.com/responsible-disclosure-policy/
-- `9gag.com` 9gag.com -> ['security@9gag.com']
-- `a-tcontrols.com` Pon Holdings -> https://a-tcontrols.com/responsible-disclosure/
-- `a. marketplace managed bug bounty engagement` Xopero Software S.A. Marketplace Managed Bug Bounty Engagement -> []
-- `a16z.com` Andreessen Horowitz -> https://a16z.com/security-policy
-- `abb` ABB Information Systems Ltd -> []
-- `abb.com` ABB -> https://www.abb.com/cybersecurity
-- `abbott.com` Abbott -> https://www.abbott.com/policies/cybersecurity/cybersecurity-coordinated-product-disclosure.html
-- `abc.net.au` abc.net.au -> https://ab.co/security-guidelines
-- `abcp.ru` abcp.ru -> https://abcp.ru/.well-known/security-policy.html
-- `abercrombie_fitch` Abercrombie & Fitch Management Co. -> []
-- `abmc.gov` American Battle Monuments Commission -> https://www.abmc.gov/vulnerability-disclosure-policy
-- `abn_amro_vdp` ABN AMRO Bank VDP -> []
-- `abnamro.nl` Abn Amro -> https://www.abnamro.nl/en/personal/overabnamro/secure-banking/responsible-disclosure.html
-- `academia.edu` academia.edu -> ['security@academia.edu']
-- `accenture.com` Accenture -> https://www.accenture.com/us-en/about/company/accenture-responsible-disclosure
-- `access-board.gov` United States Access Board -> https://www.access-board.gov/vulnerability-disclosure-policy
-- `accodeing.com` accodeing.com -> https://accodeing.com/security/policy
-- `accredible.com` Accredible -> https://www.accredible.com/white_hat/
-- `accxia marketplace bug bounty` Accxia Marketplace Bug Bounty  -> []
-- `achmea.nl` Achmea -> https://www.achmea.nl/en/responsibledisclosure
-- `acorns grow, inc` Acorns Grow, Inc. -> []
-- `acquia.com` Acquia -> https://www.acquia.com/solutions/security
-- `acronis` Acronis -> []
-- `across.to` Across Protocol -> https://docs.across.to/v/developer-docs/additional-info/bug-bounty
-- `actility.com` Actility -> https://www.actility.com/security/
-- `active24.com` active24.cz -> https://faq.active24.com/cz/933388-Hl%C3%A1%C5%A1en%C3%AD-bezpe%C4%8Dnostn%C3%ADch-zranitelnost%C3%AD
-- `activeprospect.com` ActiveProspect -> https://activeprospect.com/security/
-- `ad.nl` ad.nl -> []
-- `ada.com` Ada Health -> https://ada.com/security-vulnerability-disclosure-policy/
-- `adac` ADAC Vulnerability Disclosure Program -> []
-- `adac.de` adac.de -> []
-- `adafruit.com` Adafruit -> https://www.adafruit.com/reportingsecurityissues
-- `adaware.com` lavasoftusa.com -> https://www.adaware.com/privacy-policy
-- `adevinta_vdp` Adevinta -> []
-- `adex.network` adex.network -> https://www.adex.network/security-policy.txt
-- `admin.ch` Swiss National Cyber Security Center (NCSC.ch) -> https://www.bacs.admin.ch/en/framework-conditions-and-rules-cvd
-- `administrator.technology` administrator.de -> https://administrator.technology/privacy.php
-- `adobe.com` Adobe -> https://helpx.adobe.com/security.html/security/policy.ug.html
-- `adobe.net` adobe.net -> https://helpx.adobe.com/security.html/security/policy.ug.html
-- `adp.com` ADP -> https://www.adp.com/about-adp/data-security.aspx
-- `adyen.help` Ayden -> https://www.adyen.help/hc/en-us/articles/115001187330-How-do-I-report-a-possible-security-issue-to-Adyen
-- `aegean_airlines_vdp` Aegean Airlines Vulnerability Disclosure -> []
-- `aelbox marketplace bug bounty` Aelbox Marketplace Bug Bounty -> []
-- `aerohive.com` Aerohive -> http://www.aerohive.com/support/security-center
-- `aeromexico_vdp` Aeromexico VDP -> []
-- `affirm` Affirm -> []
-- `afterpay bug bounty program` Afterpay Bug Bounty Program -> []
-- `aftonbladet.se` aftonbladet.se -> https://www.schibsted.com/about/security-in-schibsted/schibsted-security-policy/
-- `agentlegend.com` Agent Legend -> https://agentlegend.com/vulnerability-disclosure-policy/
-- `agile doyens` agile doyens -> []
-- `agilepulse marketplace bug bounty program` AgilePulse Marketplace Bug Bounty Program -> []
-- `agilis lt bug bounty` Agilis LT Bug Bounty -> []
-- `agoda-public` Agoda Public -> []
-- `agoda.com` agoda.com -> https://hackerone.com/agoda-public
-- `agsairports.co.uk` southamptonairport.com -> https://www.agsairports.co.uk/report-a-vulnerability/
-- `aholddelhaize.com` Ahold Delhaize -> https://www.aholddelhaize.com/en/security/
-- `ai | apps+ marketplace bug bounty program` AI | Apps+ Marketplace Bug Bounty Program -> []
-- `aig` AIG -> []
-- `aikido` Aikido Security: Bug Bounty Program -> []
-- `aims360.com` Aims360 -> https://www.aims360.com/vulnerability-responses/
-- `aion.network` Aion -> https://aion.network/terms-bounty/
-- `airbnb` Airbnb -> []
-- `airbnb.com` airbnb.com -> https://hackerone.com/airbnb#overview
-- `aircrack-ng.org` aircrack-ng.org -> https://aircrack-ng.org/security.html
-- `airmap.com` Airmap -> https://www.airmap.com/responsible-disclosure-policy/
-- `airmiles.nl` Air Miles -> https://www.airmiles.nl/responsible-disclosure
-- `airmilesshop.nl` Air Miles Shop -> https://www.airmilesshop.nl/responsible-disclosure
-- `airship.com` Airship -> https://www.airship.com/legal/full-disclosure-security-policy/
-- `airswap.io` AirSwap -> https://blog.airswap.io/airswap-bug-bounty-4d7ec41f3ea7
-- `airtable` Airtable -> []
-- `airvpn.org` AirVPN -> https://airvpn.org/security_policy/
-- `aiven managed bug bounty` Aiven Managed Bug Bounty -> []
-- `akeles marketplace bug bounty` Akeles Marketplace Bug Bounty -> []
-- `al-enterprise.com` Alcatel Lucent -> https://www.al-enterprise.com/en/support/security-advisories
-- `alasco gmbh - bug bounty program` Alasco GmbH - Bug Bounty Program -> []
-- `alaskaair.com` Alaska Air -> https://www.alaskaair.com/content/about-us/site-info/report-site-security-issues
-- `alcyon.nl` Alcyon -> https://www.alcyon.nl/responsible-disclosure/
-- `aldolat.it` aldolat.it -> https://www.aldolat.it/info/privacy-policy/
-- `aleria.fr` aleria.fr -> https://aleria.fr/legales.php
-- `algolia` Algolia -> []
-- `alibaba.com` Alibaba -> https://security.alibaba.com/
-- `alibaba_vdp` Alibaba VDP -> []
-- `aliter.com` Aliter Technologies -> https://www.aliter.com/vulnerability-disclosure-policy/
-- `allegion` Allegion -> []
-- `allegro` Allegro -> []
-- `allegro.pl` allegro.pl -> https://app.intigriti.com/programs/allegro/allegrobugbounty/detail
-- `almarise marketplace managed bug bounty engagement` Almarise Marketplace Managed Bug Bounty Engagement  -> []
-- `alohi` Alohi -> []
-- `alsco` ALSCO -> []
-- `alscotoday.com` ALSCO -> https://alscotoday.com/go/bug
-- `alshaya` Alshaya -> []
-- `altera` Altera -> []
-- `altervista.org` Altervista -> https://en.altervista.org/feedback.php?who=feedback
-- `altilly.com` Altilly -> https://www.altilly.com/page/security
-- `alwaysdata.com` AlwaysData -> https://www.alwaysdata.com/en/bug-bounty/
-- `amara.org` Amara -> http://amara.org/en/security
-- `amazon.co.jp` amazon.co.jp -> https://hackerone.com/amazonvrp
-- `amazon.co.uk` amazon.co.uk -> https://hackerone.com/amazonvrp
-- `amazon.com` Amazon Web Services -> https://hackerone.com/amazonvrp
-- `amazon.in` amazon.in -> https://hackerone.com/amazonvrp
-- `amazonaws.com` amazonaws.com -> https://vdp.aws.security/
-- `amazonvrp` Amazon Vulnerability Research Program -> []
-- `amd.com` AMD -> https://www.amd.com/en/corporate/product-security-incident-response-team
-- `americanexpress.com` American Express -> https://www.americanexpress.com/us/security-center/cybersecurity.html
-- `amocrm.com` amoCRM -> https://www.amocrm.com/vulnerability-disclosure-program/
-- `amoeboids` Amoeboids -> []
-- `ampcode.com` AmpCode.com -> https://ampcode.com/security/
-- `amplitude.com` amplitude.com -> https://amplitude.com/docs/faq/security-and-privacy
-- `amr.net` amr.net -> https://www.amr.net/site/privacy-policy
-- `anacondainc` Anaconda Vulnerability Disclosure Program -> []
-- `analog.com` Analog Devices -> https://www.analog.com/en/support/technical-support/product-security-response-center/vulnerability-disclosure-policy.html
-- `ancestry.com` ancestry.com -> https://www.ancestry.com/c/legal/security
-- `anduril_industries` Anduril Industries -> []
-- `angi.com` angi.com -> ['infosec@angi.com']
-- `anker` Anker -> []
-- `anomali.com` Anomali -> https://www.anomali.com/security
-- `anthropic` Anthropic -> []
-- `anthropic-cyber-jailbreak` Anthropic Cyber Jailbreak -> []
-- `anthropic.com` anthropic.com -> https://www.anthropic.com/responsible-disclosure-policy
-- `anydesk.com` anydesk.com -> https://trust.anydesk.com/faq?search=What+is+your+responsible+disclosure+process%3F
-- `anywhererealestate` Anywhere Real Estate -> []
-- `aol.com` AOL -> https://legal.aol.com/responsible-disclosure.html
-- `aon` Aon -> []
-- `apache.org` Apache -> https://security.apache.org/report/
-- `aparat.com` aparat.com -> ['security@aparat.com']
-- `apnic` APNIC -> []
-- `apnic.net` apnic.net -> https://www.apnic.net/community/security/apnic-vulnerability-reporting-program/
-- `app-ads-services.com` app-ads-services.com -> https://g.co/vrp
-- `apparmor.com` Apparmor -> https://www.apparmor.com/About/Security/Disclosure/
-- `appcelerator.com` Appcelerator -> https://www.appcelerator.com/responsible-disclosure-of-security-vulnerabilities/
-- `appfox` AppFox -> []
-- `apple.com` Apple -> https://security.apple.com/bounty/guidelines/
-- `appliances - barracuda networks, inc` Appliances - Barracuda Networks, Inc. -> []
-- `appliger` AppLiger -> []
-- `appoptics.com` Appoptics -> https://www.appoptics.com/security
-- `appsmith.com` Appsmith -> https://docs.appsmith.com/product/security
-- `appsvio marketplace bug bounty` Appsvio Marketplace Bug Bounty -> []
-- `apptentive.com` Apptentive -> https://www.apptentive.com/contact
-- `aptible.com` Aptible -> https://www.aptible.com/legal/responsible-disclosure
-- `aptis` APTIS -> []
-- `aquasec.com` Aqua Security -> https://www.aquasec.com/trust/security/responsible-disclosure-program/
-- `aragon.org` Aragon -> https://blog.aragon.org/aragon-network-bug-bounty/
-- `arbonia` Arbonia VDP program -> []
-- `arc-bbp` Arc -> []
-- `archive.org` archive.org -> ['info@archive.org']
-- `arduino.cc` Arduino -> https://www.arduino.cc/en/Main/Security
-- `arena.ai` arena.ai -> https://arena.ai/privacy-policy
-- `ark.io` Ark -> https://ark.io/blog/ark-development-and-security-bounty-program-arkio-blog
-- `arkadiyt-projects` arkadiyt-projects -> []
-- `arkane` Venly -> []
-- `arkose_labs` Arkose Labs -> []
-- `arlo cash rewards` Arlo Cash Rewards -> []
-- `arm` Arm -> []
-- `arm.com` Arm -> https://developer.arm.com/support/arm-security-updates/report-security-vulnerabilities
-- `arts.gov` National Endowment for the Arts -> https://www.arts.gov/vulnerability-disclosure-policy
-- `artsy.net` Artsy -> https://www.artsy.net/security
-- `arup.com` arup.com -> https://www.arup.com/Reporting-Policy.pdf
-- `asana` Asana -> []
-- `asana.com` Asana -> https://asana.com/bounty
-- `ashbyhq.com` Ashby -> https://www.ashbyhq.com/resources/vulnerability-disclosure
-- `assa_abloy_americas` Assa Abloy Americas -> []
-- `asterisk.org` Asterisk -> https://wiki.asterisk.org/wiki/display/AST/Asterisk+Bug+Bounties
-- `asus.com` ASUS -> https://www.asus.com/security-advisory/#vdp
-- `aswatson` ICI PARIS XL -> []
-- `atg public bug bounty program` ATG Public Bug Bounty Program -> []
-- `atl-paas.net` atl-paas.net -> https://www.atlassian.com/trust/security/report-a-vulnerability
-- `atlassian` Atlassian -> []
-- `atlassian-built apps` Atlassian-Built Apps -> []
-- `atlassian.com` 0xdata.atlassian.net -> https://www.atlassian.com/trust/security/report-a-vulnerability
-- `atlassian.net` atlassian.net -> https://www.atlassian.com/trust/security/report-a-vulnerability
-- `atolls` Atolls Vulnerability Disclosure Program (VDP) -> []
-- `att` AT&T -> []
-- `att.com` AT&T -> https://bugbounty.att.com/
-- `attentia` Attentia VDP -> []
-- `au, property.com.au` REA Group | realestate.com.au, realcommercial.com.au, property.com.au -> []
-- `auderenow.org` Audere -> https://auderenow.org/security
-- `audi.de` Audi -> https://www.audi.de/de/brand/de/kontakt-und-haendler.html#layer=/de/brand/de/neuwagen/layer/kontakt-audi-cyber-security.html
-- `audible` Audible -> []
-- `augur.net` Augur -> https://augur.net/blog/v2-bug-bounty/
-- `aurory managed bug bounty engagement (public)` Aurory Managed Bug Bounty Engagement (Public) -> []
+- `1and1.com` 1and1.com -> https://www.ionos.com/it-security
+- `1win.com` 1win.com -> https://1win.global/.well-known/VulnerabilityDisclosurePolicy.pdf
+- `ably-realtime.com` ably-realtime.com -> []
+- `abuse.ch` abuse.ch -> ['admin@abuse.ch']
+- `activehosted.com` activehosted.com -> []
+- `airbnb.fr` airbnb.fr -> https://hackerone.com/airbnb#overview
+- `allegro.hu` allegro.hu -> https://app.intigriti.com/programs/allegro/allegrobugbounty/detail
+- `allianz.com` allianz.com -> https://www.allianz.com/en/disclosure-policy.html
+- `allwyn.cz` allwyn.cz -> https://www.allwyn.cz/.well-known/responsible_disclosure_policy.pdf
+- `anaconda.org` anaconda.org -> []
+- `ascopubs.org` ascopubs.org -> ['security@wiley.com']
+- `audiojungle.net` audiojungle.net -> https://www.envato.com/lp/vulnerability-disclosure/
+- `binance.us` binance.us -> ['security@binance.us']
+- `blogspot.it` blogspot.it -> https://g.co/vrp
+- `brainly.com` brainly.com -> https://brainly.com/responsible-disclosure-program
+- `cdm.me` cdm.me -> ['webmaster@cdm.me']
+- `cdn-vitals.com` cdn-vitals.com -> ['security@freestar.com']
+- `chainalysis.com` chainalysis.com -> ['securitybugreport@chainalysis.com']
+- `checkatrade.com` checkatrade.com -> ['infosec@checkatrade.com']
+- `civitai.com` civitai.com -> https://github.com/civitai/civitai/blob/main/SECURITY.md
+- `cloudlinux.com` cloudlinux.com -> https://www.cloudlinux.com/vulnerability-reporting/
+- `cloudsecurityalliance.org` cloudsecurityalliance.org -> https://cloudsecurityalliance.org/security
+- `coches.net` coches.net -> https://adevinta.com/security-vulnerability/
+- `comfy.ua` comfy.ua -> ['siem@comfy.ua']
+- `cornelsen.de` cornelsen.de -> ['security@cornelsen.de']
+- `crestron.com` crestron.com -> []
+- `cronometer.com` cronometer.com -> https://cronometer.com/terms/terms-security.html
+- `cs.money` cs.money -> ['security@cs.money']
+- `delfi.ee` delfi.ee -> ['security@egrupp.ee']
+- `demorgen.be` demorgen.be -> []
+- `deriv.com` deriv.com -> https://hackerone.com/deriv/safe_harbor
+- `despegar.com.ar` despegar.com.ar -> ['appsec@despegar.com']
+- `distrokid.com` distrokid.com -> ['security@distrokid.com']
+- `doublelist.com` doublelist.com -> ['admin@doublelist.com']
+- `dragonkind.com` dragonkind.com -> ['hello@dragonkind.com']
+- `dweb.link` dweb.link -> https://about.ipfs.io/#reporting-abuse
+- `echodnia.eu` echodnia.eu -> ['secvul@polskapress.pl']
+- `elisa.fi` elisa.fi -> ['abuse@elisa.fi']
+- `euroauto.ru` euroauto.ru -> ['security@euroauto.ru']
+- `evvelcevap.com` evvelcevap.com -> ['security@evvelcevap.com']
+- `f-droid.org` f-droid.org -> ['team@f-droid.org']
+- `faire.com` faire.com -> ['security@faire.com']
+- `fdcservers.net` fdcservers.net -> ['security@fdcservers.net']
+- `fischipedia.org` fischipedia.org -> https://meta.miraheze.org/wiki/Security
+- `five9.com` five9.com -> https://www.five9.com/trust/vdp
+- `flashscore.co.za` flashscore.co.za -> https://bugbounty.livesport.eu/#rules
+- `flashscore.com.br` flashscore.com.br -> https://bugbounty.livesport.eu/#rules
+- `flashscore.es` flashscore.es -> https://bugbounty.livesport.eu/#rules
+- `fly.io` fly.io -> https://docs.fly.io/security
+- `foodandwine.com` foodandwine.com -> https://hackerone.com/dotdashmeredith
+- `fronius.com` fronius.com -> ['vulnerability-report@fronius.com']
+- `fusionauth.io` fusionauth.io -> []
+- `gazetawroclawska.pl` gazetawroclawska.pl -> ['secvul@polskapress.pl']
+- `gc.com` gc.com -> https://bugcrowd.com/engagements/dickssportinggoods
+- `google.gy` google.gy -> https://g.co/vrp
+- `google.lk` google.lk -> https://g.co/vrp
+- `google.lv` google.lv -> https://g.co/vrp
+- `gov.br` gov.br -> ['cgplt.sgd@gestao.gov.br', 'security@bcb.gov.br<br/>']
+- `graphicriver.net` graphicriver.net -> https://www.envato.com/lp/vulnerability-disclosure/
+- `gtmetrix.com` gtmetrix.com -> ['feedback@gtmetrix.com']
+- `gucci.com` gucci.com -> https://vdp.gucci.com
+- `hubstaff.com` hubstaff.com -> https://hubstaff.com/bug-bounty
+- `instyle.com` instyle.com -> https://hackerone.com/dotdashmeredith
+- `iowa.gov` iowa.gov -> https://dom.iowa.gov/state-government/information-technology/cybersecurity/common-cyber-security-questions
+- `iptwins.com` iptwins.com -> ['noc@iptwins.com']
+- `iserv.eu` iserv.eu -> ['security@iserv.de']
+- `johnsoncontrols.com` johnsoncontrols.com -> https://www.johnsoncontrols.com/trust-center/cybersecurity/response
+- `jotfor.ms` jotfor.ms -> https://www.jotform.com/vulnerability-disclosure-program/#program-rules
+- `jus.br` jus.br -> [' csirt@tjgo.jus.br', ' etir@tjgo.jus.br']
+- `keepersecurity.com` keepersecurity.com -> https://keepersecurity.com/security.html
+- `kino.de` kino.de -> ['security@stroeermediabrands.de']
+- `lemmy.world` lemmy.world -> https://legal.lemmy.world/security/
+- `liveabout.com` liveabout.com -> https://hackerone.com/dotdashmeredith
+- `lokmat.com` lokmat.com -> ['mohammed.zulkifl@lokmat.com']
+- `lolipop.jp` lolipop.jp -> https://pepabo.com/contact/vulnerability-reporting/
+- `lu.ma` lu.ma -> https://help.luma.com/p/security-bug-bounty
+- `lucidmotors.com` lucidmotors.com -> https://bugcrowd.com/lucidmotors-vdp
+- `luciq.ai` luciq.ai -> ['security@luciq.ai']
+- `mailbox.org` mailbox.org -> ['ciso@heinlein-support.de']
+- `mijnwoordenboek.nl` mijnwoordenboek.nl -> ['security@infrapod.nl']
+- `mitel.io` mitel.io -> https://www.mitel.com/support/security-advisories/mitel-product-security-policy
+- `mobilevikings.be` mobilevikings.be -> https://app.intigriti.com/programs/mv/mobilevikings/detail
+- `mod.uk` mod.uk -> https://www.gov.uk/help/report-vulnerability
+- `moneysavingexpert.com` moneysavingexpert.com -> https://bugcrowd.com/engagement_teasers/wandering-violet-3363
+- `namirial.it` namirial.it -> https://namirial.com/en/vulnerability-reporting/
+- `nekobt.to` nekobt.to -> ['bugs@nekobt.to']
+- `netipybase.com` netipybase.com -> https://github.com/appwrite/appwrite/security/policy
+- `neurology.org` neurology.org -> ['security@wiley.com']
+- `nic.cz` nic.cz -> ['abuse@nic.cz']
+- `nielseniq.com` nielseniq.com -> https://nielseniq.com/global/en/legal/privacy-policy/
+- `noredink.com` noredink.com -> ['security@noredink.com']
+- `novaskin.me` novaskin.me -> ['saviski@novaskin.me']
+- `nvaccess.org` nvaccess.org -> https://github.com/nvaccess/nvda/security/policy
+- `onfinality.io` onfinality.io -> https://documentation.onfinality.io/support/onfinality-vulnerability-and-bug-reporting
+- `opencollective.com` opencollective.com -> https://github.com/opencollective/opencollective/security/policy
+- `overheid.nl` overheid.nl -> https://www.ncsc.nl/dienstverlening/kwetsbaarheid-melden-cvd
+- `paessler.com` paessler.com -> https://www.paessler.com/vulnerability-disclosure-program
+- `pinside.com` pinside.com -> ['webmaster@pinside.com']
+- `platformsh.site` platformsh.site -> https://platform.sh/trust-center/security/responsible-disclosure/
+- `plejada.pl` plejada.pl -> ['abuse@ringieraxelspringer.pl']
+- `pokernews.com` pokernews.com -> ['security@pokernews.com']
+- `polkachu.com` polkachu.com -> ['hello@polkachu.com']
+- `pornorama.com` pornorama.com -> []
+- `protonvpn.com` protonvpn.com -> https://proton.me/security/bug-bounty
+- `psiphon.ca` psiphon.ca -> ['security@psiphon.ca']
+- `pub.dev` pub.dev -> https://pub.dev/security
+- `pushnami.com` pushnami.com -> ['infra@pushnami.com']
+- `pushover.net` pushover.net -> ['security@pushover.net']
+- `radiosaovivo.net` radiosaovivo.net -> ['security@instant.audio']
+- `rd.com` rd.com -> ['security.reports@tmbi.com']
+- `realvnc.com` realvnc.com -> ['psirt@realvnc.com']
+- `resend.com` resend.com -> https://resend.com/security
+- `ringpublishing.com` ringpublishing.com -> ['abuse@ringieraxelspringer.pl']
+- `rockylinux.org` rockylinux.org -> ['security@rockylinux.org']
+- `romeo.com` romeo.com -> ['security@romeo.com']
+- `rubyonrails.org` rubyonrails.org -> https://rubyonrails.org/security
+- `run.place` run.place -> https://dnsexit.com/support/abuse/
+- `sageone.com` sageone.com -> https://www.sage.com/en-gb/trust-security/
+- `salla.sa` salla.sa -> https://salla.com/en/privacy-policy/
+- `semgrep.dev` semgrep.dev -> https://semgrep.dev/docs/security
+- `setapp.com` setapp.com -> https://macpaw.com/vulnerability-disclosure-policy
+- `sezzle.com` sezzle.com -> Found a bug in our application? We have our private bug bounty program with Bugcrowd. Send your email to us so that we can invite you to the program.
+- `skillbuilder.aws` skillbuilder.aws -> https://vdp.aws.security/
+- `skillshare.com` skillshare.com -> ['responsibledisclosure@skillshare.com']
+- `skybet.com` skybet.com -> https://hackerone.com/flutteruki
+- `skyvegas.com` skyvegas.com -> https://hackerone.com/flutteruki
+- `snapfish.com` snapfish.com -> https://hackerone.com/shutterfly_vdp
+- `solcon.nl` solcon.nl -> []
+- `sparkpost.com` sparkpost.com -> ['security@messagebird.com']
+- `spring.io` spring.io -> https://spring.io/security-policy
+- `stake.us` stake.us -> []
+- `starshield.com` starshield.com -> ['vulnerabilityreporting@spacex.com']
+- `stores.jp` stores.jp -> ['product-security@st.inc']
+- `sumsub.com` sumsub.com -> ['security@sumsub.com']
+- `telemagazyn.pl` telemagazyn.pl -> ['secvul@polskapress.pl']
+- `tempo.com` tempo.com -> https://github.com/tempoxyz/.github/blob/main/SECURITY.md
+- `thalesgroup.com` thalesgroup.com -> https://www.thalesgroup.com/en/global/group/psirt
+- `ticketone.it` ticketone.it -> ['itsecurity@eventim.de']
+- `tractive.com` tractive.com -> https://tractive.com/en/l/vulnerability-disclosure
+- `trueconf.com` trueconf.com -> https://trueconf.com/company/legal/privacy.html
+- `turfomania.fr` turfomania.fr -> []
+- `tuttocampo.it` tuttocampo.it -> ['redazione@tuttocampo.it']
+- `tweakers.net` tweakers.net -> https://tweakers.net/info/responsible-disclosure/
+- `twit.tv` twit.tv -> []
+- `ublockdns.com` ublockdns.com -> https://ublockdns.com/.well-known/security.txt
+- `uni-kassel.de` uni-kassel.de -> ['ism@uni-kassel.de']
+- `unibe.ch` unibe.ch -> ['responsible-disclosure@unibe.ch']
+- `uoguelph.ca` uoguelph.ca -> https://ithelp.uoguelph.ca/policy/responsible-disclosure-process
+- `upr.edu` upr.edu -> ['noc-upr@upr.edu']
+- `upstart.com` upstart.com -> Upstart runs a private bug bounty program. To request an invite, please email security@upstart.com with the subject "Bug Bounty Invite: <username>"
+- `veikkaus.fi` veikkaus.fi -> https://www.veikkausgroup.com/en/veikkaus-vulnerability-disclosure-policy-vdp
+- `verywellfit.com` verywellfit.com -> https://hackerone.com/dotdashmeredith
+- `work.gd` work.gd -> https://dnsexit.com/support/abuse/
+- `workspaceoneaccess.com` workspaceoneaccess.com -> ['security@omnissa.com']
+- `worten.pt` worten.pt -> ['rvd@worten.pt']
+- `wrike.com` wrike.com -> https://www.wrike.com/security/report/
+- `xnxx-ru.com` xnxx-ru.com -> []
+- `yandex.md` yandex.md -> https://ya.cc/t/1cSZixjB3gkSva
 
 ## Removed (0)
 
 
-## Changed (0)
+## Changed (10)
 
+- `circleci.com`: policy, expiry, expires_on, sources
+- `f-secure.com`: expiry, sources
+- `fastweb.it`: expiry, sources
+- `first.org`: policy, expiry, expires_on, sources
+- `gcore.com`: expiry, sources
+- `grofers.com`: policy, expiry, sources
+- `jenkins.io`: expiry, expires_on, sources
+- `platform.sh`: policy, expiry, expires_on, sources
+- `snyk.io`: policy, expiry, sources
+- `walletconnect.com`: expiry, sources

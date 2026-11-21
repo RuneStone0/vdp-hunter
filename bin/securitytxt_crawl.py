@@ -207,6 +207,7 @@ async def main():
                     seen.add(json.loads(line)["domain"])
                 except Exception:  # noqa: BLE001
                     pass
+    domains = [d for d in domains if d not in seen]
     print(f"{len(domains)} domains queued, {len(seen)} already in {args.out}", flush=True)
 
     queue = asyncio.Queue(maxsize=args.concurrency * 4)

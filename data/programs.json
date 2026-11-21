@@ -60,6 +60,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "1and1.com",
+  "emails": [
+   " security@ionos.com"
+  ],
+  "expires_on": "2026-02-11",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "1and1.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.ionos.com/it-security",
+  "safe_harbor": null,
+  "securitytxt_url": "https://1and1.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
+  "contact_urls": [],
   "domain": "1mg.com",
   "emails": [
    "bugbounty@1mg.com"
@@ -73,6 +94,30 @@
   "policy": null,
   "safe_harbor": null,
   "securitytxt_url": "https://www.1mg.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "1win.com",
+  "emails": [
+   "cybersecurity@1win.pro"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [
+   "1win.com"
+  ],
+  "name": "1win.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://1win.global/.well-known/VulnerabilityDisclosurePolicy.pdf",
+  "safe_harbor": null,
+  "securitytxt_url": "https://1win.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -129,14 +174,14 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "fulfillment.23andme.com",
-   "trust.23andme.com",
-   "you.23andme.com",
-   "refer.23andme.com",
-   "api.23andme.com",
-   "portal.23andme.com",
    "auth.23andme.com",
-   "merch.23andme.com"
+   "trust.23andme.com",
+   "fulfillment.23andme.com",
+   "refer.23andme.com",
+   "merch.23andme.com",
+   "api.23andme.com",
+   "you.23andme.com",
+   "portal.23andme.com"
   ],
   "name": "23andme",
   "offers_bounty": "yes",
@@ -536,31 +581,31 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "dima.abb.com",
-   "access.iiot.automation.abb.com",
-   "hvac-smart-solutions.events.abb.com",
-   "naveopro.emergencylighting.abb.com",
-   "iobeya.abb.com",
-   "mail.abb.com",
-   "gr.inside.abb.com",
-   "ecommerce.industrialsolutions.abb.com",
-   "abbtm.fi.abb.com",
-   "ir.abb.com",
-   "collab-edge.be.abb.com",
-   "industrial-automation-service.abb.com",
-   "pass.abb.com",
-   "au.inside.abb.com",
-   "account.buildinglicense.abb.com",
-   "benelux.inside.abb.com",
-   "cstm.sites-pg.abb.com",
-   "eg.abb.com",
-   "prntrelay1.baldor.abb.com",
-   "industrialsolutions.se.abb.com",
-   "pi.industrysolutions-ims.abb.com",
+   "apm.22.1.genix.abb.com",
+   "geo.cn.mybuildings.abb.com",
+   "pa.inside.abb.com",
+   "myremotecare.abb.com",
+   "ceqe.mt.genix.abb.com",
+   "my.privacy.abb.com",
+   "procure.abb.com",
+   "cnbjs-zgw0.cn.abb.com",
+   "eleai.cloudintegration.abb.com",
    "electrification.equipmentmanagement.abb.com",
-   "ftp.pdc.abb.com",
-   "be.abb.com",
-   "at.inside.abb.com"
+   "ilcae-zgw1.il.abb.com",
+   "newpdc.abb.com",
+   "gelfhttp.logging.electrificationtools.abb.com",
+   "growthmeeting.events.abb.com",
+   "ma.abb.com",
+   "king.us.abb.com",
+   "evi.gwa001.it.abb.com",
+   "annualreport2015.e.abb.com",
+   "ae.abb.com",
+   "cataloghi.it.abb.com",
+   "industrialsolutions.de.abb.com",
+   "ext01.xe.abb.com",
+   "accessmanagement.motion.abb.com",
+   "pt.inside.abb.com",
+   "gatemanager.abb.com"
   ],
   "name": "ABB",
   "offers_bounty": "no",
@@ -660,6 +705,25 @@
  },
  {
   "contact_urls": [],
+  "domain": "ably-realtime.com",
+  "emails": [],
+  "expires_on": "2027-05-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "ably-realtime.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://ably-realtime.com/.well-known/security.txt",
+  "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
+  "contact_urls": [],
   "domain": "abmc.gov",
   "emails": [
    "ext-cybersec@abmc.gov"
@@ -720,6 +784,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "abuse.ch",
+  "emails": [
+   "admin@abuse.ch"
+  ],
+  "expires_on": "2029-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "abuse.ch",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://abuse.ch/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -989,6 +1074,28 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://www.activecampaign.com/contact",
+   "https://www.activecampaign.com/security"
+  ],
+  "domain": "activehosted.com",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "activehosted.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://activehosted.com/.well-known/security.txt",
+  "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "domain": "activeprospect.com",
   "emails": [
@@ -1020,8 +1127,8 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "myaccount.ad.nl",
-   "www.ad.nl"
+   "www.ad.nl",
+   "myaccount.ad.nl"
   ],
   "name": "ad.nl",
   "offers_bounty": null,
@@ -1766,15 +1873,15 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "one.airbnb.com",
-   "open.airbnb.com",
-   "assets.airbnb.com",
-   "callbacks.airbnb.com",
-   "next.airbnb.com",
-   "www.airbnb.com",
-   "support-api.airbnb.com",
    "m.airbnb.com",
-   "api.airbnb.com"
+   "open.airbnb.com",
+   "www.airbnb.com",
+   "one.airbnb.com",
+   "callbacks.airbnb.com",
+   "assets.airbnb.com",
+   "api.airbnb.com",
+   "next.airbnb.com",
+   "support-api.airbnb.com"
   ],
   "name": "airbnb.com",
   "offers_bounty": null,
@@ -1782,6 +1889,27 @@
   "policy": "https://hackerone.com/airbnb#overview",
   "safe_harbor": null,
   "securitytxt_url": "https://airbnb.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://hackerone.com/airbnb/"
+  ],
+  "domain": "airbnb.fr",
+  "emails": [],
+  "expires_on": "2027-06-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "airbnb.fr",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://hackerone.com/airbnb#overview",
+  "safe_harbor": null,
+  "securitytxt_url": "https://airbnb.fr/.well-known/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -2251,6 +2379,28 @@
    "https://app.intigriti.com/programs/allegro/allegrobugbounty/detail",
    "https://cert.allegro.com"
   ],
+  "domain": "allegro.hu",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "allegro.hu",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://app.intigriti.com/programs/allegro/allegrobugbounty/detail",
+  "safe_harbor": null,
+  "securitytxt_url": "https://allegro.hu/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://app.intigriti.com/programs/allegro/allegrobugbounty/detail",
+   "https://cert.allegro.com"
+  ],
   "domain": "allegro.pl",
   "emails": [],
   "expires_on": null,
@@ -2262,6 +2412,48 @@
   "policy": "https://app.intigriti.com/programs/allegro/allegrobugbounty/detail",
   "safe_harbor": null,
   "securitytxt_url": "https://allegro.pl/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "allianz.com",
+  "emails": [
+   "security@allianz.com"
+  ],
+  "expires_on": "2032-01-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "allianz.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.allianz.com/en/disclosure-policy.html",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.allianz.com/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "allwyn.cz",
+  "emails": [
+   "security@allwyn.cz"
+  ],
+  "expires_on": "2027-08-08",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "allwyn.cz",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.allwyn.cz/.well-known/responsible_disclosure_policy.pdf",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.allwyn.cz/.well-known/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -2567,29 +2759,29 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "anubhuti-userdata-nlb-3ba0df74c52b028b.elb.ap-south-1.amazonaws.com",
-   "jdfm-ext-alb-dev-2132639108.us-east-1.elb.amazonaws.com",
-   "anubhuti-local-nlb-6b9d2fc5cd815f6e.elb.ap-south-1.amazonaws.com",
-   "iris-testing-us-east-1-nlb-4df4bbde6f6e2bbb.elb.us-east-1.amazonaws.com",
-   "aebddc74953f248bc8455665b0f7d47b-78af959a11e5d0c1.elb.us-east-1.amazonaws.com",
-   "anubhuti-registration-nlb-67d4351a2d0c539e.elb.ap-south-1.amazonaws.com",
-   "sim-frontend-nlb-qual-a1f0385e06b6ddb6.elb.ap-south-1.amazonaws.com",
-   "nmq-alb-1579264938.us-east-1.elb.amazonaws.com",
-   "k8s-licbrk-licenseb-11d216e80e-384217420.eu-central-1.elb.amazonaws.com",
-   "sim-frontend-nlb-devl-231adec0e420d442.elb.ap-south-1.amazonaws.com",
-   "all.arcgis-cert-new-276364979.us-east-1.elb.amazonaws.com",
-   "anubhuti-userdata-nlb-79fafbcd9dab384c.elb.ap-south-1.amazonaws.com",
-   "all.arcgis-prod-new-1191849026.us-east-1.elb.amazonaws.com",
-   "ab2b0c50cdc7b445391f99d4957850c5-cd4ccfdb37dfafad.elb.us-east-1.amazonaws.com",
-   "anubhuti-associates-nlb-323ffbc5be9c6943.elb.ap-south-1.amazonaws.com",
-   "d-z076ywkf28.execute-api.ap-south-1.amazonaws.com",
-   "apriori-alb-1722286097.us-east-1.elb.amazonaws.com",
    "i3ihc4rj4l.execute-api.us-east-1.amazonaws.com",
-   "lazzx4o5mh.execute-api.eu-west-1.amazonaws.com",
-   "hackerone-us-west-2-production-attachments.s3.us-west-2.amazonaws.com",
+   "d-z076ywkf28.execute-api.ap-south-1.amazonaws.com",
+   "k8s-licbrk-licenseb-11d216e80e-384217420.eu-central-1.elb.amazonaws.com",
+   "iris-testing-us-east-1-nlb-4df4bbde6f6e2bbb.elb.us-east-1.amazonaws.com",
+   "all.arcgis-cert-new-276364979.us-east-1.elb.amazonaws.com",
+   "anubhuti-userdata-nlb-3ba0df74c52b028b.elb.ap-south-1.amazonaws.com",
+   "nmq-alb-1579264938.us-east-1.elb.amazonaws.com",
    "sp1y1tpaf1.execute-api.eu-west-1.amazonaws.com",
    "anubhuti-common-nlb-b4c5b3b693b55734.elb.ap-south-1.amazonaws.com",
-   "8907balpi7.execute-api.us-east-1.amazonaws.com"
+   "lazzx4o5mh.execute-api.eu-west-1.amazonaws.com",
+   "ab2b0c50cdc7b445391f99d4957850c5-cd4ccfdb37dfafad.elb.us-east-1.amazonaws.com",
+   "hackerone-us-west-2-production-attachments.s3.us-west-2.amazonaws.com",
+   "apriori-alb-1722286097.us-east-1.elb.amazonaws.com",
+   "sim-frontend-nlb-devl-231adec0e420d442.elb.ap-south-1.amazonaws.com",
+   "jdfm-ext-alb-dev-2132639108.us-east-1.elb.amazonaws.com",
+   "anubhuti-registration-nlb-67d4351a2d0c539e.elb.ap-south-1.amazonaws.com",
+   "8907balpi7.execute-api.us-east-1.amazonaws.com",
+   "anubhuti-associates-nlb-323ffbc5be9c6943.elb.ap-south-1.amazonaws.com",
+   "aebddc74953f248bc8455665b0f7d47b-78af959a11e5d0c1.elb.us-east-1.amazonaws.com",
+   "sim-frontend-nlb-qual-a1f0385e06b6ddb6.elb.ap-south-1.amazonaws.com",
+   "all.arcgis-prod-new-1191849026.us-east-1.elb.amazonaws.com",
+   "anubhuti-local-nlb-6b9d2fc5cd815f6e.elb.ap-south-1.amazonaws.com",
+   "anubhuti-userdata-nlb-79fafbcd9dab384c.elb.ap-south-1.amazonaws.com"
   ],
   "name": "amazonaws.com",
   "offers_bounty": null,
@@ -2768,6 +2960,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://app.intigriti.com/programs/anacondainc/anacondavdp/detail"
+  ],
+  "domain": "anaconda.org",
+  "emails": [],
+  "expires_on": "2026-10-01",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "anaconda.org",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://anaconda.org/.well-known/security.txt",
+  "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -2969,9 +3182,9 @@
   "first_seen": "2026-11-21",
   "in_scope_domains": [
    "api.anthropic.com",
-   "docs.anthropic.com",
+   "console.anthropic.com",
    "support.anthropic.com",
-   "console.anthropic.com"
+   "docs.anthropic.com"
   ],
   "name": "anthropic.com",
   "offers_bounty": null,
@@ -3149,15 +3362,15 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "orbit.apnic.net",
-   "rsync.apnic.net",
-   "aso.apnic.net",
-   "submission.apnic.net",
-   "stats.labs.apnic.net",
    "nori.apnic.net",
+   "rpki.apnic.net",
+   "orbit.apnic.net",
+   "aso.apnic.net",
+   "stats.labs.apnic.net",
+   "submission.apnic.net",
    "registry-testbed.apnic.net",
    "ftp.apnic.net",
-   "rpki.apnic.net"
+   "rsync.apnic.net"
   ],
   "name": "apnic.net",
   "offers_bounty": null,
@@ -3838,9 +4051,9 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
+   "form.asana.com",
    "app.asana.com",
-   "asana.com",
-   "form.asana.com"
+   "asana.com"
   ],
   "name": "Asana",
   "offers_bounty": "yes",
@@ -3853,6 +4066,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "ascopubs.org",
+  "emails": [
+   "security@wiley.com"
+  ],
+  "expires_on": "2027-01-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "ascopubs.org",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://ascopubs.org/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -4058,15 +4292,15 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
+   "anthropic.atlassian.com",
    "start.atlassian.com",
    "id.atlassian.com",
-   "admin.atlassian.com",
-   "confluence.atlassian.com",
-   "marketplace.atlassian.com",
-   "anthropic.atlassian.com",
    "mcp.atlassian.com",
+   "www.atlassian.com",
+   "marketplace.atlassian.com",
+   "admin.atlassian.com",
    "support.atlassian.com",
-   "www.atlassian.com"
+   "confluence.atlassian.com"
   ],
   "name": "0xdata.atlassian.net",
   "offers_bounty": null,
@@ -4094,9 +4328,9 @@
   "first_seen": "2026-11-21",
   "in_scope_domains": [
    "aon.technology.atlassian.net",
+   "clearme.atlassian.net",
    "mtngroup.atlassian.net",
-   "cmcom.atlassian.net",
-   "clearme.atlassian.net"
+   "cmcom.atlassian.net"
   ],
   "name": "atlassian.net",
   "offers_bounty": null,
@@ -4277,6 +4511,27 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://help.market.envato.com/hc/en-us/requests/new?ticket_form_id=38490"
+  ],
+  "domain": "audiojungle.net",
+  "emails": [],
+  "expires_on": "2027-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "audiojungle.net",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.envato.com/lp/vulnerability-disclosure/",
+  "safe_harbor": null,
+  "securitytxt_url": "https://audiojungle.net/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "domain": "augur.net",
   "emails": [
@@ -4371,8 +4626,8 @@
   "first_seen": "2026-11-21",
   "in_scope_domains": [
    "chenosisza-dev-cd-wpqlaq34dnebm9uo.edge.tenants.mtn-dev.auth0.com",
-   "production.maf.auth0.com",
    "chenosisza-prod-cd-6qbqld53nwicqaof.edge.tenants.mtn.auth0.com",
+   "production.maf.auth0.com",
    "marketplace.auth0.com"
   ],
   "name": "Auth0",
@@ -5129,14 +5384,14 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "transfers.bankofamerica.com",
    "abwebpay-mbod-qa.bankofamerica.com",
+   "transfers.bankofamerica.com",
+   "abwebpay-mbod.bankofamerica.com",
+   "sso-fi.bankofamerica.com",
+   "billpay-bit.bankofamerica.com",
    "billpay-ui.bankofamerica.com",
    "stageceft.transfers.bankofamerica.com",
-   "sso-fi.bankofamerica.com",
-   "qaceft.transfers.bankofamerica.com",
-   "billpay-bit.bankofamerica.com",
-   "abwebpay-mbod.bankofamerica.com"
+   "qaceft.transfers.bankofamerica.com"
   ],
   "name": "Bank of America",
   "offers_bounty": "no",
@@ -5808,9 +6063,9 @@
   "expiry": "expired",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
+   "meinkonto.bild.de",
    "bild.de",
-   "m.bild.de",
-   "meinkonto.bild.de"
+   "m.bild.de"
   ],
   "name": "bild.de",
   "offers_bounty": null,
@@ -5898,8 +6153,8 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "api.binance.com",
-   "www.binance.com"
+   "www.binance.com",
+   "api.binance.com"
   ],
   "name": "binance.com",
   "offers_bounty": null,
@@ -5908,6 +6163,30 @@
   "safe_harbor": null,
   "securitytxt_url": "https://www.binance.com/.well-known/security.txt",
   "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "binance.us",
+  "emails": [
+   "security@binance.us"
+  ],
+  "expires_on": "2027-06-08",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [
+   "www.binance.us"
+  ],
+  "name": "binance.us",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://binance.us/.well-known/security.txt",
+  "self_managed": true,
   "sources": [
    "securitytxt"
   ],
@@ -6175,8 +6454,8 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "testnet.bitmex.com",
-   "www.bitmex.com"
+   "www.bitmex.com",
+   "testnet.bitmex.com"
   ],
   "name": "BitMEX",
   "offers_bounty": "yes",
@@ -6732,6 +7011,29 @@
   "tls_verified": true
  },
  {
+  "contact_urls": [
+   "https://g.co/vulnz"
+  ],
+  "domain": "blogspot.it",
+  "emails": [
+   "security@google.com"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "blogspot.it",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://g.co/vrp",
+  "safe_harbor": null,
+  "securitytxt_url": "https://blogspot.it/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "domain": "bloomberg.com",
   "emails": [
@@ -7038,31 +7340,31 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "distribution-xml.booking.com",
    "secure-iphone-xml.booking.com",
-   "supply-xml.booking.com",
-   "paynotifications.booking.com",
-   "secure.booking.com",
    "portal.taxi.booking.com",
-   "experiences.booking.com",
-   "careers.booking.com",
-   "metasearch-api.booking.com",
-   "indicative-pricing.taxi.booking.com",
-   "secure-supply-xml.booking.com",
    "phone-validation.taxi.booking.com",
-   "paybridge.booking.com",
-   "supplier.auth.toag.booking.com",
-   "accommodations.booking.com",
-   "admin.booking.com",
-   "autocomplete.booking.com",
+   "experiences.booking.com",
+   "supply-xml.booking.com",
+   "secure-supply-xml.booking.com",
    "cars.booking.com",
    "taxi.booking.com",
    "chat.booking.com",
    "flights.booking.com",
+   "booking.com",
+   "iphone-xml.booking.com",
+   "accommodations.booking.com",
+   "kyc-onboarding.booking.com",
+   "metasearch-api.booking.com",
+   "supplier.auth.toag.booking.com",
+   "webhooks.booking.com",
+   "admin.booking.com",
+   "secure.booking.com",
+   "indicative-pricing.taxi.booking.com",
    "taxis.booking.com",
    "paymentcomponent.booking.com",
-   "iphone-xml.booking.com",
-   "kyc-onboarding.booking.com"
+   "autocomplete.booking.com",
+   "paybridge.booking.com",
+   "distribution-xml.booking.com"
   ],
   "name": "booking.com",
   "offers_bounty": null,
@@ -7295,13 +7597,13 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "m.box.com",
+   "cloud.app.box.com",
+   "notes.services.box.com",
    "account.box.com",
    "app.box.com",
    "upload.box.com",
-   "cloud.app.box.com",
    "api.box.com",
-   "notes.services.box.com"
+   "m.box.com"
   ],
   "name": "Box",
   "offers_bounty": "no",
@@ -7377,6 +7679,27 @@
    "intigriti"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://brainly.com/responsible-disclosure-program"
+  ],
+  "domain": "brainly.com",
+  "emails": [],
+  "expires_on": "2030-05-21",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "brainly.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://brainly.com/responsible-disclosure-program",
+  "safe_harbor": null,
+  "securitytxt_url": "https://brainly.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -8368,8 +8691,8 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "www.canva.com",
-   "api.canva.com"
+   "api.canva.com",
+   "www.canva.com"
   ],
   "name": "Canva",
   "offers_bounty": "yes",
@@ -8476,8 +8799,8 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "billpayment.capitalone.com",
-   "billpaymenttest.capitalone.com"
+   "billpaymenttest.capitalone.com",
+   "billpayment.capitalone.com"
   ],
   "name": "Capital One",
   "offers_bounty": "no",
@@ -8863,6 +9186,48 @@
  },
  {
   "contact_urls": [],
+  "domain": "cdm.me",
+  "emails": [
+   "webmaster@cdm.me"
+  ],
+  "expires_on": "2031-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "cdm.me",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://cdm.me/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
+  "contact_urls": [],
+  "domain": "cdn-vitals.com",
+  "emails": [
+   "security@freestar.com"
+  ],
+  "expires_on": "2027-09-09",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "cdn-vitals.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://cdn-vitals.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
+  "contact_urls": [],
   "domain": "cedars-sinai",
   "emails": [],
   "expires_on": null,
@@ -9193,6 +9558,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "chainalysis.com",
+  "emails": [
+   "securitybugreport@chainalysis.com"
+  ],
+  "expires_on": "2024-11-11",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "chainalysis.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.chainalysis.com/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "chainlink",
   "emails": [],
   "expires_on": null,
@@ -9363,6 +9749,27 @@
    "hackerone"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "checkatrade.com",
+  "emails": [
+   "infosec@checkatrade.com"
+  ],
+  "expires_on": "2030-01-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "checkatrade.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://checkatrade.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -9594,21 +10001,24 @@
  {
   "contact_urls": [],
   "domain": "circleci.com",
-  "emails": [],
-  "expires_on": null,
-  "expiry": null,
+  "emails": [
+   "security@circleci.com"
+  ],
+  "expires_on": "2027-06-01",
+  "expiry": "valid",
   "first_seen": "2026-11-21",
   "name": "CircleCi",
   "offers_bounty": "no",
   "platforms": [],
-  "policy": "https://circleci.com/security/",
+  "policy": "https://circleci.com/security",
   "safe_harbor": "none",
-  "securitytxt_url": "",
+  "securitytxt_url": "https://circleci.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "diodb"
+   "diodb",
+   "securitytxt"
   ],
-  "tls_verified": null
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -9726,8 +10136,8 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "portal.cards.spring.citi.com",
-   "ebills.citi.com"
+   "ebills.citi.com",
+   "portal.cards.spring.citi.com"
   ],
   "name": "Citigroup",
   "offers_bounty": "no",
@@ -9865,6 +10275,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "civitai.com",
+  "emails": [
+   "security@civitai.com"
+  ],
+  "expires_on": "2027-05-20",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "civitai.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://github.com/civitai/civitai/blob/main/SECURITY.md",
+  "safe_harbor": null,
+  "securitytxt_url": "https://civitai.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "clamxav.com",
   "emails": [
    "security@clamxav.com"
@@ -9957,16 +10388,16 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "ws.multiplayer.classdojo.com",
    "www.classdojo.com",
-   "home.classdojo.com",
    "clients.multiplayer.classdojo.com",
    "monster-customizer.classdojo.com",
-   "student.classdojo.com",
-   "dev.tutoring.classdojo.com",
    "teach.classdojo.com",
+   "home.classdojo.com",
    "ticket.multiplayer.classdojo.com",
-   "api.classdojo.com"
+   "dev.tutoring.classdojo.com",
+   "api.classdojo.com",
+   "student.classdojo.com",
+   "ws.multiplayer.classdojo.com"
   ],
   "name": "Classdojo",
   "offers_bounty": "yes",
@@ -10308,13 +10739,13 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "adm.cloud.com",
-   "eu.cloud.com",
    "us.cloud.com",
-   "api.adm.cloud.com",
    "ap-s.cloud.com",
+   "api.adm.cloud.com",
+   "eu.cloud.com",
    "accounts.cloud.com",
-   "onboarding.cloud.com"
+   "onboarding.cloud.com",
+   "adm.cloud.com"
   ],
   "name": "cloud.com",
   "offers_bounty": null,
@@ -10422,9 +10853,9 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "api.cloudflare.com",
    "dash.cloudflare.com",
-   "one.dash.cloudflare.com"
+   "one.dash.cloudflare.com",
+   "api.cloudflare.com"
   ],
   "name": "CloudFlare",
   "offers_bounty": "no",
@@ -10461,6 +10892,29 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://www.cloudlinux.com/vulnerability-reporting/"
+  ],
+  "domain": "cloudlinux.com",
+  "emails": [
+   "security@cloudlinux.com"
+  ],
+  "expires_on": "2027-08-27",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "cloudlinux.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.cloudlinux.com/vulnerability-reporting/",
+  "safe_harbor": null,
+  "securitytxt_url": "https://cloudlinux.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
   "contact_urls": [],
   "domain": "cloudreach.com",
   "emails": [
@@ -10480,6 +10934,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "cloudsecurityalliance.org",
+  "emails": [
+   "security@cloudsecurityalliance.org"
+  ],
+  "expires_on": "2027-01-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "cloudsecurityalliance.org",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://cloudsecurityalliance.org/security",
+  "safe_harbor": null,
+  "securitytxt_url": "https://cloudsecurityalliance.org/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -10598,31 +11073,31 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "autodiscover.cbre.co.th",
-   "wirtgen.co.th",
-   "go.cbre.co.th",
-   "mail.cbre.co.th",
-   "www.visa.co.th",
-   "uat-www.cbre.co.th",
+   "www.watsons.co.th",
    "property.cbre.co.th",
-   "app.cbre.co.th",
+   "www.visa.co.th",
+   "www.vitrium.cbre.co.th",
    "www10.watsons.co.th",
-   "cdn.cbre.co.th",
-   "www.research.cbre.co.th",
-   "www.cbre.co.th",
-   "vitrium.cbre.co.th",
-   "www.2022marketoutlook.cbre.co.th",
-   "_dmarc.wirtgen.co.th",
-   "medias.watsons.co.th",
-   "uat.cbre.co.th",
+   "wirtgen.co.th",
+   "community.watsons.co.th",
+   "www.promis.cbre.co.th",
+   "research.cbre.co.th",
    "staging.cbre.co.th",
-   "api.watsons.co.th",
    "report.cbre.co.th",
    "www.toyota.co.th",
-   "www.watsons.co.th",
-   "www.vitrium.cbre.co.th",
+   "api.watsons.co.th",
+   "cbre.co.th",
+   "www.report.cbre.co.th",
+   "uat-www.cbre.co.th",
+   "app.cbre.co.th",
+   "2022marketoutlook.cbre.co.th",
+   "cdn.cbre.co.th",
+   "www.dyson.co.th",
+   "cbcd.cbre.co.th",
+   "www.research.cbre.co.th",
+   "mail.cbre.co.th",
    "www.cbcd.cbre.co.th",
-   "www.wirtgen.co.th"
+   "autodiscover.cbre.co.th"
   ],
   "name": "co.th",
   "offers_bounty": null,
@@ -10698,6 +11173,30 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "coches.net",
+  "emails": [
+   "responsibledisclosure+motor@adevinta.com"
+  ],
+  "expires_on": "2027-01-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [
+   "www.coches.net"
+  ],
+  "name": "coches.net",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://adevinta.com/security-vulnerability/",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.coches.net/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -11085,8 +11584,8 @@
   "first_seen": "2026-11-21",
   "in_scope_domains": [
    "data-api.coindesk.com",
-   "www.coindesk.com",
-   "consensus2026.sandbox.events.coindesk.com"
+   "consensus2026.sandbox.events.coindesk.com",
+   "www.coindesk.com"
   ],
   "name": "CoinDesk.com",
   "offers_bounty": null,
@@ -11332,6 +11831,27 @@
    "bugcrowd"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "comfy.ua",
+  "emails": [
+   "siem@comfy.ua"
+  ],
+  "expires_on": "2027-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "comfy.ua",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://comfy.ua/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -11652,6 +12172,29 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://app.intigriti.com/company/programs/cornelsen/cornelsenvdp"
+  ],
+  "domain": "cornelsen.de",
+  "emails": [
+   "security@cornelsen.de"
+  ],
+  "expires_on": "2044-11-03",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "cornelsen.de",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.cornelsen.de/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "domain": "costco",
   "emails": [],
@@ -11830,31 +12373,31 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "reco.coupang.com",
-   "loyalty.coupang.com",
-   "cash.tw.coupang.com",
-   "ljc.coupang.com",
-   "eats-mobile-web.coupang.com",
-   "csmessenger.coupang.com",
-   "egift.coupang.com",
-   "fileupload.coupang.com",
-   "influencers.tw.coupang.com",
-   "p.coupang.com",
-   "ljc-test.coupang.com",
-   "mauth.tw.coupang.com",
+   "mc.coupang.com",
+   "trip.coupang.com",
    "pages.tw.coupang.com",
+   "eats-mobile-web.coupang.com",
    "cart.tw.coupang.com",
-   "fintech-aml-kyc-tw.coupang.com",
-   "tw.coupang.com",
-   "liveh5.coupang.com",
-   "shop.tw.coupang.com",
-   "www.coupang.com",
-   "myself.tw.coupang.com",
+   "my.tw.coupang.com",
+   "checkout.tw.coupang.com",
+   "review.tw.coupang.com",
+   "my.coupang.com",
+   "cart-front-api.tw.coupang.com",
+   "weblog.coupang.com",
+   "subscribe-order.coupang.com",
+   "go-cms.tw.coupang.com",
+   "reco.tw.coupang.com",
    "fileupload-video.tw.coupang.com",
-   "live.coupang.com",
-   "feed-web.coupang.com",
-   "cousms.coupang.com",
-   "checkout.tw.coupang.com"
+   "cash.coupang.com",
+   "ljc.tw.coupang.com",
+   "logs-partners.tw.coupang.com",
+   "review.coupang.com",
+   "cash.tw.coupang.com",
+   "media-log.coupang.com",
+   "payment.tw.coupang.com",
+   "partners.tw.coupang.com",
+   "coupang.com",
+   "ljc-test.tw.coupang.com"
   ],
   "name": "coupang.com",
   "offers_bounty": null,
@@ -12214,6 +12757,27 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://www.crestron.com/Security"
+  ],
+  "domain": "crestron.com",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "crestron.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://crestron.com/.well-known/security.txt",
+  "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
   "contact_urls": [],
   "domain": "criteo.com",
   "emails": [],
@@ -12231,6 +12795,27 @@
    "securitytxt"
   ],
   "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "cronometer.com",
+  "emails": [
+   "bug-bounty@cronometer.com"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "cronometer.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://cronometer.com/terms/terms-security.html",
+  "safe_harbor": null,
+  "securitytxt_url": "https://cronometer.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -12334,6 +12919,36 @@
    "hackerone"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://hackerone.com/cs_money"
+  ],
+  "domain": "cs.money",
+  "emails": [
+   "security@cs.money"
+  ],
+  "expires_on": "2027-03-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [
+   "blog.cs.money",
+   "3d.cs.money",
+   "cs.money",
+   "wiki.cs.money",
+   "support.cs.money"
+  ],
+  "name": "cs.money",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://cs.money/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -13223,31 +13838,31 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "loyaltyregistrationq.deere.com",
-   "vistaar.deere.com",
-   "gaia-argentina-apis-qual.deere.com",
-   "bonomedico.jdiberica.deere.com",
-   "data-conversion-qual.deere.com",
-   "dealer-translations.deere.com",
-   "learning.deere.com",
-   "jdlink.deere.com",
-   "abtools.deere.com",
-   "machinefinderpro.deere.com",
-   "warrantysystemdevl.deere.com",
-   "devl-vhb.nprd-exco.deere.com",
-   "devl-api.nprd-exco.deere.com",
-   "stage-mfe-sc.nprd-exco.deere.com",
-   "jdehs.deere.com",
-   "jdpo-devl.deere.com",
-   "ims.tal.deere.com",
-   "data-catalog.deere.com",
-   "dave.deere.com",
-   "stage-app.nprd-exco.deere.com",
-   "mydigitalworkspace.deere.com",
-   "jdprismreporting.deere.com",
-   "pdi.deere.com",
-   "certifieddigital.deere.com",
-   "geofence-manager.deere.com"
+   "sso.deere.com",
+   "synthiscene.deere.com",
+   "machinefinderdevlaws.tal.deere.com",
+   "cicqual.tal.deere.com",
+   "cyberfinancial.deere.com",
+   "vdp.deere.com",
+   "forms.deere.com",
+   "isgcareers.deere.com",
+   "partscatalog.deere.com",
+   "uss.deere.com",
+   "ccms.deere.com",
+   "jdfy.deere.com",
+   "dealerlocator.deere.com",
+   "eetd-pdf.deere.com",
+   "careers.deere.com",
+   "adzonetest.deere.com",
+   "origin-www.tal.deere.com",
+   "marketingrcms.deere.com",
+   "amd-ai.deere.com",
+   "jdpo-cert.deere.com",
+   "my.deere.com",
+   "leasedataservice.deere.com",
+   "monosemusa-devl.deere.com",
+   "anubhutiuat.deere.com",
+   "stg.rewards.deere.com"
   ],
   "name": "John Deere",
   "offers_bounty": "no",
@@ -13408,6 +14023,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "delfi.ee",
+  "emails": [
+   "security@egrupp.ee"
+  ],
+  "expires_on": "2027-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "delfi.ee",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://delfi.ee/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
+  "contact_urls": [],
   "domain": "delfi.lt",
   "emails": [
    "security@egrupp.ee"
@@ -13533,6 +14169,32 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://app.intigriti.com/programs",
+   "https://app.intigriti.com/programs/dpgm/dpgmedia"
+  ],
+  "domain": "demorgen.be",
+  "emails": [],
+  "expires_on": "2026-12-30",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [
+   "myaccount.demorgen.be",
+   "www.demorgen.be"
+  ],
+  "name": "demorgen.be",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://demorgen.be/.well-known/security.txt",
+  "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -13740,6 +14402,42 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://hackerone.com/deriv"
+  ],
+  "domain": "deriv.com",
+  "emails": [
+   "security@deriv.com"
+  ],
+  "expires_on": "2030-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [
+   "app.deriv.com",
+   "api-core.deriv.com",
+   "partners.deriv.com",
+   "smarttrader.deriv.com",
+   "cashier.deriv.com",
+   "ct.deriv.com",
+   "secure-dfadmin.deriv.com",
+   "api.deriv.com",
+   "home.deriv.com",
+   "oauth.deriv.com",
+   "core-api.deriv.com"
+  ],
+  "name": "deriv.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://hackerone.com/deriv/safe_harbor",
+  "safe_harbor": null,
+  "securitytxt_url": "https://deriv.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "domain": "desjardins.com",
   "emails": [
@@ -13780,6 +14478,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "despegar.com.ar",
+  "emails": [
+   "appsec@despegar.com"
+  ],
+  "expires_on": "2030-01-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "despegar.com.ar",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://despegar.com.ar/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -14125,12 +14844,12 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
+   "amd.digitalocean.com",
    "api.digitalocean.com",
+   "www.digitalocean.com",
    "cloud.digitalocean.com",
    "marketplace.digitalocean.com",
-   "hackathon-tracker.digitalocean.com",
-   "amd.digitalocean.com",
-   "www.digitalocean.com"
+   "hackathon-tracker.digitalocean.com"
   ],
   "name": "DigitalOcean",
   "offers_bounty": "yes",
@@ -14297,6 +15016,27 @@
    "hackerone"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "distrokid.com",
+  "emails": [
+   "security@distrokid.com"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "distrokid.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://distrokid.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [
@@ -14785,6 +15525,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "doublelist.com",
+  "emails": [
+   "admin@doublelist.com"
+  ],
+  "expires_on": "2024-06-01",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "doublelist.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://doublelist.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "dozuki.com",
   "emails": [
    "security@ifixit.com"
@@ -14864,6 +15625,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "dragonkind.com",
+  "emails": [
+   "hello@dragonkind.com"
+  ],
+  "expires_on": "2027-10-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "dragonkind.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://dragonkind.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -15202,6 +15984,27 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [],
+  "domain": "dweb.link",
+  "emails": [
+   "security@ipfs.io"
+  ],
+  "expires_on": "2027-02-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "dweb.link",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://about.ipfs.io/#reporting-abuse",
+  "safe_harbor": null,
+  "securitytxt_url": "https://dweb.link/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [
    "https://dt-url.net/l7038f0"
   ],
@@ -15339,14 +16142,14 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "inquirydirect.earlywarning.com",
-   "accountinfo.earlywarning.com",
-   "accountinfodirect.earlywarning.com",
-   "aoa-ws-fis.earlywarning.com",
-   "aoa-ws-direct-snd.earlywarning.com",
    "accountinfodirect-snd.earlywarning.com",
+   "accountinfodirect.earlywarning.com",
    "aoa-ws.earlywarning.com",
-   "aoa-ws-direct.earlywarning.com"
+   "aoa-ws-direct.earlywarning.com",
+   "aoa-ws-fis.earlywarning.com",
+   "accountinfo.earlywarning.com",
+   "inquirydirect.earlywarning.com",
+   "aoa-ws-direct-snd.earlywarning.com"
   ],
   "name": "Early Warning",
   "offers_bounty": "no",
@@ -15481,6 +16284,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "echodnia.eu",
+  "emails": [
+   "secvul@polskapress.pl"
+  ],
+  "expires_on": "2025-12-31",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "echodnia.eu",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://echodnia.eu/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -15941,6 +16765,29 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://elisa.fi/vulnerabilities/"
+  ],
+  "domain": "elisa.fi",
+  "emails": [
+   "abuse@elisa.fi"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "elisa.fi",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://elisa.fi/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "domain": "ellucian.com",
   "emails": [
@@ -16324,15 +17171,15 @@
   "in_scope_domains": [
    "nexus.live.ucs.on.epicgames.com",
    "communities.epicgames.com",
-   "content-service-live-testing.bfda.live.use1a.on.epicgames.com",
-   "fn-commerce-live.eeef.live.use1a.on.epicgames.com",
-   "content-service.bfda.live.use1a.on.epicgames.com",
-   "store.epicgames.com",
-   "cosmo.fdeb.live.use1a.on.epicgames.com",
-   "urc-auth-uefn.live.ucs.on.epicgames.com",
    "artportal.epicgames.com",
+   "store.epicgames.com",
+   "dev.epicgames.com",
+   "urc-auth-uefn.live.ucs.on.epicgames.com",
+   "cosmo.fdeb.live.use1a.on.epicgames.com",
    "urc-uefn.live.ucs.on.epicgames.com",
-   "dev.epicgames.com"
+   "content-service.bfda.live.use1a.on.epicgames.com",
+   "content-service-live-testing.bfda.live.use1a.on.epicgames.com",
+   "fn-commerce-live.eeef.live.use1a.on.epicgames.com"
   ],
   "name": "epicgames.com",
   "offers_bounty": null,
@@ -16594,11 +17441,11 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "www.etsy.com",
-   "help.etsy.com",
    "careers.etsy.com",
+   "help.etsy.com",
    "blog.etsy.com",
-   "community.etsy.com"
+   "community.etsy.com",
+   "www.etsy.com"
   ],
   "name": "etsy.com",
   "offers_bounty": null,
@@ -16677,6 +17524,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "euroauto.ru",
+  "emails": [
+   "security@euroauto.ru"
+  ],
+  "expires_on": "2026-11-30",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "euroauto.ru",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://euroauto.ru/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -16791,11 +17659,11 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "api.evernote.com",
-   "accounts.stage.evernote.com",
-   "api.stage.evernote.com",
+   "www.evernote.com",
    "accounts.evernote.com",
-   "www.evernote.com"
+   "api.evernote.com",
+   "api.stage.evernote.com",
+   "accounts.stage.evernote.com"
   ],
   "name": "Evernote",
   "offers_bounty": "no",
@@ -16808,6 +17676,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "evvelcevap.com",
+  "emails": [
+   "security@evvelcevap.com"
+  ],
+  "expires_on": "2027-08-24",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "evvelcevap.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://evvelcevap.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -16985,9 +17874,9 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "www.exoscale.com",
+   "community.exoscale.com",
    "portal.exoscale.com",
-   "community.exoscale.com"
+   "www.exoscale.com"
   ],
   "name": "exoscale.ch",
   "offers_bounty": null,
@@ -17170,25 +18059,49 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://gitlab.com/fdroid/admin/issues"
+  ],
+  "domain": "f-droid.org",
+  "emails": [
+   "team@f-droid.org"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "f-droid.org",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://f-droid.org/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "domain": "f-secure.com",
   "emails": [
    "security@f-secure.com"
   ],
   "expires_on": null,
-  "expiry": null,
+  "expiry": "missing",
   "first_seen": "2026-11-21",
   "name": "F Secure",
   "offers_bounty": "no",
   "platforms": [],
   "policy": "https://www.f-secure.com/en/business/programs/vulnerability-reward-program",
   "safe_harbor": "none",
-  "securitytxt_url": "",
+  "securitytxt_url": "https://www.f-secure.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "diodb"
+   "diodb",
+   "securitytxt"
   ],
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [
@@ -17298,6 +18211,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "faire.com",
+  "emails": [
+   "security@faire.com"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "faire.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.faire.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -17471,9 +18405,9 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
+   "api.fastly.com",
    "manage.fastly.com",
-   "docs.fastly.com",
-   "api.fastly.com"
+   "docs.fastly.com"
   ],
   "name": "Fastly",
   "offers_bounty": "no",
@@ -17515,19 +18449,20 @@
    "csirt@fastweb.it"
   ],
   "expires_on": null,
-  "expiry": null,
+  "expiry": "missing",
   "first_seen": "2026-11-21",
   "name": "fastweb.it",
   "offers_bounty": null,
   "platforms": [],
   "policy": "https://www.fastweb.it/corporate/responsible-disclosure/",
   "safe_harbor": "full",
-  "securitytxt_url": "",
+  "securitytxt_url": "https://fastweb.it/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "diodb"
+   "diodb",
+   "securitytxt"
   ],
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -17633,6 +18568,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "fdcservers.net",
+  "emails": [
+   "security@fdcservers.net"
+  ],
+  "expires_on": "2027-01-27",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "fdcservers.net",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://fdcservers.net/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -18287,25 +19243,28 @@
   "tls_verified": true
  },
  {
-  "contact_urls": [],
+  "contact_urls": [
+   "https://support.first.org"
+  ],
   "domain": "first.org",
   "emails": [
    "bugs@first.org"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2028-01-26",
+  "expiry": "valid",
   "first_seen": "2026-11-21",
   "name": "First",
   "offers_bounty": "no",
   "platforms": [],
-  "policy": "https://www.first.org/about/bugs",
+  "policy": "https://www.first.org/about/policies",
   "safe_harbor": null,
-  "securitytxt_url": "",
+  "securitytxt_url": "https://first.org/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "diodb"
+   "diodb",
+   "securitytxt"
   ],
-  "tls_verified": null
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -18327,6 +19286,27 @@
    "bugcrowd"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "fischipedia.org",
+  "emails": [
+   "security@miraheze.org"
+  ],
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "fischipedia.org",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://meta.miraheze.org/wiki/Security",
+  "safe_harbor": null,
+  "securitytxt_url": "https://fischipedia.org/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -18367,6 +19347,29 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://www.five9.com/trust/vdp"
+  ],
+  "domain": "five9.com",
+  "emails": [
+   "cybersecurity@five9.com"
+  ],
+  "expires_on": "2027-03-30",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "five9.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.five9.com/trust/vdp",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.five9.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -18412,6 +19415,27 @@
   "contact_urls": [
    "https://www.livesport.eu/en/contacts"
   ],
+  "domain": "flashscore.co.za",
+  "emails": [],
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "flashscore.co.za",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://bugbounty.livesport.eu/#rules",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.flashscore.co.za/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://www.livesport.eu/en/contacts"
+  ],
   "domain": "flashscore.com",
   "emails": [],
   "expires_on": "2026-12-31",
@@ -18433,6 +19457,27 @@
   "contact_urls": [
    "https://www.livesport.eu/en/contacts"
   ],
+  "domain": "flashscore.com.br",
+  "emails": [],
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "flashscore.com.br",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://bugbounty.livesport.eu/#rules",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.flashscore.com.br/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://www.livesport.eu/en/contacts"
+  ],
   "domain": "flashscore.com.ng",
   "emails": [],
   "expires_on": "2026-12-31",
@@ -18444,6 +19489,27 @@
   "policy": "https://bugbounty.livesport.eu/#rules",
   "safe_harbor": null,
   "securitytxt_url": "https://www.flashscore.com.ng/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://www.livesport.eu/en/contacts"
+  ],
+  "domain": "flashscore.es",
+  "emails": [],
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "flashscore.es",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://bugbounty.livesport.eu/#rules",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.flashscore.es/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -18788,6 +19854,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "fly.io",
+  "emails": [
+   "security@fly.io"
+  ],
+  "expires_on": "2027-10-22",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "fly.io",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://docs.fly.io/security",
+  "safe_harbor": null,
+  "securitytxt_url": "https://fly.io/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "flywire",
   "emails": [],
   "expires_on": null,
@@ -18909,6 +19996,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://hackerone.com/b6bf1613-5ba4-4ce3-b371-ac47e4507b5d/embedded_submissions/new"
+  ],
+  "domain": "foodandwine.com",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "foodandwine.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://hackerone.com/dotdashmeredith",
+  "safe_harbor": null,
+  "securitytxt_url": "https://foodandwine.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -19414,6 +20522,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "fronius.com",
+  "emails": [
+   "vulnerability-report@fronius.com"
+  ],
+  "expires_on": "2027-04-30",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "fronius.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.fronius.com/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "fronthq",
   "emails": [],
   "expires_on": null,
@@ -19602,6 +20731,27 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://fusionauth.io/security"
+  ],
+  "domain": "fusionauth.io",
+  "emails": [],
+  "expires_on": "2033-10-28",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "fusionauth.io",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://fusionauth.io/.well-known/security.txt",
+  "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "domain": "g.co",
   "emails": [],
@@ -19650,8 +20800,8 @@
   "first_seen": "2026-11-21",
   "in_scope_domains": [
    "mijn.gamma.nl",
-   "kassa.gamma.nl",
-   "www.gamma.nl"
+   "www.gamma.nl",
+   "kassa.gamma.nl"
   ],
   "name": "Gamma",
   "offers_bounty": "yes",
@@ -19771,12 +20921,54 @@
  },
  {
   "contact_urls": [],
+  "domain": "gazetawroclawska.pl",
+  "emails": [
+   "secvul@polskapress.pl"
+  ],
+  "expires_on": "2025-12-31",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "gazetawroclawska.pl",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://gazetawroclawska.pl/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "gc.com",
+  "emails": [
+   "infosec@gc.com"
+  ],
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "gc.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://bugcrowd.com/engagements/dickssportinggoods",
+  "safe_harbor": null,
+  "securitytxt_url": "https://gc.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "gcore.com",
   "emails": [
    "bugbounty@gcore.com"
   ],
   "expires_on": null,
-  "expiry": null,
+  "expiry": "missing",
   "first_seen": "2026-11-21",
   "name": "Gcore",
   "offers_bounty": "yes",
@@ -19786,9 +20978,10 @@
   "securitytxt_url": "https://gcore.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "diodb"
+   "diodb",
+   "securitytxt"
   ],
-  "tls_verified": null
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -20082,16 +21275,16 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "www.getyourguide.com",
-   "widget.getyourguide.com",
-   "integrator-portal-api.getyourguide.com",
-   "integrator.getyourguide.com",
-   "supplier-support.getyourguide.com",
-   "partner.getyourguide.com",
-   "supplier-api.getyourguide.com",
    "travelers-api.getyourguide.com",
-   "supplier.getyourguide.com",
-   "partner-public.getyourguide.com"
+   "partner.getyourguide.com",
+   "integrator-portal-api.getyourguide.com",
+   "www.getyourguide.com",
+   "supplier-api.getyourguide.com",
+   "partner-public.getyourguide.com",
+   "supplier-support.getyourguide.com",
+   "widget.getyourguide.com",
+   "integrator.getyourguide.com",
+   "supplier.getyourguide.com"
   ],
   "name": "GetYourGuide",
   "offers_bounty": "no",
@@ -20318,9 +21511,9 @@
   "in_scope_domains": [
    "classroom.github.com",
    "api.github.com",
+   "github.com",
    "education.github.com",
-   "gist.github.com",
-   "github.com"
+   "gist.github.com"
   ],
   "name": "Bitcoin Core",
   "offers_bounty": "no",
@@ -20391,12 +21584,12 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "design.gitlab.com",
    "registry.gitlab.com",
    "advisories.gitlab.com",
-   "gitlab.com",
    "customers.gitlab.com",
+   "gitlab.com",
    "about.gitlab.com",
+   "design.gitlab.com",
    "docs.gitlab.com"
   ],
   "name": "Gitlab",
@@ -20612,14 +21805,14 @@
   "first_seen": "2026-11-21",
   "in_scope_domains": [
    "manage-sandbox.gocardless.com",
-   "docs.gocardless.com",
+   "auth0.gocardless.com",
    "payer-details-sandbox.gocardless.com",
+   "docs.gocardless.com",
+   "pay-sandbox.gocardless.com",
    "www.gocardless.com",
    "ob.gocardless.com",
    "oauth-sandbox.gocardless.com",
-   "pay-sandbox.gocardless.com",
    "api-sandbox.gocardless.com",
-   "auth0.gocardless.com",
    "connect-sandbox.gocardless.com"
   ],
   "name": "gocardless.com",
@@ -20951,9 +22144,9 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
+   "chromewebstore.google.com",
    "lookerstudio.google.com",
-   "chrome.google.com",
-   "chromewebstore.google.com"
+   "chrome.google.com"
   ],
   "name": "Android",
   "offers_bounty": "yes",
@@ -21156,6 +22349,29 @@
   "contact_urls": [
    "https://g.co/vulnz"
   ],
+  "domain": "google.gy",
+  "emails": [
+   "security@google.com"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "google.gy",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://g.co/vrp",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.google.gy/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://g.co/vulnz"
+  ],
   "domain": "google.hu",
   "emails": [
    "security@google.com"
@@ -21215,6 +22431,52 @@
   "policy": "https://g.co/vrp",
   "safe_harbor": null,
   "securitytxt_url": "https://www.google.kz/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://g.co/vulnz"
+  ],
+  "domain": "google.lk",
+  "emails": [
+   "security@google.com"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "google.lk",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://g.co/vrp",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.google.lk/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
+  "contact_urls": [
+   "https://g.co/vulnz"
+  ],
+  "domain": "google.lv",
+  "emails": [
+   "security@google.com"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "google.lv",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://g.co/vrp",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.google.lv/.well-known/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -21332,6 +22594,28 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "gov.br",
+  "emails": [
+   "cgplt.sgd@gestao.gov.br",
+   "security@bcb.gov.br<br/>"
+  ],
+  "expires_on": "2027-08-01",
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "gov.br",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://vlibras.gov.br/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -21617,6 +22901,27 @@
   "tls_verified": false
  },
  {
+  "contact_urls": [
+   "https://help.market.envato.com/hc/en-us/requests/new?ticket_form_id=38490"
+  ],
+  "domain": "graphicriver.net",
+  "emails": [],
+  "expires_on": "2027-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "graphicriver.net",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.envato.com/lp/vulnerability-disclosure/",
+  "safe_harbor": null,
+  "securitytxt_url": "https://graphicriver.net/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "domain": "greenbone.net",
   "emails": [],
@@ -21682,23 +22987,24 @@
   "domain": "grofers.com",
   "emails": [],
   "expires_on": null,
-  "expiry": null,
+  "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "api2.grofers.com",
-   "api.grofers.com"
+   "api.grofers.com",
+   "api2.grofers.com"
   ],
   "name": "Grofers",
   "offers_bounty": null,
   "platforms": [],
-  "policy": "https://grofers.com/bug-bounty",
+  "policy": "https://grofers.com/bug-bounty-policy",
   "safe_harbor": null,
-  "securitytxt_url": "",
+  "securitytxt_url": "https://grofers.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "diodb"
+   "diodb",
+   "securitytxt"
   ],
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -21814,6 +23120,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "gtmetrix.com",
+  "emails": [
+   "feedback@gtmetrix.com"
+  ],
+  "expires_on": "2028-09-08",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "gtmetrix.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://gtmetrix.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
+  "contact_urls": [],
   "domain": "guardian360.net",
   "emails": [
    "security@guardian360.nl"
@@ -21832,6 +23159,25 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "gucci.com",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "gucci.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://vdp.gucci.com",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.gucci.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -22612,9 +23958,9 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "myaccount.hln.be",
    "www.hln.be",
-   "hln.be"
+   "hln.be",
+   "myaccount.hln.be"
   ],
   "name": "hln.be",
   "offers_bounty": null,
@@ -22889,16 +24235,16 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "reach.hostinger.com",
-   "agents.hostinger.com",
-   "hostinger.com",
-   "horizons.hostinger.com",
    "cpanel.hostinger.com",
-   "payments.hostinger.com",
-   "hpanel.hostinger.com",
    "ecommerce.hostinger.com",
+   "payments.hostinger.com",
+   "hostinger.com",
+   "agents.hostinger.com",
+   "reach.hostinger.com",
+   "horizons.hostinger.com",
+   "builder.hostinger.com",
    "ai-builder.hostinger.com",
-   "builder.hostinger.com"
+   "hpanel.hostinger.com"
   ],
   "name": "Hostinger",
   "offers_bounty": "yes",
@@ -23004,31 +24350,31 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "api-gateway.support.hpe.com",
-   "epes-web-pro-edit-glb.it.hpe.com",
-   "api-ext-pro-ltm-vip_dr.it.hpe.com",
-   "z2z-hpecom-static-prd-poc-01.wip.it.hpe.com",
-   "epes-web-itg-edit.it.hpe.com",
-   "epes-web-itg-edit-vip.it.hpe.com",
-   "bmoext-itg.wip.it.hpe.com",
-   "h22261.www2.hpe.com",
-   "sce-public1-vip.it.hpe.com",
-   "infosight-prod-vip.it.hpe.com",
-   "esam-dev.it.hpe.com",
-   "ext-pro.support.hpe.com",
-   "partnerbuy-vip.it.hpe.com",
-   "ngq-itg2-ext.it.hpe.com",
-   "file-upload-download.wip.it.hpe.com",
-   "ocldevglobalext1-vip.it.hpe.com",
-   "eponpr1.it.hpe.com",
-   "entitlement-prd-ui-ext.it.hpe.com",
-   "installed-environments-srvc-prd-lb-ext.it.hpe.com",
    "api.support.hpe.com",
-   "installed-environments-ui-itg-ext.it.hpe.com",
+   "ws-support-itg.wip.it.hpe.com",
+   "h22257.www2.it.hpe.com",
    "api-prx-stg-sgw.it.hpe.com",
-   "api-mtls-itg.it.hpe.com",
+   "partnerbuy-vip.it.hpe.com",
+   "oclglobalextone.wip.it.hpe.com",
+   "drupalb2b.wip.it.hpe.com",
+   "ezc-itg.wip.it.hpe.com",
+   "gsd-lead-management.itcs.hpe.com",
+   "infosight.hpe.com",
+   "snr-srv-ext-itg.it.hpe.com",
    "infosight.wip.it.hpe.com",
-   "api-ext-pro.wip.it.hpe.com"
+   "file-upload-download-prd.it.hpe.com",
+   "hpe-operations-prd-web-ctg-vip.it.hpe.com",
+   "api-csc-itg-sgw.it.hpe.com",
+   "sce-public1.it.hpe.com",
+   "onepass-restservice.it.hpe.com",
+   "entitlement-prd-ui-ext.wip.it.hpe.com",
+   "occ-ext1-vip.it.hpe.com",
+   "ext-pro-webserv2-corona-vip.it.hpe.com",
+   "h20429.www2.it.hpe.com",
+   "s360-dev.it.hpe.com",
+   "prodscpq.vip.it.hpe.com",
+   "swg-prd.it.hpe.com",
+   "ecg-web-dmz-prd-vip.it.hpe.com"
   ],
   "name": "Hewlett Packard",
   "offers_bounty": "no",
@@ -23227,6 +24573,27 @@
   "policy": "https://hackerone.com/hubspot",
   "safe_harbor": null,
   "securitytxt_url": "https://www.hubspot.com/hubfs/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "hubstaff.com",
+  "emails": [
+   "security@hubstaff.com"
+  ],
+  "expires_on": "2029-02-22",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "hubstaff.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://hubstaff.com/bug-bounty",
+  "safe_harbor": null,
+  "securitytxt_url": "https://hubstaff.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -24518,6 +25885,27 @@
   "tls_verified": true
  },
  {
+  "contact_urls": [
+   "https://hackerone.com/b6bf1613-5ba4-4ce3-b371-ac47e4507b5d/embedded_submissions/new"
+  ],
+  "domain": "instyle.com",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "instyle.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://hackerone.com/dotdashmeredith",
+  "safe_harbor": null,
+  "securitytxt_url": "https://instyle.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "domain": "insulet_corporation",
   "emails": [],
@@ -24655,10 +26043,10 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "www.intercom.com",
-   "mcp.intercom.com",
    "api.intercom.com",
-   "app.intercom.com"
+   "app.intercom.com",
+   "mcp.intercom.com",
+   "www.intercom.com"
   ],
   "name": "intercom.com",
   "offers_bounty": null,
@@ -24705,8 +26093,8 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "app.intercom.io",
-   "api-iam.intercom.io"
+   "api-iam.intercom.io",
+   "app.intercom.io"
   ],
   "name": "intercom.io",
   "offers_bounty": null,
@@ -24931,6 +26319,27 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://docs.google.com/forms/d/e/1FAIpQLSeCzHS6PYLr883Tu9JAWAO16m3fJ6WGx1OJ5KKx0vWn2Opf4Q/viewform"
+  ],
+  "domain": "iowa.gov",
+  "emails": [],
+  "expires_on": "2025-12-10",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "iowa.gov",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://dom.iowa.gov/state-government/information-technology/cybersecurity/common-cyber-security-questions",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.iowa.gov/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
   "contact_urls": [],
   "domain": "ipaidthat.io",
   "emails": [
@@ -25016,6 +26425,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "iptwins.com",
+  "emails": [
+   "noc@iptwins.com"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "iptwins.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://iptwins.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
+  "contact_urls": [],
   "domain": "irccloud.com",
   "emails": [],
   "expires_on": null,
@@ -25093,6 +26523,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "iserv.eu",
+  "emails": [
+   "security@iserv.de"
+  ],
+  "expires_on": "2029-01-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "iserv.eu",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://iserv.eu/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -25493,23 +26944,29 @@
   "tls_verified": null
  },
  {
-  "contact_urls": [],
+  "contact_urls": [
+   "https://www.jenkins.io/security/#reporting-vulnerabilities",
+   "https://www.jenkins.io/security/reporting/"
+  ],
   "domain": "jenkins.io",
-  "emails": [],
-  "expires_on": null,
-  "expiry": null,
+  "emails": [
+   "jenkinsci-cert@googlegroups.com"
+  ],
+  "expires_on": "2027-01-01",
+  "expiry": "valid",
   "first_seen": "2026-11-21",
   "name": "Jenkins",
   "offers_bounty": "no",
   "platforms": [],
   "policy": "https://www.jenkins.io/security/reporting/",
   "safe_harbor": "none",
-  "securitytxt_url": "",
+  "securitytxt_url": "https://www.jenkins.io/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "diodb"
+   "diodb",
+   "securitytxt"
   ],
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -25660,6 +27117,29 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://www.johnsoncontrols.com/trust-center/cybersecurity/response"
+  ],
+  "domain": "johnsoncontrols.com",
+  "emails": [
+   "trustcenter@jci.com"
+  ],
+  "expires_on": "2027-09-14",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "johnsoncontrols.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.johnsoncontrols.com/trust-center/cybersecurity/response",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.johnsoncontrols.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "domain": "joomla.org",
   "emails": [
@@ -25700,6 +27180,27 @@
    "bugcrowd"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://www.jotform.com/vulnerability-disclosure-program"
+  ],
+  "domain": "jotfor.ms",
+  "emails": [],
+  "expires_on": "2027-01-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "jotfor.ms",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.jotform.com/vulnerability-disclosure-program/#program-rules",
+  "safe_harbor": null,
+  "securitytxt_url": "https://jotfor.ms/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [
@@ -25946,6 +27447,30 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://www.tjgo.jus.br/index.php/organizacao/seguranca-da-informacao/equipe-de-tratamento-de-incidentes-e-riscos-de-seguranca-da-informacao"
+  ],
+  "domain": "jus.br",
+  "emails": [
+   " csirt@tjgo.jus.br",
+   " etir@tjgo.jus.br"
+  ],
+  "expires_on": "2027-05-14",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "jus.br",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://tjgo.jus.br/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -26245,8 +27770,8 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "business.kayak.com",
-   "www.kayak.com"
+   "www.kayak.com",
+   "business.kayak.com"
   ],
   "name": "kayak.com",
   "offers_bounty": null,
@@ -26280,6 +27805,31 @@
    "bugcrowd"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://bugcrowd.com/engagements/keepersecurity"
+  ],
+  "domain": "keepersecurity.com",
+  "emails": [],
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [
+   "www.keepersecurity.com",
+   "keepersecurity.com"
+  ],
+  "name": "keepersecurity.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://keepersecurity.com/security.html",
+  "safe_harbor": null,
+  "securitytxt_url": "https://keepersecurity.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -26494,6 +28044,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "kino.de",
+  "emails": [
+   "security@stroeermediabrands.de"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "kino.de",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.kino.de/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "kissflow.com",
   "emails": [
    "security@kissflow.com"
@@ -26647,9 +28218,9 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "jobs.kiwi.com",
    "www.kiwi.com",
-   "tequila.kiwi.com"
+   "tequila.kiwi.com",
+   "jobs.kiwi.com"
   ],
   "name": "code.kiwi.com",
   "offers_bounty": null,
@@ -27052,16 +28623,16 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "upld.krisp.ai",
-   "account.krisp.ai",
-   "api.krisp.ai",
    "resources.krisp.ai",
    "download.krisp.ai",
+   "analytics.krisp.ai",
+   "account.krisp.ai",
    "help-jp.krisp.ai",
    "teams.krisp.ai",
    "krisp.ai",
-   "analytics.krisp.ai",
    "help.krisp.ai",
+   "upld.krisp.ai",
+   "api.krisp.ai",
    "app.krisp.ai"
   ],
   "name": "krisp.ai",
@@ -27192,9 +28763,9 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "associatie.kuleuven.be",
+   "www.kuleuven.be",
    "webwsp.aps.kuleuven.be",
-   "www.kuleuven.be"
+   "associatie.kuleuven.be"
   ],
   "name": "kuleuven.be",
   "offers_bounty": null,
@@ -27344,17 +28915,17 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "open.larksuite.com",
-   "hackers_chosendomain.larksuite.com",
-   "api.larksuite.com",
-   "passport.larksuite.com",
    "app.larksuite.com",
+   "status.larksuite.com",
+   "passport.larksuite.com",
+   "hackers_chosendomain.larksuite.com",
+   "open.larksuite.com",
+   "file.larksuite.com",
+   "internal-api-lark-api.larksuite.com",
+   "api.larksuite.com",
    "internal-api-drive-stream.larksuite.com",
    "caldav.larksuite.com",
-   "internal-api-lark-api.larksuite.com",
-   "file.larksuite.com",
    "internal-api.larksuite.com",
-   "status.larksuite.com",
    "larksuite.com"
   ],
   "name": "Lark",
@@ -27642,6 +29213,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "lemmy.world",
+  "emails": [
+   "security@lemmy.world"
+  ],
+  "expires_on": "2025-01-01",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "lemmy.world",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://legal.lemmy.world/security/",
+  "safe_harbor": null,
+  "securitytxt_url": "https://legal.lemmy.world/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
+  "contact_urls": [],
   "domain": "lenovo.com",
   "emails": [
    "psirt@lenovo.com"
@@ -27800,8 +29392,8 @@
   "in_scope_domains": [
    "www.liferay.com",
    "marketplace.liferay.com",
-   "learn.liferay.com",
-   "support.liferay.com"
+   "support.liferay.com",
+   "learn.liferay.com"
   ],
   "name": "Liferay",
   "offers_bounty": "no",
@@ -28010,8 +29602,8 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "www.linkedin.com",
    "business.linkedin.com",
+   "www.linkedin.com",
    "api.linkedin.com"
   ],
   "name": "Linkedin",
@@ -28154,6 +29746,27 @@
    "hackerone"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://hackerone.com/b6bf1613-5ba4-4ce3-b371-ac47e4507b5d/embedded_submissions/new"
+  ],
+  "domain": "liveabout.com",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "liveabout.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://hackerone.com/dotdashmeredith",
+  "safe_harbor": null,
+  "securitytxt_url": "https://liveabout.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -28346,20 +29959,20 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "select.logitech.com",
-   "external.logitech.com",
-   "community.logitech.com",
-   "buy.logitech.com",
-   "www.logitech.com",
-   "sync.logitech.com",
-   "logilife.logitech.com",
-   "partner.logitech.com",
    "maintenance.logitech.com",
-   "outage.logitech.com",
-   "outagehistory.logitech.com",
-   "alert.logitech.com",
    "feedback.logitech.com",
-   "jira.logitech.com"
+   "alert.logitech.com",
+   "external.logitech.com",
+   "www.logitech.com",
+   "jira.logitech.com",
+   "buy.logitech.com",
+   "select.logitech.com",
+   "partner.logitech.com",
+   "outagehistory.logitech.com",
+   "community.logitech.com",
+   "logilife.logitech.com",
+   "outage.logitech.com",
+   "sync.logitech.com"
   ],
   "name": "Logitech",
   "offers_bounty": "no",
@@ -28372,6 +29985,50 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://www.lokmat.com/contact-us/"
+  ],
+  "domain": "lokmat.com",
+  "emails": [
+   "mohammed.zulkifl@lokmat.com"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "lokmat.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.lokmat.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "lolipop.jp",
+  "emails": [
+   "security@pepabo.com"
+  ],
+  "expires_on": "2027-07-20",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "lolipop.jp",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://pepabo.com/contact/vulnerability-reporting/",
+  "safe_harbor": null,
+  "securitytxt_url": "http://lolipop.jp/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -28467,10 +30124,10 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "mcp.lovable.dev",
    "oauth.lovable.dev",
-   "api.lovable.dev",
-   "lovable.dev"
+   "lovable.dev",
+   "mcp.lovable.dev",
+   "api.lovable.dev"
   ],
   "name": "lovable.dev",
   "offers_bounty": null,
@@ -28549,6 +30206,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "lu.ma",
+  "emails": [
+   "security@luma.com"
+  ],
+  "expires_on": "2027-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "lu.ma",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://help.luma.com/p/security-bug-bounty",
+  "safe_harbor": null,
+  "securitytxt_url": "https://lu.ma/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "lu.se",
   "emails": [
    "abuse@lu.se",
@@ -28568,6 +30246,48 @@
    "securitytxt"
   ],
   "tls_verified": false
+ },
+ {
+  "contact_urls": [],
+  "domain": "lucidmotors.com",
+  "emails": [
+   "VulnerabilityDisclosure@lucidmotors.com"
+  ],
+  "expires_on": "2030-01-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "lucidmotors.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://bugcrowd.com/lucidmotors-vdp",
+  "safe_harbor": null,
+  "securitytxt_url": "https://lucidmotors.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "luciq.ai",
+  "emails": [
+   "security@luciq.ai"
+  ],
+  "expires_on": "2027-11-12",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "luciq.ai",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.luciq.ai/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -28860,6 +30580,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "mailbox.org",
+  "emails": [
+   "ciso@heinlein-support.de"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "mailbox.org",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://mailbox.org/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [
@@ -30179,8 +31920,8 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "www.microsoft.com",
-   "microsoftedge.microsoft.com"
+   "microsoftedge.microsoft.com",
+   "www.microsoft.com"
   ],
   "name": "Bing",
   "offers_bounty": "yes",
@@ -30251,6 +31992,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "mijnwoordenboek.nl",
+  "emails": [
+   "security@infrapod.nl"
+  ],
+  "expires_on": "2026-12-21",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "mijnwoordenboek.nl",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://mijnwoordenboek.nl/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -30460,6 +32222,27 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [],
+  "domain": "mitel.io",
+  "emails": [
+   "psirt@mitel.com"
+  ],
+  "expires_on": "2025-01-01",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "mitel.io",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.mitel.com/support/security-advisories/mitel-product-security-policy",
+  "safe_harbor": null,
+  "securitytxt_url": "https://mitel.io/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [
    "https://hackerone.com/mixpanel"
   ],
@@ -30592,6 +32375,34 @@
   "tls_verified": true
  },
  {
+  "contact_urls": [
+   "https://app.intigriti.com/programs/mv/mobilevikings/detail"
+  ],
+  "domain": "mobilevikings.be",
+  "emails": [],
+  "expires_on": "2026-12-15",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [
+   "vpn.mobilevikings.be",
+   "forms.mobilevikings.be",
+   "uwa.mobilevikings.be",
+   "mgm.mobilevikings.be",
+   "mobilevikings.be"
+  ],
+  "name": "mobilevikings.be",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://app.intigriti.com/programs/mv/mobilevikings/detail",
+  "safe_harbor": null,
+  "securitytxt_url": "https://mobilevikings.be/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "domain": "mobilitystream bug bounty",
   "emails": [],
@@ -30611,6 +32422,28 @@
    "bugcrowd"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://hackerone.com/44c348eb-e030-4273-b445-d4a2f6f83ba8/embedded_submissions/new",
+   "https://www.gov.uk/contact/govuk"
+  ],
+  "domain": "mod.uk",
+  "emails": [],
+  "expires_on": "2027-02-16",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "mod.uk",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.gov.uk/help/report-vulnerability",
+  "safe_harbor": null,
+  "securitytxt_url": "https://vdp.cabinetoffice.gov.uk/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -30748,31 +32581,31 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "equella.monash.edu",
-   "alumni-friends.monash.edu",
-   "www.monash.edu",
-   "forms.apps.monash.edu",
-   "formative.eassessment.monash.edu",
-   "agent.apps.monash.edu",
+   "online.monash.edu",
+   "connect.monash.edu",
    "mix-qat.monash.edu",
    "move.monash.edu",
-   "identity.monash.edu",
-   "mix-dev.monash.edu",
-   "collections.monash.edu",
-   "shop.monash.edu",
-   "researchmgt.monash.edu",
-   "online.monash.edu",
-   "mlivetickets.monash.edu",
-   "fileshare.ze.monash.edu",
-   "myapp.monash.edu",
-   "account-registration.monash.edu",
+   "forms.apps.monash.edu",
    "ims.monash.edu",
-   "apps.connect.monash.edu",
-   "connect.monash.edu",
+   "equella.monash.edu",
+   "fileshare.ze.monash.edu",
+   "agent.apps.monash.edu",
+   "shop.monash.edu",
+   "interviews.monash.edu",
    "studentplacements.monash.edu",
    "evigilation.monash.edu",
-   "eassessment.monash.edu",
-   "compulsoryunits.monash.edu"
+   "mids.monash.edu",
+   "mix-dev.monash.edu",
+   "formative.eassessment.monash.edu",
+   "apps.connect.monash.edu",
+   "researchmgt.monash.edu",
+   "mlivetickets.monash.edu",
+   "compulsoryunits.monash.edu",
+   "unihub.monash.edu",
+   "partner.apps.monash.edu",
+   "www.monash.edu",
+   "research.monash.edu",
+   "alumni-friends.monash.edu"
   ],
   "name": "Monash University",
   "offers_bounty": "yes",
@@ -30907,6 +32740,27 @@
    "yeswehack"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "moneysavingexpert.com",
+  "emails": [
+   "security@monygroup.com"
+  ],
+  "expires_on": "2026-05-31",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "moneysavingexpert.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://bugcrowd.com/engagement_teasers/wandering-violet-3363",
+  "safe_harbor": null,
+  "securitytxt_url": "https://moneysavingexpert.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -31780,8 +33634,8 @@
   "first_seen": "2026-11-21",
   "in_scope_domains": [
    "api.myntra.com",
-   "www.myntra.com",
-   "payments.myntra.com"
+   "payments.myntra.com",
+   "www.myntra.com"
   ],
   "name": "Myntra",
   "offers_bounty": "no",
@@ -31895,6 +33749,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "namirial.it",
+  "emails": [
+   "csirt.reporting@namirial.com"
+  ],
+  "expires_on": "2025-12-31",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "namirial.it",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://namirial.com/en/vulnerability-reporting/",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.namirial.it/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -32353,6 +34228,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "nekobt.to",
+  "emails": [
+   "bugs@nekobt.to"
+  ],
+  "expires_on": "2040-01-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "nekobt.to",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://nekobt.to/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "nemetschek",
   "emails": [],
   "expires_on": null,
@@ -32487,15 +34383,15 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "help.netflix.com",
    "meechum.netflix.com",
    "beacon.netflix.com",
-   "presentationtracking.netflix.com",
-   "secure.netflix.com",
-   "customerevents.netflix.com",
    "ichnaea.netflix.com",
+   "help.netflix.com",
+   "secure.netflix.com",
    "www.netflix.com",
-   "nmtracking.netflix.com"
+   "nmtracking.netflix.com",
+   "customerevents.netflix.com",
+   "presentationtracking.netflix.com"
   ],
   "name": "Netflix",
   "offers_bounty": "no",
@@ -32574,6 +34470,29 @@
   "tls_verified": true
  },
  {
+  "contact_urls": [
+   "https://github.com/appwrite/appwrite/security/advisories/new"
+  ],
+  "domain": "netipybase.com",
+  "emails": [
+   "security@appwrite.io"
+  ],
+  "expires_on": "2027-11-21",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "netipybase.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://github.com/appwrite/appwrite/security/policy",
+  "safe_harbor": null,
+  "securitytxt_url": "https://netipybase.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
   "contact_urls": [],
   "domain": "netohq.com",
   "emails": [
@@ -32635,6 +34554,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "neurology.org",
+  "emails": [
+   "security@wiley.com"
+  ],
+  "expires_on": "2027-01-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "neurology.org",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://neurology.org/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -32730,8 +34670,8 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "pmtcards.newegg.com",
-   "secure.newegg.com"
+   "secure.newegg.com",
+   "pmtcards.newegg.com"
   ],
   "name": "newegg.com",
   "offers_bounty": null,
@@ -32776,14 +34716,14 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "forum.newrelic.com",
+   "support.newrelic.com",
+   "developer.newrelic.com",
    "newrelic.com",
+   "forum.newrelic.com",
+   "knowledge.newrelic.com",
    "learn.newrelic.com",
    "one.newrelic.com",
-   "knowledge.newrelic.com",
-   "docs.newrelic.com",
-   "developer.newrelic.com",
-   "support.newrelic.com"
+   "docs.newrelic.com"
   ],
   "name": "newrelic.com",
   "offers_bounty": null,
@@ -33009,6 +34949,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "nic.cz",
+  "emails": [
+   "abuse@nic.cz"
+  ],
+  "expires_on": "2026-12-20",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "nic.cz",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://nic.cz/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "nic.de",
   "emails": [
    "security@denic.de"
@@ -33022,6 +34983,28 @@
   "policy": "https://www.denic.de/security/responsible-disclosure-policy",
   "safe_harbor": null,
   "securitytxt_url": "https://www.denic.de/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "http://mailto:product-security@smb.nielseniq.com",
+   "https://vdp.nielseniq.com/"
+  ],
+  "domain": "nielseniq.com",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "nielseniq.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://nielseniq.com/global/en/legal/privacy-policy/",
+  "safe_harbor": null,
+  "securitytxt_url": "https://nielseniq.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -33304,6 +35287,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "noredink.com",
+  "emails": [
+   "security@noredink.com"
+  ],
+  "expires_on": "2027-01-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "noredink.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.noredink.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "nori.com",
   "emails": [
    "security@nori.com"
@@ -33483,8 +35487,8 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "mail.notion.so",
-   "calendar.notion.so"
+   "calendar.notion.so",
+   "mail.notion.so"
   ],
   "name": "Notion",
   "offers_bounty": "yes",
@@ -33497,6 +35501,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "novaskin.me",
+  "emails": [
+   "saviski@novaskin.me"
+  ],
+  "expires_on": "2030-01-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "novaskin.me",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://novaskin.me/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -33791,6 +35816,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "nvaccess.org",
+  "emails": [
+   "info@nvaccess.org"
+  ],
+  "expires_on": "2027-01-28",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "nvaccess.org",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://github.com/nvaccess/nvda/security/policy",
+  "safe_harbor": null,
+  "securitytxt_url": "http://nvaccess.org/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -34370,10 +36416,10 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "support.okta.com",
-   "aon-ext.okta.com",
    "help.okta.com",
-   "www.okta.com"
+   "www.okta.com",
+   "support.okta.com",
+   "aon-ext.okta.com"
   ],
   "name": "okta.com",
   "offers_bounty": null,
@@ -34729,10 +36775,10 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "cms.onepeloton.com",
-   "www.onepeloton.com",
    "qa1-cms.onepeloton.com",
+   "cms.onepeloton.com",
    "cosmos.onepeloton.com",
+   "www.onepeloton.com",
    "cosmos-stage.onepeloton.com"
   ],
   "name": "onepeloton.com",
@@ -34828,6 +36874,27 @@
    "bugcrowd"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "onfinality.io",
+  "emails": [
+   "privacy@onfinality.io"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "onfinality.io",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://documentation.onfinality.io/support/onfinality-vulnerability-and-bug-reporting",
+  "safe_harbor": null,
+  "securitytxt_url": "https://onfinality.io/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -34946,10 +37013,10 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "api.openai.com",
    "chat.openai.com",
-   "openai.com",
-   "platform.openai.com"
+   "api.openai.com",
+   "platform.openai.com",
+   "openai.com"
   ],
   "name": "openai.com",
   "offers_bounty": null,
@@ -35004,6 +37071,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "opencollective.com",
+  "emails": [
+   "security@opencollective.com"
+  ],
+  "expires_on": "2027-09-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "opencollective.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://github.com/opencollective/opencollective/security/policy",
+  "safe_harbor": null,
+  "securitytxt_url": "https://opencollective.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -35203,25 +37291,25 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "bugs.opera.com",
-   "net.geo.opera.com",
-   "speeddials.opera.com",
-   "ofp.adx.opera.com",
-   "www.opera.com",
-   "ofa.adx.opera.com",
-   "cms.adx.opera.com",
-   "autoupdate.geo.opera.com",
-   "browser-notifications.opera.com",
-   "flow.opera.com",
-   "download.opera.com",
-   "cashback.opera.com",
    "accounts.opera.com",
-   "auth.opera.com",
-   "get.geo.opera.com",
    "auth-adx.op-mobile.opera.com",
-   "exchange.opera.com",
+   "bugs.opera.com",
+   "speeddials.opera.com",
+   "cashback.opera.com",
+   "flow.opera.com",
+   "ofa.adx.opera.com",
+   "www.opera.com",
+   "net.geo.opera.com",
+   "auth.opera.com",
    "neon.opera.com",
    "push.opera.com",
+   "get.geo.opera.com",
+   "download.opera.com",
+   "browser-notifications.opera.com",
+   "autoupdate.geo.opera.com",
+   "cms.adx.opera.com",
+   "ofp.adx.opera.com",
+   "exchange.opera.com",
    "api.neon.opera.com"
   ],
   "name": "Opera",
@@ -35778,12 +37866,12 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "supplier-connect.otto.de",
    "retail-api.otto.de",
+   "www.teleoptiprd.otto.de",
    "mmp.otto.de",
-   "www.otto.de",
    "orbidder.otto.de",
-   "www.teleoptiprd.otto.de"
+   "supplier-connect.otto.de",
+   "www.otto.de"
   ],
   "name": "otto.de",
   "offers_bounty": null,
@@ -35912,12 +38000,12 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "cockpit-eu-west-2.outscale.com",
-   "eim.eu-west-2.outscale.com",
-   "oos.eu-west-2.outscale.com",
+   "lbu.eu-west-2.outscale.com",
    "fcu.eu-west-2.outscale.com",
+   "oos.eu-west-2.outscale.com",
+   "cockpit-eu-west-2.outscale.com",
    "directlink.eu-west-2.outscale.com",
-   "lbu.eu-west-2.outscale.com"
+   "eim.eu-west-2.outscale.com"
   ],
   "name": "3DS OUTSCALE",
   "offers_bounty": "yes",
@@ -35946,6 +38034,30 @@
   "policy": null,
   "safe_harbor": null,
   "securitytxt_url": "https://www.overdrive.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://www.ncsc.nl/dienstverlening/kwetsbaarheid-melden-cvd",
+   "https://www.ncsc.nl/en/cvd-report-form"
+  ],
+  "domain": "overheid.nl",
+  "emails": [
+   "security@ncsc.nl"
+  ],
+  "expires_on": "2027-01-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "overheid.nl",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.ncsc.nl/dienstverlening/kwetsbaarheid-melden-cvd",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.ncsc.nl/.well-known/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -36162,6 +38274,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "paessler.com",
+  "emails": [
+   "security@paessler.com"
+  ],
+  "expires_on": "2028-05-11",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "paessler.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.paessler.com/vulnerability-disclosure-program",
+  "safe_harbor": null,
+  "securitytxt_url": "https://paessler.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "pagerduty",
   "emails": [],
   "expires_on": null,
@@ -36192,8 +38325,8 @@
   "first_seen": "2026-11-21",
   "in_scope_domains": [
    "api.pagerduty.com",
-   "www.pagerduty.com",
-   "events.pagerduty.com"
+   "events.pagerduty.com",
+   "www.pagerduty.com"
   ],
   "name": "Pagerduty",
   "offers_bounty": "no",
@@ -37563,6 +39696,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "pinside.com",
+  "emails": [
+   "webmaster@pinside.com"
+  ],
+  "expires_on": "2046-01-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "pinside.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://pinside.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "pinterest",
   "emails": [],
   "expires_on": null,
@@ -37720,16 +39874,16 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "accounts.pixiv.net",
-   "sketch.pixiv.net",
    "www.pixiv.net",
+   "payment.pixiv.net",
    "sensei.pixiv.net",
+   "comic.pixiv.net",
    "premium.pixiv.net",
    "novel.pixiv.net",
-   "coban.pixiv.net",
-   "comic.pixiv.net",
    "dic.pixiv.net",
-   "payment.pixiv.net",
+   "coban.pixiv.net",
+   "sketch.pixiv.net",
+   "accounts.pixiv.net",
    "comic-indies.pixiv.net"
   ],
   "name": "pixiv.net",
@@ -37857,20 +40011,21 @@
   "emails": [
    "security@platform.sh"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2099-12-31",
+  "expiry": "valid",
   "first_seen": "2026-11-21",
   "name": "platform.sh",
   "offers_bounty": null,
   "platforms": [],
-  "policy": "https://platform.sh/tos/#section-10-disclosures-and-notices",
+  "policy": "https://platform.sh/trust-center/security/responsible-disclosure/",
   "safe_harbor": null,
-  "securitytxt_url": "",
+  "securitytxt_url": "https://platform.sh/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "diodb"
+   "diodb",
+   "securitytxt"
   ],
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -37892,6 +40047,25 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "platformsh.site",
+  "emails": [],
+  "expires_on": "2099-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "platformsh.site",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://platform.sh/trust-center/security/responsible-disclosure/",
+  "safe_harbor": null,
+  "securitytxt_url": "https://platform.sh/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -37992,6 +40166,27 @@
   "policy": "https://hackerone.com/playtika",
   "safe_harbor": null,
   "securitytxt_url": "https://www.playtika.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "plejada.pl",
+  "emails": [
+   "abuse@ringieraxelspringer.pl"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "plejada.pl",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://plejada.pl/.well-known/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -38166,6 +40361,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "pokernews.com",
+  "emails": [
+   "security@pokernews.com"
+  ],
+  "expires_on": "2026-04-04",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "pokernews.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://pokernews.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "poki.com",
   "emails": [
    "security@poki.com"
@@ -38205,6 +40421,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "polkachu.com",
+  "emails": [
+   "hello@polkachu.com"
+  ],
+  "expires_on": "2029-11-24",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "polkachu.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://polkachu.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -38335,6 +40572,27 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://hackerone.com/xvideos"
+  ],
+  "domain": "pornorama.com",
+  "emails": [],
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "pornorama.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://pornorama.com/.well-known/security.txt",
+  "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
   "contact_urls": [],
   "domain": "porsche.com",
   "emails": [
@@ -38384,23 +40642,23 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "share-accpt.portofantwerp.com",
-   "share.portofantwerp.com",
-   "wiki.portofantwerp.com",
-   "api.portofantwerp.com",
-   "maximo.portofantwerp.com",
-   "maximo-accpt.portofantwerp.com",
    "wiki-accpt.portofantwerp.com",
+   "apps-accpt.portofantwerp.com",
+   "my.portofantwerp.com",
+   "api-accpt.portofantwerp.com",
+   "my-accpt.portofantwerp.com",
+   "servicedesk.portofantwerp.com",
+   "servicedesk-accpt.portofantwerp.com",
+   "share-accpt.portofantwerp.com",
+   "api.portofantwerp.com",
+   "maximo-accpt.portofantwerp.com",
+   "maximo.portofantwerp.com",
    "apps.portofantwerp.com",
    "register-accpt.portofantwerp.com",
    "webapps-accpt.portofantwerp.com",
-   "my.portofantwerp.com",
-   "apps-accpt.portofantwerp.com",
-   "servicedesk-accpt.portofantwerp.com",
-   "my-accpt.portofantwerp.com",
-   "api-accpt.portofantwerp.com",
-   "servicedesk.portofantwerp.com",
-   "webapps.portofantwerp.com"
+   "wiki.portofantwerp.com",
+   "webapps.portofantwerp.com",
+   "share.portofantwerp.com"
   ],
   "name": "Port of Antwerp",
   "offers_bounty": "no",
@@ -38932,6 +41190,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "protonvpn.com",
+  "emails": [
+   "security@proton.me"
+  ],
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "protonvpn.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://proton.me/security/bug-bounty",
+  "safe_harbor": null,
+  "securitytxt_url": "https://protonvpn.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "proxmox.com",
   "emails": [
    "security@proxmox.com"
@@ -38974,6 +41253,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "psiphon.ca",
+  "emails": [
+   "security@psiphon.ca"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "psiphon.ca",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://psiphon.ca/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "ptc.com",
   "emails": [
    "cvd@ptc.com"
@@ -38992,6 +41292,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://goo.gl/vulnz"
+  ],
+  "domain": "pub.dev",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "pub.dev",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://pub.dev/security",
+  "safe_harbor": null,
+  "securitytxt_url": "https://pub.dev/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -39120,6 +41441,48 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "pushnami.com",
+  "emails": [
+   "infra@pushnami.com"
+  ],
+  "expires_on": "2027-11-11",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "pushnami.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://pushnami.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "pushover.net",
+  "emails": [
+   "security@pushover.net"
+  ],
+  "expires_on": "2038-01-19",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "pushover.net",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://pushover.net/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -39625,6 +41988,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "radiosaovivo.net",
+  "emails": [
+   "security@instant.audio"
+  ],
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "radiosaovivo.net",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://radiosaovivo.net/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "raidboxes.io",
   "emails": [
    "security@raidboxes.io"
@@ -39925,12 +42309,12 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "invoices.razorpay.com",
-   "checkout.razorpay.com",
    "dashboard.razorpay.com",
    "payroll.razorpay.com",
+   "api.razorpay.com",
+   "checkout.razorpay.com",
    "x.razorpay.com",
-   "api.razorpay.com"
+   "invoices.razorpay.com"
   ],
   "name": "Razorpay",
   "offers_bounty": "no",
@@ -39968,6 +42352,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "rd.com",
+  "emails": [
+   "security.reports@tmbi.com"
+  ],
+  "expires_on": "2030-02-02",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "rd.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.rd.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -40034,6 +42439,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "realvnc.com",
+  "emails": [
+   "psirt@realvnc.com"
+  ],
+  "expires_on": "2026-09-25",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "realvnc.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://realvnc.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -40111,11 +42537,11 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
+   "mcp.recordedfuture.com",
    "www.recordedfuture.com",
-   "api.recordedfuture.com",
    "app.recordedfuture.com",
    "id.recordedfuture.com",
-   "mcp.recordedfuture.com"
+   "api.recordedfuture.com"
   ],
   "name": "Recorded Future",
   "offers_bounty": "no",
@@ -40304,19 +42730,19 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "sh.reddit.com",
-   "developers.reddit.com",
-   "strapi.reddit.com",
-   "new.reddit.com",
-   "gql.reddit.com",
    "api.reddit.com",
-   "amp.reddit.com",
+   "sh.reddit.com",
    "meta-api.reddit.com",
+   "strapi.reddit.com",
+   "accounts.reddit.com",
    "gateway.reddit.com",
-   "m.reddit.com",
-   "ads.reddit.com",
+   "gql.reddit.com",
+   "developers.reddit.com",
    "mod.reddit.com",
-   "accounts.reddit.com"
+   "ads.reddit.com",
+   "m.reddit.com",
+   "amp.reddit.com",
+   "new.reddit.com"
   ],
   "name": "Reddit",
   "offers_bounty": "no",
@@ -40859,6 +43285,25 @@
  },
  {
   "contact_urls": [],
+  "domain": "resend.com",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "resend.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://resend.com/security",
+  "safe_harbor": null,
+  "securitytxt_url": "https://resend.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "resmed",
   "emails": [],
   "expires_on": null,
@@ -40888,16 +43333,16 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "resmed.com",
-   "onlinestore.resmed.com",
-   "airview.resmed.com",
-   "nightowl-admin.resmed.com",
-   "account.resmed.com",
-   "resupply.resmed.com",
-   "careers.resmed.com",
    "myair.resmed.com",
-   "nightowl.resmed.com",
-   "shop.resmed.com"
+   "shop.resmed.com",
+   "careers.resmed.com",
+   "onlinestore.resmed.com",
+   "resupply.resmed.com",
+   "airview.resmed.com",
+   "account.resmed.com",
+   "nightowl-admin.resmed.com",
+   "resmed.com",
+   "nightowl.resmed.com"
   ],
   "name": "Resmed",
   "offers_bounty": "no",
@@ -41200,6 +43645,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "ringpublishing.com",
+  "emails": [
+   "abuse@ringieraxelspringer.pl"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "ringpublishing.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://ringpublishing.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
+  "contact_urls": [],
   "domain": "riotgames.com",
   "emails": [],
   "expires_on": null,
@@ -41227,8 +43693,8 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "lirportal.ripe.net",
-   "access.ripe.net"
+   "access.ripe.net",
+   "lirportal.ripe.net"
   ],
   "name": "Ripe NCC",
   "offers_bounty": "no",
@@ -41620,6 +44086,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "rockylinux.org",
+  "emails": [
+   "security@rockylinux.org"
+  ],
+  "expires_on": "2027-10-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "rockylinux.org",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://rockylinux.org/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
+  "contact_urls": [],
   "domain": "rokt.com",
   "emails": [
    "security@rokt.com"
@@ -41678,6 +44165,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "romeo.com",
+  "emails": [
+   "security@romeo.com"
+  ],
+  "expires_on": "2027-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "romeo.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.romeo.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -41847,6 +44355,27 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://hackerone.com/rails"
+  ],
+  "domain": "rubyonrails.org",
+  "emails": [],
+  "expires_on": "2027-08-13",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "rubyonrails.org",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://rubyonrails.org/security",
+  "safe_harbor": null,
+  "securitytxt_url": "https://rubyonrails.org/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "domain": "rug.nl",
   "emails": [
@@ -41887,6 +44416,30 @@
    "securitytxt"
   ],
   "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://dnsexit.com/support/abuse/",
+   "https://freedomain.one/support/abuse/"
+  ],
+  "domain": "run.place",
+  "emails": [
+   "abuse@dnsexit.com"
+  ],
+  "expires_on": "2027-08-15",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "run.place",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://dnsexit.com/support/abuse/",
+  "safe_harbor": null,
+  "securitytxt_url": "http://run.place/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -42039,6 +44592,28 @@
  },
  {
   "contact_urls": [],
+  "domain": "sageone.com",
+  "emails": [
+   "security@sage.com",
+   "soc@sage.com"
+  ],
+  "expires_on": "2040-12-02",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "sageone.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.sage.com/en-gb/trust-security/",
+  "safe_harbor": null,
+  "securitytxt_url": "https://sageone.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "sailsjs.com",
   "emails": [
    "critical@sailsjs.io"
@@ -42163,6 +44738,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "salla.sa",
+  "emails": [
+   "security@salla.sa"
+  ],
+  "expires_on": "2026-12-27",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "salla.sa",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://salla.com/en/privacy-policy/",
+  "safe_harbor": null,
+  "securitytxt_url": "http://salla.sa/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -43086,6 +45682,25 @@
  },
  {
   "contact_urls": [],
+  "domain": "semgrep.dev",
+  "emails": [],
+  "expires_on": "2028-02-06",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "semgrep.dev",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://semgrep.dev/docs/security",
+  "safe_harbor": null,
+  "securitytxt_url": "https://semgrep.dev/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "semrush",
   "emails": [],
   "expires_on": null,
@@ -43293,6 +45908,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "setapp.com",
+  "emails": [
+   "security@macpaw.com"
+  ],
+  "expires_on": "2030-05-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "setapp.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://macpaw.com/vulnerability-disclosure-policy",
+  "safe_harbor": null,
+  "securitytxt_url": "http://setapp.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
+  "contact_urls": [],
   "domain": "setpointis.com",
   "emails": [
    "rd@pon.com"
@@ -43327,6 +45963,27 @@
   "policy": "https://www.seznam.cz/.well-known/security-policy.html",
   "safe_harbor": null,
   "securitytxt_url": "https://seznam.cz/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "sezzle.com",
+  "emails": [
+   "security@sezzle.com"
+  ],
+  "expires_on": "2027-08-21",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "sezzle.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "Found a bug in our application? We have our private bug bounty program with Bugcrowd. Send your email to us so that we can invite you to the program.",
+  "safe_harbor": null,
+  "securitytxt_url": "https://sezzle.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -43534,8 +46191,8 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "partners.shopify.com",
    "accounts.shopify.com",
+   "partners.shopify.com",
    "admin.shopify.com"
   ],
   "name": "Shopify",
@@ -44022,8 +46679,8 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "ibt-test.six-group.com",
-   "www.six-group.com"
+   "www.six-group.com",
+   "ibt-test.six-group.com"
   ],
   "name": "SIX Group",
   "offers_bounty": "yes",
@@ -44081,6 +46738,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "skillbuilder.aws",
+  "emails": [
+   "aws-security@amazon.com"
+  ],
+  "expires_on": "2026-09-24",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "skillbuilder.aws",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://vdp.aws.security/",
+  "safe_harbor": null,
+  "securitytxt_url": "https://skillbuilder.aws/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
+  "contact_urls": [],
   "domain": "skilledhub.com",
   "emails": [
    "admin@skilledhub.com"
@@ -44099,6 +46777,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "skillshare.com",
+  "emails": [
+   "responsibledisclosure@skillshare.com"
+  ],
+  "expires_on": "2026-01-01",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "skillshare.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.skillshare.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -44227,6 +46926,27 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://hackerone.com/flutteruki"
+  ],
+  "domain": "skybet.com",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "skybet.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://hackerone.com/flutteruki",
+  "safe_harbor": null,
+  "securitytxt_url": "https://skybet.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
   "contact_urls": [],
   "domain": "skylight.digital",
   "emails": [
@@ -44290,6 +47010,27 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://hackerone.com/flutteruki"
+  ],
+  "domain": "skyvegas.com",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "skyvegas.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://hackerone.com/flutteruki",
+  "safe_harbor": null,
+  "securitytxt_url": "https://skyvegas.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "domain": "slack",
   "emails": [],
@@ -44320,10 +47061,10 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
+   "edgeapi.slack.com",
    "app.slack.com",
    "api.slack.com",
-   "slack.com",
-   "edgeapi.slack.com"
+   "slack.com"
   ],
   "name": "Slack",
   "offers_bounty": "yes",
@@ -44514,21 +47255,21 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "scan.snapchat.com",
-   "geofilters.snapchat.com",
-   "my.snapchat.com",
-   "story.snapchat.com",
-   "ads.snapchat.com",
-   "create.snapchat.com",
-   "map.snapchat.com",
-   "kit.snapchat.com",
    "snappublisher.snapchat.com",
+   "my.snapchat.com",
+   "business.snapchat.com",
+   "create.snapchat.com",
+   "ads.snapchat.com",
+   "app.snapchat.com",
+   "map.snapchat.com",
+   "web.snapchat.com",
+   "geofilters.snapchat.com",
+   "accounts.snapchat.com",
    "businesshelp.snapchat.com",
    "store.snapchat.com",
-   "business.snapchat.com",
-   "web.snapchat.com",
-   "accounts.snapchat.com",
-   "app.snapchat.com"
+   "story.snapchat.com",
+   "kit.snapchat.com",
+   "scan.snapchat.com"
   ],
   "name": "snapchat.com",
   "offers_bounty": null,
@@ -44541,6 +47282,33 @@
    "securitytxt"
   ],
   "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://hackerone.com/shutterfly_vdp"
+  ],
+  "domain": "snapfish.com",
+  "emails": [
+   "security-bugreports@shutterfly.com"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [
+   "snapfish.com",
+   "wgwebservices.snapfish.com"
+  ],
+  "name": "snapfish.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://hackerone.com/shutterfly_vdp",
+  "safe_harbor": null,
+  "securitytxt_url": "http://snapfish.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -44571,19 +47339,20 @@
    "security@snyk.io"
   ],
   "expires_on": null,
-  "expiry": null,
+  "expiry": "missing",
   "first_seen": "2026-11-21",
   "name": "Snyk",
   "offers_bounty": "no",
   "platforms": [],
-  "policy": "https://snyk.io/docs/security",
+  "policy": "https://docs.snyk.io/more-info/disclosing-vulnerabilities/disclose-a-vulnerability-in-snyk-services",
   "safe_harbor": "partial",
-  "securitytxt_url": "",
+  "securitytxt_url": "https://snyk.io/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "diodb"
+   "diodb",
+   "securitytxt"
   ],
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -44710,6 +47479,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://www.solcon.nl/beveiligingslek-melden/"
+  ],
+  "domain": "solcon.nl",
+  "emails": [],
+  "expires_on": "2026-01-22",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "solcon.nl",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://solcon.nl/.well-known/security.txt",
+  "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -45074,6 +47864,29 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://hackerone.com/messagebird"
+  ],
+  "domain": "sparkpost.com",
+  "emails": [
+   "security@messagebird.com"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "sparkpost.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://sparkpost.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
   "contact_urls": [],
   "domain": "speakap",
   "emails": [],
@@ -45309,8 +48122,8 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "api.spotify.com",
-   "assets.spotify.com"
+   "assets.spotify.com",
+   "api.spotify.com"
   ],
   "name": "Spotify",
   "offers_bounty": "yes",
@@ -45366,6 +48179,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://spring.io/security-policy"
+  ],
+  "domain": "spring.io",
+  "emails": [],
+  "expires_on": "2026-12-21",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "spring.io",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://spring.io/security-policy",
+  "safe_harbor": null,
+  "securitytxt_url": "https://spring.io/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -45595,6 +48429,27 @@
    "securitytxt"
   ],
   "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://bugcrowd.com/engagements/stake-vdp-pro"
+  ],
+  "domain": "stake.us",
+  "emails": [],
+  "expires_on": "2026-06-30",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "stake.us",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://stake.us/.well-known/security.txt",
+  "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -45831,16 +48686,16 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "payment-api.starlingbank.com",
+   "help.starlingbank.com",
+   "openbanking.starlingbank.com",
+   "api-openbanking.starlingbank.com",
+   "developer.starlingbank.com",
+   "oauth.starlingbank.com",
+   "token-api.starlingbank.com",
+   "www.starlingbank.com",
    "api.starlingbank.com",
    "app.starlingbank.com",
-   "api-openbanking.starlingbank.com",
-   "oauth.starlingbank.com",
-   "developer.starlingbank.com",
-   "openbanking.starlingbank.com",
-   "help.starlingbank.com",
-   "www.starlingbank.com",
-   "token-api.starlingbank.com"
+   "payment-api.starlingbank.com"
   ],
   "name": "starlingbank.co.uk",
   "offers_bounty": null,
@@ -45853,6 +48708,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "starshield.com",
+  "emails": [
+   "vulnerabilityreporting@spacex.com"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "starshield.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://starshield.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -46067,6 +48943,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "stores.jp",
+  "emails": [
+   "product-security@st.inc"
+  ],
+  "expires_on": "2027-11-21",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "stores.jp",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://stores.jp/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
+  "contact_urls": [],
   "domain": "strala.com",
   "emails": [
    "security@strala.com"
@@ -46182,11 +49079,11 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "api.stripe.com",
-   "files.stripe.com",
    "stripe.com",
    "mcp.stripe.com",
-   "js.stripe.com"
+   "files.stripe.com",
+   "js.stripe.com",
+   "api.stripe.com"
   ],
   "name": "Stripe",
   "offers_bounty": "yes",
@@ -46413,6 +49310,29 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://bugcrowd.com/engagements/sumsub-mbb-og"
+  ],
+  "domain": "sumsub.com",
+  "emails": [
+   "security@sumsub.com"
+  ],
+  "expires_on": "2027-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "sumsub.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://sumsub.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -47117,9 +50037,9 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
+   "mytargetcirclecard.target.com",
    "rcam.target.com",
-   "mytargetcirclecard-test.target.com",
-   "mytargetcirclecard.target.com"
+   "mytargetcirclecard-test.target.com"
   ],
   "name": "Target",
   "offers_bounty": "no",
@@ -47397,8 +50317,8 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "web.teamviewer.com",
    "login.teamviewer.com",
+   "web.teamviewer.com",
    "account.teamviewer.com"
   ],
   "name": "teamviewer.com",
@@ -47617,6 +50537,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "telemagazyn.pl",
+  "emails": [
+   "secvul@polskapress.pl"
+  ],
+  "expires_on": "2025-12-31",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "telemagazyn.pl",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://telemagazyn.pl/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
+  "contact_urls": [],
   "domain": "telenor sweden public bug bounty program",
   "emails": [],
   "expires_on": null,
@@ -47635,6 +50576,27 @@
    "yeswehack"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "tempo.com",
+  "emails": [
+   "security@tempo.xyz"
+  ],
+  "expires_on": "2027-05-04",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "tempo.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://github.com/tempoxyz/.github/blob/main/SECURITY.md",
+  "safe_harbor": null,
+  "securitytxt_url": "https://tempo.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -47862,6 +50824,31 @@
    "bugcrowd"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://www.thalesgroup.com/en/cert"
+  ],
+  "domain": "thalesgroup.com",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [
+   "supportportal.thalesgroup.com",
+   "cpl.thalesgroup.com"
+  ],
+  "name": "thalesgroup.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.thalesgroup.com/en/global/group/psirt",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.thalesgroup.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -48343,6 +51330,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "ticketone.it",
+  "emails": [
+   "itsecurity@eventim.de"
+  ],
+  "expires_on": "2030-06-02",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "ticketone.it",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://ticketone.it/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -48866,6 +51874,27 @@
   "tls_verified": true
  },
  {
+  "contact_urls": [],
+  "domain": "tractive.com",
+  "emails": [
+   "security@tractive.com"
+  ],
+  "expires_on": "2029-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "tractive.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://tractive.com/en/l/vulnerability-disclosure",
+  "safe_harbor": null,
+  "securitytxt_url": "https://tractive.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
   "contact_urls": [
    "https://www.tradingview.com/bounty/"
   ],
@@ -49307,6 +52336,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "trueconf.com",
+  "emails": [
+   "privacy@trueconf.com"
+  ],
+  "expires_on": "2030-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "trueconf.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://trueconf.com/company/legal/privacy.html",
+  "safe_harbor": null,
+  "securitytxt_url": "https://trueconf.com/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "truelayer",
   "emails": [],
   "expires_on": null,
@@ -49542,12 +52592,12 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "api.tumblr.com",
+   "embed.tumblr.com",
    "safe.tumblr.com",
-   "www.tumblr.com",
    "assets.tumblr.com",
+   "api.tumblr.com",
    "secure.tumblr.com",
-   "embed.tumblr.com"
+   "www.tumblr.com"
   ],
   "name": "tumblr.com",
   "offers_bounty": null,
@@ -49556,6 +52606,25 @@
   "safe_harbor": null,
   "securitytxt_url": "https://www.tumblr.com/.well-known/security.txt",
   "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "turfomania.fr",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "turfomania.fr",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.turfomania.fr/.well-known/security.txt",
+  "self_managed": false,
   "sources": [
    "securitytxt"
   ],
@@ -49579,6 +52648,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "tuttocampo.it",
+  "emails": [
+   "redazione@tuttocampo.it"
+  ],
+  "expires_on": "2027-10-29",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "tuttocampo.it",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.tuttocampo.it/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -49643,6 +52733,27 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://app.intigriti.com/programs/dpgm/tweakers/detail"
+  ],
+  "domain": "tweakers.net",
+  "emails": [],
+  "expires_on": "2027-05-25",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "tweakers.net",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://tweakers.net/info/responsible-disclosure/",
+  "safe_harbor": null,
+  "securitytxt_url": "https://tweakers.net/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
   "contact_urls": [],
   "domain": "twilio",
   "emails": [],
@@ -49683,6 +52794,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://twit.tv/about/contact"
+  ],
+  "domain": "twit.tv",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "twit.tv",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://twit.tv/.well-known/security.txt",
+  "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -49913,6 +53045,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "ublockdns.com",
+  "emails": [
+   "security@ublockdns.com"
+  ],
+  "expires_on": "2027-03-05",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "ublockdns.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://ublockdns.com/.well-known/security.txt",
+  "safe_harbor": null,
+  "securitytxt_url": "https://ublockdns.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "ubuntu.com",
   "emails": [
    "security@ubuntu.com"
@@ -50049,21 +53202,21 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "ui.com",
-   "wiki.ui.com",
-   "ispdesign.ui.com",
-   "dev-training.ui.com",
    "careers.ui.com",
-   "help.ui.com",
    "training.ui.com",
-   "design.ui.com",
+   "community.ui.com",
+   "dev-training.ui.com",
    "account.ui.com",
-   "blog.ui.com",
-   "ir.ui.com",
-   "store.ui.com",
+   "ui.com",
    "unifi.ui.com",
+   "design.ui.com",
+   "ir.ui.com",
+   "blog.ui.com",
    "rma.ui.com",
-   "community.ui.com"
+   "wiki.ui.com",
+   "help.ui.com",
+   "store.ui.com",
+   "ispdesign.ui.com"
   ],
   "name": "Ubiquiti - Aside program to the current at HackerOne",
   "offers_bounty": "yes",
@@ -50311,6 +53464,27 @@
   "tls_verified": true
  },
  {
+  "contact_urls": [],
+  "domain": "uni-kassel.de",
+  "emails": [
+   "ism@uni-kassel.de"
+  ],
+  "expires_on": "2026-12-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "uni-kassel.de",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://uni-kassel.de/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [
    "https://itcc.uni-koeln.de/services/informationssicherheit/it-sicherheit/stabsstelle-security-operations"
   ],
@@ -50327,6 +53501,29 @@
   "policy": null,
   "safe_harbor": null,
   "securitytxt_url": "https://uni-koeln.de/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://www.unibesecure.unibe.ch/vorfaelle_melden/index_ger.html"
+  ],
+  "domain": "unibe.ch",
+  "emails": [
+   "responsible-disclosure@unibe.ch"
+  ],
+  "expires_on": "2026-09-30",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "unibe.ch",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.unibe.ch/.well-known/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -50428,8 +53625,8 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "res.vacations.united.com",
-   "vacations.united.com"
+   "vacations.united.com",
+   "res.vacations.united.com"
   ],
   "name": "United Airlines",
   "offers_bounty": "yes",
@@ -50611,6 +53808,50 @@
   "tls_verified": true
  },
  {
+  "contact_urls": [
+   "https://ithelp.uoguelph.ca/it-help"
+  ],
+  "domain": "uoguelph.ca",
+  "emails": [
+   "infosec@uoguelph.ca"
+  ],
+  "expires_on": "2026-01-12",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "uoguelph.ca",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://ithelp.uoguelph.ca/policy/responsible-disclosure-process",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.uoguelph.ca/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "upr.edu",
+  "emails": [
+   "noc-upr@upr.edu"
+  ],
+  "expires_on": "2027-10-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "upr.edu",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://upr.edu/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "domain": "ups",
   "emails": [],
@@ -50670,6 +53911,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://www.upstart.com/lenders/regulatory-compliance/vulnerability-reporting/"
+  ],
+  "domain": "upstart.com",
+  "emails": [],
+  "expires_on": "2025-09-01",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "upstart.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "Upstart runs a private bug bounty program. To request an invite, please email security@upstart.com with the subject \"Bug Bounty Invite: <username>\"",
+  "safe_harbor": null,
+  "securitytxt_url": "https://upstart.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -51173,6 +54435,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "veikkaus.fi",
+  "emails": [
+   "haavoittuvuudet@veikkaus.fi"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "veikkaus.fi",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.veikkausgroup.com/en/veikkaus-vulnerability-disclosure-policy-vdp",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.veikkaus.fi/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "vendasta",
   "emails": [],
   "expires_on": null,
@@ -51359,6 +54642,27 @@
    "hackerone"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://hackerone.com/b6bf1613-5ba4-4ce3-b371-ac47e4507b5d/embedded_submissions/new"
+  ],
+  "domain": "verywellfit.com",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "verywellfit.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://hackerone.com/dotdashmeredith",
+  "safe_harbor": null,
+  "securitytxt_url": "https://verywellfit.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -51601,11 +54905,11 @@
   "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "api.vimeo.com",
-   "www.vimeo.com",
-   "vimeo.com",
    "checkout.vimeo.com",
-   "player.vimeo.com"
+   "www.vimeo.com",
+   "player.vimeo.com",
+   "vimeo.com",
+   "api.vimeo.com"
   ],
   "name": "vimeo.com",
   "offers_bounty": null,
@@ -51651,17 +54955,17 @@
   "first_seen": "2026-11-21",
   "in_scope_domains": [
    "castor.vinci.com",
-   "essentials.vinci.com",
-   "stats.vinci.com",
-   "leonard.vinci.com",
    "survey.vinci.com",
-   "boost.vinci.com",
-   "essentiel.vinci.com",
-   "actionnaires.vinci.com",
+   "essentials.vinci.com",
+   "leonard.vinci.com",
    "www.vinci.com",
+   "emag.vinci.com",
    "solutions-environnement.vinci.com",
+   "boost.vinci.com",
    "jobs.vinci.com",
-   "emag.vinci.com"
+   "actionnaires.vinci.com",
+   "essentiel.vinci.com",
+   "stats.vinci.com"
   ],
   "name": "lafabriquedelacite.com",
   "offers_bounty": null,
@@ -51828,22 +55132,22 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "survey.visa.com",
-   "cis.visa.com",
-   "www.visa.com",
-   "askpeopleteam.visa.com",
    "codeofconduct.visa.com",
+   "rs.visa.com",
    "vwcm.visa.com",
+   "bd.visa.com",
+   "usa.visa.com",
+   "dwy.visa.com",
+   "survey.visa.com",
+   "myanmar.visa.com",
    "africa.visa.com",
    "sandbox.secure.checkout.visa.com",
-   "bd.visa.com",
-   "vasdemos.visa.com",
-   "rs.visa.com",
    "by.visa.com",
-   "developer.visa.com",
-   "myanmar.visa.com",
-   "usa.visa.com",
-   "dwy.visa.com"
+   "vasdemos.visa.com",
+   "www.visa.com",
+   "askpeopleteam.visa.com",
+   "cis.visa.com",
+   "developer.visa.com"
   ],
   "name": "Visa",
   "offers_bounty": "no",
@@ -52308,8 +55612,8 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "player.vrt.be",
    "profiel.vrt.be",
+   "player.vrt.be",
    "vrt.be"
   ],
   "name": "VRT",
@@ -52510,13 +55814,15 @@
   "tls_verified": null
  },
  {
-  "contact_urls": [],
+  "contact_urls": [
+   "https://walletconnect.network/security"
+  ],
   "domain": "walletconnect.com",
   "emails": [
    "security@walletconnect.com"
   ],
   "expires_on": null,
-  "expiry": null,
+  "expiry": "missing",
   "first_seen": "2026-11-21",
   "name": "WalletConnect",
   "offers_bounty": "yes",
@@ -52526,9 +55832,10 @@
   "securitytxt_url": "https://walletconnect.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "diodb"
+   "diodb",
+   "securitytxt"
   ],
-  "tls_verified": null
+  "tls_verified": false
  },
  {
   "contact_urls": [
@@ -53019,10 +56326,10 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "connect.secure.wellsfargo.com",
-   "homeloans.wellsfargo.com",
+   "wellsfargo.com",
    "accountoffers.wellsfargo.com",
-   "wellsfargo.com"
+   "connect.secure.wellsfargo.com",
+   "homeloans.wellsfargo.com"
   ],
   "name": "Wells Fargo",
   "offers_bounty": "no",
@@ -53046,12 +56353,12 @@
   "expiry": "expired",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
+   "welt.de",
+   "cancellation.prod.ps.welt.de",
    "signin.auth.welt.de",
    "digital.welt.de",
-   "epaper.welt.de",
-   "cancellation.prod.ps.welt.de",
    "go.welt.de",
-   "welt.de"
+   "epaper.welt.de"
   ],
   "name": "welt.de",
   "offers_bounty": null,
@@ -53565,13 +56872,13 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "authentication.wolt.com",
-   "wolt.com",
-   "ops.wolt.com",
+   "merchant.wolt.com",
    "drive.wolt.com",
    "corporate.wolt.com",
-   "merchant.wolt.com",
-   "restaurant-api.wolt.com"
+   "ops.wolt.com",
+   "restaurant-api.wolt.com",
+   "wolt.com",
+   "authentication.wolt.com"
   ],
   "name": "wolt.com",
   "offers_bounty": null,
@@ -53685,11 +56992,11 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "codex.wordpress.org",
-   "planet.wordpress.org",
    "mercantile.wordpress.org",
    "profiles.wordpress.org",
-   "api.wordpress.org"
+   "codex.wordpress.org",
+   "api.wordpress.org",
+   "planet.wordpress.org"
   ],
   "name": "Wordpress",
   "offers_bounty": "no",
@@ -53703,6 +57010,30 @@
    "securitytxt"
   ],
   "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://dnsexit.com/support/abuse/",
+   "https://freedomain.one/support/abuse/"
+  ],
+  "domain": "work.gd",
+  "emails": [
+   "abuse@dnsexit.com"
+  ],
+  "expires_on": "2027-08-15",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "work.gd",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://dnsexit.com/support/abuse/",
+  "safe_harbor": null,
+  "securitytxt_url": "http://work.gd/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -53748,6 +57079,27 @@
  },
  {
   "contact_urls": [],
+  "domain": "workspaceoneaccess.com",
+  "emails": [
+   "security@omnissa.com"
+  ],
+  "expires_on": "2027-09-26",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "workspaceoneaccess.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://workspaceoneaccess.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "worldline.com",
   "emails": [
    "security@worldline.com"
@@ -53766,6 +57118,27 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "worten.pt",
+  "emails": [
+   "rvd@worten.pt"
+  ],
+  "expires_on": "2030-06-26",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "worten.pt",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "http://worten.pt/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [
@@ -53879,6 +57252,29 @@
   "tls_verified": true
  },
  {
+  "contact_urls": [
+   "https://www.wrike.com/security/report/"
+  ],
+  "domain": "wrike.com",
+  "emails": [
+   "appsec@team.wrike.com"
+  ],
+  "expires_on": "2026-10-10",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "name": "wrike.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.wrike.com/security/report/",
+  "safe_harbor": null,
+  "securitytxt_url": "http://wrike.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
+ },
+ {
   "contact_urls": [],
   "domain": "wyze bug bounty",
   "emails": [],
@@ -53931,9 +57327,9 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "accounts.x.ai",
    "console.x.ai",
-   "x.ai"
+   "x.ai",
+   "accounts.x.ai"
   ],
   "name": "x.ai",
   "offers_bounty": null,
@@ -53957,10 +57353,10 @@
   "expiry": "expired",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "x.com",
-   "money.x.com",
+   "chat.x.com",
    "console.x.com",
-   "chat.x.com"
+   "x.com",
+   "money.x.com"
   ],
   "name": "x.com",
   "offers_bounty": null,
@@ -54137,6 +57533,27 @@
   "policy": null,
   "safe_harbor": null,
   "securitytxt_url": "https://xnxx-arabic.com/.well-known/security.txt",
+  "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://hackerone.com/xvideos"
+  ],
+  "domain": "xnxx-ru.com",
+  "emails": [],
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "name": "xnxx-ru.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://xnxx-ru.com/.well-known/security.txt",
   "self_managed": false,
   "sources": [
    "securitytxt"
@@ -54499,8 +57916,8 @@
   "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "onepush.query.yahoo.com",
    "apis.mail.yahoo.com",
+   "onepush.query.yahoo.com",
    "data.mail.yahoo.com",
    "proddata.xobni.yahoo.com"
   ],
@@ -54562,6 +57979,29 @@
    "securitytxt"
   ],
   "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://ya.cc/t/_rjVQfBG3gkSdX"
+  ],
+  "domain": "yandex.md",
+  "emails": [
+   "security@yandex-team.ru"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "name": "yandex.md",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://ya.cc/t/1cSZixjB3gkSva",
+  "safe_harbor": null,
+  "securitytxt_url": "https://yandex.md/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": false
  },
  {
   "contact_urls": [
@@ -55460,8 +58900,8 @@
   "expiry": null,
   "first_seen": "2026-11-21",
   "in_scope_domains": [
-   "mcp-server.zomato.com",
-   "winecellar.zomato.com"
+   "winecellar.zomato.com",
+   "mcp-server.zomato.com"
   ],
   "name": "Zomato",
   "offers_bounty": "yes",
