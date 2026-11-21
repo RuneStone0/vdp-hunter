@@ -274,6 +274,15 @@ def revoke_key(key_value: str = Query(..., alias="key"), key: dict = Depends(adm
     return envelope({"revoked": True})
 
 
+@app.post("/admin/reload", tags=["admin"], summary="Re-ingest data/programs.json without crawling")
+def reload_dataset(key: dict = Depends(admin)):
+    import json
+    seed = ROOT / "data" / "programs.json"
+    if not seed.exists():
+        raise HTTPException(503, "data/programs.json missing")
+    return envelope(store.ingest(json.load(open(seed, encoding="utf-8")), run_kind="reload"))
+
+
 @app.post("/admin/scan", tags=["admin"], summary="Trigger one scan cycle now")
 def trigger_scan(key: dict = Depends(admin)):
     return envelope(scanner.cycle())

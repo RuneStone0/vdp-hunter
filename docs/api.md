@@ -31,6 +31,7 @@ Missing or revoked keys return `401`; over-limit returns `429`.
 | POST | `/admin/keys` | Issue a key (admin) |
 | DELETE | `/admin/keys?key=` | Revoke a key (admin) |
 | POST | `/admin/scan` | Run one scan cycle now (admin) |
+| POST | `/admin/reload` | Re-ingest `data/programs.json` without crawling (admin) |
 
 ## Response envelope
 

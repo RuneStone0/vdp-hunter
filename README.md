@@ -18,35 +18,40 @@ Two free datasets cover most of the market, and neither one covers all of it:
 publishes a security.txt is by definition inviting reports, and that file is
 public, structured, and cheap to check.
 
-## Measured baseline from the first runs
+## Measured baseline
 
-Tranco top-1M seed, 2026-11-21, 58,259 domains probed end to end (22.5 minutes at
-37 domains/s and 300 connections):
+Tranco top-1M seed, 2026-11-21, 58,259 domains probed end to end at 23 domains/s
+(42 minutes, concurrency 120). Every domain is re-probed with `--recheck`, so a file that
+changes is picked up:
 
 | Rank band | Domains probed | security.txt found | Hits per 1k |
 |---|---|---|---|
-| 1 - 1,000 | 1,000 | 216 | 216 |
-| 1,001 - 10,000 | 9,000 | 267 | 30 |
-| 10,001 - 58,259 | 48,259 | 128 | 2.7 |
-| **total** | **58,259** | **611** | **10.5** |
+| 1 - 1,000 | 1,000 | 217 | 217 |
+| 1,001 - 10,000 | 9,000 | 931 | 103 |
+| 10,001 - 58,259 | 48,259 | 2,997 | 62 |
+| **total** | **58,259** | **4,034** | **69** |
 
-Of the 611: 335 unexpired, 225 with no `Expires` field at all, 52 already expired,
-79 served over an unverified TLS chain. After matching against diodb (by policy /
-security.txt host and program name) and against every platform program and scope
-list, 525 program rows have no match. 124 of those still point at a platform URL
-that the name join missed, leaving **401 programs in no existing dataset**, and
-**216 of those are unexpired, self-managed, and have a usable contact or policy**.
-Examples: Anthropic, Allianz, Bloomberg, Booking.com, Calendly, Ancestry, AWS VDP,
-9GAG, Academia.edu.
+Of those 4,034: 2,486 unexpired, 1,291 with no `Expires` field, 400 already expired, and 544
+served over an unverified TLS chain (flagged, not dropped).
 
-Adoption collapses below the top 10k, so the full list is worth roughly 1,500 to
-2,500 more hits, not tens of thousands.
+Merged dataset after the pass: **6,156 programs**, of which 5,252 are not listed on any
+platform. Matching against diodb by policy / security.txt host and program name leaves 3,643
+unmatched; 469 of those still point at a platform URL the name join missed, leaving **3,174
+self-managed programs in no existing dataset**, and **1,909 of those are unexpired with a
+usable policy URL or security mailbox**. 472 publish their policy on their own domain.
+Examples: Anthropic, Allianz, Bloomberg, Booking.com, Calendly, Ancestry, AWS VDP, 9GAG,
+Academia.edu, Merriam-Webster, Teachers Pay Teachers.
 
-Second channel, measured on 400 domains at ranks 20k-20.4k: conventional page
-probing (`/security`, `/responsible-disclosure`, `/bug-bounty`, ...) found 5
-signals, 1.25 per 100 domains, at 7 potential requests per domain versus 2 for
-security.txt. Real pages (ISPsystem, Termius) but poor yield, so it stays a
-targeted add-on rather than the main crawl.
+Earlier runs of this crawler reported about 1% adoption instead of 7%. That was a measurement
+bug, not a data change: at 250-400 concurrent connections the link saturates, TLS handshakes
+time out, and a timed-out handshake is recorded the same way as "no security.txt". The scanner
+now runs at 120. Verify any number here by re-probing a sample by hand; every row carries its
+`securitytxt_url`.
+
+Second channel, measured on 400 domains at ranks 20k-20.4k: conventional page probing
+(`/security`, `/responsible-disclosure`, `/bug-bounty`, ...) found 5 signals, 1.25 per 100
+domains, at 7 potential requests per domain versus 2 for security.txt. Real pages (ISPsystem,
+Termius) but poor yield, so it stays a targeted add-on rather than the main crawl.
 
 ## How it works
 
@@ -60,6 +65,9 @@ diodb + platform data ───────────────────�
                                                     └──────────> data/NEWS.md (diff vs last run)
 ```
 
+- **Concurrency matters for accuracy.** Above roughly 150 concurrent connections the
+  link saturates and TLS handshakes start timing out; failed handshakes look identical to
+  "no security.txt" and silently undercount by up to 10x. The scanner runs at 120.
 - **2 requests per domain maximum**: `https://d/.well-known/security.txt`, then
   `/security.txt` only if the first returned 404. Plain HTTP is only tried when
   HTTPS fails at the transport layer.
