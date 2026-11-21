@@ -84,6 +84,13 @@ def main() -> int:
         sys.exit("VDP_ADMIN_KEY not set")
 
     index, entries = build_index()
+    # a program's own primary domain is the only place its platform label belongs;
+    # do not stamp "hackerone" onto every third-party domain a scope happens to list
+    primary_labels: dict[str, set[str]] = {}
+    for plat, prog, primary in entries:
+        if primary:
+            primary_labels.setdefault(primary, set()).add(
+                "intigriti" if plat == "intigriti_api" else plat)
     rows = fetch_rows(args.api, args.key)
     print(f"live rows {len(rows):,} | companies with published scope {len(index):,}")
 
@@ -105,6 +112,10 @@ def main() -> int:
         row["out_of_scope_domains"] = sorted(set(asset_domains(outs)))[:200]
         if row["scopes_count"]:
             with_scope += 1
+        labels = primary_labels.get(row["domain"])
+        if labels:
+            row["platforms"] = sorted(set(row.get("platforms") or []) | labels)
+            row["sources"] = sorted(set(row.get("sources") or []) | labels)
         if "yeswehack" in (row.get("platforms") or []):
             row["submit_access"] = ("invite_only" if any(
                 p.get("public") is False for pl, p in entries if pl == "yeswehack")
@@ -141,6 +152,12 @@ def main() -> int:
           f"| platform programs created {created:,}")
     if args.dry_run:
         return 0
+    body = json.dumps({"programs": list(rows.values())}).encode()
+    req = urllib.request.Request(f"{args.api}/admin/ingest", data=body, method="POST",
+                                 headers={"X-API-Key": args.key,
+                                          "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=1800) as r:
+        print("ingest:", r.read(300).decode())
     (DATA / "programs.json").write_text(json.dumps(rows, indent=0), encoding="utf-8")
     print(f"wrote {DATA / 'programs.json'} ({(DATA / 'programs.json').stat().st_size:,} bytes)")
     return 0

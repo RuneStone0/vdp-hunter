@@ -73,6 +73,12 @@ def scope_of(detail: dict) -> tuple[list[dict], list[dict]]:
 
 
 def main() -> int:
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--list-only", action="store_true",
+                    help="skip the detail calls: the list carries name, handle and bounty")
+    ap.add_argument("--pause", type=float, default=1.5, help="seconds between detail calls")
+    args = ap.parse_args()
     records, offset, limit = [], 0, 100
     while True:
         page = call(f"/programs?limit={limit}&offset={offset}")
@@ -97,6 +103,16 @@ def main() -> int:
         if rec["id"] in done:
             out.append(done[rec["id"]])
             continue
+        if args.list_only:
+            out.append({
+                "id": rec["id"], "handle": rec.get("handle") or "",
+                "name": rec.get("name") or rec.get("handle") or "",
+                "public": (rec.get("confidentialityLevel") or {}).get("value"),
+                "bounty": bool((rec.get("minBounty") or {}).get("value")),
+                "safe_harbour": None, "scope_in": [], "scope_out": [],
+                "submit_access": "account_required",
+            })
+            continue
         detail = call(f"/programs/{rec['id']}")
         ins, outs = scope_of(detail)
         out.append({
@@ -114,7 +130,7 @@ def main() -> int:
         if i % 25 == 0:
             print(f"  detail {i}/{len(records)}", flush=True)
             OUT.write_text(json.dumps(out, indent=0), encoding="utf-8")
-        time.sleep(0.5)
+        time.sleep(args.pause)
 
     OUT.write_text(json.dumps(out, indent=0), encoding="utf-8")
     with_scope = sum(1 for p in out if p["scope_in"] or p["scope_out"])

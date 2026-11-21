@@ -323,6 +323,25 @@ def reload_dataset(prune_directory: bool = False, key: dict = Depends(admin)):
         prune_dotless_platform=prune_directory))
 
 
+@app.post("/admin/ingest", tags=["admin"], summary="Ingest a dataset snapshot posted as JSON")
+def ingest_snapshot(payload: dict, prune_directory: bool = False, key: dict = Depends(admin)):
+    """Take the snapshot over HTTP instead of reading a file.
+
+    The container builds its seed from git, and data/ is a docker volume, so a
+    script on the host cannot assume either path is visible inside. Posting the
+    snapshot removes that assumption.
+    """
+    programs = payload.get("programs") if isinstance(payload, dict) else payload
+    if not isinstance(programs, list) or not programs:
+        raise HTTPException(422, "expected {\"programs\": [...]}")
+    return envelope(store.ingest(
+        programs, run_kind="ingest",
+        allow_removal=prune_directory,
+        prune_only_sources=({"disclose-directory", "securitytxt"}
+                            if prune_directory else None),
+        prune_dotless_platform=prune_directory))
+
+
 @app.post("/admin/scan", tags=["admin"], summary="Trigger one scan cycle now")
 def trigger_scan(key: dict = Depends(admin)):
     return envelope(scanner.cycle())
