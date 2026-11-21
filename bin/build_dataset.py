@@ -234,25 +234,32 @@ def platform_domain(prog):
     """A platform handle is not a domain: resolve the company's real domain from
     the program's own website, then from its in-scope assets.
 
-    Returns None when the program publishes nothing host-shaped, which is the
-    honest outcome for a handle like "20 minuten".
+    Each platform names its assets differently: asset_identifier on HackerOne, uri
+    on Bugcrowd, target on YesWeHack, endpoint on Intigriti. All four are tried,
+    whatever the declared asset type says, because the type vocabulary differs per
+    platform and a URL is a URL.
     """
+    candidates = []
     website = prog.get("website") or ""
     if is_url(website):
-        host = host_of(website)
-        if host and not is_ip(host) and not is_platform_host(host):
-            return registrable(host)
+        candidates.append(website)
     for target in ((prog.get("targets") or {}).get("in_scope") or []):
-        if target.get("asset_type") not in ("URL", "WILDCARD", "DOMAIN"):
+        if not isinstance(target, dict):
             continue
-        ident = (target.get("asset_identifier") or "").strip()
-        if not ident:
+        for field in ("asset_identifier", "uri", "target", "endpoint"):
+            value = target.get(field)
+            if value:
+                candidates.append(str(value).strip())
+                break
+    for raw in candidates:
+        if not raw:
             continue
-        if "://" in ident:
-            host = host_of(ident)
+        if "://" in raw:
+            host = host_of(raw)
         else:
-            host = ident.replace("*.", "").split("/")[0].split(":")[0]
-        if not host or "*" in host or is_ip(host) or is_platform_host(host):
+            host = raw.replace("*.", "").split("/")[0].split(":")[0].strip()
+        host = (host or "").lower().strip(".")
+        if not host or "*" in host or " " in host or is_ip(host) or is_platform_host(host):
             continue
         key = registrable(host)
         if key and "." in key:

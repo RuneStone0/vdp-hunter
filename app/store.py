@@ -297,8 +297,12 @@ class Store:
             by_platform = {r["p"]: r["n"] for r in c.execute(
                 "SELECT json_each.value p, COUNT(*) n FROM programs, json_each(programs.platforms) "
                 "GROUP BY p")}
+            by_source = {r["s"]: r["n"] for r in c.execute(
+                "SELECT json_each.value s, COUNT(*) n FROM programs, json_each(programs.sources) "
+                "GROUP BY s")}
             last_run = c.execute("SELECT * FROM runs ORDER BY id DESC LIMIT 1").fetchone()
         return {**counts, "by_expiry": by_expiry, "by_platform": by_platform,
+                "by_source": by_source,
                 "coverage_offset": int(coverage or 0),
                 "last_run": dict(last_run) if last_run else None,
                 "generated_at": now()}

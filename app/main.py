@@ -9,6 +9,7 @@ from __future__ import annotations
 import os
 import time
 from contextlib import asynccontextmanager
+from datetime import datetime, timezone
 from pathlib import Path
 
 from fastapi import Depends, FastAPI, HTTPException, Query, Request
@@ -300,11 +301,11 @@ def revoke_key(key_value: str = Query(..., alias="key"), key: dict = Depends(adm
 @app.post("/admin/reload", tags=["admin"], summary="Re-ingest data/programs.json without crawling")
 def reload_dataset(prune_directory: bool = False, key: dict = Depends(admin)):
     import json
-    # seed/ is the copy baked into the image from git, so it is the one a
-    # redeploy actually updates. data/ is a mounted volume that can hold a stale
-    # bootstrap snapshot, so only fall back to it.
-    seed = next((p for p in (ROOT / "seed" / "programs.json", ROOT / "data" / "programs.json")
-                 if p.exists()), None)
+    # two snapshots can exist: seed/ is baked into the image from git, data/ is the
+    # mounted volume a sync writes. Take whichever is newer, so a redeploy is
+    # picked up and a fresh sync is not silently ignored.
+    seed = max((p for p in (ROOT / "seed" / "programs.json", ROOT / "data" / "programs.json")
+                if p.exists()), key=lambda p: p.stat().st_mtime, default=None)
     if not seed:
         raise HTTPException(503, "no programs.json in data/ or seed/")
     # prune_directory deletes programs that only ever came from the disclose.io
@@ -328,6 +329,24 @@ def trigger_scan(key: dict = Depends(admin)):
 
 
 # ---------- site ----------
+def _refreshed(st: dict) -> str:
+    """How long ago the last run finished, in the unit a reader actually wants."""
+    last = st.get("last_run") or {}
+    stamp = last.get("finished_at") or last.get("started_at") or st.get("generated_at")
+    try:
+        done = datetime.fromisoformat(str(stamp))
+    except (TypeError, ValueError):
+        return "recently"
+    minutes = max(0, int((datetime.now(timezone.utc) - done).total_seconds() // 60))
+    if minutes < 60:
+        return f"{minutes} minutes ago" if minutes != 1 else "1 minute ago"
+    hours = minutes // 60
+    if hours < 24:
+        return f"{hours} hours ago" if hours != 1 else "1 hour ago"
+    days = hours // 24
+    return f"{days} days ago" if days != 1 else "1 day ago"
+
+
 def render(name: str, extra: dict | None = None) -> HTMLResponse:
     html = (ROOT / "app" / "static" / name).read_text(encoding="utf-8")
     st = store.stats()
@@ -338,7 +357,14 @@ def render(name: str, extra: dict | None = None) -> HTMLResponse:
         "{{bounty_paying}}": f"{st['bounty_paying']:,}",
         "{{changes}}": f"{st['changes']:,}",
         "{{generated_at}}": st["generated_at"][:16].replace("T", " ") + " UTC",
+        "{{refreshed}}": _refreshed(st),
     }
+    for source, count in (st.get("by_source") or {}).items():
+        values[f"{{{{src_{source}}}}}"] = f"{count:,}"
+    # a source with no rows yet renders as zero, not as an empty cell
+    for source in ("securitytxt", "hackerone", "bugcrowd", "intigriti", "yeswehack",
+                   "disclose-directory", "diodb", "czds"):
+        values.setdefault(f"{{{{src_{source}}}}}", "0")
     values.update(extra or {})
     for k, v in values.items():
         html = html.replace(k, str(v))

@@ -42,7 +42,7 @@ def fetch_rows(api: str, key: str) -> list[dict]:
             return out
 
 
-def build_index() -> dict[str, list[tuple[str, dict]]]:
+def build_index() -> tuple[dict[str, list[tuple[str, dict]]], list[tuple[str, dict, str]]]:
     """Index a platform program under every domain its own scope names.
 
     Bugcrowd and YesWeHack publish no handle that is a domain, so keying by handle
@@ -50,6 +50,7 @@ def build_index() -> dict[str, list[tuple[str, dict]]]:
     the program and a row in our dataset.
     """
     index: dict[str, list[tuple[str, dict]]] = {}
+    entries: list[tuple[str, dict, str]] = []
     for plat, fname in PLATFORMS.items():
         path = DATA / fname
         if not path.exists():
@@ -69,7 +70,8 @@ def build_index() -> dict[str, list[tuple[str, dict]]]:
                 keys.add(hkey)
             for key in keys:
                 index.setdefault(key, []).append((plat, prog))
-    return index
+            entries.append((plat, prog, primary or (sorted(keys)[0] if keys else "")))
+    return index, entries
 
 
 def main() -> int:
@@ -81,7 +83,7 @@ def main() -> int:
     if not args.key:
         sys.exit("VDP_ADMIN_KEY not set")
 
-    index = build_index()
+    index, entries = build_index()
     rows = fetch_rows(args.api, args.key)
     print(f"live rows {len(rows):,} | companies with published scope {len(index):,}")
 
@@ -109,7 +111,34 @@ def main() -> int:
                 else "account_required")
             enriched += 1
 
-    print(f"rows carrying scope {with_scope:,} | yeswehack rows marked {enriched:,}")
+    # a platform program whose company has no row yet is a program we are missing:
+    # Bugcrowd and YesWeHack publish no handle that is a domain, so they are created
+    # here from their own scope rather than silently dropped
+    created = 0
+    for plat, prog, primary in entries:
+        if not primary or primary in rows:
+            continue
+        label = "intigriti" if plat == "intigriti_api" else plat
+        ins, outs = ((prog["scope_in"], prog["scope_out"]) if "scope_in" in prog
+                     else scope_assets(prog))
+        rows[primary] = {
+            "domain": primary, "name": prog.get("name") or primary, "sources": [label],
+            "platforms": [label], "policy": None, "emails": [], "contact_urls": [],
+            "expires_on": None, "expiry": None,
+            "offers_bounty": "yes" if prog.get("bounty") or prog.get("offers_bounties") else None,
+            "safe_harbor": ("full" if (prog.get("safe_harbor") is True
+                                       or prog.get("safe_harbour") is True) else None),
+            "securitytxt_url": None, "tls_verified": None,
+            "in_scope_domains": asset_domains(ins)[:200],
+            "out_of_scope_domains": asset_domains(outs)[:200],
+            "scope_in": ins[:400], "scope_out": outs[:400],
+            "scopes_count": len(ins) + len(outs),
+            "submit_access": prog.get("submit_access"),
+        }
+        created += 1
+
+    print(f"rows carrying scope {with_scope:,} | yeswehack rows marked {enriched:,} "
+          f"| platform programs created {created:,}")
     if args.dry_run:
         return 0
     (DATA / "programs.json").write_text(json.dumps(rows, indent=0), encoding="utf-8")
