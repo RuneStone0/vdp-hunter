@@ -102,7 +102,8 @@ class Store:
     # ---------- programs ----------
     def ingest(self, programs: list[dict], run_kind: str = "rebuild",
                chunk: tuple[int, int] | None = None, probes: int = 0,
-               hits: int = 0, note: str = "", record_changes: bool = True) -> dict:
+               hits: int = 0, note: str = "", record_changes: bool = True,
+               allow_removal: bool = False) -> dict:
         """Upsert a full dataset snapshot and record the delta against the stored state."""
         started = now()
         ts = started
@@ -146,11 +147,15 @@ class Store:
                 c.execute("INSERT INTO changes(ts,run_id,kind,domain,fields,before,after) "
                           "VALUES(?,?,?,?,?,?,?)",
                           (ts, run_id, "added", d, None, None, _dumps(p)))
-            for d in removed:
-                c.execute("DELETE FROM programs WHERE domain=?", (d,))
-                c.execute("INSERT INTO changes(ts,run_id,kind,domain,fields,before,after) "
-                          "VALUES(?,?,?,?,?,?,?)",
-                          (ts, run_id, "removed", d, None, _dumps(prev[d]), None))
+            # A snapshot built from a partial crawl is not evidence that a program is gone:
+            # an incremental cycle only re-probes a slice, so everything outside the slice is
+            # absent. Deleting on absence would erase the dataset a little more every cycle.
+            if allow_removal:
+                for d in removed:
+                    c.execute("DELETE FROM programs WHERE domain=?", (d,))
+                    c.execute("INSERT INTO changes(ts,run_id,kind,domain,fields,before,after) "
+                              "VALUES(?,?,?,?,?,?,?)",
+                              (ts, run_id, "removed", d, None, _dumps(prev[d]), None))
             for d, deltas in changed:
                 p = new[d]
                 c.execute(f"UPDATE programs SET {','.join(f'{f}=?' for f in FIELDS)},"
@@ -162,10 +167,11 @@ class Store:
                           "VALUES(?,?,?,?,?,?,?)",
                           (ts, run_id, "changed", d, json.dumps(deltas),
                            json.dumps(before), json.dumps(after)))
+            gone = len(removed) if allow_removal else 0
             c.execute("UPDATE runs SET finished_at=?,added=?,removed=?,changed=? WHERE id=?",
-                      (now(), len(added), len(removed), len(changed), run_id))
-        return {"run_id": run_id, "added": len(added), "removed": len(removed),
-                "changed": len(changed)}
+                      (now(), len(added), gone, len(changed), run_id))
+        return {"run_id": run_id, "added": len(added), "removed": gone,
+                "changed": len(changed), "absent": len(removed)}
 
     def query(self, q=None, platform=None, source=None, bounty=None, expiry=None,
               limit=100, offset=0, sort="domain"):
