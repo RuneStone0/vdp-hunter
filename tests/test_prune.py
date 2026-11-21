@@ -17,13 +17,15 @@ def _platform_row(domain):
     return row
 
 
-def test_dotless_platform_rows_are_retired(client):
-    main.store.ingest([_platform_row("floqast"), _platform_row("acme.com")],
+def test_dotless_rows_are_retired(client):
+    junk = _row("localhost", ["securitytxt"])
+    main.store.ingest([_platform_row("floqast"), junk, _platform_row("acme.com")],
                       record_changes=False)
     res = main.store.ingest([_platform_row("acme.com")], record_changes=True,
                             allow_removal=True, prune_dotless_platform=True)
-    assert res["removed"] == 1
+    assert res["removed"] == 2
     assert main.store.get("floqast") is None
+    assert main.store.get("localhost") is None
     assert main.store.get("acme.com") is not None
 
 

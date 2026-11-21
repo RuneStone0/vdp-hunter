@@ -154,14 +154,13 @@ class Store:
             # an incremental cycle only re-probes a slice, so everything outside the slice is
             # absent. Deleting on absence would erase the dataset a little more every cycle.
             if allow_removal:
-                # a platform company handle that is not a domain ("floqast",
-                # "abb") cannot live in a domain-keyed dataset; it is retired
-                # only when platform data proves it, never a crawled row
+                # a key with no dot is not a domain: left over from a platform
+                # company handle ("floqast") or from a crawler scraping junk
+                # ("localhost", "this domain"). The seed is authoritative and
+                # domain-keyed, so an absent dotless key is retired.
                 dotless = set()
                 if prune_dotless_platform:
-                    dotless = {d for d in prev
-                               if "." not in d and d not in new
-                               and (_load(prev[d].get("platforms")) or [])}
+                    dotless = {d for d in prev if "." not in d and d not in new}
                 # prune_only_sources keeps a prune surgical: only rows whose every
                 # source is in that set may be deleted, so a refresh of one source
                 # can never erase a crawl or platform discovery.
