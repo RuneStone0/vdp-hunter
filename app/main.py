@@ -126,8 +126,9 @@ class KeyIn(BaseModel):
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     if store.stats()["programs"] == 0 and os.environ.get("VDP_BOOTSTRAP", "1") == "1":
-        seed = ROOT / "data" / "programs.json"
-        if seed.exists():
+        seed = next((p for p in (ROOT / "data" / "programs.json",
+                                 ROOT / "seed" / "programs.json") if p.exists()), None)
+        if seed:
             import json
             store.ingest(json.load(open(seed, encoding="utf-8")), run_kind="bootstrap",
                          record_changes=False)

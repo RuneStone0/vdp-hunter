@@ -12,6 +12,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app ./app
 COPY bin ./bin
 COPY run.sh ./
+# seed snapshot ships outside /app/data so a mounted volume cannot hide it
+COPY data/programs.json ./seed/programs.json
 RUN chmod +x run.sh bin/*.sh bin/*.py
 
 EXPOSE 8110

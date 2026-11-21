@@ -3,8 +3,19 @@
 .github
 tests
 docs
-data
 logs
 preview.html
-*.db
 __pycache__
+*.pyc
+
+# local state and regenerable dumps
+data/*.db
+data/*.db-*
+data/tranco1m.csv
+data/app.env
+data/hackerone_data.json
+data/bugcrowd_data.json
+data/intigriti_data.json
+data/yeswehack_data.json
+data/diodb.json
+data/domains.txt
