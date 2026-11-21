@@ -42,7 +42,11 @@ def call(path: str, attempt: int = 0):
             return json.load(r)
     except urllib.error.HTTPError as e:
         # 403 appears after roughly a hundred rapid detail calls: back off, do not give up
-        if e.code in (403, 429, 500, 502, 503) and attempt < 4:
+        if e.code in (403, 429) and attempt < 6:
+            # the block clears on its own: a single call works again after a few minutes
+            time.sleep(300)
+            return call(path, attempt + 1)
+        if e.code in (500, 502, 503) and attempt < 3:
             time.sleep(15 + attempt * 15)
             return call(path, attempt + 1)
         raise

@@ -91,12 +91,12 @@ def main() -> int:
                       "total_rows": len(rows)}))
     if args.dry_run:
         return 0
-    (DATA / "programs.json").write_text(json.dumps(list(rows.values()), indent=0),
-                                        encoding="utf-8")
-    req = urllib.request.Request(f"{args.api}/admin/reload", method="POST",
-                                 headers={"X-API-Key": args.key})
-    with urllib.request.urlopen(req, timeout=900) as r:
-        print("reload:", r.read(300).decode())
+    body = json.dumps({"programs": list(rows.values())}).encode()
+    req = urllib.request.Request(f"{args.api}/admin/ingest", data=body, method="POST",
+                                 headers={"X-API-Key": args.key,
+                                          "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=1800) as r:
+        print("ingest:", r.read(300).decode())
     return 0
 
 

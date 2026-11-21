@@ -11,6 +11,7 @@ import argparse
 import json
 import os
 import sys
+import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -94,11 +95,12 @@ def main() -> int:
     rows = fetch_rows(args.api, args.key)
     print(f"live rows {len(rows):,} | companies with published scope {len(index):,}")
 
+    by_domain = {r["domain"]: r for r in rows}
     enriched = with_scope = 0
-    for row in rows:
-        entries = index.get(row["domain"], [])
+    for row in by_domain.values():
+        matches = index.get(row["domain"], [])
         ins, outs, plat_of = [], [], set()
-        for plat, prog in entries:
+        for plat, prog in matches:
             i, o = scope_assets(prog)
             if not i and not o:
                 continue
@@ -118,7 +120,7 @@ def main() -> int:
             row["sources"] = sorted(set(row.get("sources") or []) | labels)
         if "yeswehack" in (row.get("platforms") or []):
             row["submit_access"] = ("invite_only" if any(
-                p.get("public") is False for pl, p in entries if pl == "yeswehack")
+                p.get("public") is False for pl, p in matches if pl == "yeswehack")
                 else "account_required")
             enriched += 1
 
@@ -127,12 +129,12 @@ def main() -> int:
     # here from their own scope rather than silently dropped
     created = 0
     for plat, prog, primary in entries:
-        if not primary or primary in rows:
+        if not primary or primary in by_domain:
             continue
         label = "intigriti" if plat == "intigriti_api" else plat
         ins, outs = ((prog["scope_in"], prog["scope_out"]) if "scope_in" in prog
                      else scope_assets(prog))
-        rows[primary] = {
+        by_domain[primary] = {
             "domain": primary, "name": prog.get("name") or primary, "sources": [label],
             "platforms": [label], "policy": None, "emails": [], "contact_urls": [],
             "expires_on": None, "expiry": None,
@@ -152,13 +154,14 @@ def main() -> int:
           f"| platform programs created {created:,}")
     if args.dry_run:
         return 0
-    body = json.dumps({"programs": list(rows.values())}).encode()
+    programs = list(by_domain.values())
+    body = json.dumps({"programs": programs}).encode()
     req = urllib.request.Request(f"{args.api}/admin/ingest", data=body, method="POST",
                                  headers={"X-API-Key": args.key,
                                           "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=1800) as r:
         print("ingest:", r.read(300).decode())
-    (DATA / "programs.json").write_text(json.dumps(rows, indent=0), encoding="utf-8")
+    (DATA / "programs.json").write_text(json.dumps(programs, indent=0), encoding="utf-8")
     print(f"wrote {DATA / 'programs.json'} ({(DATA / 'programs.json').stat().st_size:,} bytes)")
     return 0
 
