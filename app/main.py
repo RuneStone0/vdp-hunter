@@ -291,9 +291,10 @@ def revoke_key(key_value: str = Query(..., alias="key"), key: dict = Depends(adm
 @app.post("/admin/reload", tags=["admin"], summary="Re-ingest data/programs.json without crawling")
 def reload_dataset(key: dict = Depends(admin)):
     import json
-    # data/ is a mounted volume in the container, so the freshly built image's
-    # copy lives in seed/: fall back to it rather than failing with a 503
-    seed = next((p for p in (ROOT / "data" / "programs.json", ROOT / "seed" / "programs.json")
+    # seed/ is the copy baked into the image from git, so it is the one a
+    # redeploy actually updates. data/ is a mounted volume that can hold a stale
+    # bootstrap snapshot, so only fall back to it.
+    seed = next((p for p in (ROOT / "seed" / "programs.json", ROOT / "data" / "programs.json")
                  if p.exists()), None)
     if not seed:
         raise HTTPException(503, "no programs.json in data/ or seed/")
