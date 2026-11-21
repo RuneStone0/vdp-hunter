@@ -386,7 +386,7 @@
   "policy": "https://1win.global/.well-known/VulnerabilityDisclosurePolicy.pdf",
   "safe_harbor": null,
   "securitytxt_url": "https://1win.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -1174,6 +1174,28 @@
   "self_managed": false,
   "sources": [
    "hackerone"
+  ],
+  "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": "L2 Basic",
+  "disclose_score": 45.0,
+  "domain": "9198777.xyz",
+  "emails": [
+   "8214ff686f1340d08df461f7ef884cd6@domainsbyproxy..."
+  ],
+  "expires_on": null,
+  "expiry": null,
+  "first_seen": null,
+  "name": "domainsbyproxy",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://9198777.xyz/.well-known/security.txt",
+  "safe_harbor": null,
+  "securitytxt_url": null,
+  "sources": [
+   "disclose-directory"
   ],
   "tls_verified": null
  },
@@ -2564,7 +2586,7 @@
   "policy": "https://www.abb.com/cybersecurity",
   "safe_harbor": null,
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -6006,7 +6028,7 @@
   "policy": "https://hackerone.com/acronis",
   "safe_harbor": null,
   "securitytxt_url": "https://www.acronis.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -7910,7 +7932,7 @@
   "policy": "https://adevinta.com/security-vulnerability/",
   "safe_harbor": "partial",
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -11056,7 +11078,7 @@
   "policy": "https://sandbox.affirm.com/security.txt",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -12354,7 +12376,7 @@
   "policy": "https://hackerone.com/agoda-public",
   "safe_harbor": null,
   "securitytxt_url": "https://www.agoda.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -14060,7 +14082,7 @@
   "policy": "https://hackerone.com/airbnb#overview",
   "safe_harbor": null,
   "securitytxt_url": "https://airbnb.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -14877,7 +14899,7 @@
   "policy": "https://hackerone.com/airtable",
   "safe_harbor": null,
   "securitytxt_url": "https://airtable.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -19063,7 +19085,7 @@
   "contact_urls": [],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 45.0,
-  "domain": "allbankph",
+  "domain": "allbank.ph",
   "emails": [
    "avdionisio@allbankph"
   ],
@@ -19171,7 +19193,7 @@
   "policy": "https://trust.allegion.com/",
   "safe_harbor": "full",
   "securitytxt_url": "https://www.allegion.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -21019,7 +21041,7 @@
   "policy": "https://alscotoday.com/go/bug",
   "safe_harbor": "full",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -22478,7 +22500,7 @@
   "policy": "https://hackerone.com/amazonvrp",
   "safe_harbor": "none",
   "securitytxt_url": "https://www.amazon.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone",
@@ -25891,7 +25913,7 @@
   "policy": "https://anduril.com/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": "https://www.anduril.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -27532,7 +27554,7 @@
   "policy": "https://www.anthropic.com/responsible-disclosure-policy",
   "safe_harbor": "partial",
   "securitytxt_url": "https://www.anthropic.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -28665,7 +28687,7 @@
   "policy": "https://hackerone.com/aon?view_policy=true",
   "safe_harbor": "full",
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -29732,7 +29754,7 @@
   "policy": "https://www.apnic.net/community/security/apnic-vulnerability-reporting-program/",
   "safe_harbor": "full",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -32051,28 +32073,6 @@
   "safe_harbor": null,
   "securitytxt_url": null,
   "self_managed": true,
-  "sources": [
-   "disclose-directory"
-  ],
-  "tls_verified": null
- },
- {
-  "contact_urls": [],
-  "disclose_maturity": "L2 Basic",
-  "disclose_score": 46.7,
-  "domain": "arbgae42g",
-  "emails": [
-   "@arbgae42g"
-  ],
-  "expires_on": null,
-  "expiry": null,
-  "first_seen": null,
-  "name": "arbgae42g",
-  "offers_bounty": null,
-  "platforms": [],
-  "policy": "https://twinkl.si/.well-known/security.txt",
-  "safe_harbor": null,
-  "securitytxt_url": null,
   "sources": [
    "disclose-directory"
   ],
@@ -40250,7 +40250,7 @@
   "policy": "https://bugbounty.att.com/",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -42426,7 +42426,7 @@
   "policy": "https://www.autodesk.com/trust/incident-response",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -42777,7 +42777,7 @@
   "policy": "https://hackerone.com/automattic",
   "safe_harbor": "partial",
   "securitytxt_url": "https://automattic.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -43479,7 +43479,7 @@
   "policy": "https://www.avalara.com/us/en/legal/responsible-disclosure.html",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -44543,6 +44543,28 @@
   "safe_harbor": null,
   "securitytxt_url": null,
   "self_managed": true,
+  "sources": [
+   "disclose-directory"
+  ],
+  "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": "L2 Basic",
+  "disclose_score": 43.3,
+  "domain": "avldigital.de",
+  "emails": [
+   "admin@localhost"
+  ],
+  "expires_on": null,
+  "expiry": null,
+  "first_seen": null,
+  "name": "localhost",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://avldigital.de/.well-known/security.txt",
+  "safe_harbor": null,
+  "securitytxt_url": null,
   "sources": [
    "disclose-directory"
   ],
@@ -55407,7 +55429,7 @@
   "policy": "https://soc.beiersdorf.com/disclosurepolicy.html",
   "safe_harbor": "partial",
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -58111,7 +58133,7 @@
   "policy": "https://www.bestbuy.com/site/help-topics/responsible-disclosure/pcmcat1584549036018.c?id=pcmcat1584549036018",
   "safe_harbor": "partial",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -62033,7 +62055,7 @@
   "policy": "https://www.bill.com/security",
   "safe_harbor": null,
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -64267,7 +64289,7 @@
   "policy": "https://www.bitmex.com/app/security",
   "safe_harbor": "none",
   "securitytxt_url": "https://www.bitmex.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -65031,7 +65053,7 @@
   "policy": "https://hackerone.com/bitwarden",
   "safe_harbor": null,
   "securitytxt_url": "https://bitwarden.com/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -73837,7 +73859,7 @@
   "policy": "https://booking.com/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": "https://booking.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -74327,7 +74349,7 @@
   "policy": "https://hackerone.com/boozt?view_policy=true",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -75139,7 +75161,7 @@
   "policy": "https://global.bose.com/en_us/product_security_vulnerability_response.html",
   "safe_harbor": "partial",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -76064,7 +76086,7 @@
   "policy": "https://www.box.com/about-us/security/",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -77960,7 +77982,7 @@
   "policy": "https://hackerone.com/braze_inc",
   "safe_harbor": null,
   "securitytxt_url": "https://braze.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -83655,7 +83677,7 @@
   "policy": "https://hackerone.com/bumble?view_policy",
   "safe_harbor": null,
   "securitytxt_url": "https://bumble.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -85966,7 +85988,7 @@
   "policy": "https://bykea.com/security",
   "safe_harbor": "full",
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -88464,29 +88486,6 @@
  },
  {
   "contact_urls": [],
-  "disclose_maturity": null,
-  "disclose_score": null,
-  "domain": "callsign_com",
-  "emails": [],
-  "expires_on": null,
-  "expiry": null,
-  "first_seen": "2026-11-21",
-  "name": "Callsign",
-  "offers_bounty": null,
-  "platforms": [
-   "hackerone"
-  ],
-  "policy": null,
-  "safe_harbor": null,
-  "securitytxt_url": null,
-  "self_managed": false,
-  "sources": [
-   "hackerone"
-  ],
-  "tls_verified": null
- },
- {
-  "contact_urls": [],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 45.0,
   "domain": "cally.com",
@@ -89318,7 +89317,7 @@
   "policy": "https://natural-resources.canada.ca/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -90432,7 +90431,7 @@
   "policy": "https://www.capitalone.com/digital/responsible-disclosure/",
   "safe_harbor": "none",
   "securitytxt_url": "https://www.capitalone.com/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -93987,7 +93986,7 @@
   "policy": "https://www.cat.com/en_US/support/maintenance/c/report-potential-information-security-vulnerabilities.html",
   "safe_harbor": "full",
   "securitytxt_url": "https://www.cat.com/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -98167,7 +98166,7 @@
   "policy": "https://vuls.cert.org/confluence/display/Wiki/Vulnerability+Disclosure+Policy",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -105434,7 +105433,7 @@
   "policy": "www.cloud.com/privacy",
   "safe_harbor": "none",
   "securitytxt_url": "https://www.citrix.com/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone",
@@ -107768,7 +107767,7 @@
   "policy": "https://authentication.clearme.com/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": "https://www.clearme.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -109903,7 +109902,7 @@
   "policy": "https://www.cloudflare.com/disclosure/",
   "safe_harbor": "none",
   "securitytxt_url": "https://www.cloudflare.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -112278,7 +112277,7 @@
   "policy": "https://hackerone.com/coalition",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -114499,7 +114498,7 @@
   "policy": "https://coinbase.com/whitehat",
   "safe_harbor": "full",
   "securitytxt_url": "https://www.coinbase.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -114877,7 +114876,7 @@
   "policy": "https://coinspot.com.au/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": "https://www.coinspot.com.au/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -118512,7 +118511,7 @@
   "policy": "https://www.compass.com/legal/responsible-disclosure/",
   "safe_harbor": "full",
   "securitytxt_url": "https://www.compass.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -124291,7 +124290,7 @@
   "policy": "https://hackerone.com/costco",
   "safe_harbor": null,
   "securitytxt_url": "https://www.costco.com/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -124663,7 +124662,7 @@
   "policy": "https://www.coupang.com/np/policies/vdp",
   "safe_harbor": null,
   "securitytxt_url": "https://www.coupang.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -126974,7 +126973,7 @@
   "policy": "https://hackerone.com/creditkarma",
   "safe_harbor": "full",
   "securitytxt_url": "https://creditkarma.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -128258,7 +128257,7 @@
   "policy": "https://www.crowdstrike.com/report-a-security-bug/",
   "safe_harbor": null,
   "securitytxt_url": "https://www.crowdstrike.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -129187,7 +129186,7 @@
   "policy": "https://cs.money/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": "https://cs.money/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -131105,7 +131104,7 @@
   "policy": "https://curl.se/dev/vuln-disclosure.html",
   "safe_harbor": null,
   "securitytxt_url": "https://curl.se/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -136044,7 +136043,7 @@
   "policy": "https://www.daimlertruck.com/en/vulnerability-reporting-policy",
   "safe_harbor": "full",
   "securitytxt_url": "https://www.daimlertruck.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -138258,7 +138257,7 @@
   "policy": "https://www.databricks.com/trust",
   "safe_harbor": null,
   "securitytxt_url": "https://www.databricks.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -138307,26 +138306,6 @@
   "safe_harbor": null,
   "securitytxt_url": null,
   "self_managed": true,
-  "sources": [
-   "disclose-directory"
-  ],
-  "tls_verified": null
- },
- {
-  "contact_urls": [],
-  "disclose_maturity": "L1 Contact Only",
-  "disclose_score": 20.0,
-  "domain": "datacentercatalog",
-  "emails": [],
-  "expires_on": null,
-  "expiry": null,
-  "first_seen": null,
-  "name": "Datacentercatalog",
-  "offers_bounty": null,
-  "platforms": [],
-  "policy": "http://datacentercatalog/privacy-policy",
-  "safe_harbor": null,
-  "securitytxt_url": null,
   "sources": [
    "disclose-directory"
   ],
@@ -143631,7 +143610,7 @@
   "policy": "https://www.deere.com/en/digital-security/responsible-disclosure/",
   "safe_harbor": "partial",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -147292,7 +147271,7 @@
   "policy": "https://www.deribit.com/pages/information/bug-bounty-program",
   "safe_harbor": "partial",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -147389,7 +147368,7 @@
   "policy": "https://hackerone.com/deriv/safe_harbor",
   "safe_harbor": null,
   "securitytxt_url": "https://deriv.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -160207,28 +160186,6 @@
   "contact_urls": [],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 45.0,
-  "domain": "domainsbyproxy",
-  "emails": [
-   "8214ff686f1340d08df461f7ef884cd6@domainsbyproxy..."
-  ],
-  "expires_on": null,
-  "expiry": null,
-  "first_seen": null,
-  "name": "domainsbyproxy",
-  "offers_bounty": null,
-  "platforms": [],
-  "policy": "https://9198777.xyz/.well-known/security.txt",
-  "safe_harbor": null,
-  "securitytxt_url": null,
-  "sources": [
-   "disclose-directory"
-  ],
-  "tls_verified": null
- },
- {
-  "contact_urls": [],
-  "disclose_maturity": "L2 Basic",
-  "disclose_score": 45.0,
   "domain": "domaintube.net",
   "emails": [
    "postmaster@domaintube.net"
@@ -161123,7 +161080,7 @@
   "policy": "https://docs.doppler.com/docs/security-fact-sheet#responsible-disclosure",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -161724,6 +161681,28 @@
   "safe_harbor": null,
   "securitytxt_url": null,
   "self_managed": true,
+  "sources": [
+   "disclose-directory"
+  ],
+  "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": "L2 Basic",
+  "disclose_score": 45.0,
+  "domain": "dotsonar.com",
+  "emails": [
+   "abuse@this domain"
+  ],
+  "expires_on": null,
+  "expiry": null,
+  "first_seen": null,
+  "name": "[this domain]",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "http://dotsonar.com/.well-known/security.txt",
+  "safe_harbor": null,
+  "securitytxt_url": null,
   "sources": [
    "disclose-directory"
   ],
@@ -165505,6 +165484,28 @@
   "contact_urls": [],
   "disclose_maturity": "L1 Contact Only",
   "disclose_score": 20.0,
+  "domain": "duanefking.com",
+  "emails": [
+   "via twitter @honestduane after you follow him."
+  ],
+  "expires_on": null,
+  "expiry": null,
+  "first_seen": null,
+  "name": "honestduane after you follow him",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://duanefking.com/.well-known/security.txt",
+  "safe_harbor": null,
+  "securitytxt_url": null,
+  "sources": [
+   "disclose-directory"
+  ],
+  "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": "L1 Contact Only",
+  "disclose_score": 20.0,
   "domain": "duasrodas.com",
   "emails": [
    "security@duasrodas.com"
@@ -166562,7 +166563,7 @@
   "policy": "https://dust.tt/home/vulnerability",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -169126,7 +169127,7 @@
   "policy": "https://www.earlywarning.com/responsible-disclosure-program",
   "safe_harbor": null,
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -176943,7 +176944,7 @@
   "policy": "https://www.elastic.co/cloud/security",
   "safe_harbor": null,
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -185889,35 +185890,13 @@
   "policy": "https://hackerone.com/epicgames",
   "safe_harbor": null,
   "securitytxt_url": "https://www.epicgames.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
    "securitytxt"
   ],
   "tls_verified": true
- },
- {
-  "contact_urls": [],
-  "disclose_maturity": "L2 Basic",
-  "disclose_score": 45.0,
-  "domain": "epicweb dot se",
-  "emails": [
-   "luc.gosso @ epicweb dot se"
-  ],
-  "expires_on": null,
-  "expiry": null,
-  "first_seen": null,
-  "name": "epicweb dot se",
-  "offers_bounty": null,
-  "platforms": [],
-  "policy": "https://optimizely.blog/.well-known/security.txt",
-  "safe_harbor": null,
-  "securitytxt_url": null,
-  "sources": [
-   "disclose-directory"
-  ],
-  "tls_verified": null
  },
  {
   "contact_urls": [],
@@ -192182,7 +192161,7 @@
   "policy": "https://evernote.com/security/report-issue",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -194191,7 +194170,7 @@
   "policy": "https://hackerone.com/exness",
   "safe_harbor": "full",
   "securitytxt_url": "https://www.exness.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -194796,7 +194775,7 @@
   "policy": "https://www.expediagroup.com/about/privacy-data-handling-requirements/",
   "safe_harbor": null,
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -195014,7 +194993,7 @@
   "contact_urls": [],
   "disclose_maturity": "L1 Contact Only",
   "disclose_score": 20.0,
-  "domain": "expertconsensus,ai",
+  "domain": "expertconsensus.ai",
   "emails": [
    "secops@expertconsensus,ai"
   ],
@@ -198851,7 +198830,7 @@
   "policy": "https://www.fanduel.com/security",
   "safe_harbor": "full",
   "securitytxt_url": "https://www.fanduel.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -199915,7 +199894,7 @@
   "policy": "https://www.fastly.com/security/report-security-issue",
   "safe_harbor": "partial",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -204468,7 +204447,7 @@
   "policy": "https://hackerone.com/figma",
   "safe_harbor": null,
   "securitytxt_url": "https://www.figma.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -209885,7 +209864,7 @@
   "policy": "https://hackerone.com/flexport_vdp",
   "safe_harbor": null,
   "securitytxt_url": "https://www.flexport.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -210096,7 +210075,7 @@
   "policy": "https://flickr.com/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": "https://www.flickr.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -210975,7 +210954,7 @@
   "policy": "https://api-eu.floqast.app/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": "https://www.floqast.app/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -219389,7 +219368,7 @@
   "policy": "https://fresenius.com/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -219599,7 +219578,7 @@
   "policy": "https://www.freshworks.com/security/responsible-disclosure/",
   "safe_harbor": "none",
   "securitytxt_url": "https://freshworks.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone",
@@ -234342,7 +234321,7 @@
   "policy": "https://www.getyourguide.com/security",
   "safe_harbor": "full",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -236667,7 +236646,7 @@
   "policy": "https://bounty.github.com",
   "safe_harbor": "full",
   "securitytxt_url": "https://github.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone",
@@ -236741,7 +236720,7 @@
   "policy": "https://hackerone.com/gitlab/",
   "safe_harbor": "none",
   "securitytxt_url": "https://gitlab.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone",
@@ -239885,7 +239864,7 @@
   "policy": "https://gocardless.com/faq/merchants/security/",
   "safe_harbor": null,
   "securitytxt_url": "https://gocardless.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -240074,7 +240053,7 @@
   "policy": "https://www.godaddy.com/help/coordinated-vulnerability-disclosure-27884<br/>",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -240883,7 +240862,7 @@
   "policy": "https://www.goldmansachs.com/privacy-and-cookies/global-privacy-policy.html",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -247689,7 +247668,7 @@
   "policy": "https://hackerone.com/grab?view_policy=true",
   "safe_harbor": null,
   "securitytxt_url": "https://grab.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -249908,7 +249887,7 @@
   "policy": "https://hackerone.com/greenhouse?type=team",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -251016,7 +250995,7 @@
   "policy": "https://hackerone.com/grindr?view_policy=true",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -266571,7 +266550,7 @@
   "policy": "https://hex.tech/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": "https://hex.tech/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -272342,28 +272321,6 @@
   "contact_urls": [],
   "disclose_maturity": "L1 Contact Only",
   "disclose_score": 20.0,
-  "domain": "honestduane after you follow him",
-  "emails": [
-   "via twitter @honestduane after you follow him."
-  ],
-  "expires_on": null,
-  "expiry": null,
-  "first_seen": null,
-  "name": "honestduane after you follow him",
-  "offers_bounty": null,
-  "platforms": [],
-  "policy": "https://duanefking.com/.well-known/security.txt",
-  "safe_harbor": null,
-  "securitytxt_url": null,
-  "sources": [
-   "disclose-directory"
-  ],
-  "tls_verified": null
- },
- {
-  "contact_urls": [],
-  "disclose_maturity": "L1 Contact Only",
-  "disclose_score": 20.0,
   "domain": "honesthourmm.com",
   "emails": [
    "ics-dept@tech-breeze.com.mm"
@@ -274031,7 +273988,7 @@
   "policy": "https://www.hostinger.com/legal/responsible-disclosure-policy",
   "safe_harbor": "full",
   "securitytxt_url": "https://www.hostinger.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -275700,7 +275657,7 @@
   "policy": "https://www.hpe.com/us/en/services/security-vulnerability.html",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -277180,7 +277137,7 @@
   "policy": "https://hackerone.com/hubspot",
   "safe_harbor": null,
   "securitytxt_url": "https://www.hubspot.com/hubfs/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -279238,7 +279195,7 @@
   "policy": "https://www.hy-vee.com/bug",
   "safe_harbor": null,
   "securitytxt_url": "https://hy-vee.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -281507,7 +281464,7 @@
   "policy": "http://app-06.www.ibm.com/security.txt",
   "safe_harbor": null,
   "securitytxt_url": "https://www.ibm.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -288122,7 +288079,7 @@
   "contact_urls": [],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 45.0,
-  "domain": "in-xcc",
+  "domain": "in-x.cc",
   "emails": [
    "liang@in-xcc"
   ],
@@ -290835,7 +290792,7 @@
   "policy": "https://www.informatica.com/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -293418,7 +293375,7 @@
   "policy": "https://insightly.com/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -293812,7 +293769,7 @@
   "policy": "https://hackerone.com/instacart",
   "safe_harbor": "partial",
   "securitytxt_url": "https://www.instacart.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -319830,7 +319787,7 @@
   "policy": "https://www.kaseya.com/legal/vulnerability-disclosure-policy/",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -320478,7 +320435,7 @@
   "policy": "https://www.kayak.com/security/",
   "safe_harbor": null,
   "securitytxt_url": "https://www.kayak.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -323320,7 +323277,7 @@
   "policy": "https://www.key.com/about/security/privacy-security.jsp",
   "safe_harbor": null,
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -326607,7 +326564,7 @@
   "policy": "https://www.kiwi.com/us/pages/security",
   "safe_harbor": "partial",
   "securitytxt_url": "https://www.kiwi.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -326960,7 +326917,7 @@
   "policy": "https://hackerone.com/kkr_vdp",
   "safe_harbor": null,
   "securitytxt_url": "https://www.kkr.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -327240,7 +327197,7 @@
   "policy": "https://www.klarna.com/responsible-disclosure/",
   "safe_harbor": null,
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -330376,7 +330333,7 @@
   "policy": "https://hackerone.com/koho",
   "safe_harbor": null,
   "securitytxt_url": "https://www.koho.ca/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -332812,7 +332769,7 @@
   "policy": "https://kraken.tech/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -333392,7 +333349,7 @@
   "policy": "https://krisp.ai/security/",
   "safe_harbor": "partial",
   "securitytxt_url": "https://krisp.ai/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -334642,7 +334599,7 @@
   "policy": "https://kubernetes.io/security",
   "safe_harbor": "full",
   "securitytxt_url": "https://kubernetes.io/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone",
@@ -338012,7 +337969,7 @@
   "policy": "https://controller-website-5mli35gg5a-uw.a.run.app/security.txt",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -340717,7 +340674,7 @@
   "policy": "https://www.larksuite.com/bugbounty",
   "safe_harbor": null,
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -345077,7 +345034,7 @@
   "policy": "https://hackerone.com/lemlist",
   "safe_harbor": null,
   "securitytxt_url": "https://www.lemlist.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -351411,7 +351368,7 @@
   "policy": "https://security.linkedin.com/vulnerabilty-disclosure",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -354708,29 +354665,6 @@
  {
   "contact_urls": [],
   "disclose_maturity": "L2 Basic",
-  "disclose_score": 43.3,
-  "domain": "localhost",
-  "emails": [
-   "admin@localhost",
-   "security@localhost:3000"
-  ],
-  "expires_on": null,
-  "expiry": null,
-  "first_seen": null,
-  "name": "Kogo",
-  "offers_bounty": null,
-  "platforms": [],
-  "policy": "https://localhost:3000/security-policy/",
-  "safe_harbor": null,
-  "securitytxt_url": null,
-  "sources": [
-   "disclose-directory"
-  ],
-  "tls_verified": null
- },
- {
-  "contact_urls": [],
-  "disclose_maturity": "L2 Basic",
   "disclose_score": 45.0,
   "domain": "localiza.com",
   "emails": [
@@ -355764,7 +355698,7 @@
   "policy": "https://hackerone.com/logitech",
   "safe_harbor": null,
   "securitytxt_url": "https://www.logitech.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone",
@@ -358019,7 +357953,7 @@
   "policy": "https://lovable.dev/security-issues",
   "safe_harbor": null,
   "securitytxt_url": "https://lovable.dev/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -363344,7 +363278,7 @@
   "policy": "https://magiceden.us/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -378520,7 +378454,7 @@
   "policy": null,
   "safe_harbor": null,
   "securitytxt_url": "https://mendix.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -379173,7 +379107,7 @@
   "policy": "https://hackerone.com/mercadolibre",
   "safe_harbor": "partial",
   "securitytxt_url": "https://mercadolibre.com/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -379361,7 +379295,7 @@
   "policy": "https://assets.msd-animal-health.com/security.txt",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -381771,7 +381705,7 @@
   "policy": "https://www.mheducation.com/privacy.html",
   "safe_harbor": "full",
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -392816,7 +392750,7 @@
   "policy": "https://www.mongodb.com/security",
   "safe_harbor": "partial",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -393723,7 +393657,7 @@
   "policy": "https://buy.moonpay.com/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": "http://moonpay.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -397724,7 +397658,7 @@
   "policy": "https://mtn.ng/security.txt",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -402223,7 +402157,7 @@
   "policy": "https://www.myndr.nl/nl/responsible-disclosure/",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -407302,7 +407236,7 @@
   "policy": "https://careers.nebius.com/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": "https://nebius.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -408784,7 +408718,7 @@
   "policy": "https://neon.com/security",
   "safe_harbor": null,
   "securitytxt_url": "https://neon.com/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -410244,7 +410178,7 @@
   "policy": "https://hackerone.com/netflix",
   "safe_harbor": "partial",
   "securitytxt_url": "https://www.netflix.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone",
@@ -412814,7 +412748,7 @@
   "policy": "https://kb.newegg.com/knowledge-base/privacy-policy-newegg/",
   "safe_harbor": null,
   "securitytxt_url": "https://www.newegg.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -419461,7 +419395,7 @@
   "policy": "https://github.com/nodejs/node/security/policy#security",
   "safe_harbor": null,
   "securitytxt_url": "https://nodejs.org/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone",
@@ -431755,7 +431689,7 @@
   "policy": "https://www.ohiosos.gov/vulnerability-disclosure-policy/",
   "safe_harbor": "full",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -433068,7 +433002,7 @@
   "policy": "https://omarchy.org/security",
   "safe_harbor": null,
   "securitytxt_url": "https://omarchy.org/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -435249,7 +435183,7 @@
   "policy": "https://onepeloton.com/security",
   "safe_harbor": null,
   "securitytxt_url": "https://www.onepeloton.com/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -440196,6 +440130,28 @@
   "safe_harbor": null,
   "securitytxt_url": null,
   "self_managed": true,
+  "sources": [
+   "disclose-directory"
+  ],
+  "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": "L2 Basic",
+  "disclose_score": 45.0,
+  "domain": "optimizely.blog",
+  "emails": [
+   "luc.gosso @ epicweb dot se"
+  ],
+  "expires_on": null,
+  "expiry": null,
+  "first_seen": null,
+  "name": "epicweb dot se",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://optimizely.blog/.well-known/security.txt",
+  "safe_harbor": null,
+  "securitytxt_url": null,
   "sources": [
    "disclose-directory"
   ],
@@ -447003,7 +446959,7 @@
   "policy": "https://www.pagerduty.com/security/disclosure/",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -447465,7 +447421,7 @@
   "policy": "https://www.palantir.com/responsible-disclosure/",
   "safe_harbor": null,
   "securitytxt_url": "https://www.palantir.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -452448,7 +452404,7 @@
   "policy": "https://hackerone.com/paypal?view_policy=true",
   "safe_harbor": "none",
   "securitytxt_url": "https://www.paypalobjects.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone",
@@ -457141,7 +457097,7 @@
   "policy": "https://hackerone.com/pfizer",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -458602,7 +458558,7 @@
   "policy": "Found a Security Bug? Please read our Responsible Disclosure Policy here, https://www.phonepe.com/report-vulnerability/",
   "safe_harbor": null,
   "securitytxt_url": "https://www.phonepe.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -459623,7 +459579,7 @@
   "policy": "https://hackerone.com/picsart",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -460660,7 +460616,7 @@
   "policy": "https://www.pingidentity.com/en/company/security-at-ping-identity.html",
   "safe_harbor": null,
   "securitytxt_url": "https://download.pingidentity.com/public/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone",
@@ -462027,7 +461983,7 @@
   "policy": "https://hackerone.com/pixiv?view_policy=true",
   "safe_harbor": null,
   "securitytxt_url": "https://www.pixiv.net/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -462471,7 +462427,7 @@
   "policy": null,
   "safe_harbor": null,
   "securitytxt_url": "https://plaid.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -464157,7 +464113,7 @@
   "policy": "https://hackerone.com/playtika",
   "safe_harbor": null,
   "securitytxt_url": "https://www.playtika.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -474996,7 +474952,7 @@
   "policy": "https://www.productboard.com/product/security/#application-security",
   "safe_harbor": "partial",
   "securitytxt_url": "https://www.productboard.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -491831,7 +491787,7 @@
   "policy": "https://razorpay.com/responsible-disclosure/",
   "safe_harbor": "full",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -494506,7 +494462,7 @@
   "policy": "https://www.recreation.gov/vulnerability-disclosure-policy",
   "safe_harbor": null,
   "securitytxt_url": "https://www.recreation.gov/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -495088,7 +495044,7 @@
   "policy": "https://hackerone.com/reddit?type=team",
   "safe_harbor": "none",
   "securitytxt_url": "https://www.reddit.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -495399,7 +495355,7 @@
   "policy": "https://hackerone.com/redis-vdp",
   "safe_harbor": null,
   "securitytxt_url": "https://redis.io/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -496848,7 +496804,7 @@
   "policy": "https://www.regions.com/about-regions/privacy-security/vulnerability-disclosure-program",
   "safe_harbor": "full",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -498743,7 +498699,7 @@
   "policy": "https://hackerone.com/render",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -499242,7 +499198,7 @@
   "contact_urls": [],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 43.3,
-  "domain": "reparado",
+  "domain": "reparado.com",
   "emails": [
    "web@reparado"
   ],
@@ -500367,7 +500323,7 @@
   "policy": "https://www.resmed.com/en-us/security/",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -504354,7 +504310,7 @@
   "policy": "https://hackerone.com/ring",
   "safe_harbor": null,
   "securitytxt_url": "https://ring.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -506490,7 +506446,7 @@
   "policy": "https://hackerone.com/ro",
   "safe_harbor": null,
   "securitytxt_url": "https://ro.co/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -506907,7 +506863,7 @@
   "policy": "https://hackerone.com/robinhood",
   "safe_harbor": null,
   "securitytxt_url": "https://robinhood.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -506957,7 +506913,7 @@
   "policy": "https://roblox.com/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": "https://www.roblox.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -507544,7 +507500,7 @@
   "policy": "https://hackerone.com/rockstargames?type=team",
   "safe_harbor": null,
   "securitytxt_url": "https://www.rockstargames.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -512288,7 +512244,7 @@
   "policy": "https://rubyonrails.org/security",
   "safe_harbor": null,
   "securitytxt_url": "https://rubyonrails.org/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -532875,7 +532831,7 @@
   "policy": "https://www.servicenow.com/company/trust/responsible-disclosure.html",
   "safe_harbor": null,
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -536732,7 +536688,7 @@
   "policy": "https://hackerone.com/shopify",
   "safe_harbor": "full",
   "securitytxt_url": "https://www.shopify.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -543290,7 +543246,7 @@
   "policy": "https://hackerone.com/six-group",
   "safe_harbor": null,
   "securitytxt_url": "https://www.six-group.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone",
@@ -545651,7 +545607,7 @@
   "policy": "https://hackerone.com/slack/",
   "safe_harbor": "none",
   "securitytxt_url": "https://slack.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone",
@@ -549029,7 +548985,7 @@
   "policy": "https://hackerone.com/snapchat",
   "safe_harbor": null,
   "securitytxt_url": "https://snapchat.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -553189,7 +553145,7 @@
   "policy": "http://www.sonatype.com/contact/report-a-security-issue",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -554047,7 +554003,7 @@
   "policy": "https://sorare.com/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": "https://sorare.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -558844,7 +558800,7 @@
   "policy": "https://www.spotify.com/bounty",
   "safe_harbor": "none",
   "securitytxt_url": "https://www.spotify.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -562694,7 +562650,7 @@
   "policy": "https://www.starbucks.com/whitehat",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -562927,7 +562883,7 @@
   "policy": "https://www.starlingbank.com/security/disclosure/",
   "safe_harbor": null,
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -563325,7 +563281,7 @@
   "policy": "https://www.state.gov/vulnerability-disclosure-policy/",
   "safe_harbor": "full",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -564415,7 +564371,7 @@
   "policy": "https://www.stellar.org/bug-bounty-program/",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -568818,7 +568774,7 @@
   "policy": "https://hackerone.com/stripe#overview",
   "safe_harbor": "none",
   "securitytxt_url": "https://stripe.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone",
@@ -572792,7 +572748,7 @@
   "policy": "https://supabase.com/.well-known/security.txt",
   "safe_harbor": "partial",
   "securitytxt_url": "https://supabase.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -589219,7 +589175,7 @@
   "policy": "https://www.tenable.com/security/report",
   "safe_harbor": "none",
   "securitytxt_url": "https://www.tenable.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -590315,7 +590271,7 @@
   "contact_urls": [],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 45.0,
-  "domain": "terrywang",
+  "domain": "terry.im",
   "emails": [
    "@terrywang"
   ],
@@ -597526,28 +597482,6 @@
  },
  {
   "contact_urls": [],
-  "disclose_maturity": "L2 Basic",
-  "disclose_score": 45.0,
-  "domain": "this domain",
-  "emails": [
-   "abuse@this domain"
-  ],
-  "expires_on": null,
-  "expiry": null,
-  "first_seen": null,
-  "name": "[this domain]",
-  "offers_bounty": null,
-  "platforms": [],
-  "policy": "http://dotsonar.com/.well-known/security.txt",
-  "safe_harbor": null,
-  "securitytxt_url": null,
-  "sources": [
-   "disclose-directory"
-  ],
-  "tls_verified": null
- },
- {
-  "contact_urls": [],
   "disclose_maturity": "L1 Contact Only",
   "disclose_score": 20.0,
   "domain": "thisis.la",
@@ -598210,7 +598144,7 @@
   "policy": "https://security-fed-txt.thomsonreuters.com/vdp-policy.txt",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -601912,7 +601846,7 @@
   "policy": "https://engineering.tines.com/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": "https://www.tines.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -605245,7 +605179,7 @@
   "policy": "https://hackerone.com/toolsforhumanity",
   "safe_harbor": null,
   "securitytxt_url": "https://www.toolsforhumanity.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -606404,7 +606338,7 @@
   "policy": "https://gitlab.torproject.org/tpo/core/team/-/wikis/NetworkTeam/SecurityPolicy",
   "safe_harbor": null,
   "securitytxt_url": "https://www.torproject.org/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -607307,7 +607241,7 @@
   "policy": "https://hackerone.com/toyota",
   "safe_harbor": null,
   "securitytxt_url": "https://www.toyota.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -611915,7 +611849,7 @@
   "policy": "https://tron.network/findBug",
   "safe_harbor": "full",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -617489,6 +617423,28 @@
  },
  {
   "contact_urls": [],
+  "disclose_maturity": "L2 Basic",
+  "disclose_score": 46.7,
+  "domain": "twinkl.si",
+  "emails": [
+   "@arbgae42g"
+  ],
+  "expires_on": null,
+  "expiry": null,
+  "first_seen": null,
+  "name": "arbgae42g",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://twinkl.si/.well-known/security.txt",
+  "safe_harbor": null,
+  "securitytxt_url": null,
+  "sources": [
+   "disclose-directory"
+  ],
+  "tls_verified": null
+ },
+ {
+  "contact_urls": [],
   "disclose_maturity": null,
   "disclose_score": null,
   "domain": "twintechsolutions.in",
@@ -620304,7 +620260,7 @@
   "policy": "https://support.udemy.com/hc/en-us/articles/229232627-Report-a-Security-Vulnerability",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -621024,7 +620980,7 @@
   "policy": "https://ui.com/security/",
   "safe_harbor": "none",
   "securitytxt_url": "https://ui.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -624517,7 +624473,7 @@
   "policy": "https://directory.disclose.io/# If you are a hackerone researcher, you may be invited to our private program.",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -635268,7 +635224,7 @@
   "policy": "https://hackerone.com/veeam?type=team",
   "safe_harbor": null,
   "securitytxt_url": "https://www.veeam.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -637190,7 +637146,7 @@
   "policy": "https://security.vercel.com/",
   "safe_harbor": null,
   "securitytxt_url": "https://vercel.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -641667,7 +641623,7 @@
   "policy": "https://hackerone.com/vimeo/",
   "safe_harbor": null,
   "securitytxt_url": "https://vimeo.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -644042,7 +643998,7 @@
   "policy": "https://usa.visa.com/about-visa/vulnerability-disclosure.html",
   "safe_harbor": "partial",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -647273,7 +647229,7 @@
   "policy": "https://automotive.vodafone.com/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -653096,7 +653052,7 @@
   "policy": "https://wakatime.com/report-a-vulnerability",
   "safe_harbor": null,
   "securitytxt_url": null,
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone"
@@ -656448,7 +656404,7 @@
   "policy": "https://hackerone.com/wealthsimple?view_policy=true",
   "safe_harbor": null,
   "securitytxt_url": "https://www.wealthsimple.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -658158,7 +658114,7 @@
   "policy": "https://docs.weblate.org/en/latest/contributing/issues.html#security",
   "safe_harbor": null,
   "securitytxt_url": "https://weblate.org/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -658746,28 +658702,6 @@
   "safe_harbor": null,
   "securitytxt_url": null,
   "self_managed": true,
-  "sources": [
-   "disclose-directory"
-  ],
-  "tls_verified": null
- },
- {
-  "contact_urls": [],
-  "disclose_maturity": "L2 Basic",
-  "disclose_score": 45.0,
-  "domain": "webserver",
-  "emails": [
-   "admin@webserver"
-  ],
-  "expires_on": null,
-  "expiry": null,
-  "first_seen": null,
-  "name": "webserver",
-  "offers_bounty": null,
-  "platforms": [],
-  "policy": "https://rvrjcce.ac.in/.well-known/security.txt",
-  "safe_harbor": null,
-  "securitytxt_url": null,
   "sources": [
    "disclose-directory"
   ],
@@ -660866,7 +660800,7 @@
   "policy": "https://www.wellsfargo.com/privacy-security/fraud/responsible-disclosure-program/",
   "safe_harbor": "partial",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -664494,7 +664428,7 @@
   "policy": "https://wickr.com/security/bug-bounty/",
   "safe_harbor": "none",
   "securitytxt_url": "",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "hackerone"
@@ -669334,7 +669268,7 @@
   "policy": "https://hackerone.com/wolt",
   "safe_harbor": null,
   "securitytxt_url": "https://wolt.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"
@@ -670103,7 +670037,7 @@
   "policy": "https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/",
   "safe_harbor": "none",
   "securitytxt_url": "https://wordpress.org/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "diodb",
    "disclose-directory",
@@ -674881,7 +674815,7 @@
   "contact_urls": [],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 45.0,
-  "domain": "xepelin com",
+  "domain": "xepelin.com",
   "emails": [
    "mailto security @ xepelin com"
   ],
@@ -678052,7 +677986,7 @@
   "policy": "https://info.xvideos.com/.well-known/security.txt",
   "safe_harbor": null,
   "securitytxt_url": "https://xvideos.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "disclose-directory",
    "hackerone",
@@ -680078,7 +680012,7 @@
   "policy": "https://hackerone.com/yelp?view_policy=true",
   "safe_harbor": null,
   "securitytxt_url": "https://yelp.com/.well-known/security.txt",
-  "self_managed": true,
+  "self_managed": false,
   "sources": [
    "hackerone",
    "securitytxt"

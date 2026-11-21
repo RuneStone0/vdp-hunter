@@ -127,7 +127,7 @@ def name_anchored_email(d):
         return None
     if name not in normalize_name(key.replace(".", "")):
         return None
-    return key
+    return key if "." in key else None
 
 
 def directory_host(d):
@@ -141,7 +141,9 @@ def directory_host(d):
     host = host_of(url)
     if not host or is_ip(host) or is_platform_host(host):
         return None
-    return registrable(host)
+    key = registrable(host)
+    # a policy served from http://localhost/ or a hostless string is not a company
+    return key if key and "." in key else None
 
 
 def fold_directory(directory):
@@ -211,7 +213,9 @@ def platform_domain(prog):
             host = ident.replace("*.", "").split("/")[0].split(":")[0]
         if not host or "*" in host or is_ip(host) or is_platform_host(host):
             continue
-        return registrable(host)
+        key = registrable(host)
+        if key and "." in key:
+            return key
     return None
 
 
