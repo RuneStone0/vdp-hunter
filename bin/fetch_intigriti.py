@@ -42,9 +42,11 @@ def call(path: str, attempt: int = 0):
             return json.load(r)
     except urllib.error.HTTPError as e:
         # 403 appears after roughly a hundred rapid detail calls: back off, do not give up
-        if e.code in (403, 429) and attempt < 6:
-            # the block clears on its own: a single call works again after a few minutes
-            time.sleep(300)
+        if e.code in (403, 429) and attempt < 3:
+            # throttling is sporadic, not a hard quota: a probe a minute later answers 200.
+            # Three tries, then the caller skips this id and a later run retries it, because
+            # retrying the same id in a tight loop is what keeps the block alive.
+            time.sleep(120)
             return call(path, attempt + 1)
         if e.code in (500, 502, 503) and attempt < 3:
             time.sleep(15 + attempt * 15)
@@ -81,7 +83,7 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--list-only", action="store_true",
                     help="skip the detail calls: the list carries name, handle and bounty")
-    ap.add_argument("--pause", type=float, default=1.5, help="seconds between detail calls")
+    ap.add_argument("--pause", type=float, default=25.0, help="seconds between detail calls")
     args = ap.parse_args()
     records, offset, limit = [], 0, 100
     while True:
@@ -97,12 +99,16 @@ def main() -> int:
     if OUT.exists():
         try:
             for prev in json.loads(OUT.read_text()):
-                done[prev["id"]] = prev
+                # a record with no scope came from --list-only; it still needs its
+                # detail call, so only scoped records count as done
+                if prev.get("scope_in") or prev.get("scope_out"):
+                    done[prev["id"]] = prev
         except json.JSONDecodeError:
             done = {}
     print(f"resuming with {len(done)} already fetched")
 
     out = []
+    skipped: list[str] = []
     for i, rec in enumerate(records, 1):
         if rec["id"] in done:
             out.append(done[rec["id"]])
@@ -117,7 +123,11 @@ def main() -> int:
                 "submit_access": "account_required",
             })
             continue
-        detail = call(f"/programs/{rec['id']}")
+        try:
+            detail = call(f"/programs/{rec['id']}")
+        except urllib.error.HTTPError:
+            skipped.append(rec["id"])
+            continue
         ins, outs = scope_of(detail)
         out.append({
             "id": rec["id"],
@@ -139,6 +149,7 @@ def main() -> int:
     OUT.write_text(json.dumps(out, indent=0), encoding="utf-8")
     with_scope = sum(1 for p in out if p["scope_in"] or p["scope_out"])
     print(json.dumps({"programs": len(out), "with_scope": with_scope,
+                      "skipped_throttled": len(skipped),
                       "in_assets": sum(len(p["scope_in"]) for p in out),
                       "out_assets": sum(len(p["scope_out"]) for p in out),
                       "written": str(OUT)}, indent=1))
