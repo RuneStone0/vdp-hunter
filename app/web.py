@@ -178,6 +178,7 @@ def program_body(p: dict) -> str:
          + (f' · {esc(p["expires_on"])}' if p.get("expires_on") else "")),
         ("TLS verified", "yes" if p.get("tls_verified") else "no"),
         ("In scope", _list(p.get("in_scope_domains"))),
+        ("Out of scope", _list(p.get("out_of_scope_domains"))),
         ("First seen", esc(p.get("first_seen") or "")),
         ("Last seen", esc(p.get("last_seen") or "")),
         ("API", f'<span class="mono-small">GET /v1/programs/{esc(p["domain"])} (key required)</span>'),

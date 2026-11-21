@@ -15,8 +15,10 @@ from datetime import datetime, timezone
 
 FIELDS = ("name", "sources", "platforms", "policy", "emails", "contact_urls",
           "expires_on", "expiry", "offers_bounty", "safe_harbor",
-          "securitytxt_url", "tls_verified", "in_scope_domains")
-JSON_FIELDS = {"sources", "platforms", "emails", "contact_urls", "in_scope_domains"}
+          "securitytxt_url", "tls_verified", "in_scope_domains",
+          "out_of_scope_domains", "scope_in", "scope_out", "scopes_count", "submit_access")
+JSON_FIELDS = {"sources", "platforms", "emails", "contact_urls", "in_scope_domains",
+               "out_of_scope_domains", "scope_in", "scope_out"}
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS programs (
@@ -25,6 +27,8 @@ CREATE TABLE IF NOT EXISTS programs (
     emails TEXT, contact_urls TEXT, expires_on TEXT, expiry TEXT,
     offers_bounty TEXT, safe_harbor TEXT, securitytxt_url TEXT,
     tls_verified INTEGER, in_scope_domains TEXT,
+    out_of_scope_domains TEXT, scope_in TEXT, scope_out TEXT,
+    scopes_count INTEGER, submit_access TEXT,
     first_seen TEXT, last_seen TEXT, updated_at TEXT
 );
 CREATE INDEX IF NOT EXISTS idx_programs_expiry ON programs(expiry);
@@ -60,6 +64,13 @@ class Store:
         os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
         with self.conn() as c:
             c.executescript(SCHEMA)
+            # the volume database predates later columns; add them in place
+            have = {r["name"] for r in c.execute("PRAGMA table_info(programs)")}
+            for col, kind in (("out_of_scope_domains", "TEXT"), ("scope_in", "TEXT"),
+                              ("scope_out", "TEXT"), ("scopes_count", "INTEGER"),
+                              ("submit_access", "TEXT")):
+                if col not in have:
+                    c.execute(f"ALTER TABLE programs ADD COLUMN {col} {kind}")
 
     @contextmanager
     def conn(self):
@@ -194,7 +205,7 @@ class Store:
 
     def query(self, q=None, platform=None, source=None, bounty=None, expiry=None,
               limit=100, offset=0, sort="domain", self_managed=False,
-              platform_only=False, safe_harbor=None):
+              platform_only=False, safe_harbor=None, submit_access=None, has_scope=False):
         where, args = [], []
         if self_managed:
             where.append("(platforms IS NULL OR platforms IN ('[]', ''))")
@@ -220,6 +231,11 @@ class Store:
         if safe_harbor:
             where.append("safe_harbor=?")
             args.append(safe_harbor)
+        if submit_access:
+            where.append("submit_access=?")
+            args.append(submit_access)
+        if has_scope:
+            where.append("COALESCE(scopes_count,0)>0")
         clause = ("WHERE " + " AND ".join(where)) if where else ""
         sort = sort if sort in ("domain", "expiry", "expires_on", "updated_at") else "domain"
         with self.conn() as c:

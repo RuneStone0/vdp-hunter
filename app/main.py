@@ -106,6 +106,11 @@ class Program(BaseModel):
     first_seen: str | None = None
     last_seen: str | None = None
     in_scope_domains: list[str] = Field(default_factory=list)
+    out_of_scope_domains: list[str] = Field(default_factory=list)
+    scope_in: list[dict] = Field(default_factory=list, description="In-scope assets as published")
+    scope_out: list[dict] = Field(default_factory=list, description="Out-of-scope assets")
+    scopes_count: int = 0
+    submit_access: str | None = Field(None, examples=["account_required", "invite_only"])
 
 
 class Change(BaseModel):
@@ -184,6 +189,9 @@ def list_programs(
     safe_harbor: str | None = Query(None, pattern="^(full|partial|none)$",
                                     description="'full' = explicit authorisation and law "
                                                 "exemptions, 'partial' = promises no legal action"),
+    submit_access: str | None = Query(None, pattern="^(account_required|invite_only)$",
+                                      description="Programs whose submission needs an account"),
+    has_scope: bool = Query(False, description="Only programs that publish scope"),
     limit: int = Query(100, ge=1, le=1000),
     offset: int = Query(0, ge=0),
     sort: str = Query("domain", pattern="^(domain|expiry|expires_on|updated_at)$"),
@@ -191,7 +199,8 @@ def list_programs(
 ):
     free = key["tier"] == "free"
     rows, total = store.query(q, platform, source, bounty, expiry, limit, offset, sort,
-                              platform_only=free, safe_harbor=safe_harbor)
+                              platform_only=free, safe_harbor=safe_harbor,
+                              submit_access=submit_access, has_scope=has_scope)
     return envelope(rows, total, limit, offset,
                     **({"free_tier_restricted": True} if free else {}))
 

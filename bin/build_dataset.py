@@ -75,7 +75,48 @@ def base_program(key):
             "emails": [], "contact_urls": [], "expires_on": None, "expiry": None,
             "offers_bounty": None, "safe_harbor": None, "securitytxt_url": None,
             "first_seen": None, "tls_verified": None,
+            "in_scope_domains": [], "out_of_scope_domains": [],
+            "scope_in": [], "scope_out": [], "scopes_count": 0, "submit_access": None,
             "disclose_maturity": None, "disclose_score": None}
+
+
+SCOPE_FIELDS = ("asset_identifier", "uri", "endpoint", "target")
+
+
+def scope_assets(prog):
+    """Every platform publishes scope in its own shape: asset_identifier (HackerOne),
+    uri (Bugcrowd), endpoint (Intigriti), target (YesWeHack). Normalise the four
+    into one list of {target, type} and keep in and out apart."""
+    targets = prog.get("targets") or {}
+
+    def norm(items):
+        out = []
+        for item in items or []:
+            if not isinstance(item, dict):
+                continue
+            raw = next((str(item[f]).strip() for f in SCOPE_FIELDS if item.get(f)), "")
+            if not raw:
+                continue
+            kind = item.get("asset_type") or item.get("type") or "other"
+            out.append({"target": raw[:300], "type": str(kind)[:40]})
+        return out
+
+    return norm(targets.get("in_scope")), norm(targets.get("out_of_scope"))
+
+
+def asset_domains(assets):
+    """The registrable domains an asset list names, so scope can filter the dataset."""
+    domains = set()
+    for asset in assets:
+        raw = asset["target"]
+        host = host_of(raw) if "://" in raw else raw.replace("*.", "").split("/")[0].split(":")[0]
+        host = (host or "").strip().lower().strip(".")
+        if not host or is_ip(host) or is_platform_host(host):
+            continue
+        key = registrable(host)
+        if key and "." in key:
+            domains.add(key)
+    return sorted(domains)
 
 
 def is_url(value):
@@ -385,6 +426,18 @@ def main():
             if p["name"] == p["domain"]:
                 p["name"] = prog.get("name") or p["name"]
             p["offers_bounty"] = p["offers_bounty"] or ("yes" if prog.get("offers_bounties") else None)
+            ins, outs = scope_assets(prog)
+            if ins or outs:
+                p["scope_in"].extend({"platform": plat, **a} for a in ins[:200])
+                p["scope_out"].extend({"platform": plat, **a} for a in outs[:200])
+                p["in_scope_domains"] = sorted(set(p["in_scope_domains"]) | set(asset_domains(ins)))
+                p["out_of_scope_domains"] = sorted(
+                    set(p["out_of_scope_domains"]) | set(asset_domains(outs)))
+                p["scopes_count"] = len(p["scope_in"]) + len(p["scope_out"])
+            # YesWeHack hides submission behind a hunter account; a program that is
+            # not public is invite-only on top of that
+            if plat == "yeswehack":
+                p["submit_access"] = "invite_only" if prog.get("public") is False else "account_required"
 
     # 4) platform scope domains: mark any program whose host appears in scope
     scope = load_lines("domains.txt")
@@ -400,7 +453,9 @@ def main():
         p["sources"] = sorted(set(p["sources"]))
         p["platforms"] = sorted(set(p["platforms"]))
         p["self_managed"] = bool(p["platforms"]) is False and bool(p["policy"] or p["emails"])
-        p["in_scope_domains"] = sorted(p.get("in_scope_domains") or [])
+        p["in_scope_domains"] = sorted(set(p.get("in_scope_domains") or []))[:200]
+        p["out_of_scope_domains"] = sorted(set(p.get("out_of_scope_domains") or []))[:200]
+        p["scopes_count"] = len(p.get("scope_in") or []) + len(p.get("scope_out") or [])
         p["emails"] = sorted(set(p["emails"]))
         p["contact_urls"] = sorted(set(p["contact_urls"]))
         if not p.get("first_seen"):
