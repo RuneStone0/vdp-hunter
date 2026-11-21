@@ -1,36 +1,41 @@
 # VDP dataset changes, 2026-11-21
 
-Programs: 6247 total, 4010 not in any known list, 904 on a bounty platform.
+Programs: 6274 total, 4037 not in any known list, 904 on a bounty platform.
 
-## New programs (24)
+## New programs (27)
 
-- `airbnb.nl` airbnb.nl -> https://hackerone.com/airbnb#overview
-- `blackwell-synergy.com` blackwell-synergy.com -> ['security@wiley.com']
-- `com.tn` com.tn -> https://g.co/vrp
-- `crowneplaza.com` crowneplaza.com -> https://www.ihg.com/content/us/en/customer-care/privacy-and-cookie-center/responsible-disclosure
-- `cuyahogacounty.gov` cuyahogacounty.gov -> https://cuyahogacounty.gov/information-technology/security/disclosure
-- `degiro.nl` degiro.nl -> https://www.flatexdegiro.com/security
-- `emburse.com` emburse.com -> https://www.emburse.com/responsible-disclosure
-- `flatpay.com` flatpay.com -> https://flatpay.com/responsible-disclosure
-- `gameboost.com` gameboost.com -> ['youssef@gameboost.com']
-- `goquiq.com` goquiq.com -> https://quiq.com/responsible-disclosure/
-- `hoyts.com.au` hoyts.com.au -> ['security@hoyts.com.au']
-- `iu.org` iu.org -> ['informationssicherheit@iu.org', 'security@iu.org']
-- `jobberman.com` jobberman.com -> ['security@ringier.co.za']
-- `kurierlubelski.pl` kurierlubelski.pl -> ['secvul@polskapress.pl']
-- `nn.nl` nn.nl -> https://www.nn-group.com/ethical-hacking-nn-groups-responsible-disclosure-policy.htm
-- `onlinejacc.org` onlinejacc.org -> ['security@wiley.com']
-- `queerty.com` queerty.com -> ['developers@queerty.com']
-- `reverselookup.com` reverselookup.com -> https://reverselookup.com/security
-- `saloncentric.com` saloncentric.com -> ['bugbounty@loreal.com']
-- `st.nu` st.nu -> ['security@bonniernews.se']
-- `toyota.es` toyota.es -> []
-- `uscc.gov` uscc.gov -> ['uscc-support@usa-ctc.com']
-- `watchpeopledie.tv` watchpeopledie.tv -> ['wpd@watchpeopledie.tv']
-- `xvideovn.com` xvideovn.com -> []
+- `aicrowd.com` aicrowd.com -> https://www.aicrowd.com/bug_bounty
+- `am730.com.hk` am730.com.hk -> ['it@am730.com.hk']
+- `chatdate.app` chatdate.app -> https://hackerone.com/bumble?view_policy
+- `finma.ch` finma.ch -> ['questions@finma.ch', 'security@finma.ch']
+- `flashscore.nl` flashscore.nl -> https://bugbounty.livesport.eu/#rules
+- `gameknot.com` gameknot.com -> []
+- `kerrang.com` kerrang.com -> https://www.kerrang.com/security-policy
+- `kindroid.ai` kindroid.ai -> https://kindroid.ai/security.html
+- `ktk.de` ktk.de -> https://kevag-telekom.de/bug
+- `laredoute.es` laredoute.es -> https://www.laredoute.com/vulnerability_disclosure_program.aspx
+- `makemula.ai` makemula.ai -> https://makemula.ai/privacy#security
+- `mall.hr` mall.hr -> ['abuse@mall.hr']
+- `margriet.nl` margriet.nl -> []
+- `netwrix.com` netwrix.com -> ['psirt@netwrix.com']
+- `nykaaman.com` nykaaman.com -> https://www.nykaaman.com/responsible-disclosure
+- `onepay.com` onepay.com -> ['security@one.app']
+- `ryviu.com` ryviu.com -> ['tuanlv8195@gmail.com']
+- `s-pankki.fi` s-pankki.fi -> [' turvallisuus[at]s-pankki.fi']
+- `secretescapes.de` secretescapes.de -> ['bugbounty@secretescapes.com']
+- `smp.se` smp.se -> ['security@bonniernews.se']
+- `street-one.de` street-one.de -> ['web-security@cbr.de']
+- `tchibo.pl` tchibo.pl -> ['security@tchibo.de']
+- `thecarconnection.com` thecarconnection.com -> []
+- `toyota.fr` toyota.fr -> []
+- `underdogfantasy.com` underdogfantasy.com -> ['security@underdogsports.com']
+- `uni-duisburg-essen.de` uni-duisburg-essen.de -> ['ciso@uni-due.de']
+- `yukon.ca` yukon.ca -> ['itsecurity@yukon.ca', 'thomas.dang@yukon.ca']
 
 ## Removed (0)
 
 
-## Changed (0)
+## Changed (2)
 
+- `coder.com`: policy, expiry, sources
+- `ohiosos.gov`: policy, expiry, expires_on, sources

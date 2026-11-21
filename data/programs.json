@@ -3630,6 +3630,28 @@
  },
  {
   "contact_urls": [],
+  "domain": "aicrowd.com",
+  "emails": [
+   "hello@aicrowd.com"
+  ],
+  "expires_on": "2022-09-21",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "aicrowd.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.aicrowd.com/bug_bounty",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.aicrowd.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "aig",
   "emails": [],
   "expires_on": null,
@@ -5731,6 +5753,28 @@
   "policy": "https://www.alzheimers.org.uk/responsible-disclosure",
   "safe_harbor": null,
   "securitytxt_url": "https://www.alzheimers.org.uk/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "am730.com.hk",
+  "emails": [
+   "it@am730.com.hk"
+  ],
+  "expires_on": "2024-12-31",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "am730.com.hk",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.am730.com.hk/.well-known/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -21827,6 +21871,30 @@
  },
  {
   "contact_urls": [
+   "https://hackerone.com/bumble/reports/new"
+  ],
+  "domain": "chatdate.app",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [
+   "chatdate.app"
+  ],
+  "name": "chatdate.app",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://hackerone.com/bumble?view_policy",
+  "safe_harbor": null,
+  "securitytxt_url": "https://chatdate.app/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
    "https://bugcrowd.com/openai"
   ],
   "domain": "chatgpt.com",
@@ -25030,22 +25098,25 @@
  {
   "contact_urls": [],
   "domain": "coder.com",
-  "emails": [],
+  "emails": [
+   "security@coder.com"
+  ],
   "expires_on": null,
-  "expiry": null,
+  "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "Coder",
   "offers_bounty": "no",
   "platforms": [],
-  "policy": "https://www.coder.com/security/policy",
+  "policy": "https://coder.com/security/policy",
   "safe_harbor": "full",
-  "securitytxt_url": "https://www.coder.com/.well-known/security.txt",
+  "securitytxt_url": "https://coder.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "diodb"
+   "diodb",
+   "securitytxt"
   ],
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [
@@ -43656,6 +43727,29 @@
  },
  {
   "contact_urls": [],
+  "domain": "finma.ch",
+  "emails": [
+   "questions@finma.ch",
+   "security@finma.ch"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "finma.ch",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.finma.ch/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "finn.com",
   "emails": [
    "security@finn.com"
@@ -44618,6 +44712,28 @@
   "policy": "https://bugbounty.livesport.eu/#rules",
   "safe_harbor": null,
   "securitytxt_url": "https://www.flashscore.it/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://www.livesport.eu/en/contacts"
+  ],
+  "domain": "flashscore.nl",
+  "emails": [],
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "flashscore.nl",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://bugbounty.livesport.eu/#rules",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.flashscore.nl/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -48094,6 +48210,28 @@
   "safe_harbor": null,
   "securitytxt_url": "https://gameforge.com/.well-known/security.txt",
   "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://gameknot.com/contact.pl?q=Security+issue&for=gk"
+  ],
+  "domain": "gameknot.com",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "gameknot.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://gameknot.com/.well-known/security.txt",
+  "self_managed": false,
   "sources": [
    "securitytxt"
   ],
@@ -67789,6 +67927,26 @@
  },
  {
   "contact_urls": [],
+  "domain": "kerrang.com",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "kerrang.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.kerrang.com/security-policy",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.kerrang.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "key.com",
   "emails": [],
   "expires_on": null,
@@ -68070,6 +68228,28 @@
   "self_managed": true,
   "sources": [
    "diodb",
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "kindroid.ai",
+  "emails": [
+   "hello@kindroid.ai"
+  ],
+  "expires_on": "2027-10-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "kindroid.ai",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://kindroid.ai/security.html",
+  "safe_harbor": null,
+  "securitytxt_url": "https://kindroid.ai/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
    "securitytxt"
   ],
   "tls_verified": true
@@ -69630,6 +69810,26 @@
  },
  {
   "contact_urls": [],
+  "domain": "ktk.de",
+  "emails": [],
+  "expires_on": "2030-01-05",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "ktk.de",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://kevag-telekom.de/bug",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.kevag-telekom.de/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "kubernetes",
   "emails": [],
   "expires_on": null,
@@ -70342,6 +70542,28 @@
   "policy": "https://www.laredoute.com/vulnerability_disclosure_program.aspx",
   "safe_harbor": null,
   "securitytxt_url": "https://www.laredoute.co.uk/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://app.yogosha.com/cvd/la-redoute/1w0n6joTNAru5gbKCMH4zO"
+  ],
+  "domain": "laredoute.es",
+  "emails": [],
+  "expires_on": "2025-12-31",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "laredoute.es",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.laredoute.com/vulnerability_disclosure_program.aspx",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.laredoute.es/.well-known/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -75279,6 +75501,50 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [],
+  "domain": "makemula.ai",
+  "emails": [
+   "hello@makemula.ai"
+  ],
+  "expires_on": "2027-11-06",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "makemula.ai",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://makemula.ai/privacy#security",
+  "safe_harbor": null,
+  "securitytxt_url": "https://makemula.ai/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "mall.hr",
+  "emails": [
+   "abuse@mall.hr"
+  ],
+  "expires_on": "2030-01-05",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "mall.hr",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://mall.hr/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [
    "https://app.yogosha.com/cvd/malt/rqtSc4eIMUj7CKFhA87hI"
   ],
@@ -75763,6 +76029,29 @@
   "safe_harbor": null,
   "securitytxt_url": "https://www.maptoolkit.com/.well-known/security.txt",
   "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://app.intigriti.com/programs",
+   "https://app.intigriti.com/programs/dpgm/dpgmedia"
+  ],
+  "domain": "margriet.nl",
+  "emails": [],
+  "expires_on": "2026-12-30",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "margriet.nl",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://margriet.nl/.well-known/security.txt",
+  "self_managed": false,
   "sources": [
    "securitytxt"
   ],
@@ -83934,6 +84223,28 @@
  },
  {
   "contact_urls": [],
+  "domain": "netwrix.com",
+  "emails": [
+   "psirt@netwrix.com"
+  ],
+  "expires_on": "2027-01-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "netwrix.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://netwrix.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "neuralink.com",
   "emails": [
    "vulnerability-disclosure@neuralink.com"
@@ -87293,6 +87604,28 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [],
+  "domain": "nykaaman.com",
+  "emails": [
+   "it-security@nykaa.com"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "nykaaman.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": "https://www.nykaaman.com/responsible-disclosure",
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.nykaaman.com/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
   "contact_urls": [
    "https://help.nytimes.com/hc/en-us/articles/115015385887-Contact-Us"
   ],
@@ -88033,26 +88366,29 @@
   "tls_verified": null
  },
  {
-  "contact_urls": [],
+  "contact_urls": [
+   "https://www.ohiosos.gov/vulnerability-disclosure-policy/"
+  ],
   "domain": "ohiosos.gov",
   "emails": [
    "vulnerability@ohiosos.gov"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "Ohio Secretary of State",
   "offers_bounty": "no",
   "platforms": [],
-  "policy": "https://www.ohiosos.gov/vulnerability-disclosure-policy/",
+  "policy": "# The Office of the Ohio Secretary of State",
   "safe_harbor": "full",
-  "securitytxt_url": "",
+  "securitytxt_url": "https://www.ohiosos.gov/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "diodb"
+   "diodb",
+   "securitytxt"
   ],
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -88825,6 +89161,28 @@
    "intigriti"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "onepay.com",
+  "emails": [
+   "security@one.app"
+  ],
+  "expires_on": "2025-11-22",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "onepay.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://onepay.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -105053,6 +105411,28 @@
  },
  {
   "contact_urls": [],
+  "domain": "ryviu.com",
+  "emails": [
+   "tuanlv8195@gmail.com"
+  ],
+  "expires_on": "2027-11-04",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "ryviu.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.ryviu.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "s-kaupat.fi",
   "emails": [
    "csirt@sok.fi"
@@ -105094,6 +105474,33 @@
    "hackerone"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "s-pankki.fi",
+  "emails": [
+   " turvallisuus[at]s-pankki.fi"
+  ],
+  "expires_on": "2027-04-30",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [
+   "extranet.s-pankki.fi",
+   "mobile.s-pankki.fi",
+   "online.s-pankki.fi",
+   "www.s-pankki.fi"
+  ],
+  "name": "s-pankki.fi",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.s-pankki.fi/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -107159,6 +107566,28 @@
    "diodb"
   ],
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "domain": "secretescapes.de",
+  "emails": [
+   "bugbounty@secretescapes.com"
+  ],
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "secretescapes.de",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.secretescapes.de/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -110857,6 +111286,28 @@
   "policy": "https://www.qoria.com/vulnerability-disclosure-policy",
   "safe_harbor": null,
   "securitytxt_url": "https://www.qoria.com/hubfs/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "smp.se",
+  "emails": [
+   "security@bonniernews.se"
+  ],
+  "expires_on": "2027-10-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "smp.se",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.smp.se/.well-known/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -114571,6 +115022,28 @@
  },
  {
   "contact_urls": [],
+  "domain": "street-one.de",
+  "emails": [
+   "web-security@cbr.de"
+  ],
+  "expires_on": "2027-06-25",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "street-one.de",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.street-one.de/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "streeteasy.com",
   "emails": [],
   "expires_on": null,
@@ -117602,6 +118075,28 @@
  },
  {
   "contact_urls": [],
+  "domain": "tchibo.pl",
+  "emails": [
+   "security@tchibo.de"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "tchibo.pl",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.tchibo.pl/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "tcl.com",
   "emails": [
    " security@tcl.com"
@@ -119270,6 +119765,28 @@
   "safe_harbor": null,
   "securitytxt_url": "https://www.thebalancemoney.com/.well-known/security.txt",
   "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://bugcrowd.com/internetbrands-public"
+  ],
+  "domain": "thecarconnection.com",
+  "emails": [],
+  "expires_on": "2027-11-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "thecarconnection.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://thecarconnection.com/.well-known/security.txt",
+  "self_managed": false,
   "sources": [
    "securitytxt"
   ],
@@ -121872,6 +122389,26 @@
   "policy": null,
   "safe_harbor": null,
   "securitytxt_url": "https://www.toyota.es/.well-known/security.txt",
+  "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "domain": "toyota.fr",
+  "emails": [],
+  "expires_on": "2025-12-31",
+  "expiry": "expired",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "toyota.fr",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.toyota.fr/.well-known/security.txt",
   "self_managed": false,
   "sources": [
    "securitytxt"
@@ -125940,6 +126477,28 @@
  },
  {
   "contact_urls": [],
+  "domain": "underdogfantasy.com",
+  "emails": [
+   "security@underdogsports.com"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "underdogfantasy.com",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://underdogfantasy.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "domain": "understood.org",
   "emails": [
    "devops@understood.org"
@@ -126063,6 +126622,30 @@
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "uni-due.de",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://www.uni-due.de/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://www.uni-due.de/ciso/vulnerability_reporting_form.php"
+  ],
+  "domain": "uni-duisburg-essen.de",
+  "emails": [
+   "ciso@uni-due.de"
+  ],
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "uni-duisburg-essen.de",
   "offers_bounty": null,
   "platforms": [],
   "policy": null,
@@ -138625,6 +139208,29 @@
    "securitytxt"
   ],
   "tls_verified": false
+ },
+ {
+  "contact_urls": [],
+  "domain": "yukon.ca",
+  "emails": [
+   "itsecurity@yukon.ca",
+   "thomas.dang@yukon.ca"
+  ],
+  "expires_on": "2027-06-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-21",
+  "in_scope_domains": [],
+  "name": "yukon.ca",
+  "offers_bounty": null,
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "securitytxt_url": "https://yukon.ca/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "tls_verified": true
  },
  {
   "contact_urls": [
