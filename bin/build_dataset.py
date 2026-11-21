@@ -151,7 +151,7 @@ def main():
 
     # 4) platform scope domains: mark any program whose host appears in scope
     scope = load_lines("domains.txt")
-    for d in list(scope):
+    for d in sorted(scope):
         key = registrable(d)
         if key in programs:
             programs[key]["platforms"] = sorted(set(programs[key]["platforms"]))
@@ -163,6 +163,9 @@ def main():
         p["sources"] = sorted(set(p["sources"]))
         p["platforms"] = sorted(set(p["platforms"]))
         p["self_managed"] = bool(p["platforms"]) is False and bool(p["policy"] or p["emails"])
+        p["in_scope_domains"] = sorted(p.get("in_scope_domains") or [])
+        p["emails"] = sorted(set(p["emails"]))
+        p["contact_urls"] = sorted(set(p["contact_urls"]))
         if not p.get("first_seen"):
             p["first_seen"] = today
 

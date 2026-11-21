@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vdp-hunter · pricing</title>
+<meta name="description" content="vdp-hunter API pricing: free evaluation tier, Pro for production monitoring, Enterprise for custom scope and webhooks.">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="shell">
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">VH</div>
+      <div class="brand-name">vdp-hunter</div>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/guide">Docs</a>
+      <a href="/docs">API reference</a>
+      <a href="/pricing">Pricing</a>
+      <a href="https://github.com/RuneStone0/vdp-hunter">GitHub</a>
+    </nav>
+  </header>
+
+  <p class="eyebrow">Pricing</p>
+  <h1 style="font-size:clamp(1.8rem,3.4vw,2.6rem)">Start free. Pay when it monitors for you.</h1>
+  <p class="lede">The dataset is {{programs}} programs and counting, refreshed continuously.
+  Keys are issued manually so we can keep abuse out and keep the crawl polite.</p>
+
+  <section>
+    <div class="price-grid">
+      <div class="price">
+        <h3>Free</h3>
+        <div class="amount">$0</div>
+        <div class="mono-small">Evaluation and research</div>
+        <ul>
+          <li>120 requests / minute</li>
+          <li>Current dataset, all filters</li>
+          <li>30 days of change history</li>
+          <li>Attribution: link to vdp-hunter</li>
+        </ul>
+        <a class="btn btn-ghost" href="mailto:api@vdphunter.com?subject=vdp-hunter%20free%20key">Request a key</a>
+      </div>
+      <div class="price featured">
+        <h3>Pro</h3>
+        <div class="amount">$99<span> / month</span></div>
+        <div class="mono-small">Production monitoring</div>
+        <ul>
+          <li>2,000 requests / minute</li>
+          <li>Full change history</li>
+          <li>CSV and JSON bulk export</li>
+          <li>Email support, 1 business day</li>
+          <li>Commercial use</li>
+        </ul>
+        <a class="btn btn-primary" href="mailto:api@vdphunter.com?subject=vdp-hunter%20Pro">Start with Pro</a>
+      </div>
+      <div class="price">
+        <h3>Enterprise</h3>
+        <div class="amount">Talk to us</div>
+        <div class="mono-small">Custom scope and SLAs</div>
+        <ul>
+          <li>Negotiated rate limits</li>
+          <li>Webhooks when a program appears</li>
+          <li>Custom crawl scope beyond Tranco</li>
+          <li>Historical backfill</li>
+          <li>Named contact, uptime SLA</li>
+        </ul>
+        <a class="btn btn-ghost" href="mailto:api@vdphunter.com?subject=vdp-hunter%20Enterprise">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What every tier gets</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Capability</th><th>Free</th><th>Pro</th><th>Enterprise</th></tr></thead>
+        <tbody>
+          <tr><td>Programs endpoint with all filters</td><td class="pill pill-good">Yes</td><td class="pill pill-good">Yes</td><td class="pill pill-good">Yes</td></tr>
+          <tr><td>Change feed</td><td>30 days</td><td>Full</td><td>Full + backfill</td></tr>
+          <tr><td>Per-program history</td><td>20 events</td><td>Full</td><td>Full</td></tr>
+          <tr><td>CSV export</td><td class="pill pill-bad">No</td><td class="pill pill-good">Yes</td><td class="pill pill-good">Yes</td></tr>
+          <tr><td>Webhooks on new programs</td><td class="pill pill-bad">No</td><td class="pill pill-bad">No</td><td class="pill pill-good">Yes</td></tr>
+          <tr><td>Commercial use</td><td>Attribution</td><td class="pill pill-good">Yes</td><td class="pill pill-good">Yes</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Questions</h2>
+    <div class="cards">
+      <div class="card"><h3>How is the data sourced?</h3><p>Platform data comes from public program listings and the open bounty-targets-data feed. The self-managed layer comes from our own RFC 9116 crawl, which reads only files organizations publish for exactly this purpose. Sources are attributed on every row.</p></div>
+      <div class="card"><h3>How fresh is it?</h3><p>The crawl runs continuously on a 15-minute cycle and upstream platform data refreshes daily. Each API response carries <code>generated_at</code> and the coverage position.</p></div>
+      <div class="card"><h3>Can I self-host?</h3><p>Yes. The code is MIT licensed and the repo includes the crawler, the merge pipeline and this API. You supply your own crawl budget.</p></div>
+      <div class="card"><h3>Do you offer refunds?</h3><p>Pro is monthly and cancellable any time. If the dataset is wrong for your use case within the first 14 days, we refund the month.</p></div>
+      <div class="card"><h3>How do I get a key?</h3><p>Email us with your use case and expected volume. Keys are issued the same day during business hours.</p></div>
+      <div class="card"><h3>Is there an SLA?</h3><p>Enterprise only. Pro targets 99.5% monthly uptime with no credit schedule.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div>vdp-hunter · <a href="/guide">docs</a> · <a href="/openapi.json">openapi.json</a></div>
+    <div>Data as of {{generated_at}}</div>
+  </footer>
+</div>
+</body>
+</html>

@@ -195,6 +195,8 @@ async def main():
     ap.add_argument("--offset", type=int, default=0)
     ap.add_argument("--concurrency", type=int, default=150)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--recheck", action="store_true",
+                    help="re-probe domains already recorded (picks up policy changes)")
     args = ap.parse_args()
 
     os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
@@ -207,7 +209,8 @@ async def main():
                     seen.add(json.loads(line)["domain"])
                 except Exception:  # noqa: BLE001
                     pass
-    domains = [d for d in domains if d not in seen]
+    if not args.recheck:
+        domains = [d for d in domains if d not in seen]
     print(f"{len(domains)} domains queued, {len(seen)} already in {args.out}", flush=True)
 
     queue = asyncio.Queue(maxsize=args.concurrency * 4)

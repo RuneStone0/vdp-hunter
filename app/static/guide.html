@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vdp-hunter · developer guide</title>
+<meta name="description" content="Developer guide for the vdp-hunter API: authentication, endpoints, filters, pagination, change feed and error codes.">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="shell">
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">VH</div>
+      <div class="brand-name">vdp-hunter</div>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/guide">Docs</a>
+      <a href="/docs">API reference</a>
+      <a href="/pricing">Pricing</a>
+      <a href="https://github.com/RuneStone0/vdp-hunter">GitHub</a>
+    </nav>
+  </header>
+
+  <p class="eyebrow">Developer guide</p>
+  <h1 style="font-size:clamp(1.8rem,3.4vw,2.6rem)">Build on the dataset</h1>
+  <p class="lede">Everything here is served as JSON over HTTPS with a single API key header. The
+  machine-readable contract lives at <a href="/openapi.json">/openapi.json</a>; the interactive
+  reference is at <a href="/docs">/docs</a>.</p>
+
+  <div class="doc-nav" style="margin-top:26px">
+    <a href="#base">Base URL</a>
+    <a href="#auth">Authentication</a>
+    <a href="#limits">Rate limits</a>
+    <a href="#programs">Programs</a>
+    <a href="#changes">Change feed</a>
+    <a href="#model">Data model</a>
+    <a href="#errors">Errors</a>
+    <a href="#cadence">Cadence</a>
+  </div>
+
+  <section id="base" style="margin-top:36px">
+    <h2>Base URL</h2>
+<pre>https://api.vdphunter.com          # hosted
+http://localhost:8110              # self-hosted from the repo</pre>
+    <p class="sub">Every endpoint below is relative to the base URL. Responses are
+    <code>application/json; charset=utf-8</code>.</p>
+  </section>
+
+  <section id="auth">
+    <h2>Authentication</h2>
+    <p class="sub">Pass your key in the <code>X-API-Key</code> header. Keys are issued per
+    customer and tier; revoking a key takes effect immediately.</p>
+<pre>curl -s "$BASE/v1/programs?limit=1" -H "X-API-Key: $VDP_KEY"</pre>
+    <p class="sub">Requests without a key return <code>401</code>. Requests above your tier's
+    limit return <code>429</code>. The <code>/health</code> endpoint and the documentation pages
+    need no key.</p>
+  </section>
+
+  <section id="limits">
+    <h2>Rate limits</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tier</th><th>Requests / minute</th><th>History</th><th>Bulk export</th></tr></thead>
+        <tbody>
+          <tr><td>Free</td><td>120</td><td>30 days</td><td>No</td></tr>
+          <tr><td>Pro</td><td>2,000</td><td>Full</td><td>Yes</td></tr>
+          <tr><td>Enterprise</td><td>Negotiated</td><td>Full, plus backfill</td><td>Yes, plus webhooks</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sub" style="margin-top:14px">Limits are counted per key per wall-clock minute. Poll the
+    change feed once a minute rather than re-pulling <code>/v1/programs</code>.</p>
+  </section>
+
+  <section id="programs">
+    <h2>Programs</h2>
+    <p class="sub"><code>GET /v1/programs</code> searches the current dataset. All filters are optional
+    and combine with AND.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Parameter</th><th>Type</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td><code>q</code></td><td>string</td><td>Substring match on domain, name or policy URL</td></tr>
+          <tr><td><code>platform</code></td><td>enum</td><td><code>hackerone</code>, <code>bugcrowd</code>, <code>intigriti</code>, <code>yeswehack</code></td></tr>
+          <tr><td><code>source</code></td><td>enum</td><td><code>securitytxt</code>, <code>diodb</code>, or any platform id</td></tr>
+          <tr><td><code>bounty</code></td><td>enum</td><td><code>yes</code> = confirmed paying, <code>no</code> = unconfirmed or VDP-only</td></tr>
+          <tr><td><code>expiry</code></td><td>enum</td><td><code>valid</code>, <code>expired</code>, <code>missing</code> (security.txt Expires state)</td></tr>
+          <tr><td><code>limit</code></td><td>int</td><td>1 to 1,000, default 100</td></tr>
+          <tr><td><code>offset</code></td><td>int</td><td>Default 0</td></tr>
+          <tr><td><code>sort</code></td><td>enum</td><td><code>domain</code>, <code>expiry</code>, <code>expires_on</code>, <code>updated_at</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+<pre>curl -s "$BASE/v1/programs?expiry=valid&amp;bounty=yes&amp;limit=50" -H "X-API-Key: $VDP_KEY"</pre>
+    <p class="sub">Single record: <code>GET /v1/programs/{domain}</code>. The response includes the
+    program and its last 20 change records.</p>
+  </section>
+
+  <section id="changes">
+    <h2>Change feed</h2>
+    <p class="sub">The feed is append-only and ordered newest first. Use it for monitoring.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Parameter</th><th>Type</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td><code>since</code></td><td>ISO 8601</td><td>Rows with <code>ts &gt;= since</code>; timezone-aware</td></tr>
+          <tr><td><code>kind</code></td><td>enum</td><td><code>added</code>, <code>removed</code>, <code>changed</code></td></tr>
+          <tr><td><code>domain</code></td><td>string</td><td>History for one program</td></tr>
+          <tr><td><code>limit</code></td><td>int</td><td>1 to 1,000, default 200</td></tr>
+        </tbody>
+      </table>
+    </div>
+<pre>curl -s "$BASE/v1/changes?since=2026-11-21T00:00:00Z&amp;kind=added" -H "X-API-Key: $VDP_KEY"</pre>
+    <p class="sub">Store the newest <code>ts</code> you have seen and pass it back next time.
+    <code>changed</code> rows carry the exact field names plus <code>before</code> and
+    <code>after</code> values.</p>
+  </section>
+
+  <section id="model">
+    <h2>Data model</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Field</th><th>Type</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td><code>domain</code></td><td>string</td><td>Registrable domain; the primary key</td></tr>
+          <tr><td><code>name</code></td><td>string</td><td>Organization or program name when known</td></tr>
+          <tr><td><code>sources</code></td><td>string[]</td><td>Which feeds contributed to this row</td></tr>
+          <tr><td><code>platforms</code></td><td>string[]</td><td>Platforms that list the org, if any</td></tr>
+          <tr><td><code>policy</code></td><td>string</td><td>Disclosure policy URL</td></tr>
+          <tr><td><code>emails</code></td><td>string[]</td><td>Contacts from the security.txt <code>Contact</code> field</td></tr>
+          <tr><td><code>expiry</code></td><td>enum</td><td><code>valid</code>, <code>expired</code>, <code>missing</code></td></tr>
+          <tr><td><code>offers_bounty</code></td><td>enum</td><td><code>yes</code>, <code>no</code>, <code>partial</code>, null when unknown</td></tr>
+          <tr><td><code>safe_harbor</code></td><td>string</td><td>disclose.io safe-harbor status</td></tr>
+          <tr><td><code>tls_verified</code></td><td>bool</td><td>Whether the security.txt was fetched over a verified chain; false means treat contacts as unverified</td></tr>
+          <tr><td><code>first_seen</code>, <code>last_seen</code></td><td>date</td><td>Snapshot dates</td></tr>
+          <tr><td><code>in_scope_domains</code></td><td>string[]</td><td>Up to 25 in-scope domains from platform data</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="errors">
+    <h2>Errors</h2>
+    <p class="sub">Errors return a JSON body with a <code>detail</code> string.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Status</th><th>When</th></tr></thead>
+        <tbody>
+          <tr><td><code>401</code></td><td>Missing, invalid or revoked key</td></tr>
+          <tr><td><code>403</code></td><td>Admin key required for <code>/admin/*</code></td></tr>
+          <tr><td><code>404</code></td><td>Unknown domain or change id</td></tr>
+          <tr><td><code>422</code></td><td>Parameter failed validation, for example a bad enum</td></tr>
+          <tr><td><code>429</code></td><td>Tier rate limit exceeded</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="cadence">
+    <h2>Cadence and coverage</h2>
+    <p class="sub">The scanner crawls the next Tranco slice every 15 minutes, rebuilds the merged
+    dataset, and records the diff. Upstream platform data refreshes daily. Coverage restarts at the
+    top of the list and wraps, so every domain is revisited.</p>
+    <p class="sub">Current coverage and the last scan run are exposed at
+    <code>GET /v1/stats</code> and <code>GET /v1/runs</code>.</p>
+    <div class="note">Historical depth shown here reflects the current tier. Enterprise accounts can
+    request a full backfill.</div>
+  </section>
+
+  <footer>
+    <div>vdp-hunter · <a href="/openapi.json">openapi.json</a> · <a href="https://github.com/RuneStone0/vdp-hunter">source</a></div>
+    <div>Questions: <a href="mailto:api@vdphunter.com">api@vdphunter.com</a></div>
+  </footer>
+</div>
+</body>
+</html>

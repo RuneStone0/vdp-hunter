@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>vdp-hunter · vulnerability disclosure programs, with change history</title>
+<meta name="description" content="Continuously discovered vulnerability disclosure and bug bounty programs, merged from HackerOne, Bugcrowd, Intigriti, YesWeHack, disclose.io and a live RFC 9116 security.txt crawl. REST API with full change history.">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="shell">
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">VH</div>
+      <div class="brand-name">vdp-hunter</div>
+    </div>
+    <nav>
+      <a href="#data">Data</a>
+      <a href="/guide">Docs</a>
+      <a href="/docs">API reference</a>
+      <a href="/pricing">Pricing</a>
+      <a href="https://github.com/RuneStone0/vdp-hunter">GitHub</a>
+    </nav>
+  </header>
+
+  <section class="hero" style="margin-top:0">
+    <div>
+      <p class="eyebrow">Disclosure program intelligence</p>
+      <h1>The programs nobody<br><span class="accent">puts on a list.</span></h1>
+      <p class="lede">
+        Every bug bounty platform and one curated directory miss the same thing: organizations
+        that publish their own security policy. We crawl RFC 9116 <code>security.txt</code> across
+        the top million domains, merge that with HackerOne, Bugcrowd, Intigriti, YesWeHack and
+        disclose.io, and serve the result as one dataset with a full change history.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/guide">Read the docs</a>
+        <a class="btn btn-ghost" href="/docs">OpenAPI reference</a>
+      </div>
+      <p class="mono-small" style="margin-top:16px">Data as of {{generated_at}} · MIT licensed code · CC0 and MIT upstream data</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat"><div class="n">{{programs}}</div><div class="l">Programs tracked</div></div>
+      <div class="stat"><div class="n">{{self_managed}}</div><div class="l">Self-managed</div></div>
+      <div class="stat"><div class="n">{{contactable}}</div><div class="l">With a policy or mailbox</div></div>
+      <div class="stat"><div class="n">{{changes}}</div><div class="l">Changes recorded</div></div>
+    </div>
+  </section>
+
+  <section id="data">
+    <h2>What is in the dataset</h2>
+    <p class="sub">One row per registrable domain, with provenance on every field.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Source</th><th>What it contributes</th><th>Refresh</th><th>Coverage</th></tr></thead>
+        <tbody>
+          <tr><td>security.txt crawl</td><td>Self-managed policies, contact addresses, expiry state, first-seen dates</td><td>Every 15 min</td><td>Top-1M Tranco, continuous</td></tr>
+          <tr><td>HackerOne</td><td>Program identity, in-scope assets, bounty flag</td><td>Daily</td><td>448 programs</td></tr>
+          <tr><td>Bugcrowd</td><td>Program identity, in-scope assets, max payout</td><td>Daily</td><td>296 programs</td></tr>
+          <tr><td>Intigriti</td><td>Program identity, bounty range</td><td>Daily</td><td>144 programs</td></tr>
+          <tr><td>YesWeHack</td><td>Program identity, in-scope assets</td><td>Daily</td><td>52 programs</td></tr>
+          <tr><td>disclose.io</td><td>Self-hosted VDPs, safe-harbor status, contact</td><td>Daily</td><td>2,433 programs</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why teams pay for this</h2>
+    <p class="sub">The delta is the product. A list tells you what exists today; a change feed tells you what appeared last night.</p>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">Discovery</span>
+        <h3>Programs beyond the platforms</h3>
+        <p>A large share of organizations that accept reports never join a platform. If they publish a security.txt, they are in this dataset, with the address to write to.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Change history</span>
+        <h3>Every add, removal and edit</h3>
+        <p><code>GET /v1/changes?since=</code> returns added, removed and changed rows with before and after values, so a monitor polls a few hundred bytes instead of pulling the full set.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Attribution</span>
+        <h3>Know where a fact came from</h3>
+        <p>Each row carries its sources, whether the record came over a verified TLS chain, and the expiry state of the underlying policy file.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Quick start</h2>
+    <p class="sub">One header, one endpoint. JSON in, JSON out.</p>
+<pre>curl -s "$VDP_BASE/v1/changes?since=2026-11-21T00:00:00Z&amp;kind=added" \
+  -H "X-API-Key: $VDP_KEY"</pre>
+<pre>{
+  "data": [
+    {
+      "id": 412,
+      "ts": "2026-11-21T16:15:03+00:00",
+      "kind": "added",
+      "domain": "anthropic.com",
+      "after": { "policy": "https://www.anthropic.com/responsible-disclosure-policy",
+                 "expiry": "valid", "sources": ["securitytxt"] }
+    }
+  ],
+  "meta": { "count": 1, "total": 1, "has_more": false, "generated_at": "2026-11-21T16:20:00+00:00" }
+}</pre>
+    <p class="note">Full schema, filters, pagination and error codes are in the <a href="/guide">developer guide</a>. The machine-readable contract is at <a href="/openapi.json">/openapi.json</a>.</p>
+  </section>
+
+  <section>
+    <h2>Pricing</h2>
+    <p class="sub">Free tier for evaluation and research. Paid tiers for production traffic and history depth.</p>
+    <div class="price-grid">
+      <div class="price">
+        <h3>Free</h3>
+        <div class="amount">$0</div>
+        <ul><li>120 requests / minute</li><li>Current dataset</li><li>30 days of change history</li><li>Community support</li></ul>
+        <a class="btn btn-ghost" href="/pricing">Request a key</a>
+      </div>
+      <div class="price featured">
+        <h3>Pro</h3>
+        <div class="amount">$99<span> / month</span></div>
+        <ul><li>2,000 requests / minute</li><li>Full change history</li><li>Bulk export and CSV</li><li>Email support, 1 business day</li></ul>
+        <a class="btn btn-primary" href="/pricing">Start with Pro</a>
+      </div>
+      <div class="price">
+        <h3>Enterprise</h3>
+        <div class="amount">Talk to us</div>
+        <ul><li>Custom crawl scope</li><li>Webhooks on new programs</li><li>Historical backfill</li><li>SLA and named contact</li></ul>
+        <a class="btn btn-ghost" href="/pricing">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>vdp-hunter · data refreshed continuously · <a href="/guide">docs</a> · <a href="/openapi.json">openapi</a></div>
+    <div>Sources: HackerOne, Bugcrowd, Intigriti, YesWeHack, disclose.io, RFC 9116 crawl</div>
+  </footer>
+</div>
+</body>
+</html>

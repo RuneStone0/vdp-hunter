@@ -12,3 +12,8 @@ data/intigriti_data.json
 data/yeswehack_data.json
 data/diodb.json
 data/domains.txt
+
+data/app.env
+data/vdp.db
+data/*.db-wal
+data/*.db-shm

@@ -1,180 +1,42 @@
 # VDP dataset changes, 2026-11-21
 
-Programs: 2763 total, 525 not in any known list, 905 on a bounty platform.
+Programs: 2870 total, 633 not in any known list, 904 on a bounty platform.
 
-## New programs (158)
+## New programs (29)
 
-- `1and1.com` 1and1.com -> https://www.ionos.com/it-security
-- `1win.com` 1win.com -> https://1win.global/.well-known/VulnerabilityDisclosurePolicy.pdf
-- `ably-realtime.com` ably-realtime.com -> []
-- `abuse.ch` abuse.ch -> ['admin@abuse.ch']
-- `activehosted.com` activehosted.com -> []
-- `airbnb.fr` airbnb.fr -> https://hackerone.com/airbnb#overview
-- `allegro.hu` allegro.hu -> https://app.intigriti.com/programs/allegro/allegrobugbounty/detail
-- `allianz.com` allianz.com -> https://www.allianz.com/en/disclosure-policy.html
-- `allwyn.cz` allwyn.cz -> https://www.allwyn.cz/.well-known/responsible_disclosure_policy.pdf
-- `anaconda.org` anaconda.org -> []
-- `ascopubs.org` ascopubs.org -> ['security@wiley.com']
-- `audiojungle.net` audiojungle.net -> https://www.envato.com/lp/vulnerability-disclosure/
-- `binance.us` binance.us -> ['security@binance.us']
-- `blogspot.it` blogspot.it -> https://g.co/vrp
-- `brainly.com` brainly.com -> https://brainly.com/responsible-disclosure-program
-- `cdm.me` cdm.me -> ['webmaster@cdm.me']
-- `cdn-vitals.com` cdn-vitals.com -> ['security@freestar.com']
-- `chainalysis.com` chainalysis.com -> ['securitybugreport@chainalysis.com']
-- `checkatrade.com` checkatrade.com -> ['infosec@checkatrade.com']
-- `civitai.com` civitai.com -> https://github.com/civitai/civitai/blob/main/SECURITY.md
-- `cloudlinux.com` cloudlinux.com -> https://www.cloudlinux.com/vulnerability-reporting/
-- `cloudsecurityalliance.org` cloudsecurityalliance.org -> https://cloudsecurityalliance.org/security
-- `coches.net` coches.net -> https://adevinta.com/security-vulnerability/
-- `comfy.ua` comfy.ua -> ['siem@comfy.ua']
-- `cornelsen.de` cornelsen.de -> ['security@cornelsen.de']
-- `crestron.com` crestron.com -> []
-- `cronometer.com` cronometer.com -> https://cronometer.com/terms/terms-security.html
-- `cs.money` cs.money -> ['security@cs.money']
-- `delfi.ee` delfi.ee -> ['security@egrupp.ee']
-- `demorgen.be` demorgen.be -> []
-- `deriv.com` deriv.com -> https://hackerone.com/deriv/safe_harbor
-- `despegar.com.ar` despegar.com.ar -> ['appsec@despegar.com']
-- `distrokid.com` distrokid.com -> ['security@distrokid.com']
-- `doublelist.com` doublelist.com -> ['admin@doublelist.com']
-- `dragonkind.com` dragonkind.com -> ['hello@dragonkind.com']
-- `dweb.link` dweb.link -> https://about.ipfs.io/#reporting-abuse
-- `echodnia.eu` echodnia.eu -> ['secvul@polskapress.pl']
-- `elisa.fi` elisa.fi -> ['abuse@elisa.fi']
-- `euroauto.ru` euroauto.ru -> ['security@euroauto.ru']
-- `evvelcevap.com` evvelcevap.com -> ['security@evvelcevap.com']
-- `f-droid.org` f-droid.org -> ['team@f-droid.org']
-- `faire.com` faire.com -> ['security@faire.com']
-- `fdcservers.net` fdcservers.net -> ['security@fdcservers.net']
-- `fischipedia.org` fischipedia.org -> https://meta.miraheze.org/wiki/Security
-- `five9.com` five9.com -> https://www.five9.com/trust/vdp
-- `flashscore.co.za` flashscore.co.za -> https://bugbounty.livesport.eu/#rules
-- `flashscore.com.br` flashscore.com.br -> https://bugbounty.livesport.eu/#rules
-- `flashscore.es` flashscore.es -> https://bugbounty.livesport.eu/#rules
-- `fly.io` fly.io -> https://docs.fly.io/security
-- `foodandwine.com` foodandwine.com -> https://hackerone.com/dotdashmeredith
-- `fronius.com` fronius.com -> ['vulnerability-report@fronius.com']
-- `fusionauth.io` fusionauth.io -> []
-- `gazetawroclawska.pl` gazetawroclawska.pl -> ['secvul@polskapress.pl']
-- `gc.com` gc.com -> https://bugcrowd.com/engagements/dickssportinggoods
-- `google.gy` google.gy -> https://g.co/vrp
-- `google.lk` google.lk -> https://g.co/vrp
-- `google.lv` google.lv -> https://g.co/vrp
-- `gov.br` gov.br -> ['cgplt.sgd@gestao.gov.br', 'security@bcb.gov.br<br/>']
-- `graphicriver.net` graphicriver.net -> https://www.envato.com/lp/vulnerability-disclosure/
-- `gtmetrix.com` gtmetrix.com -> ['feedback@gtmetrix.com']
-- `gucci.com` gucci.com -> https://vdp.gucci.com
-- `hubstaff.com` hubstaff.com -> https://hubstaff.com/bug-bounty
-- `instyle.com` instyle.com -> https://hackerone.com/dotdashmeredith
-- `iowa.gov` iowa.gov -> https://dom.iowa.gov/state-government/information-technology/cybersecurity/common-cyber-security-questions
-- `iptwins.com` iptwins.com -> ['noc@iptwins.com']
-- `iserv.eu` iserv.eu -> ['security@iserv.de']
-- `johnsoncontrols.com` johnsoncontrols.com -> https://www.johnsoncontrols.com/trust-center/cybersecurity/response
-- `jotfor.ms` jotfor.ms -> https://www.jotform.com/vulnerability-disclosure-program/#program-rules
-- `jus.br` jus.br -> [' csirt@tjgo.jus.br', ' etir@tjgo.jus.br']
-- `keepersecurity.com` keepersecurity.com -> https://keepersecurity.com/security.html
-- `kino.de` kino.de -> ['security@stroeermediabrands.de']
-- `lemmy.world` lemmy.world -> https://legal.lemmy.world/security/
-- `liveabout.com` liveabout.com -> https://hackerone.com/dotdashmeredith
-- `lokmat.com` lokmat.com -> ['mohammed.zulkifl@lokmat.com']
-- `lolipop.jp` lolipop.jp -> https://pepabo.com/contact/vulnerability-reporting/
-- `lu.ma` lu.ma -> https://help.luma.com/p/security-bug-bounty
-- `lucidmotors.com` lucidmotors.com -> https://bugcrowd.com/lucidmotors-vdp
-- `luciq.ai` luciq.ai -> ['security@luciq.ai']
-- `mailbox.org` mailbox.org -> ['ciso@heinlein-support.de']
-- `mijnwoordenboek.nl` mijnwoordenboek.nl -> ['security@infrapod.nl']
-- `mitel.io` mitel.io -> https://www.mitel.com/support/security-advisories/mitel-product-security-policy
-- `mobilevikings.be` mobilevikings.be -> https://app.intigriti.com/programs/mv/mobilevikings/detail
-- `mod.uk` mod.uk -> https://www.gov.uk/help/report-vulnerability
-- `moneysavingexpert.com` moneysavingexpert.com -> https://bugcrowd.com/engagement_teasers/wandering-violet-3363
-- `namirial.it` namirial.it -> https://namirial.com/en/vulnerability-reporting/
-- `nekobt.to` nekobt.to -> ['bugs@nekobt.to']
-- `netipybase.com` netipybase.com -> https://github.com/appwrite/appwrite/security/policy
-- `neurology.org` neurology.org -> ['security@wiley.com']
-- `nic.cz` nic.cz -> ['abuse@nic.cz']
-- `nielseniq.com` nielseniq.com -> https://nielseniq.com/global/en/legal/privacy-policy/
-- `noredink.com` noredink.com -> ['security@noredink.com']
-- `novaskin.me` novaskin.me -> ['saviski@novaskin.me']
-- `nvaccess.org` nvaccess.org -> https://github.com/nvaccess/nvda/security/policy
-- `onfinality.io` onfinality.io -> https://documentation.onfinality.io/support/onfinality-vulnerability-and-bug-reporting
-- `opencollective.com` opencollective.com -> https://github.com/opencollective/opencollective/security/policy
-- `overheid.nl` overheid.nl -> https://www.ncsc.nl/dienstverlening/kwetsbaarheid-melden-cvd
-- `paessler.com` paessler.com -> https://www.paessler.com/vulnerability-disclosure-program
-- `pinside.com` pinside.com -> ['webmaster@pinside.com']
-- `platformsh.site` platformsh.site -> https://platform.sh/trust-center/security/responsible-disclosure/
-- `plejada.pl` plejada.pl -> ['abuse@ringieraxelspringer.pl']
-- `pokernews.com` pokernews.com -> ['security@pokernews.com']
-- `polkachu.com` polkachu.com -> ['hello@polkachu.com']
-- `pornorama.com` pornorama.com -> []
-- `protonvpn.com` protonvpn.com -> https://proton.me/security/bug-bounty
-- `psiphon.ca` psiphon.ca -> ['security@psiphon.ca']
-- `pub.dev` pub.dev -> https://pub.dev/security
-- `pushnami.com` pushnami.com -> ['infra@pushnami.com']
-- `pushover.net` pushover.net -> ['security@pushover.net']
-- `radiosaovivo.net` radiosaovivo.net -> ['security@instant.audio']
-- `rd.com` rd.com -> ['security.reports@tmbi.com']
-- `realvnc.com` realvnc.com -> ['psirt@realvnc.com']
-- `resend.com` resend.com -> https://resend.com/security
-- `ringpublishing.com` ringpublishing.com -> ['abuse@ringieraxelspringer.pl']
-- `rockylinux.org` rockylinux.org -> ['security@rockylinux.org']
-- `romeo.com` romeo.com -> ['security@romeo.com']
-- `rubyonrails.org` rubyonrails.org -> https://rubyonrails.org/security
-- `run.place` run.place -> https://dnsexit.com/support/abuse/
-- `sageone.com` sageone.com -> https://www.sage.com/en-gb/trust-security/
-- `salla.sa` salla.sa -> https://salla.com/en/privacy-policy/
-- `semgrep.dev` semgrep.dev -> https://semgrep.dev/docs/security
-- `setapp.com` setapp.com -> https://macpaw.com/vulnerability-disclosure-policy
-- `sezzle.com` sezzle.com -> Found a bug in our application? We have our private bug bounty program with Bugcrowd. Send your email to us so that we can invite you to the program.
-- `skillbuilder.aws` skillbuilder.aws -> https://vdp.aws.security/
-- `skillshare.com` skillshare.com -> ['responsibledisclosure@skillshare.com']
-- `skybet.com` skybet.com -> https://hackerone.com/flutteruki
-- `skyvegas.com` skyvegas.com -> https://hackerone.com/flutteruki
-- `snapfish.com` snapfish.com -> https://hackerone.com/shutterfly_vdp
-- `solcon.nl` solcon.nl -> []
-- `sparkpost.com` sparkpost.com -> ['security@messagebird.com']
-- `spring.io` spring.io -> https://spring.io/security-policy
-- `stake.us` stake.us -> []
-- `starshield.com` starshield.com -> ['vulnerabilityreporting@spacex.com']
-- `stores.jp` stores.jp -> ['product-security@st.inc']
-- `sumsub.com` sumsub.com -> ['security@sumsub.com']
-- `telemagazyn.pl` telemagazyn.pl -> ['secvul@polskapress.pl']
-- `tempo.com` tempo.com -> https://github.com/tempoxyz/.github/blob/main/SECURITY.md
-- `thalesgroup.com` thalesgroup.com -> https://www.thalesgroup.com/en/global/group/psirt
-- `ticketone.it` ticketone.it -> ['itsecurity@eventim.de']
-- `tractive.com` tractive.com -> https://tractive.com/en/l/vulnerability-disclosure
-- `trueconf.com` trueconf.com -> https://trueconf.com/company/legal/privacy.html
-- `turfomania.fr` turfomania.fr -> []
-- `tuttocampo.it` tuttocampo.it -> ['redazione@tuttocampo.it']
-- `tweakers.net` tweakers.net -> https://tweakers.net/info/responsible-disclosure/
-- `twit.tv` twit.tv -> []
-- `ublockdns.com` ublockdns.com -> https://ublockdns.com/.well-known/security.txt
-- `uni-kassel.de` uni-kassel.de -> ['ism@uni-kassel.de']
-- `unibe.ch` unibe.ch -> ['responsible-disclosure@unibe.ch']
-- `uoguelph.ca` uoguelph.ca -> https://ithelp.uoguelph.ca/policy/responsible-disclosure-process
-- `upr.edu` upr.edu -> ['noc-upr@upr.edu']
-- `upstart.com` upstart.com -> Upstart runs a private bug bounty program. To request an invite, please email security@upstart.com with the subject "Bug Bounty Invite: <username>"
-- `veikkaus.fi` veikkaus.fi -> https://www.veikkausgroup.com/en/veikkaus-vulnerability-disclosure-policy-vdp
-- `verywellfit.com` verywellfit.com -> https://hackerone.com/dotdashmeredith
-- `work.gd` work.gd -> https://dnsexit.com/support/abuse/
-- `workspaceoneaccess.com` workspaceoneaccess.com -> ['security@omnissa.com']
-- `worten.pt` worten.pt -> ['rvd@worten.pt']
-- `wrike.com` wrike.com -> https://www.wrike.com/security/report/
-- `xnxx-ru.com` xnxx-ru.com -> []
-- `yandex.md` yandex.md -> https://ya.cc/t/1cSZixjB3gkSva
+- `123stitch.com` 123stitch.com -> ['security@123stitch.com']
+- `2bd.net` 2bd.net -> https://dnsexit.com/support/abuse/
+- `ajmadison.com` ajmadison.com -> ['security@ajmadison.com']
+- `apexlegendsstatus.com` apexlegendsstatus.com -> ['domains@hugoderave.fr']
+- `appian.com` appian.com -> []
+- `backmarket.es` backmarket.es -> ['security@backmarket.com']
+- `bellroy.com` bellroy.com -> ['security@bellroy.com']
+- `blavity.com` blavity.com -> ['security@blavity.com']
+- `budgetdirect.com.au` budgetdirect.com.au -> https://www.autogeneral.com.au/docs/ag-external-vulnerability-disclosure-policy.pdf
+- `filmmakers.eu` filmmakers.eu -> https://www.filmmakers.eu/security-policy
+- `fletcher.nl` fletcher.nl -> ['lhamo@fletcher.nl', 'swijnreder@fletcher.nl']
+- `glassnode.com` glassnode.com -> ['security@glassnode.com']
+- `gotranscript.com` gotranscript.com -> https://gotranscript.com/.well-known/security-policy.txt
+- `jumia.ci` jumia.ci -> https://group.jumia.com/security/
+- `jumpseller.com` jumpseller.com -> https://jumpseller.com/security/bug-bounty-program/
+- `koho.ca` koho.ca -> https://hackerone.com/koho
+- `maptoolkit.net` maptoolkit.net -> ['security@maptoolkit.com']
+- `nencinisport.it` nencinisport.it -> ['security@padosoft.com']
+- `notino.ro` notino.ro -> https://www.notino.com/bug-bounty.html
+- `octopuce.fr` octopuce.fr -> ['rssi@octopuce.fr']
+- `ozon.uz` ozon.uz -> []
+- `parliament.scot` parliament.scot -> https://www.parliament.scot/about/how-parliament-works/policies/vulnerability-reporting
+- `plopsa.com` plopsa.com -> https://www.plopsa.com/en/responsible-disclosure-policy
+- `safecast.org` safecast.org -> ['rob@yr-design.biz']
+- `satflow.com` satflow.com -> [' admin@satflow.com']
+- `schmorp.de` schmorp.de -> ['security.txt@nethype.de']
+- `ssi.com.vn` ssi.com.vn -> https://www.ssi.com.vn/bao-mat
+- `tombola.co.uk` tombola.co.uk -> ['security@tombola.com']
+- `worldofsweets.de` worldofsweets.de -> ['datenschutz@worldofsweets.de']
 
 ## Removed (0)
 
 
-## Changed (10)
+## Changed (1)
 
-- `circleci.com`: policy, expiry, expires_on, sources
-- `f-secure.com`: expiry, sources
-- `fastweb.it`: expiry, sources
-- `first.org`: policy, expiry, expires_on, sources
-- `gcore.com`: expiry, sources
-- `grofers.com`: policy, expiry, sources
-- `jenkins.io`: expiry, expires_on, sources
-- `platform.sh`: policy, expiry, expires_on, sources
-- `snyk.io`: policy, expiry, sources
-- `walletconnect.com`: expiry, sources
+- `ampcode.com`: policy, expiry, expires_on, sources

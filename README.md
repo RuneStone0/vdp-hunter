@@ -99,6 +99,54 @@ python3 bin/build_dataset.py
 Seed list: Tranco daily list, `https://tranco-list.eu/api/lists/date/latest`
 (CSV: rank,domain).
 
+## API and site
+
+`app/` is a FastAPI service that owns the serving side: a SQLite store, a background
+scanner that keeps crawling, and the public pages.
+
+| Path | What |
+|---|---|
+| `/` | Landing page with live counts |
+| `/guide` | Developer guide: auth, filters, change feed, data model, errors |
+| `/pricing` | Tiers and key request |
+| `/docs` | Swagger UI |
+| `/redoc` | ReDoc |
+| `/openapi.json` | OpenAPI 3.1 contract |
+| `/v1/programs`, `/v1/programs/{domain}` | Current dataset |
+| `/v1/changes` | Added / removed / changed rows, filterable by `since` and `kind` |
+| `/v1/stats`, `/v1/sources`, `/v1/runs` | Coverage and provenance |
+| `/admin/keys`, `/admin/scan` | Key issuance and manual scan trigger (admin key) |
+
+Auth is `X-API-Key` with per-tier rate limits (free 120/min, pro 2,000/min). The scanner
+runs a cycle on startup and then every `VDP_INTERVAL` seconds: crawl next Tranco slice,
+rebuild dataset, diff against the stored snapshot, write a `runs` row.
+
+```bash
+cp data/app.env.example data/app.env      # set VDP_ADMIN_KEY
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+./run.sh                                   # http://localhost:8110
+```
+
+Environment: `VDP_DB`, `VDP_ADMIN_KEY`, `VDP_PORT`, `VDP_SCAN_ENABLED`, `VDP_CHUNK`,
+`VDP_INTERVAL`, `VDP_BOOTSTRAP`.
+
+## Deployment
+
+```bash
+docker compose up -d --build
+```
+
+`data/` is mounted into the container and holds the database, the seed list and the crawl
+log. `data/app.env` holds secrets and is gitignored.
+
+## Tests
+
+```bash
+.venv/bin/python -m pytest tests -q     # 9 tests: auth, filters, diff semantics, OpenAPI, pages
+```
+
+CI runs the same suite plus `compileall` on every push.
+
 ## Schema (`data/programs.json`)
 
 | Field | Meaning |
