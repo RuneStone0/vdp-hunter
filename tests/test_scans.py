@@ -1,4 +1,11 @@
 """The /scans page and the snapshot endpoint the zone runner posts to."""
+import json
+import subprocess
+
+import pytest
+
+from app import main, zonescan
+
 ADMIN = {"X-API-Key": "test-admin-key"}
 
 
@@ -54,3 +61,41 @@ def test_czds_token_round_trip(client):
 def test_zone_snapshot_needs_a_tld(client):
     assert client.post("/admin/scan-status", json={"hits": 1},
                        headers=ADMIN).status_code == 422
+
+
+def test_czds_page_install_wakes_the_blocked_sweeper(client, tmp_path, monkeypatch):
+    """A token pasted at /czds-token must not sit behind the 30 minute blocked backoff."""
+    monkeypatch.setenv("CZDS_TOKEN_FILE", str(tmp_path / "czds_token.txt"))
+    monkeypatch.setattr(main, "_czds_verify", lambda token: (True, "ICANN answered 206"))
+    woke = []
+    monkeypatch.setattr(main.sweeper, "wake", lambda: woke.append(1))
+    token = "z" * 60
+    r = client.post("/czds-token", data={"token": token})
+    assert r.status_code == 200
+    assert (tmp_path / "czds_token.txt").read_text() == token
+    assert (tmp_path / "czds_token.txt").stat().st_mode & 0o777 == 0o600
+    assert main.sweeper.token == token
+    assert woke == [1]
+    running = json.loads(main.store.get_state("zone_running") or "{}")
+    assert running["state"] == "idle" and running["last_error"] is None
+
+
+def test_zone_download_puts_the_installed_token_on_the_wire(tmp_path, monkeypatch):
+    """A download that sends a placeholder instead of the token 401s forever."""
+    seen = {}
+
+    def fake_run(cmd, **kw):
+        seen["cmd"] = cmd
+        return subprocess.CompletedProcess(cmd, 0, stdout="401", stderr="")
+
+    monkeypatch.setattr(zonescan.subprocess, "run", fake_run)
+    token = "live-token-abcdef"
+    sweeper = zonescan.ZoneSweeper(main.store, str(tmp_path), ["accountant"],
+                                   token=token, token_file="",
+                                   files_dir=str(tmp_path / "zones"))
+    with pytest.raises(PermissionError):
+        sweeper._download("accountant")
+    sent = [a for a in seen["cmd"] if a.startswith("Authorization:")]
+    assert sent == [f"Authorization: Bearer {token}"]
+    assert not (tmp_path / "zones" / "accountant.zone.gz").exists()
+

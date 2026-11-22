@@ -551,6 +551,12 @@ async def czds_submit(request: Request):
     os.chmod(tmp, 0o600)
     tmp.replace(path)
     store.set_state("czds_token_at", now())
+    # A blocked sweeper sleeps 30 minutes before trying again, so a token pasted
+    # here has to wake it, the same way /admin/czds-token does.
+    sweeper.token = token
+    store.set_state("zone_running", json.dumps({"state": "idle", "updated_at": now(),
+                                                "last_error": None}))
+    sweeper.wake()
     return HTMLResponse(CZD_FORM.format(msg=f"Token verified and installed ({len(token)} characters)."))
 
 
