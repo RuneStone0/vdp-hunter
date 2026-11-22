@@ -84,8 +84,13 @@ in a masked field and posts it to that endpoint.
 `bin/monthly_zone_scan.sh` still works as a manual host-side fallback, with its
 own state under `/opt/data/vdp-zone-state`.
 
-## Open item
+## The token
 
-The CZDS bearer token comes from a signed-in browser session and expires. The
-monthly script needs a fresh one at the start of a run; when it is missing the
-download fails loudly and the run skips that TLD rather than scanning nothing.
+The CZDS bearer token comes from a signed-in browser session and expires within
+hours. It is installed at `http://<host>:8118/czds-token`, a page served by the
+app itself: a listener bound inside the container is not reachable from another
+machine, which is what the earlier standalone intake page got wrong. The page
+asks ICANN for one byte of a real zone before storing anything, so an expired
+token is refused at entry rather than failing mid-sweep. The sweep reads it back
+with `GET /admin/czds-token`, and when no token is installed the download fails
+loudly and the run skips that TLD rather than scanning nothing.
