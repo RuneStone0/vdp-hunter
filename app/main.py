@@ -504,6 +504,7 @@ def put_czds_token(payload: dict, key: dict = Depends(admin)):
     sweeper.token = token
     store.set_state("zone_running", json.dumps({"state": "idle", "updated_at": now(),
                                                 "last_error": None}))
+    sweeper.wake()
     return envelope({"installed": True, "length": len(token)})
 
 

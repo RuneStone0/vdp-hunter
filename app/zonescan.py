@@ -41,6 +41,7 @@ class ZoneSweeper:
         self.merge = merge
         self.progress = self.state_dir / "progress.json"
         self._stop = threading.Event()
+        self._wake = threading.Event()
         self._thread: threading.Thread | None = None
         self.status = {"state": "idle", "tld": None, "phase": None, "last_error": None}
 
@@ -181,7 +182,12 @@ class ZoneSweeper:
             res = self.tick()
             # a blocked token does not need a tight retry, someone has to refresh it
             wait = 1800 if res.get("state") == "blocked" else self.pause_s
-            self._stop.wait(wait)
+            self._wake.wait(wait)
+            self._wake.clear()
+
+    def wake(self) -> None:
+        """A fresh token should not wait out the backoff the last failure earned."""
+        self._wake.set()
 
     def start(self) -> None:
         if self._thread and self._thread.is_alive():
