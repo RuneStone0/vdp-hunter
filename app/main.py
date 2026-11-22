@@ -30,7 +30,7 @@ SCAN_ENABLED = os.environ.get("VDP_SCAN_ENABLED", "1") == "1"
 CHUNK = int(os.environ.get("VDP_CHUNK", "2000"))
 INTERVAL = int(os.environ.get("VDP_INTERVAL", "900"))
 
-ZONE_SCAN = os.environ.get("VDP_ZONE_SCAN", "0") == "1"
+ZONE_SCAN = os.environ.get("VDP_ZONE_SCAN", "1") == "1"
 ZONE_MINUTES = int(os.environ.get("VDP_ZONE_MINUTES", "120"))
 ZONE_TLDS = [t.strip() for t in os.environ.get("VDP_ZONE_TLDS", "").split(",") if t.strip()]
 
@@ -50,7 +50,7 @@ sweeper = ZoneSweeper(
     store, str(ROOT), ZONE_TLDS or _default_tlds(), minutes=ZONE_MINUTES,
     pause_s=int(os.environ.get("VDP_ZONE_PAUSE", "300")),
     token=os.environ.get("CZDS_TOKEN", ""),
-    token_file=os.environ.get("CZDS_TOKEN_FILE", ""),
+    token_file=os.environ.get("CZDS_TOKEN_FILE", str(ROOT / "data" / "czds_token.txt")),
     state_dir=os.environ.get("VDP_ZONE_STATE", str(ROOT / "data" / "zone-state")),
     files_dir=os.environ.get("VDP_ZONE_FILES", str(ROOT / "data" / "zones")))
 
@@ -485,6 +485,26 @@ def _scan_report() -> dict:
 @app.get("/v1/scans", tags=["meta"], summary="Crawl and zone-sweep progress")
 def scans_json(key: dict = Depends(auth)):
     return envelope(_scan_report())
+
+
+@app.post("/admin/czds-token", tags=["admin"],
+          summary="Install a fresh CZDS bearer token for the zone sweeper")
+def put_czds_token(payload: dict, key: dict = Depends(admin)):
+    """The token comes from a signed-in ICANN session and expires, so it is handed
+    to the service at runtime instead of baked into the image or the stack env."""
+    token = (payload.get("token") or "").strip()
+    if len(token) < 40:
+        raise HTTPException(422, "expected {\"token\": \"<jwt>\"}")
+    path = Path(os.environ.get("CZDS_TOKEN_FILE", str(ROOT / "data" / "czds_token.txt")))
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(".tmp")
+    tmp.write_text(token)
+    os.chmod(tmp, 0o600)
+    tmp.replace(path)
+    sweeper.token = token
+    store.set_state("zone_running", json.dumps({"state": "idle", "updated_at": now(),
+                                                "last_error": None}))
+    return envelope({"installed": True, "length": len(token)})
 
 
 @app.post("/admin/scan-status", tags=["admin"], summary="Record a zone-sweep snapshot")
