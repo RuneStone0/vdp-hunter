@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scan status · vdp-hunter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: Inter, system-ui, sans-serif; color: #dbeafe;
+    background: linear-gradient(160deg, #071827 0%, #0e283f 100%); min-height: 100vh;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+  header { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  h1 { font-size: 1.7rem; margin: 0; letter-spacing: -.02em; }
+  .sub { color: #7dd3fc; font-size: .9rem; }
+  .muted { color: #7c93ab; }
+  .card {
+    background: rgba(255,255,255,.03); border: 1px solid rgba(125,211,252,.15);
+    border-radius: 14px; padding: 1.4rem 1.5rem; margin-top: 1.5rem;
+  }
+  h2 { font-size: 1.05rem; margin: 0 0 .9rem; color: #e0f2fe; font-weight: 600; }
+  table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  th, td { text-align: left; padding: .45rem .6rem; border-bottom: 1px solid rgba(125,211,252,.1); }
+  thead th { color: #7dd3fc; font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; }
+  tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
+  tbody th { color: #9fb3c8; font-weight: 500; width: 38%; }
+  td { font-variant-numeric: tabular-nums; }
+  .foot { margin-top: 2rem; font-size: .8rem; color: #7c93ab; }
+  .foot a { color: #7dd3fc; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Scan status</h1>
+      <div class="sub">What the crawlers are doing. Internal view, no key required.</div>
+    </div>
+    <div class="sub">dataset refreshed {{freshness}}</div>
+  </header>
+
+  <div class="card">
+    <h2>security.txt crawl (Tranco seed)</h2>
+    <table><tbody>{{crawl_rows}}</tbody></table>
+  </div>
+
+  <div class="card">
+    <h2>Recent chunks</h2>
+    <table>
+      <thead><tr><th>Finished</th><th>Probed</th><th>Policies found</th><th>Dataset change</th></tr></thead>
+      <tbody>{{recent_rows}}</tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>CZDS zone sweep</h2>
+    <table>
+      <thead><tr><th>TLD</th><th>Names</th><th>Checked</th><th>Parked</th><th>Policies</th><th>Seconds</th><th>Rate</th><th>State</th><th>Reported</th></tr></thead>
+      <tbody>{{zone_rows}}</tbody>
+    </table>
+  </div>
+
+  <div class="foot">
+    <a href="/">back to the dataset</a> · <a href="/guide">docs</a> · <a href="/v1/scans">/v1/scans (json)</a>
+  </div>
+</div>
+</body>
+</html>

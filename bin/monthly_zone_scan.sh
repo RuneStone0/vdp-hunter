@@ -47,9 +47,29 @@ for tld in $TLDS; do
     ./bin/go/zonex -in "$zone" -tld "$tld" -out "$names" || continue
   fi
   echo "[$(date -u +%FT%TZ)] scanning $tld ($(wc -l < "$names") names, budget ${MINUTES}m)"
-  ./bin/go/scan -zone "$names" -tld "$tld" -state "$STATE" -hits "$HITS" \
+  out=$(./bin/go/scan -zone "$names" -tld "$tld" -state "$STATE" -hits "$HITS" \
       -max-minutes "$MINUTES" -dns-workers 400 -port-workers 200 -http-workers 150 \
-      -dns-timeout 2s -http-timeout 3s -park-days 90 -park-clean-days 30
+      -dns-timeout 2s -http-timeout 3s -park-days 90 -park-clean-days 30)
+  echo "$out"
+  # the /scans page reads these snapshots, so a sweep is visible while it runs
+  TLD="$tld" LINE="$out" .venv/bin/python - <<'PY'
+import json, os, re, urllib.request
+line = os.environ.get("LINE", "")
+kv = dict(re.findall(r"(\w+)=([\d.]+)", line))
+payload = {"tld": os.environ["TLD"], "names": int(kv.get("names", 0)),
+           "checked": int(kv.get("checked", 0)), "parked": int(kv.get("parked_skip", 0)),
+           "hits": int(kv.get("hits", 0)), "seconds": float(kv.get("seconds", 0)),
+           "rate": float(kv.get("rate", 0)),
+           "stopped_early": kv.get("shards_stopped_early", "0") not in ("0", "")}
+req = urllib.request.Request("http://192.168.1.66:8118/admin/scan-status",
+    data=json.dumps(payload).encode(), method="POST",
+    headers={"X-API-Key": os.environ["VDP_ADMIN_KEY"],
+             "Content-Type": "application/json"})
+try:
+    urllib.request.urlopen(req, timeout=30).read()
+except Exception as e:
+    print("  status post failed:", e)
+PY
   # once every name in a zone is parked the file is no longer needed
   rm -f "$zone"
 done

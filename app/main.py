@@ -6,6 +6,7 @@ at /docs, ReDoc at /redoc.
 """
 from __future__ import annotations
 
+import json
 import os
 import time
 from contextlib import asynccontextmanager
@@ -405,6 +406,100 @@ def shell_page(active: str, title: str, description: str, body: str) -> HTMLResp
     html_out = (web.page(SHELL, title=title, description=description, active=active, body=body)
                 .replace("{{generated_at}}", st["generated_at"][:16].replace("T", " ") + " UTC"))
     return HTMLResponse(html_out)
+
+
+def _scan_report() -> dict:
+    """Everything the /scans page shows, in one place so the JSON route agrees with it."""
+    runs = store.runs(40)
+    crawl_runs = [r for r in runs if r.get("run_kind") == "crawl"]
+    total = int(store.get_state("seed_rows") or 0)
+    offset = int(store.get_state("coverage_offset") or 0)
+    seed_path = ROOT / "data" / "tranco1m.csv"
+    seed = {"path": "data/tranco1m.csv", "exists": seed_path.exists()}
+    if seed_path.exists():
+        stat = seed_path.stat()
+        seed["bytes"] = stat.st_size
+        seed["modified_at"] = datetime.fromtimestamp(
+            stat.st_mtime, timezone.utc).isoformat(timespec="seconds")
+    seed["rows"] = total
+    last = crawl_runs[0] if crawl_runs else {}
+    return {
+        "crawl": {
+            "seed": seed,
+            "offset": offset,
+            "total": total,
+            "percent": round(100 * offset / total, 2) if total else 0,
+            "cycles": len(crawl_runs),
+            "last_run_at": last.get("finished_at") or last.get("started_at"),
+            "last_hits": last.get("hits"),
+            "last_probes": last.get("probes"),
+            "seed_downloaded_at": store.get_state("seed_downloaded_at"),
+            "upstream_refreshed_at": store.get_state("upstream_refreshed_at"),
+            "recent": crawl_runs[:8],
+        },
+        "zones": json.loads(store.get_state("zone_status") or "{}"),
+    }
+
+
+@app.get("/v1/scans", tags=["meta"], summary="Crawl and zone-sweep progress")
+def scans_json(key: dict = Depends(auth)):
+    return envelope(_scan_report())
+
+
+@app.post("/admin/scan-status", tags=["admin"], summary="Record a zone-sweep snapshot")
+def post_scan_status(payload: dict, key: dict = Depends(admin)):
+    tld = (payload.get("tld") or "").strip()
+    if not tld:
+        raise HTTPException(422, "expected {\"tld\": ...}")
+    current = json.loads(store.get_state("zone_status") or "{}")
+    payload["updated_at"] = now()
+    current[tld] = payload
+    store.set_state("zone_status", json.dumps(current))
+    return envelope({"tld": tld, "zones": len(current)})
+
+
+@app.get("/scans", include_in_schema=False, response_class=HTMLResponse)
+def scans_page():
+    rep = _scan_report()
+    crawl = rep["crawl"]
+    seed = crawl["seed"]
+    rows = [
+        ("Seed file", f"{seed['path']} ({seed.get('rows', 0):,} names, "
+                      f"{seed.get('bytes', 0) / 1e6:.1f} MB)"),
+        ("Position in seed", f"{crawl['offset']:,} of {crawl['total']:,} ({crawl['percent']}%)"),
+        ("Sweeps completed", f"{crawl['cycles']}"),
+        ("Last chunk", f"{crawl.get('last_probes') or 0:,} probed, "
+                       f"{crawl.get('last_hits') or 0:,} policies"),
+        ("Last run", crawl.get("last_run_at") or "never"),
+        ("Seed refreshed", crawl.get("seed_downloaded_at") or "never"),
+        ("Upstream lists refreshed", crawl.get("upstream_refreshed_at") or "never"),
+        ("Pace", f"{CHUNK:,} names per chunk, a chunk every {INTERVAL} s "
+                 f"(about {INTERVAL // 60} min)"),
+    ]
+    crawl_rows = "".join(f"<tr><th>{k}</th><td>{v}</td></tr>" for k, v in rows)
+    zone_rows = ""
+    for tld, z in sorted(rep["zones"].items()):
+        zone_rows += (
+            f"<tr><td>{tld}</td><td>{z.get('names', 0):,}</td>"
+            f"<td>{z.get('checked', 0):,}</td><td>{z.get('parked', 0):,}</td>"
+            f"<td>{z.get('hits', 0):,}</td><td>{z.get('seconds', 0):.0f}s</td>"
+            f"<td>{z.get('rate', 0):.0f}/s</td>"
+            f"<td>{z.get('stopped_early') and 'budget hit' or 'complete'}</td>"
+            f"<td>{z.get('updated_at', '')[:16].replace('T', ' ')}</td></tr>")
+    if not zone_rows:
+        zone_rows = ("<tr><td colspan=9 class=muted>No sweep reported yet. The monthly "
+                     "runner posts a row per TLD as it finishes.</td></tr>")
+    recent = "".join(
+        f"<tr><td>{r.get('finished_at') or r.get('started_at') or ''}</td>"
+        f"<td>{r.get('probes') or 0:,}</td><td>{r.get('hits') or 0:,}</td>"
+        f"<td>{r.get('added') or 0:,} added / {r.get('changed') or 0:,} changed</td></tr>"
+        for r in crawl["recent"])
+    return render("scans.html", {
+        "{{crawl_rows}}": crawl_rows,
+        "{{zone_rows}}": zone_rows,
+        "{{recent_rows}}": recent,
+        "{{freshness}}": _refreshed(store.stats()),
+    })
 
 
 @app.get("/explore", include_in_schema=False, response_class=HTMLResponse)

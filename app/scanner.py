@@ -74,6 +74,7 @@ class Scanner:
                 if not self.ensure_seed():
                     raise RuntimeError("no seed list available")
                 total = _count_lines(self.seed)
+                self.store.set_state("seed_rows", str(total))
                 offset = int(self.store.get_state("coverage_offset", "0") or 0)
                 if offset >= total:
                     offset = 0
