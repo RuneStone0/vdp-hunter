@@ -63,15 +63,26 @@ Two honest caveats:
 
 ## Running it
 
-```
-bin/monthly_zone_scan.sh A      # com, net, app
-bin/monthly_zone_scan.sh B      # the quarterly set
-MINUTES=120 bin/monthly_zone_scan.sh A   # a short nightly window
-```
+The sweeps run inside the service, as one thread next to the Tranco crawler, so
+there is nothing to schedule and nothing to keep alive on a laptop. On boot the
+sweeper takes the next TLD from its queue, downloads the zone, extracts the apex
+names, and sweeps for `VDP_ZONE_MINUTES` before yielding. Progress is written
+into the same state the API serves, so `/scans` shows the phase, the names
+checked and the policies found while it is running.
 
-State lives in `/opt/data/vdp-zone-state`, hits append to `data/hits-czds.jsonl`,
-and the script finishes by folding hits into the live dataset with
-`bin/merge_hits.py`, so a scan night ends with the API already updated.
+Settings (environment): `VDP_ZONE_SCAN` (default on), `VDP_ZONE_TLDS` (comma
+list, default the approved list in `seed/czds_tlds.txt`), `VDP_ZONE_MINUTES`
+(120), `VDP_ZONE_PAUSE` (300). State and zone files live under `/app/data`, so
+they survive a redeploy with the rest of the dataset.
+
+The CZDS token expires within hours. `POST /admin/czds-token` installs a fresh
+one into `/app/data/czds_token.txt` (mode 600) and wakes the sweeper; until then
+`/scans` shows `blocked: czds http 401` and the queue waits instead of retrying.
+`/opt/data/private/czds_intake.py` is a one-shot local page that takes the token
+in a masked field and posts it to that endpoint.
+
+`bin/monthly_zone_scan.sh` still works as a manual host-side fallback, with its
+own state under `/opt/data/vdp-zone-state`.
 
 ## Open item
 
