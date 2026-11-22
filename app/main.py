@@ -410,8 +410,8 @@ def shell_page(active: str, title: str, description: str, body: str) -> HTMLResp
 
 def _scan_report() -> dict:
     """Everything the /scans page shows, in one place so the JSON route agrees with it."""
-    runs = store.runs(40)
-    crawl_runs = [r for r in runs if r.get("run_kind") == "crawl"]
+    runs = store.runs(200)
+    crawl_runs = [r for r in runs if r.get("kind") == "crawl"]
     total = int(store.get_state("seed_rows") or 0)
     offset = int(store.get_state("coverage_offset") or 0)
     seed_path = ROOT / "data" / "tranco1m.csv"
@@ -429,7 +429,9 @@ def _scan_report() -> dict:
             "offset": offset,
             "total": total,
             "percent": round(100 * offset / total, 2) if total else 0,
-            "cycles": len(crawl_runs),
+            # the runs table keeps a row per chunk, but a fresh install may have none
+            # yet while the offset already moved, so fall back to the offset
+            "cycles": len(crawl_runs) or (offset // CHUNK if offset else 0),
             "last_run_at": last.get("finished_at") or last.get("started_at"),
             "last_hits": last.get("hits"),
             "last_probes": last.get("probes"),
@@ -490,7 +492,7 @@ def scans_page():
         zone_rows = ("<tr><td colspan=9 class=muted>No sweep reported yet. The monthly "
                      "runner posts a row per TLD as it finishes.</td></tr>")
     recent = "".join(
-        f"<tr><td>{r.get('finished_at') or r.get('started_at') or ''}</td>"
+        f"<tr><td>{(r.get('started_at') or '')[:16].replace('T', ' ')}</td>"
         f"<td>{r.get('probes') or 0:,}</td><td>{r.get('hits') or 0:,}</td>"
         f"<td>{r.get('added') or 0:,} added / {r.get('changed') or 0:,} changed</td></tr>"
         for r in crawl["recent"])
