@@ -1,40 +1,30 @@
 # VDP dataset changes, 2026-11-22
 
-Programs: 30184 total, 28215 not in any known list, 737 on a bounty platform.
+Programs: 30213 total, 28244 not in any known list, 737 on a bounty platform.
 
-## New programs (17)
+## New programs (12)
 
-- `airbnb.co.nz` airbnb.co.nz -> https://hackerone.com/airbnb#overview
-- `deno.land` deno.land -> https://deno.com/deploy/docs/security
-- `fasebj.org` fasebj.org -> ['security@wiley.com']
-- `jeugdjournaal.nl` jeugdjournaal.nl -> https://over.nos.nl/organisatie/melden-zwakke-ict-plekken
-- `kitaplus.de` kitaplus.de -> ['security@npo-applications.de']
-- `medpex.de` medpex.de -> https://www.medpex.de/ueber-uns/cyber-sicherheit
-- `nederlandwereldwijd.nl` nederlandwereldwijd.nl -> https://www.ncsc.nl/dienstverlening/kwetsbaarheid-melden-cvd
-- `nocowanie.pl` nocowanie.pl -> ['soc@grupawp.pl']
-- `nordpoolgroup.com` nordpoolgroup.com -> ['infosecdefensecsirt@euronext.com', 'security.incident@euronext.com']
-- `nvwa.nl` nvwa.nl -> https://www.ncsc.nl/dienstverlening/kwetsbaarheid-melden-cvd
-- `santos.com` santos.com -> https://bugcrowd.com/santos-vdp
-- `satakunnankansa.fi` satakunnankansa.fi -> https://www.sanoma.com/en/responsible-disclosure-statement/
-- `siemensgamesa.com` siemensgamesa.com -> https://new.siemens.com/global/en/products/services/cert/vulnerability-process.html
-- `timeanddate.de` timeanddate.de -> https://hackerone.com/timeanddate
-- `tinyfish.ai` tinyfish.ai -> https://www.tinyfish.ai/security/vulnerability-disclosure-policy.txt
-- `tmbi.com` tmbi.com -> ['security.reports@tmbi.com']
-- `torproject.net` torproject.net -> https://gitlab.torproject.org/tpo/core/team/-/wikis/NetworkTeam/SecurityPolicy
+- `dressmann.com` dressmann.com -> https://riversecurity.eu/activefocus-responsible-disclosure/
+- `fourthwall.dev` fourthwall.dev -> https://fourthwall.com/responsible-disclosure-policy
+- `homestars.com` homestars.com -> ['security@instapro.com']
+- `hornbach.ch` hornbach.ch -> []
+- `nagra.com` nagra.com -> https://vdp.kudelski.com
+- `nowosci.com.pl` nowosci.com.pl -> ['secvul@polskapress.pl']
+- `supercheapauto.co.nz` supercheapauto.co.nz -> ['disclosures@supercheapauto.co.nz']
+- `thoughtspot.com` thoughtspot.com -> https://www.thoughtspot.com/responsible-disclosure-program
+- `travelperk.com` travelperk.com -> https://app.intigriti.com/company/programs/travelperk/travelperk/detail
+- `videosz.com` videosz.com -> []
+- `whatsapp.tv` whatsapp.tv -> https://bugbounty.meta.com/
+- `world.org` world.org -> https://hackerone.com/toolsforhumanity
 
 ## Removed (0)
 
 
-## Changed (11)
+## Changed (6)
 
-- `askjan.org`: expiry, sources
-- `axiell.com`: policy, expiry, expires_on, sources
-- `celsoazevedo.com`: expiry, sources
-- `elhacker.net`: expiry, expires_on, sources
-- `eo.nl`: policy, expiry, expires_on, sources
-- `internet.nl`: expiry, expires_on, sources
-- `osu.cz`: expiry, expires_on, sources
-- `qubes-os.org`: expiry, expires_on, sources
-- `radboudumc.nl`: expiry, expires_on, sources
-- `storiesonline.net`: expiry, sources
-- `uptrends.com`: expiry, expires_on, sources
+- `ista.com`: expiry, sources
+- `kescher.at`: expiry, expires_on, sources
+- `megekko.nl`: expiry, expires_on, sources
+- `threatspike.com`: expiry, expires_on, sources
+- `truelayer.com`: expiry, expires_on, sources
+- `tul.cz`: expiry, sources
