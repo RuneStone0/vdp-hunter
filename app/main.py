@@ -6,8 +6,12 @@ at /docs, ReDoc at /redoc.
 """
 from __future__ import annotations
 
+import html
 import json
 import os
+import urllib.error
+import urllib.request
+from urllib.parse import parse_qs
 import time
 from contextlib import asynccontextmanager
 from datetime import datetime, timezone
@@ -485,6 +489,69 @@ def _scan_report() -> dict:
 @app.get("/v1/scans", tags=["meta"], summary="Crawl and zone-sweep progress")
 def scans_json(key: dict = Depends(auth)):
     return envelope(_scan_report())
+
+
+CZD_FORM = """<!doctype html><meta charset=utf-8><title>CZDS token</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+ body{{font-family:Inter,system-ui,sans-serif;background:#071827;color:#dbeafe;margin:0;padding:3rem 1.5rem}}
+ .c{{max-width:640px;margin:0 auto;background:rgba(255,255,255,.03);border:1px solid rgba(125,211,252,.15);border-radius:14px;padding:1.6rem}}
+ h1{{font-size:1.2rem;margin:0 0 .4rem}} p{{color:#9fb3c8;font-size:.9rem;line-height:1.5}}
+ textarea{{width:100%;min-height:140px;background:#0b2136;color:#dbeafe;border:1px solid rgba(125,211,252,.25);
+   border-radius:10px;padding:.7rem;font-family:ui-monospace,monospace;font-size:.82rem}}
+ button{{margin-top:.9rem;background:#7dd3fc;color:#071827;border:0;border-radius:9px;padding:.6rem 1.1rem;font-weight:600;cursor:pointer}}
+ .msg{{margin-top:1rem;color:#7dd3fc}}
+</style>
+<div class=c><h1>Install a CZDS bearer token</h1>
+<p>The token comes from a signed-in session at account.icann.org and expires within hours.
+It is checked against ICANN before it is stored, so an expired token is rejected here rather than
+failing silently during a sweep. The token is the credential: anyone who can present a valid one
+could have fetched the zones themselves.</p>
+<form method=post action="/czds-token">
+<textarea name=token autofocus spellcheck=false placeholder="eyJraWQiOi..."></textarea>
+<button type=submit>Verify and install</button></form>
+<div class=msg>{msg}</div></div>"""
+
+
+def _czds_verify(token: str) -> tuple[bool, str]:
+    """ICANN is the only authority on whether a token is live, so ask it."""
+    req = urllib.request.Request(
+        "https://czds-api.icann.org/czds/downloads/cpa.zone",
+        headers={"Authorization": f"Bearer {token}", "ngsw-bypass": "true",
+                 "Range": "bytes=0-0"})
+    try:
+        with urllib.request.urlopen(req, timeout=90) as r:
+            return r.status in (200, 206), f"ICANN answered {r.status}"
+    except urllib.error.HTTPError as e:
+        if e.code in (401, 403):
+            return False, "ICANN rejected that token: expired, or from a session that signed out."
+        return False, f"ICANN answered {e.code}"
+    except Exception as e:  # noqa: BLE001
+        return False, f"could not reach ICANN: {e}"
+
+
+@app.get("/czds-token", include_in_schema=False, response_class=HTMLResponse)
+def czds_form():
+    return CZD_FORM.format(msg="")
+
+
+@app.post("/czds-token", include_in_schema=False, response_class=HTMLResponse)
+async def czds_submit(request: Request):
+    body = (await request.body()).decode("utf-8", "replace")
+    token = (parse_qs(body).get("token") or [""])[0].strip()
+    if len(token) < 40:
+        return HTMLResponse(CZD_FORM.format(msg="That does not look like a token."), 400)
+    ok, why = _czds_verify(token)
+    if not ok:
+        return HTMLResponse(CZD_FORM.format(msg=html.escape(why)), 400)
+    path = Path(os.environ.get("CZDS_TOKEN_FILE", str(ROOT / "data" / "czds_token.txt")))
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(".tmp")
+    tmp.write_text(token)
+    os.chmod(tmp, 0o600)
+    tmp.replace(path)
+    store.set_state("czds_token_at", now())
+    return HTMLResponse(CZD_FORM.format(msg=f"Token verified and installed ({len(token)} characters)."))
 
 
 @app.get("/admin/czds-token", tags=["admin"],
