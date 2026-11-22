@@ -408,6 +408,19 @@ def shell_page(active: str, title: str, description: str, body: str) -> HTMLResp
     return HTMLResponse(html_out)
 
 
+def _eta(total: int, offset: int) -> str:
+    """How long the remaining chunks take at the configured pace, printed coarsely."""
+    left = max(total - offset, 0)
+    if not left or not total:
+        return "complete"
+    hours = left / CHUNK * INTERVAL / 3600
+    if hours < 1:
+        return f"{int(hours * 60)} minutes"
+    if hours < 48:
+        return f"{hours:.0f} hours"
+    return f"{hours / 24:.1f} days"
+
+
 def _scan_report() -> dict:
     """Everything the /scans page shows, in one place so the JSON route agrees with it."""
     runs = store.runs(200)
@@ -470,6 +483,7 @@ def scans_page():
                       f"{seed.get('bytes', 0) / 1e6:.1f} MB)"),
         ("Position in seed", f"{crawl['offset']:,} of {crawl['total']:,} ({crawl['percent']}%)"),
         ("Sweeps completed", f"{crawl['cycles']}"),
+        ("Full sweep ETA", _eta(crawl["total"], crawl["offset"])),
         ("Last chunk", f"{crawl.get('last_probes') or 0:,} probed, "
                        f"{crawl.get('last_hits') or 0:,} policies"),
         ("Last run", crawl.get("last_run_at") or "never"),
