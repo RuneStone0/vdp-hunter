@@ -77,7 +77,7 @@ and wraps around.
 """
 
 api_key_header = APIKeyHeader(name="X-API-Key", auto_error=False,
-                              description="API key issued by vdp-hunter")
+                              description="API key issued by Bug Hunter")
 
 
 def rate_limited(key: str, limit: int) -> bool:
@@ -176,11 +176,11 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="vdp-hunter API",
+    title="Bug Hunter API",
     version="1.0.0",
     summary="Vulnerability disclosure and bug bounty programs, with change history.",
     description=DESCRIPTION,
-    contact={"name": "vdp-hunter", "url": "https://github.com/RuneStone0/vdp-hunter"},
+    contact={"name": "Bug Hunter", "url": "https://github.com/RuneStone0/vdp-hunter"},
     license_info={"name": "MIT", "url": "https://github.com/RuneStone0/vdp-hunter/blob/main/LICENSE"},
     lifespan=lifespan,
     openapi_tags=[
@@ -710,7 +710,7 @@ program pays. Click a domain for the full record and its change history.</p>
 <span><a href="/changes">Recent changes &rarr;</a></span></div>
 {web.rows_table(rows)}
 {web.pager(filters, page, total)}"""
-    return shell_page("/explore", "vdp-hunter · explore the dataset",
+    return shell_page("/explore", "Bug Hunter · explore the dataset",
                       "Search and filter vulnerability disclosure programs by platform, bounty, "
                       "expiry and source.", body)
 
@@ -722,7 +722,7 @@ def program_page(domain: str):
     p = store.get(domain)
     if not p:
         raise HTTPException(404, f"No program {domain}")
-    return shell_page("/explore", f"{domain} · vdp-hunter",
+    return shell_page("/explore", f"{domain} · Bug Hunter",
                       f"Disclosure policy, contacts and change history for {domain}.",
                       web.program_body(p))
 
@@ -753,7 +753,7 @@ moved policy URL or an expired security.txt is visible rather than implied.</p>
   <span class="pager-pos">page {page}</span>
   {f'<a href="/changes?page={page + 1}&kind={web.esc(kind)}&domain={web.esc(domain)}">next &rsaquo;</a>' if total > page * web.PER_PAGE else ''}
 </div>"""
-    return shell_page("/changes", "vdp-hunter · change feed",
+    return shell_page("/changes", "Bug Hunter · change feed",
                       "Field-level diffs for every disclosure program we track.", body)
 
 
@@ -787,7 +787,7 @@ async def not_found(request: Request, exc):
     body = ('<p class="eyebrow">404</p><h1>Nothing here</h1>'
             f'<p class="lede">{web.esc(str(exc.detail))}. Try the '
             '<a href="/explore">explorer</a> instead.</p>')
-    html_out = (web.page(SHELL, title="vdp-hunter · not found",
+    html_out = (web.page(SHELL, title="Bug Hunter · not found",
                          description="Page not found.", active="", body=body)
                 .replace("{{generated_at}}", st["generated_at"][:16].replace("T", " ") + " UTC"))
     return HTMLResponse(html_out, status_code=404)
