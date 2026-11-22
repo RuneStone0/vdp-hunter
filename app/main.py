@@ -487,6 +487,18 @@ def scans_json(key: dict = Depends(auth)):
     return envelope(_scan_report())
 
 
+@app.get("/admin/czds-token", tags=["admin"],
+         summary="Read back the installed CZDS bearer token")
+def get_czds_token(key: dict = Depends(admin)):
+    """The zone sweep runs on the host, not in this container, so it has no way to see
+    the token a browser session just handed to the service. Read it back over the API."""
+    path = Path(os.environ.get("CZDS_TOKEN_FILE", str(ROOT / "data" / "czds_token.txt")))
+    if not path.exists():
+        raise HTTPException(404, "no token installed")
+    token = path.read_text().strip()
+    return envelope({"token": token, "length": len(token)})
+
+
 @app.post("/admin/czds-token", tags=["admin"],
           summary="Install a fresh CZDS bearer token for the zone sweeper")
 def put_czds_token(payload: dict, key: dict = Depends(admin)):

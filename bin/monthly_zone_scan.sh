@@ -24,6 +24,13 @@ case "$TIER" in
 esac
 
 set -a; . /opt/data/private/vdp-hunter.env; set +a
+API=${API:-http://192.168.1.66:8118}
+
+# the token is installed through the intake page and lives in the service, so the
+# sweep asks the API for it rather than reading a file only the service can write
+CZDS_TOKEN=$(curl -s -m 20 -H "X-API-Key: $VDP_ADMIN_KEY" "$API/admin/czds-token" \
+  | .venv/bin/python -c "import sys,json;print((json.load(sys.stdin).get('data') or {}).get('token',''))" 2>/dev/null)
+[ -z "$CZDS_TOKEN" ] && CZDS_TOKEN=$(cat /opt/data/private/czds_token.txt 2>/dev/null)
 
 for tld in $TLDS; do
   zone="$ZONES/$tld.zone"
@@ -34,7 +41,7 @@ for tld in $TLDS; do
       # the CZDS bearer token comes from a signed-in browser session; the Go client
       # only speaks the username/password API, which is not what this account uses
       code=$(curl -s -m 900 -o "$zone.gz" -w '%{http_code}' \
-        -H "Authorization: Bearer $(cat /opt/data/private/czds_token.txt)" \
+        -H "Authorization: Bearer $CZDS_TOKEN" \
         -H 'ngsw-bypass: true' \
         "https://czds-api.icann.org/czds/downloads/$tld.zone")
       if [ "$code" != "200" ]; then

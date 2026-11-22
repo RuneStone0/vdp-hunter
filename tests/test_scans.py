@@ -35,6 +35,22 @@ def test_czds_token_is_installed_for_the_sweeper(client, tmp_path, monkeypatch):
     assert (tmp_path / "czds_token.txt").stat().st_mode & 0o777 == 0o600
 
 
+def test_czds_token_round_trip(client):
+    """The host-side sweep reads the token back over the API, so install then read must work."""
+    import os
+    from pathlib import Path
+    tok_file = Path(os.environ.get("CZDS_TOKEN_FILE", "data/czds_token.txt"))
+    tok_file.unlink(missing_ok=True)
+    assert client.get("/admin/czds-token", headers=ADMIN).status_code == 404
+    token = "x" * 60
+    assert client.post("/admin/czds-token", json={"token": token},
+                       headers=ADMIN).status_code == 200
+    body = client.get("/admin/czds-token", headers=ADMIN).json()["data"]
+    assert body["token"] == token and body["length"] == 60
+    assert client.get("/admin/czds-token").status_code == 401
+    tok_file.unlink(missing_ok=True)
+
+
 def test_zone_snapshot_needs_a_tld(client):
     assert client.post("/admin/scan-status", json={"hits": 1},
                        headers=ADMIN).status_code == 422
