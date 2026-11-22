@@ -131,17 +131,30 @@ class ZoneSweeper:
             progress = json.loads(self.progress.read_text())
         except (OSError, json.JSONDecodeError):
             progress = {}
+
+        def num(key, cast=float, default=0):
+            """Coerce a summary field, tolerating a trailing unit like `rate=34/s`."""
+            raw = str(summary.get(key, "") or "").strip()
+            if key == "rate":
+                raw = raw.removesuffix("/s")
+            if not raw:
+                return default
+            try:
+                return cast(raw)
+            except (TypeError, ValueError):
+                return default
+
         done = bool(progress.get("done"))
         self._record(tld, phase="sweep", done=done,
-                     names=int(summary.get("names", 0) or 0),
-                     checked=int(summary.get("checked", 0) or 0),
-                     parked=int(summary.get("parked_skip", 0) or 0),
-                     hits=int(summary.get("hits", 0) or 0),
-                     seconds=float(summary.get("seconds", 0) or 0),
-                     rate=float(summary.get("rate", 0) or 0),
+                     names=num("names", int),
+                     checked=num("checked", int),
+                     parked=num("parked_skip", int),
+                     hits=num("hits", int),
+                     seconds=num("seconds"),
+                     rate=num("rate"),
                      stopped_early=summary.get("shards_stopped_early", "0") not in ("0", ""),
                      error=None)
-        return {"done": done, "hits": int(summary.get("hits", 0) or 0)}
+        return {"done": done, "hits": num("hits", int)}
 
     def merge_hits(self) -> None:
         script = self.root / "bin" / "merge_hits.py"

@@ -99,3 +99,27 @@ def test_zone_download_puts_the_installed_token_on_the_wire(tmp_path, monkeypatc
     assert sent == [f"Authorization: Bearer {token}"]
     assert not (tmp_path / "zones" / "accountant.zone.gz").exists()
 
+
+def test_sweep_tolerates_a_rate_with_a_unit(tmp_path, monkeypatch):
+    """The scan binary prints `rate=34/s`; that must not turn a finished sweep into an error."""
+    state_dir = tmp_path / "state"
+    files_dir = tmp_path / "zones"
+    state_dir.mkdir()
+    files_dir.mkdir()
+    names = files_dir / "accountant.names"
+    names.write_text("a.com\nb.com\n")
+    (state_dir / "progress.json").write_text(json.dumps({"done": True, "hits": 7}))
+    out = ("names=1615 checked=1615 parked_skip=0 no_dns=549 no_port=0 reachable=1066 "
+           "hits=7 seconds=48.2 rate=34/s shards_stopped_early=0\n")
+    monkeypatch.setattr(
+        zonescan.subprocess, "run",
+        lambda *a, **k: subprocess.CompletedProcess(a[0] if a else [], 0, out, ""))
+    sweeper = zonescan.ZoneSweeper(main.store, str(tmp_path), ["accountant"],
+                                   state_dir=str(state_dir), files_dir=str(files_dir),
+                                   merge=False)
+    assert sweeper._sweep("accountant", names) == {"done": True, "hits": 7}
+    record = json.loads(main.store.get_state("zone_status"))["accountant"]
+    assert record["rate"] == 34.0
+    assert record["checked"] == 1615
+    assert record["seconds"] == 48.2
+
