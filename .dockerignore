@@ -8,8 +8,7 @@ preview.html
 __pycache__
 *.pyc
 
-# zone-file pipeline: built locally, not needed in the image
-go/
+# zone-file pipeline: bin/go is built in the image; go/ source must be present
 zones/
 bin/go/
 data/domains-*.txt

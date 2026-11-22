@@ -19,6 +19,11 @@ services:
       VDP_CHUNK: "2000"
       VDP_INTERVAL: "900"
       VDP_BOOTSTRAP: "1"
+      # zone sweeps run inside the service; a token is required to download zones
+      VDP_ZONE_SCAN: "1"
+      VDP_ZONE_MINUTES: "120"
+      VDP_ZONE_PAUSE: "300"
+      CZDS_TOKEN: ${CZDS_TOKEN:-}
     volumes:
       - vdp_data:/app/data
     healthcheck:

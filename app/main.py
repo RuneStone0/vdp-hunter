@@ -21,6 +21,7 @@ from pydantic import BaseModel, Field
 
 from .scanner import Scanner
 from .store import Store, now
+from .zonescan import ZoneSweeper
 
 ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = os.environ.get("VDP_DB", str(ROOT / "data" / "vdp.db"))
@@ -29,8 +30,29 @@ SCAN_ENABLED = os.environ.get("VDP_SCAN_ENABLED", "1") == "1"
 CHUNK = int(os.environ.get("VDP_CHUNK", "2000"))
 INTERVAL = int(os.environ.get("VDP_INTERVAL", "900"))
 
+ZONE_SCAN = os.environ.get("VDP_ZONE_SCAN", "0") == "1"
+ZONE_MINUTES = int(os.environ.get("VDP_ZONE_MINUTES", "120"))
+ZONE_TLDS = [t.strip() for t in os.environ.get("VDP_ZONE_TLDS", "").split(",") if t.strip()]
+
+
+def _default_tlds() -> list[str]:
+    """Tier A first, then everything else the account holds, smallest zones first
+    is unknowable up front, so the order is the one in the approved list."""
+    for path in (ROOT / "seed" / "czds_tlds.txt", ROOT / "data" / "czds_tlds.txt"):
+        if path.exists():
+            return [line.strip() for line in path.read_text().splitlines() if line.strip()]
+    return []
+
+
 store = Store(DB_PATH)
 scanner = Scanner(store, str(ROOT), chunk_size=CHUNK, interval_s=INTERVAL)
+sweeper = ZoneSweeper(
+    store, str(ROOT), ZONE_TLDS or _default_tlds(), minutes=ZONE_MINUTES,
+    pause_s=int(os.environ.get("VDP_ZONE_PAUSE", "300")),
+    token=os.environ.get("CZDS_TOKEN", ""),
+    token_file=os.environ.get("CZDS_TOKEN_FILE", ""),
+    state_dir=os.environ.get("VDP_ZONE_STATE", str(ROOT / "data" / "zone-state")),
+    files_dir=os.environ.get("VDP_ZONE_FILES", str(ROOT / "data" / "zones")))
 
 TIERS = {"free": 120, "pro": 2000, "admin": 10 ** 9}
 _buckets: dict[str, tuple[float, int]] = {}
@@ -142,8 +164,11 @@ async def lifespan(app: FastAPI):
                          record_changes=False)
     if SCAN_ENABLED:
         scanner.start()
+    if ZONE_SCAN:
+        sweeper.start()
     yield
     scanner.stop()
+    sweeper.stop()
 
 
 app = FastAPI(
@@ -453,6 +478,7 @@ def _scan_report() -> dict:
             "recent": crawl_runs[:8],
         },
         "zones": json.loads(store.get_state("zone_status") or "{}"),
+        "sweeper": sweeper.live(),
     }
 
 
@@ -506,14 +532,48 @@ def scans_page():
         zone_rows = ("<tr><td colspan=9 class=muted>No sweep reported yet. The monthly "
                      "runner posts a row per TLD as it finishes.</td></tr>")
     recent = "".join(
-        f"<tr><td>{(r.get('started_at') or '')[:16].replace('T', ' ')}</td>"
+        f"<tr><td>{r.get('finished_at') or r.get('started_at') or ''}</td>"
         f"<td>{r.get('probes') or 0:,}</td><td>{r.get('hits') or 0:,}</td>"
         f"<td>{r.get('added') or 0:,} added / {r.get('changed') or 0:,} changed</td></tr>"
         for r in crawl["recent"])
+
+    live = rep["sweeper"]
+    running = live.get("status") or {}
+    prog = live.get("progress") or {}
+    state = running.get("state") or "idle"
+    tld = running.get("tld") or (live.get("queue") or [None])[0]
+    phase = running.get("phase")
+    if state in ("sweep", "download", "extract") and phase:
+        names = int(prog.get("names") or 0)
+        checked = int(prog.get("checked") or 0)
+        pct = f"{100 * checked / names:.1f}%" if names else "0%"
+        now_line = (f"{state}: .{tld} in the {phase} phase, {checked:,} of {names:,} names "
+                    f"checked ({pct}), {int(prog.get('hits') or 0):,} policies, "
+                    f"{float(prog.get('seconds') or 0) / 60:.0f} min elapsed")
+    elif state == "blocked":
+        now_line = (f"blocked on .{tld}: {running.get('last_error') or 'no CZDS token'}. "
+                    f"The queue waits for a fresh token instead of retrying.")
+    elif state == "error":
+        now_line = f"error on .{tld}: {running.get('last_error') or 'unknown'}"
+    else:
+        nxt = (live.get("queue") or ["none"])[0]
+        now_line = (f"between sweeps. Next up is .{nxt}, {len(live.get('queue') or []):,} TLDs "
+                    f"in the queue, {live.get('minutes') or 0} minutes per window.")
+    token_line = ("CZDS token configured" if live.get("configured")
+                  else "no CZDS token configured, downloads will fail")
+    last_done = max((z.get("updated_at", "") for z in rep["zones"].values()), default="")
+    live_rows = "".join(f"<tr><th>{k}</th><td>{v}</td></tr>" for k, v in [
+        ("Now", now_line),
+        ("Queue", ", ".join("." + t for t in (live.get("queue") or [])[:12]) or "empty"),
+        ("Budget", f"{live.get('minutes')} minutes of sweeping per turn"),
+        ("Auth", token_line),
+        ("Last report", last_done or "never"),
+    ])
     return render("scans.html", {
         "{{crawl_rows}}": crawl_rows,
         "{{zone_rows}}": zone_rows,
         "{{recent_rows}}": recent,
+        "{{live_rows}}": live_rows,
         "{{freshness}}": _refreshed(store.stats()),
     })
 

@@ -3499,5 +3499,976 @@
 }
 ],
 "submit_access": "account_required"
+},
+{
+"id": "2f9642bb-830b-4756-9cbe-391e44175b8a",
+"handle": "liferaydxp",
+"name": "Liferay DXP",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "Liferay DXP 2026.Q3",
+"type": "Other"
+},
+{
+"target": "Liferay DXP 2026.Q2",
+"type": "Other"
+},
+{
+"target": "Liferay DXP 2026.Q1",
+"type": "Other"
+},
+{
+"target": "Liferay DXP 2025.Q1",
+"type": "Other"
+},
+{
+"target": "Liferay DXP 2024.Q1",
+"type": "Other"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
+"handle": "algemeendagblad",
+"name": "Algemeen Dagblad",
+"public": "Public",
+"bounty": true,
+"safe_harbour": false,
+"scope_in": [
+{
+"target": "actie.ad.nl",
+"type": "Url"
+},
+{
+"target": "myaccount.ad.nl",
+"type": "Url"
+},
+{
+"target": "www.ad.nl",
+"type": "Url"
+},
+{
+"target": "www.ad.nl/abonnementen",
+"type": "Url"
+},
+{
+"target": "*.ad.nl",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "3219ed72-e563-458d-aafd-9ce8ca4e3087",
+"handle": "vrtnv",
+"name": "VRT",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "API's",
+"type": "Other"
+},
+{
+"target": "Sockets",
+"type": "Other"
+},
+{
+"target": "Mobile Applications",
+"type": "Other"
+},
+{
+"target": "player.vrt.be",
+"type": "Url"
+},
+{
+"target": "profiel.vrt.be",
+"type": "Url"
+},
+{
+"target": "sporza.be",
+"type": "Url"
+},
+{
+"target": "vrt.be/interactie/121-chat/",
+"type": "Url"
+},
+{
+"target": "vrt.be/vrtmax",
+"type": "Url"
+},
+{
+"target": "vrt.be/vrtnws",
+"type": "Url"
+},
+{
+"target": "Brand Sites",
+"type": "Other"
+},
+{
+"target": "cds.vrt.radio",
+"type": "Url"
+},
+{
+"target": "innovatie.vrt.be",
+"type": "Url"
+},
+{
+"target": "shop.*.be",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "32d93701-b082-40ee-aa05-6955c8b61d3d",
+"handle": "hyves",
+"name": "Hyves",
+"public": "Registered",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://hyves.nl/",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "3d1d5732-13a0-4eef-9bd2-efd874a2f2ac",
+"handle": "uitgeverijdeviant",
+"name": "Uitgeverij Deviant Bug Bounty",
+"public": "Application",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "api.uitgeverij-deviant.nl",
+"type": "Url"
+},
+{
+"target": "idp.uitgeverij-deviant.nl",
+"type": "Url"
+},
+{
+"target": "bff.uitgeverij-deviant.nl/api/*",
+"type": "Wildcard"
+},
+{
+"target": "studiemeter.uitgeverij-deviant.nl",
+"type": "Url"
+},
+{
+"target": "studiereader.uitgeverij-deviant.nl",
+"type": "Url"
+},
+{
+"target": "dashboard.uitgeverij-deviant.nl",
+"type": "Url"
+},
+{
+"target": "legacy-api.uitgeverij-deviant.nl",
+"type": "Url"
+},
+{
+"target": "bff.uitgeverij-deviant.nl/legacy-api/*",
+"type": "Wildcard"
+},
+{
+"target": "bff.uitgeverij-deviant.nl/sr/*",
+"type": "Wildcard"
+},
+{
+"target": "rest.uitgeverij-deviant.nl",
+"type": "Url"
+},
+{
+"target": "soap.uitgeverij-deviant.nl",
+"type": "Url"
+},
+{
+"target": "ws.uitgeverij-deviant.nl",
+"type": "Url"
+},
+{
+"target": "assets.uitgeverij-deviant.nl",
+"type": "Url"
+},
+{
+"target": "streams.uitgeverij-deviant.nl",
+"type": "Url"
+},
+{
+"target": "webshop.uitgeverij-deviant.nl",
+"type": "Url"
+},
+{
+"target": "www.uitgeverij-deviant.nl",
+"type": "Url"
+},
+{
+"target": "*.uitgeverij-deviant.nl",
+"type": "Wildcard"
+}
+],
+"scope_out": [
+{
+"target": "bff.uitgeverij-deviant.nl/*/*",
+"type": "Wildcard"
+}
+],
+"submit_access": "account_required"
+},
+{
+"id": "3d6dfea5-b7f6-4bca-98a3-a1c6b8a4c7dd",
+"handle": "qcvdp",
+"name": "QC VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "Trading Scope",
+"type": "Other"
+},
+{
+"target": "Corporate Scope",
+"type": "Other"
+},
+{
+"target": "*.cpa.iqoption.com",
+"type": "Wildcard"
+}
+],
+"scope_out": [
+{
+"target": "Main Scope",
+"type": "Other"
+},
+{
+"target": "Asset, Data & Secret Exposure",
+"type": "Other"
+}
+],
+"submit_access": "account_required"
+},
+{
+"id": "3e51fb18-7082-4ce5-85d0-2bd889b5ed4e",
+"handle": "VismaResponsibleDisclosure",
+"name": "Visma Responsible Disclosure",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "all",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "3f6b3170-afd4-411c-84fc-24113a562ecf",
+"handle": "kuleuvenrdp",
+"name": "KU Leuven Vulnerability Disclosure Program (VDP)",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "www.kuleuven.be",
+"type": "Url"
+},
+{
+"target": "IPv4: 134.58.0.0/16",
+"type": "IpRange"
+},
+{
+"target": "IPv6: 2a02:2c40::/32",
+"type": "IpRange"
+},
+{
+"target": "www.trismegistos.org",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "3f79ce72-f3f5-4ec4-9b4b-b8328d577e78",
+"handle": "qualifiedresponsibledisclosureprogram",
+"name": "Qualified Responsible Disclosure Program",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "app.qualified-dev.com",
+"type": "Url"
+},
+{
+"target": "www.qualified.com",
+"type": "Url"
+},
+{
+"target": "api.qualified.com/v1",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "406fd572-83b2-49de-9200-594c484d5bb9",
+"handle": "hetparool",
+"name": "Het Parool",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "myaccount.parool.nl",
+"type": "Url"
+},
+{
+"target": "shop.parool.nl",
+"type": "Url"
+},
+{
+"target": "webwinkel.parool.nl",
+"type": "Url"
+},
+{
+"target": "www.parool.nl",
+"type": "Url"
+},
+{
+"target": "www.parool.nl/abonnementen",
+"type": "Url"
+},
+{
+"target": "actie.parool.nl",
+"type": "Url"
+},
+{
+"target": "*.parool.nl",
+"type": "Wildcard"
+},
+{
+"target": "parool.nl/inloggen",
+"type": "Url"
+},
+{
+"target": "parool.nl/login",
+"type": "Url"
+},
+{
+"target": "parool.nl/registreren",
+"type": "Url"
+},
+{
+"target": "parool.nl/service",
+"type": "Url"
+},
+{
+"target": "abonnement.parool.nl",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "4352dcef-dfc5-4d74-8fd8-9bef5aa16f18",
+"handle": "skodaautoprivatebugbountyprogram",
+"name": "Skoda Auto Bug Bounty Program",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://apps.apple.com/cz/app/my%C5%A1koda/id1632202810",
+"type": "iOS"
+},
+{
+"target": "cz.skodaauto.myskoda",
+"type": "Android"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "43c4b274-ccbd-4ea2-8047-d40b0b4205ac",
+"handle": "libelle",
+"name": "Libelle",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "www.libelle.nl",
+"type": "Url"
+},
+{
+"target": "*.libelle.nl",
+"type": "Wildcard"
+},
+{
+"target": "libelle.nl/inloggen",
+"type": "Url"
+},
+{
+"target": "libelle.nl/login",
+"type": "Url"
+},
+{
+"target": "libelle.nl/registreren",
+"type": "Url"
+},
+{
+"target": "libelle.nl/service",
+"type": "Url"
+},
+{
+"target": "actie.libelle.nl",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "452a516e-fc32-4285-96e5-97ad5e5e9595",
+"handle": "rgfbe-vdp",
+"name": "RGF BE - VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "http://uat-www.startpeople.be/",
+"type": "Url"
+},
+{
+"target": "https://uat-www.brightplus.be",
+"type": "Url"
+},
+{
+"target": "https://uat-www.career.be",
+"type": "Url"
+},
+{
+"target": "https://uat-www.entrili.com",
+"type": "Url"
+},
+{
+"target": "https://uat-www.unique.be",
+"type": "Url"
+},
+{
+"target": "https://uat-www.uniqueselect.be",
+"type": "Url"
+},
+{
+"target": "https://uat-www.usgprofessionals.be",
+"type": "Url"
+},
+{
+"target": "*.brightplus.be",
+"type": "Wildcard"
+},
+{
+"target": "*.career.be",
+"type": "Wildcard"
+},
+{
+"target": "*.entrili.com",
+"type": "Wildcard"
+},
+{
+"target": "*.expressmedical.be",
+"type": "Wildcard"
+},
+{
+"target": "*.jobinson.be",
+"type": "Wildcard"
+},
+{
+"target": "*.public-sourcing.be",
+"type": "Wildcard"
+},
+{
+"target": "*.rgfstaffing.be",
+"type": "Wildcard"
+},
+{
+"target": "*.solvus.be",
+"type": "Wildcard"
+},
+{
+"target": "*.startpeople.be",
+"type": "Wildcard"
+},
+{
+"target": "*.unique.be",
+"type": "Wildcard"
+},
+{
+"target": "*.uniqueselect.be",
+"type": "Wildcard"
+},
+{
+"target": "*.usgprofessionals.be",
+"type": "Wildcard"
+},
+{
+"target": "https://pen-app.entrili.com",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "48853273-690a-4555-8ac5-821a1c464312",
+"handle": "capitalcom",
+"name": "Capital.com",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "payment.backend-capital.com",
+"type": "Url"
+},
+{
+"target": "*.backend-capital.com",
+"type": "Wildcard"
+},
+{
+"target": "capital.com/*",
+"type": "Wildcard"
+},
+{
+"target": "com.capital.trading",
+"type": "iOS"
+},
+{
+"target": "com.capital.trading",
+"type": "Android"
+},
+{
+"target": "open-api.capital.com",
+"type": "Url"
+},
+{
+"target": "*.capital.com",
+"type": "Wildcard"
+},
+{
+"target": "*.itcapital.io",
+"type": "Wildcard"
+},
+{
+"target": "aff.capital.com",
+"type": "Url"
+},
+{
+"target": "go.capital.com",
+"type": "Url"
+},
+{
+"target": "register.capital.com",
+"type": "Url"
+},
+{
+"target": "careers.capital.com",
+"type": "Url"
+},
+{
+"target": "*affiliates.backend-capital.com",
+"type": "Wildcard"
+},
+{
+"target": "*eduapp.backend-capital.com",
+"type": "Wildcard"
+},
+{
+"target": "*education.backend-capital.com",
+"type": "Wildcard"
+},
+{
+"target": "help.capital.com",
+"type": "Url"
+},
+{
+"target": "relocate-with-us.capital.com",
+"type": "Url"
+},
+{
+"target": "3cxby.itcapital.io",
+"type": "Url"
+},
+{
+"target": "texis.itcapital.io",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "4914b710-2aa7-4779-a944-764ad3e2a6ce",
+"handle": "rivianvdp",
+"name": "Rivian Vulnerability Disclosure Program",
+"public": "Public",
+"bounty": false,
+"safe_harbour": false,
+"scope_in": [
+{
+"target": "*.rivian.com",
+"type": "Wildcard"
+},
+{
+"target": "Vehicle Software",
+"type": "Device"
+},
+{
+"target": "https://rivian.com/api/gql/orders/graphql",
+"type": "Url"
+},
+{
+"target": "https://rivian.com/api/gql/gateway/graphql",
+"type": "Url"
+},
+{
+"target": "https://rivian.com/api/gql/content/graphql",
+"type": "Url"
+},
+{
+"target": "https://business.rivian.com/api",
+"type": "Url"
+},
+{
+"target": "rivian.com",
+"type": "Url"
+},
+{
+"target": "basecamp.rivian.com",
+"type": "Url"
+},
+{
+"target": "Rivian Android Application",
+"type": "Android"
+},
+{
+"target": "Rivian iOS Application",
+"type": "iOS"
+},
+{
+"target": "assets.rivian.com",
+"type": "Url"
+},
+{
+"target": "careers.rivian.com",
+"type": "Url"
+},
+{
+"target": "cloud.e.rivian.com",
+"type": "Url"
+},
+{
+"target": "demovehicles.rivian.com",
+"type": "Url"
+},
+{
+"target": "feedback.rivian.com",
+"type": "Url"
+},
+{
+"target": "internalshop.rivian.com",
+"type": "Url"
+},
+{
+"target": "media.rivian.com",
+"type": "Url"
+},
+{
+"target": "stories.rivian.com",
+"type": "Url"
+},
+{
+"target": "view.e.rivian.com",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "4981522f-5675-4f46-b7b7-e065d30c8d79",
+"handle": "crossborderfines",
+"name": "Cross Border Fines",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://justonweb.be/fines/",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "4acc7e11-3634-4ce5-b100-d961d3f6c6f0",
+"handle": "hrsgroupvdp",
+"name": "HRS Group VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://www.hrs.com",
+"type": "Url"
+},
+{
+"target": "https://hotelservice.hrs.com/",
+"type": "Url"
+},
+{
+"target": "https://jobs.hrs.com/",
+"type": "Url"
+},
+{
+"target": "https://www.hrs.com/deals/",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "4afd6f0f-40a3-4f6d-a332-56b5970d12a0",
+"handle": "buhlergroupvdp",
+"name": "B\u00fchler Group VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.buhlergroup.com",
+"type": "Wildcard"
+},
+{
+"target": "*.pk-buhler.ch",
+"type": "Wildcard"
+},
+{
+"target": "*.buhler-datascience.ch",
+"type": "Wildcard"
+},
+{
+"target": "*.buhlercloud.com",
+"type": "Wildcard"
+},
+{
+"target": "*.buhlergroup.ai",
+"type": "Wildcard"
+},
+{
+"target": "*.buhlergroup.cn",
+"type": "Wildcard"
+},
+{
+"target": "*.buhlergroup.io",
+"type": "Wildcard"
+},
+{
+"target": "*.buhlertest.ch",
+"type": "Wildcard"
+},
+{
+"target": "194.9.120.0 - 194.9.123.255",
+"type": "IpRange"
+},
+{
+"target": "kroki.devops.buhlergroup.com",
+"type": "Url"
+},
+{
+"target": "puml.devops.buhlergroup.com",
+"type": "Url"
+},
+{
+"target": "*.info.buhlergroup.com",
+"type": "Wildcard"
+},
+{
+"target": "*.learnhub.buhlergroup.com",
+"type": "Wildcard"
+},
+{
+"target": "*.virtualworld-portal.buhlergroup.com",
+"type": "Wildcard"
+},
+{
+"target": "*.virtualworld.buhlergroup.com",
+"type": "Wildcard"
+},
+{
+"target": "*.webinars.buhlergroup.com",
+"type": "Wildcard"
+},
+{
+"target": "bestbuy.buhlergroup.com",
+"type": "Url"
+},
+{
+"target": "channel.buhlergroup.com",
+"type": "Url"
+},
+{
+"target": "gitlab.buhler-datascience.ch/api/v4/projects",
+"type": "Url"
+},
+{
+"target": "imap.buhlergroup.cn",
+"type": "Url"
+},
+{
+"target": "pop.buhlergroup.cn",
+"type": "Url"
+},
+{
+"target": "smtp.buhlergroup.cn",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "4d41a636-c811-4757-8fd9-007d7f18e212",
+"handle": "excoscalebugbounty",
+"name": "Exoscale Bug Bounty",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://portal.exoscale.com/",
+"type": "Url"
+},
+{
+"target": "https://api-*exoscale.com/v2",
+"type": "Wildcard"
+},
+{
+"target": "*.internal.exoscale.ch",
+"type": "Wildcard"
+},
+{
+"target": "https://www.exoscale.com/",
+"type": "Url"
+},
+{
+"target": "https://community.exoscale.com/",
+"type": "Url"
+},
+{
+"target": "https://changelog.exoscale.com/",
+"type": "Url"
+},
+{
+"target": "https://exoscalestatus.com/",
+"type": "Url"
+},
+{
+"target": "https://academy.exoscale.com/",
+"type": "Url"
+},
+{
+"target": "https://jobs.exoscale.com/",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "https://sos-*.exo.io",
+"type": "Wildcard"
+},
+{
+"target": "https://sks-*.exo.io",
+"type": "Wildcard"
+},
+{
+"target": "CDN service",
+"type": "Other"
+},
+{
+"target": "Marketplace products",
+"type": "Other"
+}
+],
+"submit_access": "account_required"
+},
+{
+"id": "4fdf596d-6335-4568-a501-13dbfeafe059",
+"handle": "vdp",
+"name": "Posten Bring Responsible Disclosure",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://*.mybring.com",
+"type": "Wildcard"
+},
+{
+"target": "https://*.bring.com",
+"type": "Wildcard"
+},
+{
+"target": "https://*.posten.no",
+"type": "Wildcard"
+},
+{
+"target": "https://*.digipostdata.no",
+"type": "Wildcard"
+},
+{
+"target": "https://*.digipost.no",
+"type": "Wildcard"
+},
+{
+"target": "https://github.com/digipost",
+"type": "SourceCode"
+},
+{
+"target": "Digipost Android app",
+"type": "Android"
+},
+{
+"target": "Digipost iOS app",
+"type": "iOS"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
 }
 ]

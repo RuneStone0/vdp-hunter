@@ -46,6 +46,7 @@ func main() {
 		shardSpec = flag.String("shards", "", "shard range like 0-127 or a single number, empty = all")
 		resolvers = flag.String("resolvers", "1.1.1.1:53,1.0.0.1:53,8.8.8.8:53", "comma separated DNS servers")
 		batchSize = flag.Int("batch", 20000, "names per batch, sets the cost of a pool pass")
+		progressFile = flag.String("progress", "", "write a JSON progress snapshot here after each batch")
 		portCheck = flag.Bool("port-check", false,
 			"dial 443/80 before asking for security.txt; off by default because the request itself is the port check")
 	)
@@ -210,17 +211,50 @@ func main() {
 		for shard, set := range sets {
 			_ = set.Save(*stateDir, *tld, shard, today)
 		}
+		if *progressFile != "" {
+			writeProgress(*progressFile, map[string]any{
+				"tld": *tld, "names": len(names), "checked": atomic.LoadInt64(&checked),
+				"parked": atomic.LoadInt64(&skipped), "no_dns": atomic.LoadInt64(&noDNS),
+				"no_port": atomic.LoadInt64(&noPort), "reachable": atomic.LoadInt64(&live),
+				"hits": atomic.LoadInt64(&found), "done": false,
+				"seconds": time.Since(start).Seconds(),
+			})
+		}
 		if ctx.Err() != nil {
 			parkedOut++
 		}
 	}
 
+	if *progressFile != "" {
+		writeProgress(*progressFile, map[string]any{
+			"tld": *tld, "names": len(names), "checked": atomic.LoadInt64(&checked),
+			"parked": atomic.LoadInt64(&skipped), "no_dns": atomic.LoadInt64(&noDNS),
+			"no_port": atomic.LoadInt64(&noPort), "reachable": atomic.LoadInt64(&live),
+			"hits": atomic.LoadInt64(&found), "done": true,
+			"seconds": time.Since(start).Seconds(),
+		})
+	}
 	elapsed := time.Since(start).Seconds()
 	fmt.Printf("names=%d checked=%d parked_skip=%d no_dns=%d no_port=%d reachable=%d hits=%d seconds=%.1f rate=%.0f/s shards_stopped_early=%d\n",
 		len(names), checked, skipped, noDNS, noPort, live, found, elapsed, float64(checked)/elapsed, parkedOut)
 }
 
 func dayPlus(today uint32, days int) uint32 { return today + uint32(days) }
+
+// writeProgress drops a snapshot next to the state so the site can show a sweep
+// while it is still running, not only after it finishes.
+func writeProgress(path string, payload map[string]any) {
+	payload["updated_at"] = time.Now().UTC().Format(time.RFC3339)
+	buf, err := json.Marshal(payload)
+	if err != nil {
+		return
+	}
+	tmp := path + ".tmp"
+	if err := os.WriteFile(tmp, buf, 0o644); err != nil {
+		return
+	}
+	_ = os.Rename(tmp, path)
+}
 
 // parkIn parks a name in the set that owns its shard.
 func parkIn(sets map[int]*park.Set, name string, until uint32) {

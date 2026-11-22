@@ -539,6 +539,37 @@
   "tls_verified": true
  },
  {
+  "contact_urls": [
+   "https://www.123inkt.nl/action/contact.html"
+  ],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "123inkt.nl",
+  "emails": [
+   "security@123inkt.nl"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "123inkt.nl",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": "https://www.123inkt.nl/page/responsible_disclosure.html",
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.123inkt.nl/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "disclose_maturity": null,
   "disclose_score": null,
@@ -7618,8 +7649,8 @@
   "emails": [
    "disclosure@ably.com"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2027-05-01",
+  "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "Ably",
@@ -7631,13 +7662,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://ably.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -16541,7 +16573,7 @@
    "security@aebn.net"
   ],
   "expires_on": null,
-  "expiry": null,
+  "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "aebn",
@@ -16553,13 +16585,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://aebn.net/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -84333,7 +84366,7 @@
    "websiteteam@barnardos.org.uk"
   ],
   "expires_on": null,
-  "expiry": null,
+  "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "barnardos.org",
@@ -84345,13 +84378,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://www.barnardos.org.uk/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [
@@ -99222,6 +99256,35 @@
  },
  {
   "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "billit.be",
+  "emails": [
+   "security@billit.eu"
+  ],
+  "expires_on": "2027-09-23",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "billit.be",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.billit.eu/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 45.0,
   "domain": "billur.com",
@@ -102865,6 +102928,33 @@
   ],
   "submit_access": null,
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "bitdegree.org",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "bitdegree.org",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.bitdegree.org/.well-known/security.txt",
+  "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -125663,8 +125753,8 @@
   "emails": [
    "security@bromangroup.fi"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2023-12-30",
+  "expiry": "expired",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "bromangroup",
@@ -125676,10 +125766,11 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://www.motonet.fi/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
   "tls_verified": null
@@ -128035,6 +128126,35 @@
   "self_managed": true,
   "sources": [
    "disclose-directory",
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "bt.se",
+  "emails": [
+   "security@bonniernews.se"
+  ],
+  "expires_on": "2027-10-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "bt.se",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.bt.se/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
    "securitytxt"
   ],
   "submit_access": null,
@@ -135156,6 +135276,35 @@
   ],
   "submit_access": null,
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "cabanova.com",
+  "emails": [
+   "info@cabanova.com"
+  ],
+  "expires_on": "2027-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "cabanova.com",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://cabanova.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -189902,7 +190051,7 @@
    "security@cougarboard.com"
   ],
   "expires_on": null,
-  "expiry": null,
+  "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "cougarboard",
@@ -189914,13 +190063,43 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://cougarboard.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "counselear.com",
+  "emails": [
+   "ResponsibleDisclosure@fullsteam.com"
+  ],
+  "expires_on": "2029-01-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "counselear.com",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": "https://counselear.com/Controls/Pages/Public/Index.aspx?page=Auth/Security",
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://counselear.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -215757,6 +215936,35 @@
   "scope_out": [],
   "scopes_count": 0,
   "securitytxt_url": "https://www.decathlon.hu/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://vdp.decathlon.net/p/Send-a-report"
+  ],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "decathlon.ie",
+  "emails": [],
+  "expires_on": "2027-10-21",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "decathlon.ie",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": "https://vdp.decathlon.net",
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.decathlon.ie/.well-known/security.txt",
   "self_managed": true,
   "sources": [
    "securitytxt"
@@ -282234,6 +282442,35 @@
   "tls_verified": true
  },
  {
+  "contact_urls": [
+   "https://eslfaceitgroup.com/security-and-disclosure/"
+  ],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "esl.com",
+  "emails": [],
+  "expires_on": "2024-06-01",
+  "expiry": "expired",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "esl.com",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://eslfaceitgroup.com/.well-known/security.txt",
+  "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 48.3,
@@ -301065,15 +301302,18 @@
   "tls_verified": true
  },
  {
-  "contact_urls": [],
+  "contact_urls": [
+   "https://www.rrze.fau.de/infocenter/kontakt-hilfe/sicherheitsvorfaelle/",
+   "https://www.rrze.fau.de/infocenter/kontakt-hilfe/sicherheitsvorfaelle/abuse/"
+  ],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 45.0,
   "domain": "fau.eu",
   "emails": [
    "abuse@fau.de"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2027-04-09",
+  "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "fau (fau.de)",
@@ -301085,13 +301325,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://www.fau.eu/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -306680,10 +306921,11 @@
   "disclose_score": 45.0,
   "domain": "fh-dortmund.de",
   "emails": [
+   "it-sicherheitsvorfall@fh-dortmund.de",
    "security@fh-dortmund.de"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2029-06-23",
+  "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "fh-dortmund",
@@ -306695,13 +306937,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://fh-dortmund.de/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -309845,6 +310088,37 @@
   "scopes_count": 0,
   "securitytxt_url": "https://www.findlaw.com/.well-known/security.txt",
   "self_managed": false,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://www.hackerone.com"
+  ],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "findmespot.com",
+  "emails": [
+   "VulnerabilityReport@globalstar.com"
+  ],
+  "expires_on": "2029-03-06",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "findmespot.com",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://findmespot.com/.well-known/security.txt",
+  "self_managed": true,
   "sources": [
    "securitytxt"
   ],
@@ -315259,6 +315533,35 @@
   ],
   "submit_access": null,
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://www.livesport.eu/en/contacts"
+  ],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "flashscore.at",
+  "emails": [],
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "flashscore.at",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": "https://bugbounty.livesport.eu/#rules",
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.flashscore.at/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
  },
  {
   "contact_urls": [
@@ -335161,8 +335464,8 @@
   "emails": [
    "security@fuqer.com"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "fuqer",
@@ -335174,13 +335477,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://fuqer.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -355254,7 +355558,7 @@
    "tech_inquiries@glic.com"
   ],
   "expires_on": null,
-  "expiry": null,
+  "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "glic",
@@ -355266,10 +355570,11 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://www.guardianlife.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
   "tls_verified": null
@@ -402351,6 +402656,35 @@
  },
  {
   "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "hobbyrising.com",
+  "emails": [
+   "security@nitrosell.com"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "hobbyrising.com",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://hobbyrising.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "disclose_maturity": "L1 Contact Only",
   "disclose_score": 20.0,
   "domain": "hobrasoft.cz",
@@ -422957,6 +423291,35 @@
   ],
   "submit_access": null,
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "igraal.com",
+  "emails": [
+   " security@atolls.com"
+  ],
+  "expires_on": "2027-06-29",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "igraal.com",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": "https://atolls.com/disclosure-policy",
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://fr.igraal.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -461275,6 +461638,35 @@
  },
  {
   "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "jobup.ch",
+  "emails": [
+   "security@jobcloud.ch"
+  ],
+  "expires_on": "2027-01-30",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "jobup.ch",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://jobup.ch/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 45.0,
   "domain": "jobvanexel.nl",
@@ -469504,8 +469896,8 @@
   "emails": [
    "csirt@kabu.com"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2024-03-31",
+  "expiry": "expired",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "kabu",
@@ -469517,13 +469909,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://kabu.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -520038,6 +520431,35 @@
   "tls_verified": true
  },
  {
+  "contact_urls": [
+   "https://www.livesport.eu/en/contacts"
+  ],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "liveticker.com",
+  "emails": [],
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "liveticker.com",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": "https://bugbounty.livesport.eu/#rules",
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.liveticker.com/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
   "contact_urls": [],
   "disclose_maturity": "L1 Contact Only",
   "disclose_score": 20.0,
@@ -555228,6 +555650,36 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "menorca.info",
+  "emails": [
+   "bvidal@gmail.com",
+   "tomeu@ultimahora.es"
+  ],
+  "expires_on": "2033-08-23",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "menorca.info",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.menorca.info/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
   "contact_urls": [
    "https://mens.gallery/.well-known/security.txt"
   ],
@@ -561110,6 +561562,33 @@
   "self_managed": true,
   "sources": [
    "disclose-directory",
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "michelinman.com",
+  "emails": [],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "michelinman.com",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.michelinman.com/.well-known/security.txt",
+  "self_managed": false,
+  "sources": [
    "securitytxt"
   ],
   "submit_access": null,
@@ -571678,8 +572157,8 @@
   "emails": [
    "steven@mobilitydirect.com"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2025-12-31",
+  "expiry": "expired",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "mobilitydirect",
@@ -571691,10 +572170,11 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://mobilityscootersdirect.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
   "tls_verified": null
@@ -571960,6 +572440,35 @@
   ],
   "submit_access": null,
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "modelbazar.cz",
+  "emails": [
+   "info@modelbazar.cz"
+  ],
+  "expires_on": "2027-05-27",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "modelbazar.cz",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://modelbazar.cz/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -573758,6 +574267,35 @@
   ],
   "submit_access": null,
   "tls_verified": true
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "momentumtelecom.com",
+  "emails": [
+   "security@gomomentum.com"
+  ],
+  "expires_on": "2027-10-08",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "momentumtelecom.com",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://gomomentum.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -583495,7 +584033,7 @@
    "ithelpdesk@mtech.edu"
   ],
   "expires_on": null,
-  "expiry": null,
+  "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "mtech",
@@ -583507,13 +584045,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://mtech.edu/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -590079,6 +590618,35 @@
   ],
   "submit_access": null,
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "myclimate.org",
+  "emails": [
+   "myc-security@myclimate.org"
+  ],
+  "expires_on": "2032-06-30",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "myclimate.org",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": "https://www.myclimate.org/en/security",
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.myclimate.org/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
  },
  {
   "contact_urls": [
@@ -622575,6 +623143,37 @@
   ],
   "disclose_maturity": null,
   "disclose_score": null,
+  "domain": "notino.es",
+  "emails": [
+   "bugbounty@notino.com"
+  ],
+  "expires_on": "2025-04-16",
+  "expiry": "expired",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "notino.es",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": "https://www.notino.com/bug-bounty.html",
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.notino.es/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
+   "https://www.notino.com/contact/"
+  ],
+  "disclose_maturity": null,
+  "disclose_score": null,
   "domain": "notino.fr",
   "emails": [
    "bugbounty@notino.com"
@@ -642287,6 +642886,35 @@
  },
  {
   "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "op.se",
+  "emails": [
+   "security@bonniernews.se"
+  ],
+  "expires_on": "2027-10-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "op.se",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.op.se/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "disclose_maturity": "L1 Contact Only",
   "disclose_score": 20.0,
   "domain": "opatechnologies.com",
@@ -644588,6 +645216,35 @@
   ],
   "submit_access": null,
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "opentracker.xyz",
+  "emails": [
+   "root@opentrackr.org"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "opentracker.xyz",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://opentracker.xyz/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -668267,8 +668924,8 @@
   "emails": [
    "tf-internet@pensionsmyndigheten.se"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2027-05-04",
+  "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "pensionsmyndigheten",
@@ -668280,13 +668937,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://pensionsmyndigheten.se/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -672877,14 +673535,15 @@
  },
  {
   "contact_urls": [
+   "https://app.yogosha.com/cvd/the-phantom-company/5v6vC7n5N2ptcJZMtrF8Lk",
    "https://phantombuster.com/.well-known/security.txt"
   ],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 45.0,
   "domain": "phantombuster.com",
   "emails": [],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2026-12-31",
+  "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "Phantombuster",
@@ -672896,13 +673555,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://phantombuster.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -674351,6 +675011,35 @@
   ],
   "submit_access": null,
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "photocircleapp.com",
+  "emails": [
+   "security@photocircleapp.com"
+  ],
+  "expires_on": "2036-05-18",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "photocircleapp.com",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": "https://www.photocircleapp.com/trust/",
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.photocircleapp.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
  },
  {
   "contact_urls": [
@@ -678678,8 +679367,8 @@
   "emails": [
    "security@pix4d.com"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2025-10-01",
+  "expiry": "expired",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "pix4d",
@@ -678691,13 +679380,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://www.pix4d.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -690481,8 +691171,8 @@
   "emails": [
    "ISM@posturite.co.uk"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2027-01-01",
+  "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "posturite.co",
@@ -690494,13 +691184,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://posturite.co.uk/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -694724,6 +695415,35 @@
   ],
   "submit_access": null,
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "prijsvrij.nl",
+  "emails": [
+   "security@prijsvrij.nl"
+  ],
+  "expires_on": "2027-11-19",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "prijsvrij.nl",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://prijsvrij.nl/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -775159,6 +775879,35 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "seoghoer.dk",
+  "emails": [
+   "cybersec@aller.com"
+  ],
+  "expires_on": "2025-10-09",
+  "expiry": "expired",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "seoghoer.dk",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.seoghoer.dk/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
   "contact_urls": [
    "https://seohermit.com/.well-known/security.txt"
   ],
@@ -777802,7 +778551,7 @@
    "security@sevdesk.de"
   ],
   "expires_on": null,
-  "expiry": null,
+  "expiry": "missing",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "sevdesk",
@@ -777814,13 +778563,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://sevdesk.de/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [
@@ -778723,15 +779473,17 @@
   "tls_verified": null
  },
  {
-  "contact_urls": [],
+  "contact_urls": [
+   "https://www.sg.ch/f/impressum.html"
+  ],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 45.0,
   "domain": "sg.ch",
   "emails": [
    "cms.sk@sg.ch"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2027-11-01",
+  "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "sg",
@@ -778743,13 +779495,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://www.sg.ch/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -807671,6 +808424,37 @@
   "tls_verified": null
  },
  {
+  "contact_urls": [
+   "https://www.bigbluedoor.net/contact"
+  ],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "southwark.gov.uk",
+  "emails": [
+   "security@bigbluedoor.net"
+  ],
+  "expires_on": "2027-02-18",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "southwark.gov.uk",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": "https://github.com/ukncsc/Vulnerability-Disclosure/blob/master/UK-Government-Vulnerability-Disclosure-Policy.md",
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.southwark.gov.uk/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": false
+ },
+ {
   "contact_urls": [],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 45.0,
@@ -833278,8 +834062,8 @@
   "emails": [
    "security@supermetrics.com"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2027-01-31",
+  "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "supermetrics",
@@ -833291,13 +834075,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://supermetrics.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": false
  },
  {
   "contact_urls": [],
@@ -848773,6 +849558,35 @@
  },
  {
   "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "tchibo.cz",
+  "emails": [
+   "security@tchibo.de"
+  ],
+  "expires_on": null,
+  "expiry": "missing",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "tchibo.cz",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.tchibo.cz/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 45.0,
   "domain": "tchibo.de",
@@ -853411,6 +854225,35 @@
   ],
   "submit_access": null,
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "tele2.lt",
+  "emails": [
+   "reportsecurity@tele2.com"
+  ],
+  "expires_on": "2027-07-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "tele2.lt",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://tele2.lt/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -872206,6 +873049,36 @@
  },
  {
   "contact_urls": [
+   "https://www.sidn.nl/cybersecurity/beveiligingslek-melden",
+   "https://www.sidn.nl/en/cybersecurity/reporting-a-security-breach"
+  ],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "time.nl",
+  "emails": [],
+  "expires_on": "2027-10-01",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "time.nl",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": "https://www.sidn.nl/en/cybersecurity/reporting-a-security-breach",
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://check.sidnlabs.nl/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [
    "https://hackerone.com/timeanddate"
   ],
   "disclose_maturity": "L2 Basic",
@@ -890289,6 +891162,35 @@
   ],
   "submit_access": null,
   "tls_verified": null
+ },
+ {
+  "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "trygravity.ai",
+  "emails": [
+   "support@trygravity.com"
+  ],
+  "expires_on": "2027-10-26",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "trygravity.ai",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": "https://www.trygravity.com/security#responsible-disclosure",
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.trygravity.com/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -962815,6 +963717,35 @@
  },
  {
   "contact_urls": [],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "wias-berlin.de",
+  "emails": [
+   "security@wias-berlin.de"
+  ],
+  "expires_on": "2029-08-26",
+  "expiry": "valid",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "wias-berlin.de",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": null,
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://wias-berlin.de/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
+ },
+ {
+  "contact_urls": [],
   "disclose_maturity": "L2 Basic",
   "disclose_score": 45.0,
   "domain": "wiboschool.nl",
@@ -966165,6 +967096,38 @@
   ],
   "submit_access": null,
   "tls_verified": null
+ },
+ {
+  "contact_urls": [
+   "https://www.swisscom.ch/en/about/security/bug-bounty.html"
+  ],
+  "disclose_maturity": null,
+  "disclose_score": null,
+  "domain": "wingo.ch",
+  "emails": [
+   "bug.bounty@swisscom.com",
+   "security@wingo.ch"
+  ],
+  "expires_on": "2023-12-31",
+  "expiry": "expired",
+  "first_seen": "2026-11-22",
+  "in_scope_domains": [],
+  "name": "wingo.ch",
+  "offers_bounty": null,
+  "out_of_scope_domains": [],
+  "platforms": [],
+  "policy": "https://github.com/swisscom/bugbounty",
+  "safe_harbor": null,
+  "scope_in": [],
+  "scope_out": [],
+  "scopes_count": 0,
+  "securitytxt_url": "https://www.wingo.ch/.well-known/security.txt",
+  "self_managed": true,
+  "sources": [
+   "securitytxt"
+  ],
+  "submit_access": null,
+  "tls_verified": true
  },
  {
   "contact_urls": [],
@@ -992791,8 +993754,8 @@
   "emails": [
    "zdi@trendmicro.com"
   ],
-  "expires_on": null,
-  "expiry": null,
+  "expires_on": "2037-03-07",
+  "expiry": "valid",
   "first_seen": "2026-11-21",
   "in_scope_domains": [],
   "name": "Zero Day Initiative",
@@ -992804,13 +993767,14 @@
   "scope_in": [],
   "scope_out": [],
   "scopes_count": 0,
-  "securitytxt_url": null,
+  "securitytxt_url": "https://www.zerodayinitiative.com/.well-known/security.txt",
   "self_managed": true,
   "sources": [
-   "disclose-directory"
+   "disclose-directory",
+   "securitytxt"
   ],
   "submit_access": null,
-  "tls_verified": null
+  "tls_verified": true
  },
  {
   "contact_urls": [],
