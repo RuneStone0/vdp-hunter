@@ -4470,5 +4470,4784 @@
 ],
 "scope_out": [],
 "submit_access": "account_required"
+},
+{
+"id": "5111e2de-2d04-4ec8-9f24-c0b76cbfd38e",
+"handle": "storebrand-rd",
+"name": "Storebrand Responsible Disclosure",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "Kron - Sparing og pensjon - iOS",
+"type": "iOS"
+},
+{
+"target": "Kron - Sparing og pensjon - Android",
+"type": "Android"
+},
+{
+"target": "*.sppfonder.se",
+"type": "Wildcard"
+},
+{
+"target": "*.storebrandrealestate.se",
+"type": "Wildcard"
+},
+{
+"target": "*.storebrandfunds.com",
+"type": "Wildcard"
+},
+{
+"target": "*.storebrandfondene.dk",
+"type": "Wildcard"
+},
+{
+"target": "*.aipmanagement.dk",
+"type": "Wildcard"
+},
+{
+"target": "*.storebrandam.com",
+"type": "Wildcard"
+},
+{
+"target": "*.storebrandfonder.se",
+"type": "Wildcard"
+},
+{
+"target": "*.storebrandfastigheter.se",
+"type": "Wildcard"
+},
+{
+"target": "*.capitalinvestment.dk",
+"type": "Wildcard"
+},
+{
+"target": "*.capitalbolig.dk",
+"type": "Wildcard"
+},
+{
+"target": "*.delphifunds.com",
+"type": "Wildcard"
+},
+{
+"target": "*.delphifonder.se",
+"type": "Wildcard"
+},
+{
+"target": "*.cubera.no",
+"type": "Wildcard"
+},
+{
+"target": "*.cubera.se",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfunds.it",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfunds.ch",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfunds.be",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfunds.at",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfunds.fr",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfunds.de",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfunds.ie",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfunds.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfunds.lu",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfunds.nl",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfunds.is",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfunds.fi",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfondene.dk",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfonder.se",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfunds.com",
+"type": "Wildcard"
+},
+{
+"target": "*.skagenfondene.no",
+"type": "Wildcard"
+},
+{
+"target": "*.sppkonsult.se",
+"type": "Wildcard"
+},
+{
+"target": "*.storebrand.dk",
+"type": "Wildcard"
+},
+{
+"target": "*.storebrand.se",
+"type": "Wildcard"
+},
+{
+"target": "*.storebrand.com",
+"type": "Wildcard"
+},
+{
+"target": "*.storebrand.no",
+"type": "Wildcard"
+},
+{
+"target": "*.kron.no",
+"type": "Wildcard"
+},
+{
+"target": "*.spp.se",
+"type": "Wildcard"
+},
+{
+"target": "*.kniftrygghet.no",
+"type": "Wildcard"
+},
+{
+"target": "f29baf0e-81df-4090-a5a5-f33cb9566b0d.storebrand.no",
+"type": "Url"
+},
+{
+"target": "kvadrat.no",
+"type": "Url"
+},
+{
+"target": "viavika.no",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "523f9195-ff18-4855-8b31-406b2c87e609",
+"handle": "fluvius",
+"name": "Fluvius",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://over.fluvius.be",
+"type": "Url"
+},
+{
+"target": "www.fluvius.be",
+"type": "Url"
+},
+{
+"target": "www-a.fluvius.be",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "53a05c4a-0fc0-45a0-b158-a7562b313f79",
+"handle": "1passwordbugbountyprogram",
+"name": "1Password Bug Bounty Program",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "<your-own-1password-account>.1password.com",
+"type": "Url"
+},
+{
+"target": "https://events.1password.com/api/",
+"type": "Url"
+},
+{
+"target": "<your-own-1password-account> \u2192 Latest Browser Extension",
+"type": "Other"
+},
+{
+"target": "<your-own-1password-account> \u2192 Latest stable 1Password CLI",
+"type": "Url"
+},
+{
+"target": "https://www.1password.com/",
+"type": "Url"
+},
+{
+"target": "*.agilebits.com",
+"type": "Wildcard"
+},
+{
+"target": "https://support.1password.com",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "All other 1Password Assets and Accounts",
+"type": "Url"
+}
+],
+"submit_access": "account_required"
+},
+{
+"id": "540e04bb-ae56-49cd-8e05-311a08ba44f7",
+"handle": "ing-responsible-disclosure",
+"name": "ING Responsible Disclosure",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "Any ING (sub)domain",
+"type": "Other"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "554fc6c5-4ffa-4682-a3ba-7e86696e9b17",
+"handle": "aikido",
+"name": "Aikido Security: Bug Bounty Program",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "app.aikido.dev",
+"type": "Url"
+},
+{
+"target": "*.aikido.dev",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "5ae71f99-d61e-42d2-b74e-b218530bb3b5",
+"handle": "mobilevikings",
+"name": "Mobile Vikings",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "mobilevikings.be",
+"type": "Url"
+},
+{
+"target": "api.unleashed.be",
+"type": "Url"
+},
+{
+"target": "uwa.mobilevikings.be",
+"type": "Url"
+},
+{
+"target": "jimmobile.be",
+"type": "Url"
+},
+{
+"target": "vpn.mobilevikings.be",
+"type": "Url"
+},
+{
+"target": "*.mas.mobilevikings.be",
+"type": "Wildcard"
+},
+{
+"target": "*.mobilevikings.be",
+"type": "Wildcard"
+},
+{
+"target": "*.prd-pub.mobilevikings.be",
+"type": "Wildcard"
+},
+{
+"target": "*.prd.mobilevikings.be",
+"type": "Wildcard"
+},
+{
+"target": "mgm.mobilevikings.be",
+"type": "Url"
+},
+{
+"target": "vikingco.be",
+"type": "Url"
+},
+{
+"target": "vikingdeals.be",
+"type": "Url"
+},
+{
+"target": "*.acc-pub.mobilevikings.be",
+"type": "Wildcard"
+},
+{
+"target": "*.acc.mobilevikings.be",
+"type": "Wildcard"
+},
+{
+"target": "*.dev-pub.mobilevikings.be",
+"type": "Wildcard"
+},
+{
+"target": "*.dev.mobilevikings.be",
+"type": "Wildcard"
+},
+{
+"target": "vikinglab.be",
+"type": "Url"
+},
+{
+"target": "forms.mobilevikings.be",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "5c7a8f79-a23b-4367-a2c6-63a2d48586ee",
+"handle": "hetlaatstenieuws",
+"name": "Het Laatste Nieuws",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "hln.be/inloggen",
+"type": "Url"
+},
+{
+"target": "hln.be/login",
+"type": "Url"
+},
+{
+"target": "hln.be/registreren",
+"type": "Url"
+},
+{
+"target": "hln.be",
+"type": "Url"
+},
+{
+"target": "myaccount.hln.be",
+"type": "Url"
+},
+{
+"target": "www.hln.be",
+"type": "Url"
+},
+{
+"target": "actie.hln.be",
+"type": "Url"
+},
+{
+"target": "*.hln.be",
+"type": "Wildcard"
+},
+{
+"target": "hln.be/service",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "5e9d5fc7-2cfe-4530-94de-c55f1d8d3a8e",
+"handle": "ouravulnerabilitydisclosureprogram",
+"name": "OURA Vulnerability Disclosure Program",
+"public": "Public",
+"bounty": false,
+"safe_harbour": false,
+"scope_in": [
+{
+"target": "*.ouraring.com",
+"type": "Wildcard"
+},
+{
+"target": "Oura Android App",
+"type": "Android"
+},
+{
+"target": "Oura iOS App",
+"type": "iOS"
+},
+{
+"target": "Oura Ring (Gen 3 to current)",
+"type": "Device"
+},
+{
+"target": "Any Oura related domain",
+"type": "Other"
+},
+{
+"target": "Official Oura Ring Accessories",
+"type": "Other"
+},
+{
+"target": "Services not hosted/owned by Oura",
+"type": "Other"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "5ed6962a-7017-4d60-8805-e169b638528d",
+"handle": "sqillscorporatewebsite",
+"name": "Sqills",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.sqills.com",
+"type": "Wildcard"
+},
+{
+"target": "*.sqills.team",
+"type": "Wildcard"
+},
+{
+"target": "*.red.sqills.team",
+"type": "Wildcard"
+},
+{
+"target": "booking.*.cloud.sqills.com",
+"type": "Wildcard"
+},
+{
+"target": "booking.*.sqills.com",
+"type": "Wildcard"
+},
+{
+"target": "careers.sqills.com",
+"type": "Url"
+},
+{
+"target": "welcome.sqills.com",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "5f29e1eb-85e8-4d99-9b52-b809f06de633",
+"handle": "dummy",
+"name": "Bpost",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "www.bpost2.be",
+"type": "Url"
+},
+{
+"target": "imove.bpost.cloud",
+"type": "Url"
+},
+{
+"target": "*.acbpost.be",
+"type": "Wildcard"
+},
+{
+"target": "*.bpost.be",
+"type": "Wildcard"
+},
+{
+"target": "*.bpost.cloud",
+"type": "Wildcard"
+},
+{
+"target": "*.landmarkglobal-group.com",
+"type": "Wildcard"
+},
+{
+"target": "*.stbpost.be",
+"type": "Wildcard"
+},
+{
+"target": "be.bpost.mobilecard",
+"type": "Android"
+},
+{
+"target": "be.bpost.mybpost",
+"type": "Android"
+},
+{
+"target": "bpost Parcel Lockers",
+"type": "Device"
+},
+{
+"target": "career.bpost.be",
+"type": "Url"
+},
+{
+"target": "dmm.bpost.be",
+"type": "Url"
+},
+{
+"target": "eshop.bpost.be",
+"type": "Url"
+},
+{
+"target": "maxiresponse.bpost.be",
+"type": "Url"
+},
+{
+"target": "my.bpost.be",
+"type": "Url"
+},
+{
+"target": "procuration.bpost.be",
+"type": "Url"
+},
+{
+"target": "quickstamp-gb.bpost.be",
+"type": "Url"
+},
+{
+"target": "register.bpost.be",
+"type": "Url"
+},
+{
+"target": "validationlist.bpost.be",
+"type": "Url"
+},
+{
+"target": "www.bpost.be",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "611c246e-1bf9-42b7-a458-af832582d0d7",
+"handle": "grafanaossbbp",
+"name": "Grafana Labs",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://github.com/grafana/loki",
+"type": "SourceCode"
+},
+{
+"target": "https://github.com/grafana/mimir",
+"type": "SourceCode"
+},
+{
+"target": "https://github.com/grafana/grafana",
+"type": "SourceCode"
+},
+{
+"target": "https://github.com/grafana/pyroscope",
+"type": "SourceCode"
+},
+{
+"target": "https://github.com/grafana/tempo",
+"type": "SourceCode"
+},
+{
+"target": "https://github.com/grafana/*",
+"type": "Wildcard"
+},
+{
+"target": "Public Preview feature toggles in Tier 1 products",
+"type": "Other"
+},
+{
+"target": "Reports utilising feature toggles",
+"type": "Other"
+},
+{
+"target": "Non-Core Grafana Plugins",
+"type": "Other"
+},
+{
+"target": "*.grafana.com",
+"type": "Wildcard"
+},
+{
+"target": "*.grafana.net",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "611efbaa-333e-4b7c-a3c0-89665abd3fe3",
+"handle": "altera",
+"name": "Altera",
+"public": "Public",
+"bounty": true,
+"safe_harbour": false,
+"scope_in": [
+{
+"target": "Firmware",
+"type": "Device"
+},
+{
+"target": "Hardware",
+"type": "Device"
+},
+{
+"target": "FPGA Solution Development Tools and Utilities",
+"type": "Other"
+},
+{
+"target": "Software",
+"type": "Other"
+},
+{
+"target": "Non Altera Products",
+"type": "Other"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "618a4498-8882-406f-bfe1-b44b9acd0146",
+"handle": "universityofbaselvdp",
+"name": "University of Basel VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.unibas.ch",
+"type": "Wildcard"
+}
+],
+"scope_out": [
+{
+"target": "131.152.0.0/16",
+"type": "IpRange"
+}
+],
+"submit_access": "account_required"
+},
+{
+"id": "61e0e37c-19cc-4abe-af51-108a78bee995",
+"handle": "bmwgroup",
+"name": "BMW Group",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "www.bmw-motorrad.de",
+"type": "Url"
+},
+{
+"target": "www.bmw.de",
+"type": "Url"
+},
+{
+"target": "www.mini.de",
+"type": "Url"
+},
+{
+"target": "configure.bmw.de",
+"type": "Url"
+},
+{
+"target": "configure.mini.de",
+"type": "Url"
+},
+{
+"target": "konfigurator.bmw-motorrad.de",
+"type": "Url"
+},
+{
+"target": "Other BMW Domains",
+"type": "Other"
+},
+{
+"target": "Automotive Security",
+"type": "Other"
+},
+{
+"target": "Domains from independent BMW Dealers, Resellers or Fanclubs",
+"type": "Other"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "64990067-ee7f-45f0-8c75-34761f46a056",
+"handle": "solarwindsvdp",
+"name": "SolarWinds VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "Any product available on https://www.solarwinds.com/products",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "64f80113-969e-4c55-9649-8a044487941c",
+"handle": "pdqcomprivate",
+"name": "PDQ bug bounty program",
+"public": "Public",
+"bounty": true,
+"safe_harbour": false,
+"scope_in": [
+{
+"target": "https://a.simplemdm.com/",
+"type": "Url"
+},
+{
+"target": "https://auth2.pdq.com/",
+"type": "Url"
+},
+{
+"target": "https://library.pdq.com/",
+"type": "Url"
+},
+{
+"target": "https://portal.pdq.com/",
+"type": "Url"
+},
+{
+"target": "https://app.pdq.com/",
+"type": "Url"
+},
+{
+"target": "https://*.pdq.com/",
+"type": "Wildcard"
+},
+{
+"target": "https://*.pdq.tools/",
+"type": "Wildcard"
+},
+{
+"target": "https://*.simplemdm.com/",
+"type": "Wildcard"
+},
+{
+"target": "https://*.smartdeploy.com/",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "6558543a-236f-4e98-91a3-4536e39b9c1e",
+"handle": "intigriti",
+"name": "intigriti",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.pwn.intigriti.rocks",
+"type": "Wildcard"
+},
+{
+"target": "www.intigriti.com",
+"type": "Url"
+},
+{
+"target": "https://vpn.intigriti.rocks/*",
+"type": "Wildcard"
+},
+{
+"target": "https://metabase.pwn.intigriti.rocks/",
+"type": "Url"
+},
+{
+"target": "*.intigriti.io",
+"type": "Wildcard"
+},
+{
+"target": "*.intigriti.net",
+"type": "Wildcard"
+},
+{
+"target": "any intigriti CTF or challenge",
+"type": "Other"
+},
+{
+"target": "*.intercom.io",
+"type": "Wildcard"
+},
+{
+"target": "autodiscover.intigriti.com",
+"type": "Url"
+},
+{
+"target": "careers.intigriti.com",
+"type": "Url"
+},
+{
+"target": "click.intigriti.com",
+"type": "Url"
+},
+{
+"target": "go.intigriti.com",
+"type": "Url"
+},
+{
+"target": "kb.intigriti.com",
+"type": "Url"
+},
+{
+"target": "mail.intigriti.com",
+"type": "Url"
+},
+{
+"target": "newsletter.intigriti.com",
+"type": "Url"
+},
+{
+"target": "status.intigriti.com",
+"type": "Url"
+},
+{
+"target": "swag.intigriti.com",
+"type": "Url"
+},
+{
+"target": "trust.intigriti.com",
+"type": "Url"
+},
+{
+"target": "posthog.intigriti.com",
+"type": "Url"
+},
+{
+"target": "our hubspot pages (/hs-fs/, /hubfs/, /hs/, /_hcms/, landing/, report/, webinar/, /datasheet, /customer/, /video/...)",
+"type": "Other"
+}
+],
+"scope_out": [
+{
+"target": "*.intigriti.me",
+"type": "Wildcard"
+}
+],
+"submit_access": "account_required"
+},
+{
+"id": "67d5a491-4baa-4565-bdc9-962bcd5f5ddd",
+"handle": "humo",
+"name": "Humo",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "humo.be/registreren",
+"type": "Url"
+},
+{
+"target": "myaccount.humo.be",
+"type": "Url"
+},
+{
+"target": "shop.humo.be",
+"type": "Url"
+},
+{
+"target": "www.humo.be",
+"type": "Url"
+},
+{
+"target": "www.humo.be/abonnementen",
+"type": "Url"
+},
+{
+"target": "*.humo.be",
+"type": "Wildcard"
+},
+{
+"target": "humo.be/inloggen",
+"type": "Url"
+},
+{
+"target": "humo.be/login",
+"type": "Url"
+},
+{
+"target": "humo.be/service",
+"type": "Url"
+},
+{
+"target": "abonnement.humo.be",
+"type": "Url"
+},
+{
+"target": "actie.humo.be",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "67f303d5-5c5b-44ec-a278-874f818fbc48",
+"handle": "nestl\u00e9vdp",
+"name": "Nestl\u00e9 VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.nestle.com",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "694f3e58-f408-4a3f-8e2a-1b562650399a",
+"handle": "personio",
+"name": "Personio",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.app.personio-dev.com",
+"type": "Wildcard"
+},
+{
+"target": "*.app.personio.com",
+"type": "Wildcard"
+},
+{
+"target": "*.personio-internal.de",
+"type": "Wildcard"
+},
+{
+"target": "*.personio.tools",
+"type": "Wildcard"
+},
+{
+"target": "api.personio-dev.com",
+"type": "Url"
+},
+{
+"target": "api.personio.com",
+"type": "Url"
+},
+{
+"target": "https://*.personio.de",
+"type": "Wildcard"
+},
+{
+"target": "https://*.personiowhistleblowing.com",
+"type": "Wildcard"
+},
+{
+"target": "https://hug.personio.com",
+"type": "Url"
+},
+{
+"target": "https://sec-test-<intigriti handle>-<nn>.personio.de",
+"type": "Url"
+},
+{
+"target": "https://www.personio.com/free-trial/",
+"type": "Url"
+},
+{
+"target": "https://www.personio.de/kostenlos-testen/",
+"type": "Url"
+},
+{
+"target": "https://community.personio.com",
+"type": "Url"
+},
+{
+"target": "Other assets owned by Personio",
+"type": "Url"
+},
+{
+"target": "www.personio.de",
+"type": "Url"
+},
+{
+"target": "personio.slack.com",
+"type": "Url"
+},
+{
+"target": "statuspage.personio.de",
+"type": "Url"
+},
+{
+"target": "support.personio.de",
+"type": "Url"
+},
+{
+"target": "www.personio.com",
+"type": "Url"
+},
+{
+"target": "www.personio.es",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "69a64cbf-305d-4f48-90e5-0b7377c67bac",
+"handle": "grafanalabsvdp",
+"name": "Grafana Labs - Vulnerability Disclosure Program (VDP)",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://github.com/grafana/grafana",
+"type": "SourceCode"
+},
+{
+"target": "Non-Core Grafana Plugins",
+"type": "Other"
+},
+{
+"target": "https://github.com/grafana/alloy",
+"type": "SourceCode"
+},
+{
+"target": "https://github.com/grafana/faro-web-sdk",
+"type": "SourceCode"
+},
+{
+"target": "https://github.com/grafana/k6",
+"type": "SourceCode"
+},
+{
+"target": "https://github.com/grafana/beyla",
+"type": "SourceCode"
+},
+{
+"target": "https://github.com/grafana/pyroscope",
+"type": "SourceCode"
+},
+{
+"target": "https://github.com/grafana/loki",
+"type": "SourceCode"
+},
+{
+"target": "https://github.com/grafana/mimir",
+"type": "SourceCode"
+},
+{
+"target": "https://github.com/grafana/tempo",
+"type": "SourceCode"
+},
+{
+"target": "https://github.com/grafana/*",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "6c8455c8-66b7-4360-bc6d-45b854c6fa85",
+"handle": "postibugbounty",
+"name": "Posti Bug Bounty ",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "rebl-ai-webchat-postikuori.azurewebsites.net",
+"type": "Url"
+},
+{
+"target": "api.postikuori.posti.fi",
+"type": "Url"
+},
+{
+"target": "cms.postikuori.posti.fi",
+"type": "Url"
+},
+{
+"target": "admin.postikuori.posti.fi",
+"type": "Url"
+},
+{
+"target": "iamapp.postikuori.posti.fi",
+"type": "Url"
+},
+{
+"target": "iam.postikuori.posti.fi",
+"type": "Url"
+},
+{
+"target": "etavarasto.posti.fi",
+"type": "Url"
+},
+{
+"target": "https://developer.posti.com/support-request",
+"type": "Url"
+},
+{
+"target": "postikuori.posti.fi",
+"type": "Url"
+},
+{
+"target": "logout.id.posti.fi",
+"type": "Url"
+},
+{
+"target": "mfa.posti.fi",
+"type": "Url"
+},
+{
+"target": "id.posti.fi",
+"type": "Url"
+},
+{
+"target": "orgadmin-ext.prd.account.posticloud.fi",
+"type": "Url"
+},
+{
+"target": "developer.posti.com",
+"type": "Url"
+},
+{
+"target": "www.posti.se",
+"type": "Url"
+},
+{
+"target": "yritysmuutto.posti.fi",
+"type": "Url"
+},
+{
+"target": "410789057",
+"type": "iOS"
+},
+{
+"target": "api.posti.fi",
+"type": "Url"
+},
+{
+"target": "auth-service.posti.fi",
+"type": "Url"
+},
+{
+"target": "cdn.posti.fi",
+"type": "Url"
+},
+{
+"target": "connect.posti.fi",
+"type": "Url"
+},
+{
+"target": "console.posti.com",
+"type": "Url"
+},
+{
+"target": "elma.elma.fi",
+"type": "Url"
+},
+{
+"target": "fi.itella.posti.android",
+"type": "Android"
+},
+{
+"target": "gateway.posti.fi",
+"type": "Url"
+},
+{
+"target": "https://kontakti.posti.fi",
+"type": "Url"
+},
+{
+"target": "https://my.account.posti.fi",
+"type": "Url"
+},
+{
+"target": "https://my.smartposti.ee/",
+"type": "Url"
+},
+{
+"target": "https://my.smartposti.lt",
+"type": "Url"
+},
+{
+"target": "https://my.smartposti.lv",
+"type": "Url"
+},
+{
+"target": "https://oma.posti.fi/",
+"type": "Url"
+},
+{
+"target": "https://printerdriver.posti.com/",
+"type": "Url"
+},
+{
+"target": "https://pro.posti.fi",
+"type": "Url"
+},
+{
+"target": "https://quicksight.aws.amazon.com",
+"type": "Url"
+},
+{
+"target": "https://shop.posti.fi",
+"type": "Url"
+},
+{
+"target": "https://tuleasiakkaaksi.posti.fi",
+"type": "Url"
+},
+{
+"target": "https://www.posti.fi",
+"type": "Url"
+},
+{
+"target": "https://www.smartposti.ee",
+"type": "Url"
+},
+{
+"target": "https://www.smartposti.lt",
+"type": "Url"
+},
+{
+"target": "https://www.smartposti.lv",
+"type": "Url"
+},
+{
+"target": "https://www.webproteus.com/lpro-web/login",
+"type": "Url"
+},
+{
+"target": "https://yrityksennoutopiste.posti.fi",
+"type": "Url"
+},
+{
+"target": "jakelu.posti.fi",
+"type": "Url"
+},
+{
+"target": "netposti.fi",
+"type": "Url"
+},
+{
+"target": "nextshipping.posti.fi",
+"type": "Url"
+},
+{
+"target": "partnerselfservice.posti.fi",
+"type": "Url"
+},
+{
+"target": "picc.posti.fi",
+"type": "Url"
+},
+{
+"target": "posti.com",
+"type": "Url"
+},
+{
+"target": "tnt.posti.com",
+"type": "Url"
+},
+{
+"target": "todentaminen.posti.fi",
+"type": "Url"
+},
+{
+"target": "yhteystietoni.posti.fi",
+"type": "Url"
+},
+{
+"target": "www.posti.fi/henkiloasiakkaat/lomakkeet/tuotantohairiot.html",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "6f24c2d0-b1f2-4c31-948d-eeba16e80099",
+"handle": "attentiavdp",
+"name": "Attentia VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.attentia.be",
+"type": "Wildcard"
+},
+{
+"target": "Attie by Attentia - IOS",
+"type": "iOS"
+},
+{
+"target": "My Attentia - IOS",
+"type": "iOS"
+},
+{
+"target": "Attie by Attentia - Android",
+"type": "Android"
+},
+{
+"target": "My Attentia - Android",
+"type": "Android"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "6f38540e-cba1-4897-a20e-0349a6734604",
+"handle": "cokeonenorthamerica",
+"name": "Coke One North America",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "myCoke - iOS",
+"type": "iOS"
+},
+{
+"target": "myCoke - Android",
+"type": "Android"
+},
+{
+"target": "*.c1nacloud.com",
+"type": "Wildcard"
+},
+{
+"target": "*.cokeonena.com",
+"type": "Wildcard"
+},
+{
+"target": "*.conaservices.com",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "724ad196-90de-4ba8-bf21-dc114ab7fce4",
+"handle": "trustedfirmware",
+"name": "Trusted Firmware",
+"public": "Public",
+"bounty": true,
+"safe_harbour": false,
+"scope_in": [
+{
+"target": "TrustedFirmware-A (TF-A)",
+"type": "Other"
+},
+{
+"target": "TrustedFirmware-M (TF-M)",
+"type": "Other"
+},
+{
+"target": "TF-PSA-Crypto",
+"type": "Other"
+},
+{
+"target": "OP-TEE",
+"type": "Other"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "768ad323-335b-4710-9370-6b81925c122f",
+"handle": "website",
+"name": "Kinepolis Group",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.klubcinema.fr",
+"type": "Wildcard"
+},
+{
+"target": "*.megatix.be",
+"type": "Wildcard"
+},
+{
+"target": "booking.mjrtheatres.com",
+"type": "Url"
+},
+{
+"target": "extras.landmarkcinemas.com",
+"type": "Url"
+},
+{
+"target": "identityserver.landmarkcinemas.com",
+"type": "Url"
+},
+{
+"target": "kinepolis.megatix.be",
+"type": "Url"
+},
+{
+"target": "luxfilmfestfilms.megatix.be",
+"type": "Url"
+},
+{
+"target": "luxfilmfestproducts.megatix.be",
+"type": "Url"
+},
+{
+"target": "luxfilmfesttickets.megatix.be",
+"type": "Url"
+},
+{
+"target": "movieapi.kinepolis.megatix.be",
+"type": "Url"
+},
+{
+"target": "tickets.kinepolis.be",
+"type": "Url"
+},
+{
+"target": "tickets.kinepolis.ch",
+"type": "Url"
+},
+{
+"target": "tickets.kinepolis.es",
+"type": "Url"
+},
+{
+"target": "tickets.kinepolis.fr",
+"type": "Url"
+},
+{
+"target": "tickets.kinepolis.lu",
+"type": "Url"
+},
+{
+"target": "tickets.kinepolis.nl",
+"type": "Url"
+},
+{
+"target": "userprofile-ui.landmarkcinemas.com",
+"type": "Url"
+},
+{
+"target": "www.kinepolis.be",
+"type": "Url"
+},
+{
+"target": "www.kinepolis.ch",
+"type": "Url"
+},
+{
+"target": "www.kinepolis.com",
+"type": "Url"
+},
+{
+"target": "www.kinepolis.es",
+"type": "Url"
+},
+{
+"target": "www.kinepolis.fr",
+"type": "Url"
+},
+{
+"target": "www.kinepolis.lu",
+"type": "Url"
+},
+{
+"target": "www.kinepolis.nl",
+"type": "Url"
+},
+{
+"target": "www.landmarkcinemas.com",
+"type": "Url"
+},
+{
+"target": "www.mjrtheatres.com",
+"type": "Url"
+},
+{
+"target": "business.kinepolis.be",
+"type": "Url"
+},
+{
+"target": "business.kinepolis.lu",
+"type": "Url"
+},
+{
+"target": "business.kinepolis.nl",
+"type": "Url"
+},
+{
+"target": "com.inthepocket.kinepolis",
+"type": "Android"
+},
+{
+"target": "extras-acc.landmarkcinemas.com",
+"type": "Url"
+},
+{
+"target": "https://movieclub-int.kinepolis.com",
+"type": "Url"
+},
+{
+"target": "https://movienow-int.kinepolis.be/admin",
+"type": "Url"
+},
+{
+"target": "https://shop-acc.kinepolis.be/",
+"type": "Url"
+},
+{
+"target": "identityserver-acc.landmarkcinemas.com",
+"type": "Url"
+},
+{
+"target": "kinepolis-studio.be",
+"type": "Url"
+},
+{
+"target": "kinepolis/id368204284",
+"type": "iOS"
+},
+{
+"target": "nz.co.vista.android.movie.mjrtheatres",
+"type": "Android"
+},
+{
+"target": "stage.landmarkcinemas.com",
+"type": "Url"
+},
+{
+"target": "userprofile-acc.landmarkcinemas.com",
+"type": "Url"
+},
+{
+"target": "www.kinepolis.biz",
+"type": "Url"
+},
+{
+"target": "*.kinepolis.be",
+"type": "Wildcard"
+},
+{
+"target": "*.kinepolis.ch",
+"type": "Wildcard"
+},
+{
+"target": "*.kinepolis.com",
+"type": "Wildcard"
+},
+{
+"target": "*.kinepolis.fr",
+"type": "Wildcard"
+},
+{
+"target": "*.kinepolis.lu",
+"type": "Wildcard"
+},
+{
+"target": "*.kinepolis.nl",
+"type": "Wildcard"
+},
+{
+"target": "*.landmarkcinemas.com",
+"type": "Wildcard"
+},
+{
+"target": "*.mjrtheatres.com",
+"type": "Wildcard"
+},
+{
+"target": "522089287",
+"type": "iOS"
+},
+{
+"target": "egaming.kinepolis.es",
+"type": "Url"
+},
+{
+"target": "*.cineramabios.nl",
+"type": "Wildcard"
+},
+{
+"target": "dev.kinepolis.com",
+"type": "Url"
+},
+{
+"target": "helpdesk.landmarkcinemas.com",
+"type": "Url"
+},
+{
+"target": "jobs.kinepolis.com",
+"type": "Url"
+},
+{
+"target": "l.kinepolis.com",
+"type": "Url"
+},
+{
+"target": "openx.kinepolis.com",
+"type": "Url"
+},
+{
+"target": "shop.kinepolis.be",
+"type": "Url"
+},
+{
+"target": "shop.kinepolis.es",
+"type": "Url"
+},
+{
+"target": "shop.kinepolis.fr",
+"type": "Url"
+},
+{
+"target": "shop.kinepolis.lu",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "784ffbc6-daaa-4e7e-8eba-c38a101d7b12",
+"handle": "voivulnerabilitydisclosureprogram",
+"name": "Voi Vulnerability Disclosure Program",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "All Voi assets",
+"type": "Other"
+},
+{
+"target": "Third-party systems or domains referencing Voi",
+"type": "Other"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "7999e698-363d-49e2-bd34-4ce47556d03c",
+"handle": "water-link",
+"name": "Water-Link",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "desktop.water-link.be",
+"type": "Url"
+},
+{
+"target": "pit.water-link.be",
+"type": "Url"
+},
+{
+"target": "*.aww.be",
+"type": "Wildcard"
+},
+{
+"target": "*.water-link.be",
+"type": "Wildcard"
+},
+{
+"target": "indussiibis.water-link.be",
+"type": "Url"
+},
+{
+"target": "water-link-jaarverslag.be",
+"type": "Url"
+},
+{
+"target": "*.mijnwater-link.be",
+"type": "Wildcard"
+},
+{
+"target": "aquawardsspatial.water-link.be",
+"type": "Url"
+},
+{
+"target": "aquawardsoperate.water-link.be",
+"type": "Url"
+},
+{
+"target": "waterkracht-levering.be",
+"type": "Url"
+},
+{
+"target": "induss.eu",
+"type": "Url"
+},
+{
+"target": "rio-link.be",
+"type": "Url"
+},
+{
+"target": "water-kracht-levering.eu",
+"type": "Url"
+},
+{
+"target": "adelta.be",
+"type": "Url"
+},
+{
+"target": "waterkracht-levering.eu",
+"type": "Url"
+},
+{
+"target": "aww.eu",
+"type": "Url"
+},
+{
+"target": "waterlink.be",
+"type": "Url"
+},
+{
+"target": "water-kracht-levering.be",
+"type": "Url"
+},
+{
+"target": "waterstoringen.be",
+"type": "Url"
+},
+{
+"target": "waterwise.be",
+"type": "Url"
+},
+{
+"target": "peppol-a.water-link.be",
+"type": "Url"
+},
+{
+"target": "aquawise.be",
+"type": "Url"
+},
+{
+"target": "oxum.be",
+"type": "Url"
+},
+{
+"target": "peppol-t.water-link.be",
+"type": "Url"
+},
+{
+"target": "storingvideo-t.water-link.be",
+"type": "Url"
+},
+{
+"target": "wl_dev.water-link.be",
+"type": "Url"
+},
+{
+"target": "wl_acc.water-link.be",
+"type": "Url"
+},
+{
+"target": "aquawardsoperateacc.water-link.be",
+"type": "Url"
+},
+{
+"target": "gisacc(*).water-link.be",
+"type": "Wildcard"
+},
+{
+"target": "secrets.water-link.be",
+"type": "Url"
+},
+{
+"target": "feedback.water-link.be",
+"type": "Url"
+},
+{
+"target": "jobs.water-link.be",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "7c46a970-eb8d-48b9-aa11-b52198f763c4",
+"handle": "intelvulnerabilitydisclosureprogram",
+"name": "Intel\u00ae Vulnerability Disclosure Program ",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "Software",
+"type": "Other"
+},
+{
+"target": "Firmware",
+"type": "Other"
+},
+{
+"target": "Hardware",
+"type": "Other"
+},
+{
+"target": "Services",
+"type": "Other"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "7ce36749-76cb-44f7-8231-082994146600",
+"handle": "tekionvdp",
+"name": "Tekion VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.tekioncloud.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.tekionkloud.xyz",
+"type": "Wildcard"
+},
+{
+"target": "*.tekionsupport.xyz",
+"type": "Wildcard"
+},
+{
+"target": "*.tekionblr.xyz",
+"type": "Wildcard"
+},
+{
+"target": "*.tekion.com",
+"type": "Wildcard"
+},
+{
+"target": "*.tekcdn.xyz",
+"type": "Wildcard"
+},
+{
+"target": "*.tekionsupport.com",
+"type": "Wildcard"
+},
+{
+"target": "*.tekioncdn.xyz",
+"type": "Wildcard"
+},
+{
+"target": "*.tekioncloud.net",
+"type": "Wildcard"
+},
+{
+"target": "*.tekion.xyz",
+"type": "Wildcard"
+},
+{
+"target": "*.aecloud.io",
+"type": "Wildcard"
+},
+{
+"target": "*.tekion.io",
+"type": "Wildcard"
+},
+{
+"target": "*.tekcdn.com",
+"type": "Wildcard"
+},
+{
+"target": "*.tekioncdn.com",
+"type": "Wildcard"
+},
+{
+"target": "*.tekioncloud.xyz",
+"type": "Wildcard"
+},
+{
+"target": "*.tekion.cloud",
+"type": "Wildcard"
+},
+{
+"target": "*.tekioncloud.com",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "7d2af06f-9f70-4561-9ba6-4c044274a94a",
+"handle": "truelayervdp",
+"name": "TrueLayer VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.truelayer.com",
+"type": "Wildcard"
+},
+{
+"target": "*.zimpler.net",
+"type": "Wildcard"
+},
+{
+"target": "*.sandbox.zimpler.net",
+"type": "Wildcard"
+},
+{
+"target": "*.staging.zimpler.net",
+"type": "Wildcard"
+},
+{
+"target": "*.truelayer-sandbox.com",
+"type": "Wildcard"
+},
+{
+"target": "checkout-playground.zimpler.com",
+"type": "Url"
+},
+{
+"target": "devdocs.zimpler.com",
+"type": "Url"
+},
+{
+"target": "identify.zimpler.com",
+"type": "Url"
+},
+{
+"target": "okta-oauth2.zimpler.com",
+"type": "Url"
+},
+{
+"target": "swish-playground.zimpler.com",
+"type": "Url"
+},
+{
+"target": "zimpler-merchant.zimpler.com",
+"type": "Url"
+},
+{
+"target": "*.zimpler.com",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "7ecdd3d1-a794-4ceb-9518-f9a016dc26a6",
+"handle": "bmwgroup-automotive",
+"name": "BMW Group Automotive",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "Functions dealing with vehicle access and immobilizer",
+"type": "Device"
+},
+{
+"target": "1519034860",
+"type": "iOS"
+},
+{
+"target": "de.bmw.connected.mobile20.row",
+"type": "Android"
+},
+{
+"target": "Remaining functions",
+"type": "Device"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "806f54d7-a85d-40bd-82cc-f09c1a500f28",
+"handle": "dpgmedia",
+"name": "DPG Media",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.dpgmedia.be",
+"type": "Wildcard"
+},
+{
+"target": "*.dpgmedia.nl",
+"type": "Wildcard"
+},
+{
+"target": "Any related DPG media domain",
+"type": "Other"
+},
+{
+"target": "Qualifio Subdomains",
+"type": "Other"
+},
+{
+"target": "actie.*.*",
+"type": "Wildcard"
+},
+{
+"target": "cadeau.videoland.com",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "visitors.dpgmedia.be",
+"type": "Url"
+}
+],
+"submit_access": "account_required"
+},
+{
+"id": "8148a041-c41d-4128-8c73-f4727002515e",
+"handle": "spaceliftvdp",
+"name": "Spacelift VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.app.spacelift.dev",
+"type": "Wildcard"
+},
+{
+"target": "app.spacelift.dev",
+"type": "Url"
+},
+{
+"target": "spacelift.dev",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "82be1e9b-f9ab-45e7-82fd-9ba65be37645",
+"handle": "tempo-team",
+"name": "Tempo-Team ",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.tempo-team.*",
+"type": "Wildcard"
+},
+{
+"target": "Any related Tempo-Team domain",
+"type": "Url"
+},
+{
+"target": "www.tempo-team.be",
+"type": "Url"
+},
+{
+"target": "www.tempo-team.com",
+"type": "Url"
+},
+{
+"target": "www.tempo-team.nl",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "8a5bf4a3-3183-4e2a-aa5e-20f71efe7f4b",
+"handle": "water-linkvdp",
+"name": "Water-Link VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.water-link.be",
+"type": "Wildcard"
+},
+{
+"target": "*.aww.be",
+"type": "Wildcard"
+},
+{
+"target": "water-link-jaarverslag.be",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "8a9c91c0-dd4f-4ed3-bb65-3c6b68e76b24",
+"handle": "watsons",
+"name": "Watsons",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "www.watsons.com.hk",
+"type": "Url"
+},
+{
+"target": "www10.watsons.com.hk",
+"type": "Url"
+},
+{
+"target": "Watsons Hong Kong Android",
+"type": "Android"
+},
+{
+"target": "Watsons Hong Kong iOS",
+"type": "iOS"
+},
+{
+"target": "api.watsons.com.hk",
+"type": "Url"
+},
+{
+"target": "medias.watsons.com.hk",
+"type": "Url"
+},
+{
+"target": "*.watsons.com.hk",
+"type": "Wildcard"
+},
+{
+"target": "www.watsons.co.th",
+"type": "Url"
+},
+{
+"target": "www10.watsons.co.th",
+"type": "Url"
+},
+{
+"target": "www20.watsons.co.th",
+"type": "Url"
+},
+{
+"target": "Watsons Thailand iOS",
+"type": "iOS"
+},
+{
+"target": "Watsons Thailand Android",
+"type": "Android"
+},
+{
+"target": "api.watsons.co.th",
+"type": "Url"
+},
+{
+"target": "community.watsons.co.th",
+"type": "Url"
+},
+{
+"target": "medias.watsons.co.th",
+"type": "Url"
+},
+{
+"target": "*.watsons.co.th",
+"type": "Wildcard"
+},
+{
+"target": "www.watsons.com.tw",
+"type": "Url"
+},
+{
+"target": "www10.watsons.com.tw",
+"type": "Url"
+},
+{
+"target": "Watsons Taiwan Android",
+"type": "Android"
+},
+{
+"target": "Watsons Taiwan iOS",
+"type": "iOS"
+},
+{
+"target": "api.watsons.com.tw",
+"type": "Url"
+},
+{
+"target": "member.watsons.com.tw",
+"type": "Url"
+},
+{
+"target": "medias.watsons.com.tw",
+"type": "Url"
+},
+{
+"target": "*.watsons.com.tw",
+"type": "Wildcard"
+},
+{
+"target": "www.watsons.com.sg",
+"type": "Url"
+},
+{
+"target": "www10.watsons.com.sg",
+"type": "Url"
+},
+{
+"target": "Watsons Singapore iOS",
+"type": "iOS"
+},
+{
+"target": "Watsons Singapore Android",
+"type": "Android"
+},
+{
+"target": "api.watsons.com.sg",
+"type": "Url"
+},
+{
+"target": "medias.watsons.com.sg",
+"type": "Url"
+},
+{
+"target": "*.watsons.com.sg",
+"type": "Wildcard"
+},
+{
+"target": "www.watsons.com.ph",
+"type": "Url"
+},
+{
+"target": "Watsons Philippines iOS",
+"type": "iOS"
+},
+{
+"target": "Watsons Philippines Android",
+"type": "Android"
+},
+{
+"target": "api.watsons.com.ph",
+"type": "Url"
+},
+{
+"target": "www10.watsons.com.ph",
+"type": "Url"
+},
+{
+"target": "community.watsons.com.ph",
+"type": "Url"
+},
+{
+"target": "medias.watsons.com.ph",
+"type": "Url"
+},
+{
+"target": "*.watsons.com.ph",
+"type": "Wildcard"
+},
+{
+"target": "www.lookatme.com.ph",
+"type": "Url"
+},
+{
+"target": "LookAtMe Philippines Android",
+"type": "Android"
+},
+{
+"target": "LookAtMe Philippines iOS",
+"type": "iOS"
+},
+{
+"target": "api.lookatme.com.ph",
+"type": "Url"
+},
+{
+"target": "medias.lookatme.com.ph",
+"type": "Url"
+},
+{
+"target": "*.lookatme.com.ph",
+"type": "Wildcard"
+},
+{
+"target": "www.watsons.com.my",
+"type": "Url"
+},
+{
+"target": "www10.watsons.com.my",
+"type": "Url"
+},
+{
+"target": "Watsons Malaysia Android",
+"type": "Android"
+},
+{
+"target": "Watsons Malaysia iOS",
+"type": "iOS"
+},
+{
+"target": "api.watsons.com.my",
+"type": "Url"
+},
+{
+"target": "community.watsons.com.my",
+"type": "Url"
+},
+{
+"target": "medias.watsons.com.my",
+"type": "Url"
+},
+{
+"target": "*.watsons.com.my",
+"type": "Wildcard"
+},
+{
+"target": "www.watsons.co.id",
+"type": "Url"
+},
+{
+"target": "www10.watsons.co.id",
+"type": "Url"
+},
+{
+"target": "Watsons Indonesia Android",
+"type": "Android"
+},
+{
+"target": "Watsons Indonesia iOS",
+"type": "iOS"
+},
+{
+"target": "api.watsons.co.id",
+"type": "Url"
+},
+{
+"target": "medias.watsons.co.id",
+"type": "Url"
+},
+{
+"target": "id-watsonsbesti.com",
+"type": "Url"
+},
+{
+"target": "*.watsons.co.id",
+"type": "Wildcard"
+},
+{
+"target": "www.watsons.vn",
+"type": "Url"
+},
+{
+"target": "www10.watsons.vn",
+"type": "Url"
+},
+{
+"target": "Watsons Vietnam iOS",
+"type": "iOS"
+},
+{
+"target": "Watsons Vietnam Android",
+"type": "Android"
+},
+{
+"target": "api.watsons.vn",
+"type": "Url"
+},
+{
+"target": "medias.watsons.vn",
+"type": "Url"
+},
+{
+"target": "*.watsons.vn",
+"type": "Wildcard"
+},
+{
+"target": "www.pns.hk",
+"type": "Url"
+},
+{
+"target": "www10.pns.hk",
+"type": "Url"
+},
+{
+"target": "api.pns.hk",
+"type": "Url"
+},
+{
+"target": "PNS iOS",
+"type": "iOS"
+},
+{
+"target": "PNS Android",
+"type": "Android"
+},
+{
+"target": "medias.pns.hk",
+"type": "Url"
+},
+{
+"target": "*.pns.hk",
+"type": "Wildcard"
+},
+{
+"target": "*.parknshop.com",
+"type": "Wildcard"
+},
+{
+"target": "www.fortress.com.hk",
+"type": "Url"
+},
+{
+"target": "www10.fortress.com.hk",
+"type": "Url"
+},
+{
+"target": "Fortress Hong Kong Android",
+"type": "Android"
+},
+{
+"target": "Fortress Hong Kong iOS",
+"type": "iOS"
+},
+{
+"target": "api.fortress.com.hk",
+"type": "Url"
+},
+{
+"target": "medias.fortress.com.hk",
+"type": "Url"
+},
+{
+"target": "*.fortress.com.hk",
+"type": "Wildcard"
+},
+{
+"target": "www.watsons.com.tr",
+"type": "Url"
+},
+{
+"target": "Watsons Turkey Android",
+"type": "Android"
+},
+{
+"target": "Watsons Turkey iOS",
+"type": "iOS"
+},
+{
+"target": "app.watsons.com.tr",
+"type": "Url"
+},
+{
+"target": "api.watsons.com.tr",
+"type": "Url"
+},
+{
+"target": "blog.watsons.com.tr",
+"type": "Url"
+},
+{
+"target": "campaign.watsons.com.tr",
+"type": "Url"
+},
+{
+"target": "adayevrak.watsons.com.tr",
+"type": "Url"
+},
+{
+"target": "katalog.watsons.com.tr",
+"type": "Url"
+},
+{
+"target": "www.watsonsbeautystudio.com",
+"type": "Url"
+},
+{
+"target": "ik.watsons.com.tr",
+"type": "Url"
+},
+{
+"target": "gc.watsons.com.tr",
+"type": "Url"
+},
+{
+"target": "odul.watsons.com.tr",
+"type": "Url"
+},
+{
+"target": "wasapi.watsons.com.tr",
+"type": "Url"
+},
+{
+"target": "media.watsons.com.tr",
+"type": "Url"
+},
+{
+"target": "scp.watsons.com.tr",
+"type": "Url"
+},
+{
+"target": "scpapi.watsons.com.tr",
+"type": "Url"
+},
+{
+"target": "bulten.watsons.com.tr",
+"type": "Url"
+},
+{
+"target": "*.watsons.com.tr",
+"type": "Wildcard"
+},
+{
+"target": "www.drogas.lt",
+"type": "Url"
+},
+{
+"target": "www.drogas.lv",
+"type": "Url"
+},
+{
+"target": "Drogas Latvia Android",
+"type": "Android"
+},
+{
+"target": "Drogas Latvia iOS",
+"type": "iOS"
+},
+{
+"target": "Drogas Lithuania Android",
+"type": "Android"
+},
+{
+"target": "Drogas Lithuania iOS",
+"type": "iOS"
+},
+{
+"target": "app.drogas.lt",
+"type": "Url"
+},
+{
+"target": "api.drogas.lv",
+"type": "Url"
+},
+{
+"target": "media.drogas.lt",
+"type": "Url"
+},
+{
+"target": "app.drogas.lv",
+"type": "Url"
+},
+{
+"target": "api.drogas.lt",
+"type": "Url"
+},
+{
+"target": "media.drogas.lv",
+"type": "Url"
+},
+{
+"target": "campaign.drogas.lt",
+"type": "Url"
+},
+{
+"target": "campaign.drogas.lv",
+"type": "Url"
+},
+{
+"target": "*.drogas.lt",
+"type": "Wildcard"
+},
+{
+"target": "*.drogas.lv",
+"type": "Wildcard"
+},
+{
+"target": "www.moneyback.com.hk",
+"type": "Url"
+},
+{
+"target": "Moneyback Android",
+"type": "Android"
+},
+{
+"target": "Moneyback iOS",
+"type": "iOS"
+},
+{
+"target": "mapi.moneyback.com.hk",
+"type": "Url"
+},
+{
+"target": "*.moneyback.com.hk",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "8ae2027e-eba1-4b17-a7f6-9da683b2f6c7",
+"handle": "saltovulnerabilitydisclosure",
+"name": "Salto Vulnerability Disclosure ",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.cognitec-systems.de",
+"type": "Wildcard"
+},
+{
+"target": "*.cognitec.com",
+"type": "Wildcard"
+},
+{
+"target": "*.danalock.com",
+"type": "Wildcard"
+},
+{
+"target": "*.danalock.dk",
+"type": "Wildcard"
+},
+{
+"target": "*.danalock.eu",
+"type": "Wildcard"
+},
+{
+"target": "*.danalockapps.com",
+"type": "Wildcard"
+},
+{
+"target": "*.danalockservices.com",
+"type": "Wildcard"
+},
+{
+"target": "*.enviso.io",
+"type": "Wildcard"
+},
+{
+"target": "*.enviso.shop",
+"type": "Wildcard"
+},
+{
+"target": "*.gantner.be",
+"type": "Wildcard"
+},
+{
+"target": "*.gantner.com",
+"type": "Wildcard"
+},
+{
+"target": "*.gantner.cloud",
+"type": "Wildcard"
+},
+{
+"target": "*.gantnerindia.com",
+"type": "Wildcard"
+},
+{
+"target": "*.guidemylock.dk",
+"type": "Wildcard"
+},
+{
+"target": "*.my-clay.com",
+"type": "Wildcard"
+},
+{
+"target": "*.mylock.dk",
+"type": "Wildcard"
+},
+{
+"target": "*.poly-control.com",
+"type": "Wildcard"
+},
+{
+"target": "*.poly-control.dk",
+"type": "Wildcard"
+},
+{
+"target": "*.poly-lock.dk",
+"type": "Wildcard"
+},
+{
+"target": "*.polycontrol.dk",
+"type": "Wildcard"
+},
+{
+"target": "*.recreatex.be",
+"type": "Wildcard"
+},
+{
+"target": "*.salto-orion.app",
+"type": "Wildcard"
+},
+{
+"target": "*.saltoapis.com",
+"type": "Wildcard"
+},
+{
+"target": "*.saltohomesolution.com",
+"type": "Wildcard"
+},
+{
+"target": "*.saltoks.com",
+"type": "Wildcard"
+},
+{
+"target": "*.saltosystems.com",
+"type": "Wildcard"
+},
+{
+"target": "*.saltowecosystem.com",
+"type": "Wildcard"
+},
+{
+"target": "*.vintia.cloud",
+"type": "Wildcard"
+},
+{
+"target": "*.vintia.com",
+"type": "Wildcard"
+},
+{
+"target": "*.wecosystem.com",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "8bf1f259-cac9-4114-9b84-3b950897b1ec",
+"handle": "demorgen",
+"name": "De Morgen",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "actie.demorgen.be",
+"type": "Url"
+},
+{
+"target": "myaccount.demorgen.be",
+"type": "Url"
+},
+{
+"target": "www.demorgen.be",
+"type": "Url"
+},
+{
+"target": "www.demorgen.be/abonnementen",
+"type": "Url"
+},
+{
+"target": "*.demorgen.be",
+"type": "Wildcard"
+},
+{
+"target": "demorgen.be/inloggen",
+"type": "Url"
+},
+{
+"target": "demorgen.be/login",
+"type": "Url"
+},
+{
+"target": "demorgen.be/registreren",
+"type": "Url"
+},
+{
+"target": "demorgen.be/service",
+"type": "Url"
+},
+{
+"target": "abonnement.demorgen.be",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "8f6c92dc-1300-4f11-8284-29b6ed743378",
+"handle": "speakapresponsibledisclosure",
+"name": "Speakap Responsible Disclosure",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.speakap.com",
+"type": "Wildcard"
+},
+{
+"target": "*.speakap.io",
+"type": "Wildcard"
+},
+{
+"target": "Any related Speakap domain",
+"type": "Url"
+},
+{
+"target": "https://apps.apple.com/nl/app/speakap/id713925262",
+"type": "iOS"
+},
+{
+"target": "nl.speakap.speakap",
+"type": "Android"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "92431bf9-ab3e-4e69-9619-c59f8e5193b1",
+"handle": "voiscooters",
+"name": "Voi Scooters",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "Voi \u2013 e-scooters & e-bikes",
+"type": "iOS"
+},
+{
+"target": "Voi \u2013 e-scooter & e-bike hire",
+"type": "Android"
+},
+{
+"target": "https://api.voiapp.io/",
+"type": "Url"
+},
+{
+"target": "mds.voiapp.io",
+"type": "Url"
+},
+{
+"target": "fm.voiapp.io",
+"type": "Url"
+},
+{
+"target": "https://repair.voiweb.net",
+"type": "Url"
+},
+{
+"target": "report.voi.com",
+"type": "Url"
+},
+{
+"target": "voi.com",
+"type": "Url"
+},
+{
+"target": "*.voi.com",
+"type": "Wildcard"
+},
+{
+"target": "*.voiscooters.com",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "933f224e-fbd3-4f08-a4fb-5038c2fa1a6e",
+"handle": "nmt",
+"name": "Axel Springer National Media & Tech",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "newsos.com",
+"type": "Url"
+},
+{
+"target": "politico.eu",
+"type": "Url"
+},
+{
+"target": "adtechnology.axelspringer.com",
+"type": "Url"
+},
+{
+"target": "*.asadcdn.com",
+"type": "Wildcard"
+},
+{
+"target": "bild.de",
+"type": "Url"
+},
+{
+"target": "welt.de",
+"type": "Url"
+},
+{
+"target": "epaper.welt.de",
+"type": "Url"
+},
+{
+"target": "cancellation.prod.ps.welt.de",
+"type": "Url"
+},
+{
+"target": "digital.welt.de",
+"type": "Url"
+},
+{
+"target": "signin.auth.welt.de",
+"type": "Url"
+},
+{
+"target": "m.bild.de",
+"type": "Url"
+},
+{
+"target": "*.hey.bild.de",
+"type": "Wildcard"
+},
+{
+"target": "go.welt.de",
+"type": "Url"
+},
+{
+"target": "*.auth.bild.de",
+"type": "Wildcard"
+},
+{
+"target": "*.sportbild.de",
+"type": "Wildcard"
+},
+{
+"target": "meinkonto.bild.de",
+"type": "Url"
+},
+{
+"target": "*.bild.tv",
+"type": "Wildcard"
+},
+{
+"target": "*.computerbild.de",
+"type": "Wildcard"
+},
+{
+"target": "18.184.198.198, 18.185.214.59, 18.194.109.179, 3.121.117.72, 3.121.138.10, 3.121.138.128, 3.121.138.134, 3.121.138.170, 3.121.138.33, 3.121.138.43, 3.124.248.208, 35.156.137.39",
+"type": "IpRange"
+},
+{
+"target": "dealer.prod.ps.axelspringer.de/purchases/*",
+"type": "Wildcard"
+},
+{
+"target": "*.germany.politico.eu",
+"type": "Wildcard"
+},
+{
+"target": "*.welt.de",
+"type": "Wildcard"
+},
+{
+"target": "*.bild.de",
+"type": "Wildcard"
+},
+{
+"target": "*.bild.design",
+"type": "Wildcard"
+},
+{
+"target": "*.autobild.de",
+"type": "Wildcard"
+},
+{
+"target": "*.bz-berlin.de",
+"type": "Wildcard"
+},
+{
+"target": "*.spring-media.de",
+"type": "Wildcard"
+},
+{
+"target": "*.springtools.de",
+"type": "Wildcard"
+},
+{
+"target": "editorial.one",
+"type": "Url"
+},
+{
+"target": "*.as-nmt.de",
+"type": "Wildcard"
+},
+{
+"target": "*.ein-herz-fuer-kinder.de",
+"type": "Wildcard"
+},
+{
+"target": "*.fitbook.de",
+"type": "Wildcard"
+},
+{
+"target": "*.myhomebook.de",
+"type": "Wildcard"
+},
+{
+"target": "*.petbook-magazine.com/",
+"type": "Wildcard"
+},
+{
+"target": "*.petbook.de",
+"type": "Wildcard"
+},
+{
+"target": "*.stylebook.de",
+"type": "Wildcard"
+},
+{
+"target": "*.techbook.de",
+"type": "Wildcard"
+},
+{
+"target": "*.travelbook.de",
+"type": "Wildcard"
+},
+{
+"target": "*.wissen-sie-mehr.de",
+"type": "Wildcard"
+},
+{
+"target": "*.axelspringer.com",
+"type": "Wildcard"
+},
+{
+"target": "technik.autobild.de",
+"type": "Url"
+},
+{
+"target": "technik.beta.autobild.de",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "96d3f49a-4c5f-4bc8-835a-77f734eefe4e",
+"handle": "responsiblevulnerabilitydisclosureprogram",
+"name": "Citymesh Responsible Vulnerability Disclosure Program",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "31.31.128.0/24",
+"type": "IpRange"
+},
+{
+"target": "31.31.140.0/24",
+"type": "IpRange"
+},
+{
+"target": "31.31.141.0/24",
+"type": "IpRange"
+},
+{
+"target": "31.31.143.0/24",
+"type": "IpRange"
+},
+{
+"target": "31.31.143.0/25",
+"type": "IpRange"
+},
+{
+"target": "31.31.150.0/24",
+"type": "IpRange"
+},
+{
+"target": "31.31.158.0/24",
+"type": "IpRange"
+},
+{
+"target": "31.31.159.0/24",
+"type": "IpRange"
+},
+{
+"target": "45.11.166.40/29",
+"type": "IpRange"
+},
+{
+"target": "79.132.241.0/24",
+"type": "IpRange"
+},
+{
+"target": "85.234.192.0/24",
+"type": "IpRange"
+},
+{
+"target": "85.234.203.0/24",
+"type": "IpRange"
+},
+{
+"target": "85.234.204.0/24",
+"type": "IpRange"
+},
+{
+"target": "85.234.205.0/24",
+"type": "IpRange"
+},
+{
+"target": "193.110.255.128/28",
+"type": "IpRange"
+},
+{
+"target": "212.71.0.0/24",
+"type": "IpRange"
+},
+{
+"target": "212.71.1.0/24",
+"type": "IpRange"
+},
+{
+"target": "212.71.2.0/24",
+"type": "IpRange"
+},
+{
+"target": "212.71.3.0/24",
+"type": "IpRange"
+},
+{
+"target": "212.71.4.0/24",
+"type": "IpRange"
+},
+{
+"target": "212.71.5.0/24",
+"type": "IpRange"
+},
+{
+"target": "212.71.8.0/24",
+"type": "IpRange"
+},
+{
+"target": "212.71.11.0/24",
+"type": "IpRange"
+},
+{
+"target": "213.211.130.0/24",
+"type": "IpRange"
+},
+{
+"target": "213.211.138.0/24",
+"type": "IpRange"
+},
+{
+"target": "213.211.188.0/24",
+"type": "IpRange"
+},
+{
+"target": "213.219.128.0/24",
+"type": "IpRange"
+},
+{
+"target": "213.219.132.0/24",
+"type": "IpRange"
+},
+{
+"target": "https://livechat.citymesh.com/",
+"type": "Url"
+},
+{
+"target": "https://auth.citymesh.com/",
+"type": "Url"
+},
+{
+"target": "https://extra.citymesh.com/",
+"type": "Url"
+},
+{
+"target": "https://fleet.citymeshconnect.com/",
+"type": "Url"
+},
+{
+"target": "https://my.citymesh.com/",
+"type": "Url"
+},
+{
+"target": "https://cabmanager.citymesh.com/",
+"type": "Url"
+},
+{
+"target": "https://dialhome.ncentric.be/",
+"type": "Url"
+},
+{
+"target": "https://auth.wifilab.be/",
+"type": "Url"
+},
+{
+"target": "https://extra.edpnet.net/",
+"type": "Url"
+},
+{
+"target": "https://api-gateway.citymesh.com/",
+"type": "Url"
+},
+{
+"target": "https://cc.safety-drones.com/",
+"type": "Url"
+},
+{
+"target": "*.antwerpfreewifi.be",
+"type": "Wildcard"
+},
+{
+"target": "*.biotechnology-citymesh.com",
+"type": "Wildcard"
+},
+{
+"target": "*.citymesh.com",
+"type": "Wildcard"
+},
+{
+"target": "*.citymesh-connect.be",
+"type": "Wildcard"
+},
+{
+"target": "*.citymesh-connect.com",
+"type": "Wildcard"
+},
+{
+"target": "*.citymesh.be",
+"type": "Wildcard"
+},
+{
+"target": "*.citymesh.com",
+"type": "Wildcard"
+},
+{
+"target": "*.citymesh.eu",
+"type": "Wildcard"
+},
+{
+"target": "*.citymesh.guide",
+"type": "Wildcard"
+},
+{
+"target": "*.citymesh.net",
+"type": "Wildcard"
+},
+{
+"target": "*.citymesh.fr",
+"type": "Wildcard"
+},
+{
+"target": "*.citymesh.nl",
+"type": "Wildcard"
+},
+{
+"target": "*.citymesh.io",
+"type": "Wildcard"
+},
+{
+"target": "*.citymeshconnect.be",
+"type": "Wildcard"
+},
+{
+"target": "*.citymeshconnect.com",
+"type": "Wildcard"
+},
+{
+"target": "*.ctmsh.co",
+"type": "Wildcard"
+},
+{
+"target": "*.connectingsenses.be",
+"type": "Wildcard"
+},
+{
+"target": "*.connectingsenses.com",
+"type": "Wildcard"
+},
+{
+"target": "*.connectow.be",
+"type": "Wildcard"
+},
+{
+"target": "*.connectow.eu",
+"type": "Wildcard"
+},
+{
+"target": "*.engiem2m.be",
+"type": "Wildcard"
+},
+{
+"target": "*.edpnet.com",
+"type": "Wildcard"
+},
+{
+"target": "*.edpnet.nl",
+"type": "Wildcard"
+},
+{
+"target": "*.edpnet.be",
+"type": "Wildcard"
+},
+{
+"target": "*.engiem2m.com",
+"type": "Wildcard"
+},
+{
+"target": "*.gowifi.be",
+"type": "Wildcard"
+},
+{
+"target": "*.myiot.be",
+"type": "Wildcard"
+},
+{
+"target": "*.ncentric.be",
+"type": "Wildcard"
+},
+{
+"target": "*.ncentric.cloud",
+"type": "Wildcard"
+},
+{
+"target": "*.ncentric.com",
+"type": "Wildcard"
+},
+{
+"target": "*.ptxbac.be",
+"type": "Wildcard"
+},
+{
+"target": "*.ps-radiocom.be",
+"type": "Wildcard"
+},
+{
+"target": "*.ps-radiocom.com",
+"type": "Wildcard"
+},
+{
+"target": "*.safety-drones.be",
+"type": "Wildcard"
+},
+{
+"target": "*.safety-drones.com",
+"type": "Wildcard"
+},
+{
+"target": "*.safetydrones.be",
+"type": "Wildcard"
+},
+{
+"target": "*.sigfox.nl",
+"type": "Wildcard"
+},
+{
+"target": "*.towereye.be",
+"type": "Wildcard"
+},
+{
+"target": "*.towereye.eu",
+"type": "Wildcard"
+},
+{
+"target": "*.wifilab.be",
+"type": "Wildcard"
+},
+{
+"target": "*.wflb.be",
+"type": "Wildcard"
+},
+{
+"target": "*.wifinmbssncb.be",
+"type": "Wildcard"
+},
+{
+"target": "*.static.edpnet.net",
+"type": "Wildcard"
+},
+{
+"target": "*.dyn.edpnet.net",
+"type": "Wildcard"
+},
+{
+"target": "*.citymesh.recruitee.com",
+"type": "Wildcard"
+},
+{
+"target": "*.digi-mobile.be",
+"type": "Wildcard"
+},
+{
+"target": "*.insky.be",
+"type": "Wildcard"
+},
+{
+"target": "31.31.128.128/26",
+"type": "IpRange"
+},
+{
+"target": "31.31.128.192/27",
+"type": "IpRange"
+},
+{
+"target": "31.31.128.64/26",
+"type": "IpRange"
+},
+{
+"target": "31.31.130.0/23",
+"type": "IpRange"
+},
+{
+"target": "31.31.132.0/24",
+"type": "IpRange"
+},
+{
+"target": "31.31.134.0/23",
+"type": "IpRange"
+},
+{
+"target": "31.31.136.0/21",
+"type": "IpRange"
+},
+{
+"target": "31.31.139.0/24",
+"type": "IpRange"
+},
+{
+"target": "31.31.140.0-87",
+"type": "IpRange"
+},
+{
+"target": "31.31.140.92-254",
+"type": "IpRange"
+},
+{
+"target": "31.31.141.0/26",
+"type": "IpRange"
+},
+{
+"target": "31.31.143.0-71",
+"type": "IpRange"
+}
+],
+"scope_out": [
+{
+"target": "*.edpnet.net",
+"type": "Wildcard"
+}
+],
+"submit_access": "account_required"
+},
+{
+"id": "981f8ca2-8ddd-48e8-b710-b6a00fba35cc",
+"handle": "vtmgo",
+"name": "VTM GO",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "myaccount.vtm.be",
+"type": "Url"
+},
+{
+"target": "vtm.be/vtmgo",
+"type": "Url"
+},
+{
+"target": "vtmgo.be",
+"type": "Url"
+},
+{
+"target": "*.vtmgo.be",
+"type": "Wildcard"
+},
+{
+"target": "vtmgo.be/inloggen",
+"type": "Url"
+},
+{
+"target": "vtmgo.be/login",
+"type": "Url"
+},
+{
+"target": "vtmgo.be/registreren",
+"type": "Url"
+},
+{
+"target": "vtmgo.be/service",
+"type": "Url"
+},
+{
+"target": "shop.vtm.be",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "*.vtm.be",
+"type": "Wildcard"
+},
+{
+"target": "customerservice.vtm.be",
+"type": "Url"
+}
+],
+"submit_access": "account_required"
+},
+{
+"id": "9889b03a-9d1e-44fd-b635-af6e8bd72950",
+"handle": "liferay-vdp",
+"name": "Liferay VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "www.liferay.com",
+"type": "Url"
+},
+{
+"target": "liferay.dev",
+"type": "Url"
+},
+{
+"target": "learn.liferay.com",
+"type": "Url"
+},
+{
+"target": "support.liferay.com",
+"type": "Url"
+},
+{
+"target": "marketplace.liferay.com",
+"type": "Url"
+},
+{
+"target": "console.liferay.cloud",
+"type": "Url"
+},
+{
+"target": "*.liferay.com",
+"type": "Wildcard"
+},
+{
+"target": "*.lxc.liferay.com",
+"type": "Wildcard"
+},
+{
+"target": "login.liferay.com",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "9a3f850e-4387-4434-98c7-dba2827b727b",
+"handle": "revolutvdp",
+"name": "Revolut VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "All domains of Revolut",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "9acf0f0e-f1c5-4b69-8f21-88458eb60009",
+"handle": "nxtportvdp",
+"name": "NxtPort VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.inboundrelease.com",
+"type": "Wildcard"
+},
+{
+"target": "*.certifiedpickup.com",
+"type": "Wildcard"
+},
+{
+"target": "*.nxtport.com",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "9b5d8125-aab2-4e21-95db-3ed543c003de",
+"handle": "dashlanevulnerabilitydisclosureprogram",
+"name": "Dashlane Vulnerability Disclosure Program",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.dashlane.com",
+"type": "Wildcard"
+},
+{
+"target": "Dashlane Mobile Applications",
+"type": "Other"
+},
+{
+"target": "Autofill and Autologin Functionality",
+"type": "Other"
+},
+{
+"target": "Dashlane Browser Extensions",
+"type": "Other"
+},
+{
+"target": "Dashlane Business and Enterprise Features",
+"type": "Other"
+},
+{
+"target": "Out of Scope",
+"type": "Other"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "9ef59fe8-d021-4d23-9521-0d7d01da03ee",
+"handle": "peoplecert",
+"name": "PeopleCert VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://hstconboarding.peoplecert.org/",
+"type": "Url"
+},
+{
+"target": "atv.peoplecert.org",
+"type": "Url"
+},
+{
+"target": "selt.languagecert.org",
+"type": "Url"
+},
+{
+"target": "www.languagecert.org",
+"type": "Url"
+},
+{
+"target": "www.peoplecert.org",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "9f7ba0be-8ccc-4995-8846-5bc93f573bce",
+"handle": "digi-vdp",
+"name": "DIGI Responsible Disclosure Program",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.digi.pt",
+"type": "Wildcard"
+},
+{
+"target": "*.digi.it",
+"type": "Wildcard"
+},
+{
+"target": "*.digimobil.it",
+"type": "Wildcard"
+},
+{
+"target": "*.digi-belgium.be",
+"type": "Wildcard"
+},
+{
+"target": "https://www.digi-belgium.be",
+"type": "Url"
+},
+{
+"target": "https://api.digi-belgium.be",
+"type": "Url"
+},
+{
+"target": "*.digimobil.es",
+"type": "Wildcard"
+},
+{
+"target": "https://digicampus.digimobil.es",
+"type": "Url"
+},
+{
+"target": "*.rcs-rds.ro",
+"type": "Wildcard"
+},
+{
+"target": "*.digi.ro",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "a09e497e-fd75-4b56-afa0-7a6689389b76",
+"handle": "e-tracker",
+"name": "e-tracker",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://etracker.bpost.cloud/pro",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "a5158346-5add-4916-bd31-d8a5fe1e805f",
+"handle": "usz-vdp",
+"name": "Universit\u00e4tsspital Z\u00fcrich VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.unispital.ch",
+"type": "Wildcard"
+},
+{
+"target": "*.usz.ch",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "a78e0210-4de1-4ced-8895-48ac98c3166d",
+"handle": "huisvesting",
+"name": "Housing Application (huisvestingsapp) Bug Bounty Program",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://www.kuleuven.be/sapredir/huisvesting",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "a80f638a-58a5-4f1c-a427-9d944cabd51a",
+"handle": "adacvulnerabilitydisclosureprogram",
+"name": "ADAC Vulnerability Disclosure Program",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "193.30.38.0/24",
+"type": "IpRange"
+},
+{
+"target": "193.30.37.0/24",
+"type": "IpRange"
+},
+{
+"target": "193.30.36.0/24",
+"type": "IpRange"
+}
+],
+"scope_out": [
+{
+"target": "all",
+"type": "Url"
+}
+],
+"submit_access": "account_required"
+},
+{
+"id": "acb632b9-2605-47ec-9195-3ffb2f0fcae6",
+"handle": "gulp",
+"name": "GULP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.gulp.ch",
+"type": "Wildcard"
+},
+{
+"target": "*.gulp.de",
+"type": "Wildcard"
+},
+{
+"target": "demo.tendertracker.de",
+"type": "Url"
+},
+{
+"target": "www.gulp-shop.de",
+"type": "Url"
+},
+{
+"target": "www.gulp.ch/forum/*",
+"type": "Wildcard"
+},
+{
+"target": "www.gulp.de/forum/*",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "ad2bd496-536c-4c24-b885-ce01d66966b9",
+"handle": "marionnaud",
+"name": "Marionnaud",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "www.marionnaud.fr",
+"type": "Url"
+},
+{
+"target": "Marionnaud France Android",
+"type": "Android"
+},
+{
+"target": "Marionnaud France iOS",
+"type": "iOS"
+},
+{
+"target": "app.marionnaud.fr",
+"type": "Url"
+},
+{
+"target": "media.marionnaud.fr",
+"type": "Url"
+},
+{
+"target": "api.marionnaud.fr",
+"type": "Url"
+},
+{
+"target": "ecom-data.marionnaud.fr",
+"type": "Url"
+},
+{
+"target": "jeux-concours.marionnaud.fr",
+"type": "Url"
+},
+{
+"target": "bdes-api.marionnaud.fr",
+"type": "Url"
+},
+{
+"target": "bdese.marionnaud.fr",
+"type": "Url"
+},
+{
+"target": "*.marionnaud.fr",
+"type": "Wildcard"
+},
+{
+"target": "*.marionnaud.es",
+"type": "Wildcard"
+},
+{
+"target": "*.marionnaud.paris",
+"type": "Wildcard"
+},
+{
+"target": "*.marionnaud.com",
+"type": "Wildcard"
+},
+{
+"target": "www.marionnaud.at",
+"type": "Url"
+},
+{
+"target": "Marionnaud Austria iOS",
+"type": "iOS"
+},
+{
+"target": "Marionnaud Austria Android",
+"type": "Android"
+},
+{
+"target": "app.marionnaud.at",
+"type": "Url"
+},
+{
+"target": "api.marionnaud.at",
+"type": "Url"
+},
+{
+"target": "media.marionnaud.at",
+"type": "Url"
+},
+{
+"target": "campaign.marionnaud.at",
+"type": "Url"
+},
+{
+"target": "ecom-data.marionnaud.at",
+"type": "Url"
+},
+{
+"target": "*.marionnaud.de",
+"type": "Wildcard"
+},
+{
+"target": "*.marionnaud.at",
+"type": "Wildcard"
+},
+{
+"target": "www.marionnaud.ch",
+"type": "Url"
+},
+{
+"target": "Marionnaud Switzerland iOS",
+"type": "iOS"
+},
+{
+"target": "Marionnaud Switzerland Android",
+"type": "Android"
+},
+{
+"target": "app.marionnaud.ch",
+"type": "Url"
+},
+{
+"target": "api.marionnaud.ch",
+"type": "Url"
+},
+{
+"target": "media.marionnaud.ch",
+"type": "Url"
+},
+{
+"target": "campaign.marionnaud.ch",
+"type": "Url"
+},
+{
+"target": "ecom-data.marionnaud.ch",
+"type": "Url"
+},
+{
+"target": "extranet.marionnaud.ch",
+"type": "Url"
+},
+{
+"target": "*.marionnaud.ch",
+"type": "Wildcard"
+},
+{
+"target": "www.marionnaud.it",
+"type": "Url"
+},
+{
+"target": "Marionnaud Italy iOS",
+"type": "iOS"
+},
+{
+"target": "Marionnaud Italy Android",
+"type": "Android"
+},
+{
+"target": "app.marionnaud.it",
+"type": "Url"
+},
+{
+"target": "api.marionnaud.it",
+"type": "Url"
+},
+{
+"target": "media.marionnaud.it",
+"type": "Url"
+},
+{
+"target": "campaign.marionnaud.it",
+"type": "Url"
+},
+{
+"target": "ecom-data.marionnaud.it",
+"type": "Url"
+},
+{
+"target": "*.marionnaud.it",
+"type": "Wildcard"
+},
+{
+"target": "www.marionnaud.hu",
+"type": "Url"
+},
+{
+"target": "Marionnaud Hungary iOS",
+"type": "iOS"
+},
+{
+"target": "Marionnaud Hungary Android",
+"type": "Android"
+},
+{
+"target": "media.marionnaud.hu",
+"type": "Url"
+},
+{
+"target": "api.marionnaud.hu",
+"type": "Url"
+},
+{
+"target": "app.marionnaud.hu",
+"type": "Url"
+},
+{
+"target": "ecom-data.marionnaud.hu",
+"type": "Url"
+},
+{
+"target": "campaign.marionnaud.hu",
+"type": "Url"
+},
+{
+"target": "*.marionnaud.hu",
+"type": "Wildcard"
+},
+{
+"target": "www.marionnaud.cz",
+"type": "Url"
+},
+{
+"target": "Marionnaud Czech Republic iOS",
+"type": "iOS"
+},
+{
+"target": "Marionnaud Czech Republic Android",
+"type": "Android"
+},
+{
+"target": "media.marionnaud.cz",
+"type": "Url"
+},
+{
+"target": "api.marionnaud.cz",
+"type": "Url"
+},
+{
+"target": "app.marionnaud.cz",
+"type": "Url"
+},
+{
+"target": "campaign.marionnaud.cz",
+"type": "Url"
+},
+{
+"target": "ecom-data.marionnaud.cz",
+"type": "Url"
+},
+{
+"target": "*.marionnaud.cz",
+"type": "Wildcard"
+},
+{
+"target": "www.marionnaud.ro",
+"type": "Url"
+},
+{
+"target": "Marionnaud Romania Android",
+"type": "Android"
+},
+{
+"target": "Marionnaud Romania iOS",
+"type": "iOS"
+},
+{
+"target": "api.marionnaud.ro",
+"type": "Url"
+},
+{
+"target": "app.marionnaud.ro",
+"type": "Url"
+},
+{
+"target": "media.marionnaud.ro",
+"type": "Url"
+},
+{
+"target": "campaign.marionnaud.ro",
+"type": "Url"
+},
+{
+"target": "*.marionnaud.ro",
+"type": "Wildcard"
+},
+{
+"target": "www.marionnaud.sk",
+"type": "Url"
+},
+{
+"target": "Marionnaud Slovakia iOS",
+"type": "iOS"
+},
+{
+"target": "Marionnaud Slovakia Android",
+"type": "Android"
+},
+{
+"target": "media.marionnaud.sk",
+"type": "Url"
+},
+{
+"target": "app.marionnaud.sk",
+"type": "Url"
+},
+{
+"target": "api.marionnaud.sk",
+"type": "Url"
+},
+{
+"target": "campaign.marionnaud.sk",
+"type": "Url"
+},
+{
+"target": "*.marionnaud.sk",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "afaeab02-261f-486e-8a43-4dee76fccabb",
+"handle": "rivianbugbounty",
+"name": "Rivian Bug Bounty",
+"public": "Public",
+"bounty": true,
+"safe_harbour": false,
+"scope_in": [
+{
+"target": "https://business.rivian.com/api",
+"type": "Url"
+},
+{
+"target": "https://rivian.com/api/gql/content/graphql",
+"type": "Url"
+},
+{
+"target": "https://rivian.com/api/gql/gateway/graphql",
+"type": "Url"
+},
+{
+"target": "https://rivian.com/api/gql/orders/graphql",
+"type": "Url"
+},
+{
+"target": "*.rivian.com",
+"type": "Wildcard"
+},
+{
+"target": "Rivian iOS Application",
+"type": "iOS"
+},
+{
+"target": "basecamp.rivian.com",
+"type": "Url"
+},
+{
+"target": "Rivian Android Application",
+"type": "Android"
+},
+{
+"target": "rivian.com",
+"type": "Url"
+},
+{
+"target": "assets.rivian.com",
+"type": "Url"
+},
+{
+"target": "careers.rivian.com",
+"type": "Url"
+},
+{
+"target": "cloud.e.rivian.com",
+"type": "Url"
+},
+{
+"target": "demovehicles.rivian.com",
+"type": "Url"
+},
+{
+"target": "feedback.rivian.com",
+"type": "Url"
+},
+{
+"target": "internalshop.rivian.com",
+"type": "Url"
+},
+{
+"target": "media.rivian.com",
+"type": "Url"
+},
+{
+"target": "stories.rivian.com",
+"type": "Url"
+},
+{
+"target": "view.e.rivian.com",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "afc4415d-c004-4cf8-9a12-e0f18cde6db5",
+"handle": "wpenginebugbounty",
+"name": "WP Engine Bug Bounty",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://my.wpengine.com",
+"type": "Url"
+},
+{
+"target": "https://payments.wpengine.com",
+"type": "Url"
+},
+{
+"target": "*. advancedcustomfields.com",
+"type": "Wildcard"
+},
+{
+"target": "*. bettersearchreplace.com",
+"type": "Wildcard"
+},
+{
+"target": "*.deliciousbrains.com",
+"type": "Wildcard"
+},
+{
+"target": "*.localwp.com",
+"type": "Wildcard"
+},
+{
+"target": "*.nitropack.io",
+"type": "Wildcard"
+},
+{
+"target": "*.studiopress.com",
+"type": "Wildcard"
+},
+{
+"target": "*.wpengine.io",
+"type": "Wildcard"
+},
+{
+"target": "*.wpesvc.net",
+"type": "Wildcard"
+},
+{
+"target": "https://makeshift.film",
+"type": "Url"
+},
+{
+"target": "https://studiopress.blog",
+"type": "Url"
+},
+{
+"target": "https://torquemag.io",
+"type": "Url"
+},
+{
+"target": "https://velocitize.com",
+"type": "Url"
+},
+{
+"target": "marketing.nitropack.io",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "https://app.getflywheel.com",
+"type": "Url"
+},
+{
+"target": "https://getflywheel.com",
+"type": "Url"
+},
+{
+"target": "https://wpengine.com",
+"type": "Url"
+},
+{
+"target": "WP Engine-developed WordPress Plugins and Themes",
+"type": "Other"
+}
+],
+"submit_access": "account_required"
+},
+{
+"id": "afeb2624-ac2e-46bc-b078-b0e018baeb62",
+"handle": "cloudways",
+"name": "Cloudways by DigitalOcean",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "api.cloudways.com",
+"type": "Url"
+},
+{
+"target": "platform.cloudways.com",
+"type": "Url"
+},
+{
+"target": "unified.cloudways.com",
+"type": "Url"
+},
+{
+"target": "www.cloudways.com",
+"type": "Url"
+},
+{
+"target": "css-tricks.com",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "*.cloudways.com",
+"type": "Wildcard"
+},
+{
+"target": "developers.cloudways.com",
+"type": "Url"
+}
+],
+"submit_access": "account_required"
+},
+{
+"id": "b084e962-1d83-4bec-9d46-0f02c0f7bf88",
+"handle": "innogames",
+"name": "InnoGames",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "Elvenar",
+"type": "Other"
+},
+{
+"target": "Forge of Empires",
+"type": "Other"
+},
+{
+"target": "Grepolis",
+"type": "Other"
+},
+{
+"target": "Tribal Wars",
+"type": "Other"
+},
+{
+"target": "autodiscover.innogames.de",
+"type": "Url"
+},
+{
+"target": "exchange.innogames.de",
+"type": "Url"
+},
+{
+"target": "igjam.eu",
+"type": "Url"
+},
+{
+"target": "jamf.innogames.com",
+"type": "Url"
+},
+{
+"target": "mail.innogames.com",
+"type": "Url"
+},
+{
+"target": "newsroom.innogames.com",
+"type": "Url"
+},
+{
+"target": "pn.innogames.com",
+"type": "Url"
+},
+{
+"target": "slack.innogames.de",
+"type": "Url"
+},
+{
+"target": "typingmind.innogames.de",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "Backend/Non-Game",
+"type": "Other"
+}
+],
+"submit_access": "account_required"
+},
+{
+"id": "b1a1cbbb-f927-49d5-a9c8-2ea03a626270",
+"handle": "nexo",
+"name": "Nexo",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://platform.nexo.com/api/1/create_recurring_payment",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/api/1/exchange_order",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/api/1/exchange_request_quote",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/api/1/get_pay_to_card_fee",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/api/1/request_bwc_quote",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/api/1/request_capture_payment",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/api/1/request_crypto_withdrawal",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/api/1/request_pay_to_card",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/api/1/term/deposits/user/create",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/api/platform/exchange/v1/booster/quotes",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/api/platform/exchange/v2/booster/orders",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/api/platform/exchange/v2/exchange/orders",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/api/trading/advanced/facade/api/v1/deposit",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/api/trading/advanced/facade/api/v1/fees",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/api/trading/advanced/facade/api/v1/order/futures",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/api/trading/advanced/facade/api/v1/withdraw",
+"type": "Url"
+},
+{
+"target": "https://nexo.com/",
+"type": "Url"
+},
+{
+"target": "https://platform.nexo.com/",
+"type": "Url"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "b1be2cd1-cb7c-4456-86f4-8e541955a51a",
+"handle": "theperfumeshop",
+"name": "The Perfume Shop",
+"public": "Public",
+"bounty": true,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "www.theperfumeshop.com",
+"type": "Url"
+},
+{
+"target": "app.theperfumeshop.com",
+"type": "Url"
+},
+{
+"target": "api.theperfumeshop.com",
+"type": "Url"
+},
+{
+"target": "media.theperfumeshop.com",
+"type": "Url"
+},
+{
+"target": "The Perfume Shop Android",
+"type": "Android"
+},
+{
+"target": "The Perfume Shop iOS",
+"type": "iOS"
+},
+{
+"target": "campaign.theperfumeshop.com",
+"type": "Url"
+},
+{
+"target": "campaigns.theperfumeshop.com",
+"type": "Url"
+},
+{
+"target": "ecom-data.theperfumeshop.com",
+"type": "Url"
+},
+{
+"target": "*.theperfumeshop.com",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "b1d83f6f-c8a6-4082-8a86-59aa27850d06",
+"handle": "toastvdp",
+"name": "Toast VDP",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "All Toast's Android Apps",
+"type": "Android"
+},
+{
+"target": "All Toast's iOS Apps",
+"type": "iOS"
+},
+{
+"target": "*.toasttab.com",
+"type": "Wildcard"
+},
+{
+"target": "*.xtrachef.com",
+"type": "Wildcard"
+},
+{
+"target": "*.getsling.com",
+"type": "Wildcard"
+},
+{
+"target": "*.delphidisplay.com",
+"type": "Wildcard"
+},
+{
+"target": "*.toasttakeout.com",
+"type": "Wildcard"
+},
+{
+"target": "*.phrasingpro3.com",
+"type": "Wildcard"
+},
+{
+"target": "*.rallyforrestaurants.com",
+"type": "Wildcard"
+},
+{
+"target": "*.estratex.com",
+"type": "Wildcard"
+},
+{
+"target": "*.toast.org",
+"type": "Wildcard"
+},
+{
+"target": "*.rallyforrestaurants.org",
+"type": "Wildcard"
+},
+{
+"target": "*.rallyforrestaurant.com",
+"type": "Wildcard"
+},
+{
+"target": "*.ibizdna.com",
+"type": "Wildcard"
+},
+{
+"target": "*.rallyforestaurants.com",
+"type": "Wildcard"
+}
+],
+"scope_out": [],
+"submit_access": "account_required"
+},
+{
+"id": "b2049472-b637-49c3-b9cc-077c676f093c",
+"handle": "randstad",
+"name": "Randstad",
+"public": "Public",
+"bounty": false,
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "grizzlyforce.com",
+"type": "Url"
+},
+{
+"target": "*.randstad.in",
+"type": "Wildcard"
+},
+{
+"target": "*.randstadrisesmart.*",
+"type": "Wildcard"
+},
+{
+"target": "*.risesmart.*",
+"type": "Wildcard"
+},
+{
+"target": "Any related Randstad domain",
+"type": "Other"
+},
+{
+"target": "apps.randstad.in",
+"type": "Url"
+},
+{
+"target": "cz.randstad.com",
+"type": "Url"
+},
+{
+"target": "workplace.randstad.in",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "*.randstad.*",
+"type": "Wildcard"
+}
+],
+"submit_access": "account_required"
 }
 ]

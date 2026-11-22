@@ -1,49 +1,40 @@
 # VDP dataset changes, 2026-11-22
 
-Programs: 30150 total, 28181 not in any known list, 737 on a bounty platform.
+Programs: 30184 total, 28215 not in any known list, 737 on a bounty platform.
 
-## New programs (19)
+## New programs (17)
 
-- `bitdegree.org` bitdegree.org -> []
-- `bt.se` bt.se -> ['security@bonniernews.se']
-- `cabanova.com` cabanova.com -> ['info@cabanova.com']
-- `counselear.com` counselear.com -> https://counselear.com/Controls/Pages/Public/Index.aspx?page=Auth/Security
-- `esl.com` esl.com -> []
-- `findmespot.com` findmespot.com -> ['VulnerabilityReport@globalstar.com']
-- `igraal.com` igraal.com -> https://atolls.com/disclosure-policy
-- `jobup.ch` jobup.ch -> ['security@jobcloud.ch']
-- `menorca.info` menorca.info -> ['bvidal@gmail.com', 'tomeu@ultimahora.es']
-- `modelbazar.cz` modelbazar.cz -> ['info@modelbazar.cz']
-- `momentumtelecom.com` momentumtelecom.com -> ['security@gomomentum.com']
-- `myclimate.org` myclimate.org -> https://www.myclimate.org/en/security
-- `notino.es` notino.es -> https://www.notino.com/bug-bounty.html
-- `opentracker.xyz` opentracker.xyz -> ['root@opentrackr.org']
-- `photocircleapp.com` photocircleapp.com -> https://www.photocircleapp.com/trust/
-- `seoghoer.dk` seoghoer.dk -> ['cybersec@aller.com']
-- `southwark.gov.uk` southwark.gov.uk -> https://github.com/ukncsc/Vulnerability-Disclosure/blob/master/UK-Government-Vulnerability-Disclosure-Policy.md
-- `tele2.lt` tele2.lt -> ['reportsecurity@tele2.com']
-- `wingo.ch` wingo.ch -> https://github.com/swisscom/bugbounty
+- `airbnb.co.nz` airbnb.co.nz -> https://hackerone.com/airbnb#overview
+- `deno.land` deno.land -> https://deno.com/deploy/docs/security
+- `fasebj.org` fasebj.org -> ['security@wiley.com']
+- `jeugdjournaal.nl` jeugdjournaal.nl -> https://over.nos.nl/organisatie/melden-zwakke-ict-plekken
+- `kitaplus.de` kitaplus.de -> ['security@npo-applications.de']
+- `medpex.de` medpex.de -> https://www.medpex.de/ueber-uns/cyber-sicherheit
+- `nederlandwereldwijd.nl` nederlandwereldwijd.nl -> https://www.ncsc.nl/dienstverlening/kwetsbaarheid-melden-cvd
+- `nocowanie.pl` nocowanie.pl -> ['soc@grupawp.pl']
+- `nordpoolgroup.com` nordpoolgroup.com -> ['infosecdefensecsirt@euronext.com', 'security.incident@euronext.com']
+- `nvwa.nl` nvwa.nl -> https://www.ncsc.nl/dienstverlening/kwetsbaarheid-melden-cvd
+- `santos.com` santos.com -> https://bugcrowd.com/santos-vdp
+- `satakunnankansa.fi` satakunnankansa.fi -> https://www.sanoma.com/en/responsible-disclosure-statement/
+- `siemensgamesa.com` siemensgamesa.com -> https://new.siemens.com/global/en/products/services/cert/vulnerability-process.html
+- `timeanddate.de` timeanddate.de -> https://hackerone.com/timeanddate
+- `tinyfish.ai` tinyfish.ai -> https://www.tinyfish.ai/security/vulnerability-disclosure-policy.txt
+- `tmbi.com` tmbi.com -> ['security.reports@tmbi.com']
+- `torproject.net` torproject.net -> https://gitlab.torproject.org/tpo/core/team/-/wikis/NetworkTeam/SecurityPolicy
 
 ## Removed (0)
 
 
-## Changed (18)
+## Changed (11)
 
-- `ably.com`: expiry, expires_on, sources
-- `aebn.net`: expiry, sources
-- `barnardos.org.uk`: expiry, sources
-- `bromangroup.fi`: expiry, expires_on, sources
-- `cougarboard.com`: expiry, sources
-- `fh-dortmund.de`: expiry, expires_on, sources
-- `fuqer.com`: expiry, expires_on, sources
-- `glic.com`: expiry, sources
-- `kabu.com`: expiry, expires_on, sources
-- `mobilitydirect.com`: expiry, expires_on, sources
-- `mtech.edu`: expiry, sources
-- `pensionsmyndigheten.se`: expiry, expires_on, sources
-- `phantombuster.com`: expiry, expires_on, sources
-- `pix4d.com`: expiry, expires_on, sources
-- `sevdesk.de`: expiry, sources
-- `sg.ch`: expiry, expires_on, sources
-- `supermetrics.com`: expiry, expires_on, sources
-- `zerodayinitiative.com`: expiry, expires_on, sources
+- `askjan.org`: expiry, sources
+- `axiell.com`: policy, expiry, expires_on, sources
+- `celsoazevedo.com`: expiry, sources
+- `elhacker.net`: expiry, expires_on, sources
+- `eo.nl`: policy, expiry, expires_on, sources
+- `internet.nl`: expiry, expires_on, sources
+- `osu.cz`: expiry, expires_on, sources
+- `qubes-os.org`: expiry, expires_on, sources
+- `radboudumc.nl`: expiry, expires_on, sources
+- `storiesonline.net`: expiry, sources
+- `uptrends.com`: expiry, expires_on, sources

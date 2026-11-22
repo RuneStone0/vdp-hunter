@@ -125,7 +125,8 @@ def main() -> int:
             continue
         try:
             detail = call(f"/programs/{rec['id']}")
-        except urllib.error.HTTPError:
+        except (urllib.error.HTTPError, urllib.error.URLError):
+            # a transient DNS failure should skip too, not kill the whole pass
             skipped.append(rec["id"])
             continue
         ins, outs = scope_of(detail)
