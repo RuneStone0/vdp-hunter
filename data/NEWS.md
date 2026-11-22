@@ -1,222 +1,37 @@
-# VDP dataset changes, 2026-11-21
+# VDP dataset changes, 2026-11-22
 
-Programs: 30083 total, 28114 not in any known list, 737 on a bounty platform.
+Programs: 30118 total, 28149 not in any known list, 737 on a bounty platform.
 
-## New programs (13)
+## New programs (15)
 
-- `barometern.se` barometern.se -> ['security@bonniernews.se']
-- `cafepress.com.au` cafepress.com.au -> ['security-bugreports@planetart.com']
-- `decathlon.hu` decathlon.hu -> https://vdp.decathlon.net
-- `demandforce.com` demandforce.com -> []
-- `gettyimages.fi` gettyimages.fi -> ['security@gettyimages.com']
-- `httrack.com` httrack.com -> https://github.com/xroche/httrack/blob/master/SECURITY.md
-- `hubspot.fr` hubspot.fr -> https://hackerone.com/hubspot
-- `kristianstadsbladet.se` kristianstadsbladet.se -> ['security@bonniernews.se']
-- `mediastorehouse.co.uk` mediastorehouse.co.uk -> ['sales@mediastorehouse.com']
-- `responsivevoice.org` responsivevoice.org -> https://github.com/responsivevoice/.github/blob/main/SECURITY.md
-- `snapeda.com` snapeda.com -> https://snapmagic.com/security-policy
-- `turing.ac.uk` turing.ac.uk -> https://www.turing.ac.uk/turing-policy-statement-legal/vulnerability-disclosure-policy
-- `webnode.jp` webnode.jp -> https://www.webnode.com/.well-known/security-policy.html
+- `blackwellpublishing.com` blackwellpublishing.com -> ['security@wiley.com']
+- `browser-use.com` browser-use.com -> https://browser-use.com/security/soc2
+- `carrentals.com` carrentals.com -> https://www.expediagroup.com/about/privacy-data-handling-requirements/
+- `expressilustrowany.pl` expressilustrowany.pl -> ['secvul@polskapress.pl']
+- `flashscore.dk` flashscore.dk -> https://bugbounty.livesport.eu/#rules
+- `flashscore.se` flashscore.se -> https://bugbounty.livesport.eu/#rules
+- `flixbus.it` flixbus.it -> https://global.flixbus.com/responsible-disclosure
+- `gettyimages.no` gettyimages.no -> ['security@gettyimages.com']
+- `jobseeker.com` jobseeker.com -> ['support@resumedia.com']
+- `l1nieuws.nl` l1nieuws.nl -> https://www.regiogroei.nl/responsible-disclosure
+- `mobileworldlive.com` mobileworldlive.com -> https://www.mobileworldlive.com/legal/
+- `precisely.com` precisely.com -> https://support.precisely.com/vulnerability-disclosure-program/
+- `racingjunk.com` racingjunk.com -> []
+- `teladoc.com` teladoc.com -> ['responsibledisclosure@teladochealth.com']
+- `xn--5-wxfs4ab4gvepc.com` xn--5-wxfs4ab4gvepc.com -> ['admin@xn--l3cmwb9e3d4b.com']
 
-## Removed (98)
+## Removed (0)
 
-- `*skybet.com` Sky UK/ROI Vulnerability Disclosure Program -> []
-- `\zdassets.com` Zendesk Managed Bug Bounty Engagement -> []
-- `ably.io` ably.io -> []
-- `ac.at` ac.at -> ['security.zid@univie.ac.at']
-- `all nvidia assets are in scope! including nvidia.com` NVIDIA Vulnerability Disclosure Program -> []
-- `amazonaws.com` amazonaws.com -> https://vdp.aws.security/
-- `apptracker.stream` yourdomain -> https://apptracker.stream/.well-known/security.txt
-- `atlassian.net` atlassian.net -> https://www.atlassian.com/trust/security/report-a-vulnerability
-- `aws.com` aws.com -> https://vdp.aws.security/
-- `berlin.de` berlin.de -> https://www.berlin.de/wir-ueber-uns/security
-- `biblegateway.com` biblegateway.com -> []
-- `blockchain.info` blockchain.info -> https://bugcrowd.com/engagements/blockchain-dot-com https://hackenproof.com/programs/blockchain-dot-com
-- `bloomberg.com` bloomberg.com -> https://www.bloomberg.com/responsible-disclosure
-- `bluefolder.com` Full Steam -> https://bluefolder.com/bug-bounty-policy
-- `bund.de` bund.de -> [' support-bundesportal@bdr.de']
-- `callsign_com` Callsign -> []
-- `celtra.com` celtra.com -> https://support.celtra.com/vulnerability-disclosure-program
-- `chewy.com` chewy.com -> ['programs@inspectiv.com']
-- `clara.net` clara.net -> ['security@claranet.com']
-- `clerk.com` clerk.com -> https://clerk.com/docs/guides/how-clerk-works/security/vulnerability-disclosure-policy
-- `codeberg.org` codeberg.org -> https://codeberg.org/forgejo/governance/src/branch/main/SECURITY-POLICY.md
-- `com as included in tencent.com)` Tencent Bug Bounty Program -> []
-- `com.np` com.np -> https://g.co/vrp
-- `denieuwegalerie.nl` stiphosting -> https://denieuwegalerie.nl/.well-known/security.txt
-- `dhl.de` dhl.de -> https://www.dpdhl.com/en/sustainability/governance/cyber-security/vulnerability-disclosure-policy.html
-- `dictionary.com` dictionary.com -> ['vdp@ixl.com']
-- `directadmin.com` directadmin.com -> ['security@directadmin.com']
-- `discord.com` discord.com -> https://discord.com/security
-- `dmcdn.net` dmcdn.net -> https://faq.dailymotion.com/hc/en-us/p/vulnerability-disclosure
-- `dolap.com` Trendyol -> []
-- `drmgms.com` drmgms.com -> ['cybersecurity@dreamgames.com']
-- `economictimes.com` economictimes.com -> https://timesinternet.in/responsible-disclosure/policy.html
-- `fafovabouda.cz` seznam -> https://fafovabouda.cz/.well-known/security.txt
-- `fidentity.ch` gobugfree -> https://fidentity.ch/.well-known/security.txt
-- `flic.kr` flic.kr -> []
-- `free.fr` free.fr -> []
-- `fubo.tv` fubo.tv -> ['secops@fubo.tv']
-- `google.at` google.at -> https://g.co/vrp
-- `google.be` google.be -> https://g.co/vrp
-- `google.ch` google.ch -> https://g.co/vrp
-- `google.co.il` google.co.il -> https://g.co/vrp
-- `google.co.ke` google.co.ke -> https://g.co/vrp
-- `google.co.nz` google.co.nz -> https://g.co/vrp
-- `google.com.ng` google.com.ng -> https://g.co/vrp
-- `grafana.net` grafana.net -> https://grafana.com/legal/report-a-security-issue/
-- `granola.ai` granola.ai -> ['security@granola.so']
-- `grizzlyforce.com` Randstad -> []
-- `guardian.co.uk` guardian.co.uk -> ['appsec@theguardian.com']
-- `hackerone-ext-content.com` HackerOne -> []
-- `handelsblatt.com` handelsblatt.com -> ['security@handelsblattgroup.com']
-- `hoster.kz` hoster.kz -> ['security@hoster.kz']
-- `hubspot.net` hubspot.net -> https://hackerone.com/hubspot
-- `igjam.eu` InnoGames -> []
-- `iinet.net.au` iinet.net.au -> ['vulnerability@tpgtelecom.com.au']
-- `immobilienscout24.de` immobilienscout24.de -> Contact us if you have found a security vulnerability in our platform and we will invite you to our bug bounty program.
-- `iqoption.com` QC VDP -> []
-- `kia.com` kia.com -> []
-- `kiteworks desktop client 2.0` Kiteworks Public Bug Bounty Program -> []
-- `kontur.ru` kontur.ru -> https://security.kontur.ru
-- `life360.com` life360.com -> ['responsibledisclosure@life360.com']
-- `myfitnesspal.com` myfitnesspal.com -> https://bugcrowd.com/engagements/myfitnesspal-mbb
-- `news.com.au` news.com.au -> https://newscorp.com/vulnerability-disclosure-policy/
-- `nexuzhealth.com` Nexuzhealth VDP -> []
-- `nhs.uk` nhs.uk -> []
-- `notify.gov` Gsa -> https://beta.notify.gov/.well-known/security.txt
-- `onet.pl` onet.pl -> ['abuse@ringieraxelspringer.pl']
-- `opera-mini.net` opera-mini.net -> https://security.opera.com/policy/
-- `orange.fr` orange.fr -> []
-- `permutive.app` permutive.app -> []
-- `porovnajto.sk` Srovnejto -> https://www.porovnajto.sk/security-policy.txt
-- `porovnej24.cz` Srovnejto.cz -> https://www.porovnej24.cz/security-policy.txt
-- `porsche.com` porsche.com -> https://www.porsche.com/international/information-security/
-- `protocol of the swiss post voting system 2.0 (whitepaper)` Swiss Post - E-Voting -> []
-- `redditmedia.com` redditmedia.com -> https://hackerone.com/reddit?type=team
-- `resume.com` resume.com -> https://www.indeed.com/legal?hl=en&from=gnav-homepage#ivrp
-- `rule34.xxx` rule34.xxx -> ['staff@booru.org']
-- `sbis.ru` sbis.ru -> ['security@tensor.ru']
-- `servidoresdns.net` servidoresdns.net -> https://www.arsys.net/it-security
-- `sfr.fr` sfr.fr -> []
-- `simscale.com` SimScale -> []
-- `skylinewebcams.com` skylinewebcams.com -> ['security@visioray.com']
-- `snowflakecomputing.com` snowflakecomputing.com -> https://hackerone.com/snowflake
-- `sonomacleanpower.org` The Engine is Red -> https://sonomacleanpower.org/security-policy
-- `srovnejto.cz` Srovnejto (srovnejto.cz) -> https://www.srovnejto.cz/security-policy.txt
-- `superawesome.tv` superawesome.tv -> ['information.security@superawesome.com']
-- `thuisbezorgd.nl` Just Eat Takeaway.com -> []
-- `ubisoft.com` Ubisoft Responsible Disclosure Program -> []
-- `uni-erlangen.de` uni-erlangen.de -> ['abuse@fau.de']
-- `urbanairship.com` urbanairship.com -> https://www.airship.com/legal/full-disclosure-security-policy/
-- `vinted.de` vinted.de -> []
-- `vrbo.com` vrbo.com -> https://www.expediagroup.com/about/privacy-data-handling-requirements/
-- `vtex.com` vtex.com -> https://vtex.com/.well-known/security-disclosure-policy.txt
-- `walkme.com` walkme.com -> https://www.walkme.com/bug-bounty-program/
-- `web.com` Web.com Bug Bounty -> []
-- `wikibooks.org` wikibooks.org -> https://www.mediawiki.org/wiki/Reporting_security_bugs
-- `wp.pl` wp.pl -> ['soc@grupawp.pl']
-- `wunderground.com` wunderground.com -> ['security-report@weather.com']
-- `yourdomain.com` Aviacms -> https://yourdomain.com/security-policy
 
-## Changed (99)
+## Changed (10)
 
-- `abb.com`: sources
-- `acast.com`: expiry, expires_on, sources
-- `administrator.technology`: sources
-- `alibaba.com`: sources
-- `apnic.net`: expiry, sources
-- `bbc.com`: sources
-- `bit.ly`: expiry, sources
-- `bitdefender.com`: sources
-- `blockchain.com`: sources
-- `boeing.com`: expiry, expires_on, sources
-- `ca.gov`: expiry, expires_on, sources
-- `chocolatey.org`: sources
-- `cisa.gov`: expiry, expires_on, sources
-- `citrix.com`: expiry, sources
-- `clerk.dev`: expiry, expires_on, sources
-- `co.ve`: expiry, sources
-- `com.ec`: expiry, sources
-- `crunchbase.com`: expiry, sources
-- `dentrix.com`: sources
-- `dinahosting.com`: expiry, sources
-- `dns.services`: expiry, expires_on, sources
-- `drweb.com`: expiry, sources
-- `eclipse.org`: sources
-- `electro.pl`: expiry, expires_on, sources
-- `elevenlabs.io`: expiry, expires_on, sources
-- `eveonline.com`: sources
-- `fanduel.com`: expiry, sources
-- `fastmail.com`: sources
-- `feetfinder.com`: policy, expiry, expires_on, sources
-- `folloze.com`: expiry, expires_on, sources
-- `fotmob.com`: expiry, expires_on, sources
-- `fotoforensics.com`: sources
-- `fr.ch`: expiry, expires_on, sources
-- `franceinfo.fr`: expiry, expires_on, sources
-- `fullstory.com`: expiry, expires_on, sources
-- `g.co`: sources
-- `gog.com`: expiry, sources
-- `goneo.de`: expiry, expires_on, sources
-- `gov.bd`: expiry, expires_on, sources
-- `greenhouse.io`: expiry, expires_on, sources
-- `gsa.gov`: sources
-- `harman.com`: expiry, sources
-- `heise.de`: expiry, expires_on, sources
-- `homewizard.com`: expiry, expires_on, sources
-- `honest.co.id`: sources
-- `hubspot.com`: expires_on
-- `immich.app`: policy, expiry, expires_on, sources
-- `infomaniak.com`: expiry, sources
-- `joomla.org`: expiry, sources
-- `juntadeandalucia.es`: expiry, sources
-- `karaca.com`: expiry, expires_on, sources
-- `kroger.com`: expiry, sources
-- `mediawiki.org`: expiry, expires_on, sources
-- `midas.network`: sources
-- `moz.com`: expiry, sources
-- `muenchen.de`: expiry, expires_on, sources
-- `netgate.com`: expiry, sources
-- `newscorp.com`: expiry, expires_on, sources
-- `otto.de`: sources
-- `pa.gov`: sources
-- `paddle.com`: sources
-- `picsart.com`: expiry, expires_on, sources
-- `purple.ai`: sources
-- `qualys.com`: expiry, sources
-- `radiometer.com`: sources
-- `rakuten.co.jp`: expiry, expires_on, sources
-- `rea-group.com`: sources
-- `rewind.com`: sources
-- `robeco.com`: sources
-- `sardine.ai`: expiry, expires_on, sources
-- `service-public.fr`: expiry, expires_on, sources
-- `seznam.cz`: sources
-- `sfr.com`: expiry, sources
-- `sophos.com`: expiry, sources
-- `spaceweatherlive.com`: expiry, expires_on, sources
-- `sprinklr.com`: expiry, expires_on, sources
-- `studocu.com`: expiry, sources
-- `sulzer.com`: expiry, expires_on, sources
-- `tagesspiegel.de`: expiry, expires_on, sources
-- `telekom.com`: expiry, expires_on, sources
-- `tenable.com`: expiry, expires_on, sources
-- `tensquaregames.com`: expiry, expires_on, sources
-- `theknot.com`: expiry, sources
-- `tidio.com`: sources
-- `tryprofound.com`: policy, expiry, expires_on, sources
-- `tutu.ru`: expiry, sources
-- `tvprofil.com`: sources
-- `typeform.com`: sources
-- `ucsc.edu`: expiry, expires_on, sources
-- `united-domains.de`: expiry, expires_on, sources
-- `upwork.com`: policy, expiry, expires_on, sources
-- `walgreens.com`: expiry, expires_on, sources
-- `watchguard.com`: expiry, expires_on, sources
-- `web.de`: expiry, sources
-- `websupport.sk`: expiry, sources
-- `wikipedia.org`: sources
-- `yle.fi`: expiry, expires_on, sources
-- `zendesk.com`: sources
-- `zhaw.ch`: expiry, expires_on, sources
+- `bundespolizei.de`: expiry, expires_on, sources
+- `heymarket.com`: expiry, expires_on, sources
+- `kitabisa.com`: expiry, expires_on, sources
+- `krones.com`: expiry, expires_on, sources
+- `metalstorm.net`: expiry, expires_on, sources
+- `natuurmonumenten.nl`: expiry, expires_on, sources
+- `onedoc.ch`: expiry, sources
+- `txst.edu`: expiry, expires_on, sources
+- `vipps.no`: expiry, expires_on, sources
+- `wpprovider.nl`: policy, expiry, expires_on, sources

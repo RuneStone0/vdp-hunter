@@ -384,6 +384,10 @@ def render(name: str, extra: dict | None = None) -> HTMLResponse:
     for source in ("securitytxt", "hackerone", "bugcrowd", "intigriti", "yeswehack",
                    "disclose-directory", "diodb", "czds"):
         values.setdefault(f"{{{{src_{source}}}}}", "0")
+    # the Tranco crawl and the CZDS sweep are the same thing to a reader: a crawl that
+    # found a policy. One row, one number, or the table double-counts the same find.
+    by_source = st.get("by_source") or {}
+    values["{{src_securitytxt}}"] = f"{by_source.get('securitytxt', 0) + by_source.get('czds', 0):,}"
     values.update(extra or {})
     for k, v in values.items():
         html = html.replace(k, str(v))

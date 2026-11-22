@@ -5,8 +5,41 @@
 "name": "Canada Post - Responsible Disclosure Program",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.canadapost.ca",
+"type": "Wildcard"
+},
+{
+"target": "*.aws.canadapost-postescanada.ca",
+"type": "Wildcard"
+},
+{
+"target": "*.azcpggpc.ca",
+"type": "Wildcard"
+},
+{
+"target": "*.canadapost-postescanada.ca",
+"type": "Wildcard"
+},
+{
+"target": "*.infopost.ca",
+"type": "Wildcard"
+},
+{
+"target": "*.postescanada-canadapost.ca",
+"type": "Wildcard"
+},
+{
+"target": "394391577",
+"type": "iOS"
+},
+{
+"target": "com.canadapost.android",
+"type": "Android"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -16,8 +49,13 @@
 "name": "VDP",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "www.showpad.com",
+"type": "Url"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -27,42 +65,655 @@
 "name": "The Coca-Cola Company Vulnerability Disclosure Program",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "Brand Sites",
+"type": "Other"
 },
 {
-"id": "03cf1a7b-fffb-491e-9161-6d967714a284",
-"handle": "gantner",
-"name": "Enviso Ticketing",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
+"target": "Corporate Sites",
+"type": "Url"
 },
 {
-"id": "04aab402-3eb7-41b8-b146-b9344efc89ce",
-"handle": "captureourflag",
-"name": "Capture Our Flag",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
+"target": "*.fairlife.com",
+"type": "Wildcard"
 },
 {
-"id": "053d0a3d-0513-4749-a16b-337ff49422ff",
-"handle": "ideals",
-"name": "Ideals Bug Bounty Program",
-"public": "Application",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
+"target": "*.fofbrands.com",
+"type": "Wildcard"
+},
+{
+"target": "*.goodcow.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.nl",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentcoconutwater.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.werkenbijinnocentdrinks.nl",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent-wiesenwildnis.de",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.com.pt",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent-wilde-wiesen.at",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentfoundation.org",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentofficeparty.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.london",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent-wiesenwildnis.at",
+"type": "Wildcard"
+},
+{
+"target": "*.theinnocentbiggrow.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.de",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.es",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentvildmednatur.dk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsmoothies.dk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.gr",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentinternational.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.no",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.com.tw",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsowandgrow.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentnoodlepots.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentvegjuice.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.lu",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentgrandcoupdepousse.be",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentbiggrow.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentunplugged.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.eu",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentbigrewild.ie",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.se",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.me",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.co",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsmoothies.at",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.net.cn",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.ie",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsmoothies.org.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentgreenhouse.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.com.es",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.lu",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.fr",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsmoothies.be",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentshop.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentgrandeclasseverte.be",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.is",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentkids.ie",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.se",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsmoothies.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentvegpots.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.ru",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.mt",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentgreenfriends.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent-drinks.ch",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentfruitandveg.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.sg",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentbigrewild.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.com.gr",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent-wiesenwildnis.ch",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsecretsanta.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.jp",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent-international.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentcoconutwater.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.hu",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent-unplugged.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.com.pt",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.sk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsmoothies.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.xxx",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.cn",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentkids.nl",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentcoldpressed.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.vip",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentjuicystuff.jp",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentfruitandveg.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentgroenevrienden.nl",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentvegjuice.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsmoothies.xxx",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsmoothies.ch",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.kr",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent-wilde-wiesen.ch",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.pt",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsmoothies.ie",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.co.me",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.asia",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.fi",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent-wilde-wiesen.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsupersmoothies.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.pl",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsmoothies.se",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent-bees.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentkids.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsmoothies.de",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentunplugged.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.com.es",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.com.hk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.no",
+"type": "Wildcard"
+},
+{
+"target": "*.lafondationinnocent.fr",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.net",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.it",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent-wilde-wiesen.de",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentkids.fr",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent-unplugged.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.ie",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.cz",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsupersmoothie.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentbubbles.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.tv",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.tw",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.cz",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentkids.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentltd.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentfoundation.org.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.fr",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.at",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.com.pl",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.com.pl",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.co.kr",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.com.gr",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentbubbles.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.hk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentjokegenerator.com",
+"type": "Wildcard"
+},
+{
+"target": "*.theinnocentbigrewild.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.sk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentjuice.xxx",
+"type": "Wildcard"
+},
+{
+"target": "*.coupdepousseinnocent.fr",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentfruitandvegjuice.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentcoldpressed.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.info",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentvegpots.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.dk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsmoothies.nl",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent-sports.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent.asia",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.org.cn",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.ae",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.pl",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.be",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentgrotevergroening.be",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentfruitandvegjuice.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocent-wiesenwildnis.com",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsmoothies.co",
+"type": "Wildcard"
+},
+{
+"target": "*.theinnocentbigrewild.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentsmoothies.fr",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentdrinks.pt",
+"type": "Wildcard"
+},
+{
+"target": "*.innocentgrotevergroening.nl",
+"type": "Wildcard"
+},
+{
+"target": "Hindustan Coca-Cola Beverages",
+"type": "Other"
+},
+{
+"target": "Mobile Applications",
+"type": "Other"
+},
+{
+"target": "Publicly Facing Assets Related to The Coca-Cola Company",
+"type": "Other"
+},
+{
+"target": "Food and Beverage Dispensing Devices",
+"type": "Other"
+},
+{
+"target": "Coke One North America (CONA)",
+"type": "Other"
+},
+{
+"target": "limonsoda.cl",
+"type": "Url"
+},
+{
+"target": "*.ccnag.com",
+"type": "Wildcard"
+},
+{
+"target": "*.connect.coca-cola.com",
+"type": "Wildcard"
+},
+{
+"target": "*.crewconnect.coca-cola.com",
+"type": "Wildcard"
+},
+{
+"target": "All Coke Stores",
+"type": "Other"
+}
+],
+"scope_out": [
+{
+"target": "Assets Related to China",
+"type": "Other"
+}
+],
 "submit_access": "account_required"
 },
 {
@@ -71,20 +722,79 @@
 "name": "Lansweeper Bug Bounty Program",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "app.lansweeper.com",
+"type": "Url"
 },
 {
-"id": "096899f2-d734-4026-90f0-92b5b6ef23e4",
-"handle": "ubisoftgamesecbbp",
-"name": "Ubisoft Game Security BBP",
-"public": "Application",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
+"target": "fb.lansweeper.com",
+"type": "Url"
+},
+{
+"target": "edge.lansweeper.com",
+"type": "Url"
+},
+{
+"target": "api.lansweeper.com",
+"type": "Url"
+},
+{
+"target": "backoffice.lansweeper.com",
+"type": "Url"
+},
+{
+"target": "app.lansweeper.com/trial",
+"type": "Url"
+},
+{
+"target": "autoupdateapi.lansweeper.com",
+"type": "Url"
+},
+{
+"target": "docs.lansweeper.com",
+"type": "Url"
+},
+{
+"target": "login.lansweeper.com",
+"type": "Url"
+},
+{
+"target": "*.lansweeper.com",
+"type": "Wildcard"
+},
+{
+"target": "Lansweeper Classic",
+"type": "Other"
+},
+{
+"target": "Lansweeper Discovery",
+"type": "Url"
+},
+{
+"target": "https://lsagentrelay.lansweeper.com/",
+"type": "Url"
+},
+{
+"target": "lsrunase2.0 and lsencrypt2.0",
+"type": "Other"
+},
+{
+"target": "careers.lansweeper.com",
+"type": "Url"
+},
+{
+"target": "www.lansweeper.com/forum",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "www.lansweeper.com",
+"type": "Url"
+}
+],
 "submit_access": "account_required"
 },
 {
@@ -93,9 +803,19 @@
 "name": "Arm",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
+"safe_harbour": false,
+"scope_in": [
+{
+"target": "Firmware: Mali Command Stream Frontend (CSF) Firmware",
+"type": "Other"
+}
+],
+"scope_out": [
+{
+"target": "Software: Mali GPU Kernel Driver",
+"type": "Other"
+}
+],
 "submit_access": "account_required"
 },
 {
@@ -104,8 +824,53 @@
 "name": "Cards",
 "public": "InviteOnly",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "393730279",
+"type": "iOS"
+},
+{
+"target": "431213959",
+"type": "iOS"
+},
+{
+"target": "com.commonagency.moonpig.uk",
+"type": "Android"
+},
+{
+"target": "https://api.greetz.nl",
+"type": "Url"
+},
+{
+"target": "https://api.moonpig.com",
+"type": "Url"
+},
+{
+"target": "https://www.greetz.nl",
+"type": "Url"
+},
+{
+"target": "https://www.moonpig.com",
+"type": "Url"
+},
+{
+"target": "net.sharewire.greetz",
+"type": "Android"
+},
+{
+"target": "https://confluence.moonpig.com/",
+"type": "Url"
+},
+{
+"target": "https://jira.moonpig.com/",
+"type": "Url"
+},
+{
+"target": "www.support-*.moonpig.com",
+"type": "Wildcard"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -115,8 +880,137 @@
 "name": "BorgWarner Vulnerability Disclosure Program",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.borgwarner.com",
+"type": "Wildcard"
+},
+{
+"target": "*.turbodriven.com",
+"type": "Wildcard"
+},
+{
+"target": "*.sevcon.com",
+"type": "Wildcard"
+},
+{
+"target": "*.rhombusenergysolutions.com",
+"type": "Wildcard"
+},
+{
+"target": "*.morsetec.com",
+"type": "Wildcard"
+},
+{
+"target": "*.bwauto.com",
+"type": "Wildcard"
+},
+{
+"target": "*.borgwarnerchina.com",
+"type": "Wildcard"
+},
+{
+"target": "*.borgwarnerbenefits.com",
+"type": "Wildcard"
+},
+{
+"target": "*.borgwarner.it",
+"type": "Wildcard"
+},
+{
+"target": "*.borgwarner.dev",
+"type": "Wildcard"
+},
+{
+"target": "*.cascadiamotion.com",
+"type": "Wildcard"
+},
+{
+"target": "Battery Management Controllers",
+"type": "Device"
+},
+{
+"target": "On Board Battery Charger",
+"type": "Device"
+},
+{
+"target": "DC to DC Converter",
+"type": "Device"
+},
+{
+"target": "Battery Electric Vehicles (BEV) Traction Inverters",
+"type": "Device"
+},
+{
+"target": "Other Electronic Controllers",
+"type": "Device"
+},
+{
+"target": "Battery Electric Vehicle (BEV) Traction Integrated Drive Module (iDM)",
+"type": "Device"
+},
+{
+"target": "Engine/Transmission Controller",
+"type": "Device"
+},
+{
+"target": "Power Inverters",
+"type": "Device"
+},
+{
+"target": "High Voltage Coolant Heaters",
+"type": "Device"
+},
+{
+"target": "High Voltage eFAN Systems",
+"type": "Device"
+},
+{
+"target": "eBooster Electrically Driven Compressor",
+"type": "Device"
+},
+{
+"target": "Turbine Generator System",
+"type": "Device"
+},
+{
+"target": "eTurbo",
+"type": "Device"
+},
+{
+"target": "High Voltage Air Heaters",
+"type": "Device"
+},
+{
+"target": "Electric Torque Management Controllers",
+"type": "Device"
+},
+{
+"target": "Transfer Case Controllers",
+"type": "Device"
+},
+{
+"target": "Electric Variable Cam Timing Controllers",
+"type": "Device"
+},
+{
+"target": "AWD Coupling Controllers",
+"type": "Device"
+},
+{
+"target": "Axle Disconnect Controllers",
+"type": "Device"
+},
+{
+"target": "Sensor Cluster Controller",
+"type": "Device"
+},
+{
+"target": "Battery Management Controller",
+"type": "Device"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -126,8 +1020,157 @@
 "name": "Atolls Vulnerability Disclosure Program (VDP)",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": false,
+"scope_in": [
+{
+"target": "Mobile apps owned by Atolls companies",
+"type": "Other"
+},
+{
+"target": "shoop.de",
+"type": "Url"
+},
+{
+"target": "radins.com",
+"type": "Url"
+},
+{
+"target": "promodescuentos.com",
+"type": "Url"
+},
+{
+"target": "preisjaeger.at",
+"type": "Url"
+},
+{
+"target": "pepperdeals.se",
+"type": "Url"
+},
+{
+"target": "pepperdeals.com",
+"type": "Url"
+},
+{
+"target": "pepperbonus.com",
+"type": "Url"
+},
+{
+"target": "pepper.pl",
+"type": "Url"
+},
+{
+"target": "pepper.it",
+"type": "Url"
+},
+{
+"target": "pepper.com",
+"type": "Url"
+},
+{
+"target": "kortingscode.nl",
+"type": "Url"
+},
+{
+"target": "dealabs.com",
+"type": "Url"
+},
+{
+"target": "hotukdeals.com",
+"type": "Url"
+},
+{
+"target": "cuponation.se",
+"type": "Url"
+},
+{
+"target": "cuponation.no",
+"type": "Url"
+},
+{
+"target": "cuponation.it",
+"type": "Url"
+},
+{
+"target": "cuponation.fr",
+"type": "Url"
+},
+{
+"target": "cuponation.fi",
+"type": "Url"
+},
+{
+"target": "cuponation.es",
+"type": "Url"
+},
+{
+"target": "cuponation.dk",
+"type": "Url"
+},
+{
+"target": "cuponation.de",
+"type": "Url"
+},
+{
+"target": "cuponation.com.sg",
+"type": "Url"
+},
+{
+"target": "cuponation.com.my",
+"type": "Url"
+},
+{
+"target": "cuponation.com.mx",
+"type": "Url"
+},
+{
+"target": "cuponation.com.br",
+"type": "Url"
+},
+{
+"target": "cuponation.com.au",
+"type": "Url"
+},
+{
+"target": "cuponation.co.uk",
+"type": "Url"
+},
+{
+"target": "cuponation.co.nz",
+"type": "Url"
+},
+{
+"target": "cuponation.co.id",
+"type": "Url"
+},
+{
+"target": "cuponation.ch",
+"type": "Url"
+},
+{
+"target": "cuponation.at",
+"type": "Url"
+},
+{
+"target": "coupons.com",
+"type": "Url"
+},
+{
+"target": "couponation.com",
+"type": "Url"
+},
+{
+"target": "chollometro.com",
+"type": "Url"
+},
+{
+"target": "blogdechollos.es",
+"type": "Url"
+},
+{
+"target": "Atolls.com",
+"type": "Url"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -137,30 +1180,25 @@
 "name": "Fing Bug Bounty Program",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "service.fing.com",
+"type": "Url"
 },
 {
-"id": "0bcf5043-a086-4bfe-9542-4dc58c575b41",
-"handle": "wirelesslogic",
-"name": "Wireless Logic",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
+"target": "app.fing.com",
+"type": "Url"
 },
 {
-"id": "0caa10ae-b946-433c-9bdf-080a7588456d",
-"handle": "houseofhrpublic",
-"name": "House of HR",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
+"target": "Fing desktop",
+"type": "Url"
+},
+{
+"target": "www.fing.com*",
+"type": "Wildcard"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -170,8 +1208,121 @@
 "name": "Superdrug",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "www.superdrug.com",
+"type": "Url"
+},
+{
+"target": "Superdrug iOS",
+"type": "iOS"
+},
+{
+"target": "Superdrug Android",
+"type": "Android"
+},
+{
+"target": "api.superdrug.com",
+"type": "Url"
+},
+{
+"target": "media.superdrug.com",
+"type": "Url"
+},
+{
+"target": "app.superdrug.com",
+"type": "Url"
+},
+{
+"target": "campaign.superdrug.com",
+"type": "Url"
+},
+{
+"target": "community.superdrug.com",
+"type": "Url"
+},
+{
+"target": "ecom-data.superdrug.com",
+"type": "Url"
+},
+{
+"target": "videogp-api.superdrug.com",
+"type": "Url"
+},
+{
+"target": "healthclinics.superdrug.com",
+"type": "Url"
+},
+{
+"target": "innovation.superdrug.com",
+"type": "Url"
+},
+{
+"target": "onlinedoctor.superdrug.com",
+"type": "Url"
+},
+{
+"target": "onlinepharmacy.superdrug.com",
+"type": "Url"
+},
+{
+"target": "videogp.superdrug.com",
+"type": "Url"
+},
+{
+"target": "app.pharmacy.superdrug.com",
+"type": "Url"
+},
+{
+"target": "appt.healthclinics.superdrug.com",
+"type": "Url"
+},
+{
+"target": "www.superdrugmobile.com",
+"type": "Url"
+},
+{
+"target": "*.superdrug.com",
+"type": "Wildcard"
+},
+{
+"target": "www.savers.co.uk",
+"type": "Url"
+},
+{
+"target": "Savers iOS",
+"type": "iOS"
+},
+{
+"target": "Savers Android",
+"type": "Android"
+},
+{
+"target": "api.savers.co.uk",
+"type": "Url"
+},
+{
+"target": "media.savers.co.uk",
+"type": "Url"
+},
+{
+"target": "app.savers.co.uk",
+"type": "Url"
+},
+{
+"target": "campaign.savers.co.uk",
+"type": "Url"
+},
+{
+"target": "ecom-data.savers.co.uk",
+"type": "Url"
+},
+{
+"target": "*.savers.co.uk",
+"type": "Wildcard"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -181,8 +1332,37 @@
 "name": "Torfs",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "winkels.torfs.be",
+"type": "Url"
+},
+{
+"target": "www.schoenentorfs.be",
+"type": "Url"
+},
+{
+"target": "www.schoenentorfs.nl",
+"type": "Url"
+},
+{
+"target": "www.torfs.be",
+"type": "Url"
+},
+{
+"target": "www.torfs.nl",
+"type": "Url"
+},
+{
+"target": "www.samenfittorfs.be",
+"type": "Url"
+},
+{
+"target": "Any related Torfs domain",
+"type": "Other"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -192,8 +1372,33 @@
 "name": "SimScale",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "SimScale API",
+"type": "Other"
+},
+{
+"target": "SimScale Platform",
+"type": "Other"
+},
+{
+"target": "SimScale Forum",
+"type": "Other"
+},
+{
+"target": "SimScale Website",
+"type": "Other"
+},
+{
+"target": "https://www.simscale.com/api/v1/projects/*",
+"type": "Wildcard"
+},
+{
+"target": "www.simscale.com/forum/users/*.json",
+"type": "Wildcard"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -203,8 +1408,29 @@
 "name": "De Volkskrant",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "actie.volkskrant.nl",
+"type": "Url"
+},
+{
+"target": "myaccount.volkskrant.nl",
+"type": "Url"
+},
+{
+"target": "www.volkskrant.nl",
+"type": "Url"
+},
+{
+"target": "www.volkskrant.nl/abonnementen",
+"type": "Url"
+},
+{
+"target": "*.volkskrant.nl",
+"type": "Wildcard"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -214,8 +1440,241 @@
 "name": "Port of Antwerp-Bruges",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "188.118.8.0/25",
+"type": "IpRange"
+},
+{
+"target": "94.107.237.192/26",
+"type": "IpRange"
+},
+{
+"target": "login-test.portofantwerpbruges.com/",
+"type": "Url"
+},
+{
+"target": "api-accpt.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "api-accpt.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "api.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "api.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "apps-accpt.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "apps-accpt.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "apps.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "apps.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "digitalspecs.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "login-accpt.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "maximo-accpt.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "maximo-accpt.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "maximo.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "maximo.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "maximo.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "my-accpt.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "my-accpt.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "my.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "my.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "notula-accpt.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "oprc.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "register-accpt.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "register-accpt.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "servicedesk-accpt.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "servicedesk-accpt.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "servicedesk.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "servicedesk.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "share-accpt.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "share-accpt.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "share.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "share.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "webapps-accpt.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "webapps-accpt.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "webapps-test.portofantwerpbruges.com/xui",
+"type": "Url"
+},
+{
+"target": "webapps.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "webapps.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "wiki-accpt.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "wiki-accpt.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "wiki.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "wiki.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "www.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "erpx.unit4cloud.com/u4erx_pab_acp1",
+"type": "Url"
+},
+{
+"target": "erpx.unit4cloud.com/u4erx_pab_prev",
+"type": "Url"
+},
+{
+"target": "erpx.unit4cloud.com/u4erx_pab_prod",
+"type": "Url"
+},
+{
+"target": "*.portofantwerp.com",
+"type": "Wildcard"
+},
+{
+"target": "*.portofantwerpbruges.com",
+"type": "Wildcard"
+},
+{
+"target": "future.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "future.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "jobs.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "jobs.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "media.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "media.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "register.portofantwerp.com",
+"type": "Url"
+},
+{
+"target": "register.portofantwerpbruges.com",
+"type": "Url"
+},
+{
+"target": "www.oursustainableport.com",
+"type": "Url"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -225,9 +1684,63 @@
 "name": "Visma",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "eaccountingprinting.stage.vismaonline.com",
+"type": "Url"
+},
+{
+"target": "myservices-api.stage.vismaonline.com",
+"type": "Url"
+},
+{
+"target": "photoservice.stage.vismaonline.com",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "564141518",
+"type": "iOS"
+},
+{
+"target": "accountsettings.connect.identity.stagaws.visma.com",
+"type": "Url"
+},
+{
+"target": "admin.stage.vismaonline.com",
+"type": "Url"
+},
+{
+"target": "aiassistant.stage.vismaonline.com",
+"type": "Url"
+},
+{
+"target": "com.visma.blue",
+"type": "Android"
+},
+{
+"target": "connect.identity.stagaws.visma.com",
+"type": "Url"
+},
+{
+"target": "eaccounting.stage.vismaonline.com",
+"type": "Url"
+},
+{
+"target": "identity.stage.vismaonline.com",
+"type": "Url"
+},
+{
+"target": "myservices.stage.vismaonline.com",
+"type": "Url"
+},
+{
+"target": "oauth.developers.stagaws.visma.com",
+"type": "Url"
+}
+],
 "submit_access": "account_required"
 },
 {
@@ -236,9 +1749,91 @@
 "name": "Ninja Kiwi Games Bug Bounty program",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "analytics.ninjakiwi.com",
+"type": "Url"
+},
+{
+"target": "api.ninjakiwi.com",
+"type": "Url"
+},
+{
+"target": "guts.ninjakiwi.com",
+"type": "Url"
+},
+{
+"target": "*.ninjakiwi.me",
+"type": "Wildcard"
+},
+{
+"target": "*.nkstatic.com",
+"type": "Wildcard"
+},
+{
+"target": "battles.tv",
+"type": "Url"
+},
+{
+"target": "data.ninjakiwi.com",
+"type": "Url"
+},
+{
+"target": "ninja.kiwi",
+"type": "Url"
+},
+{
+"target": "ninjakiwi.com",
+"type": "Url"
+},
+{
+"target": "alerts.ninjakiwi.com",
+"type": "Url"
+},
+{
+"target": "boomer2.ninjakiwi.com",
+"type": "Url"
+},
+{
+"target": "ct.ninjakiwi.com",
+"type": "Url"
+},
+{
+"target": "mynk-dash.ninjakiwi.com",
+"type": "Url"
+},
+{
+"target": "mynk.ninjakiwi.com",
+"type": "Url"
+},
+{
+"target": "rancher.ninjakiwi.com",
+"type": "Url"
+},
+{
+"target": "rancher.ninjakiwi.me",
+"type": "Url"
+},
+{
+"target": "store.ninjakiwi.com",
+"type": "Url"
+},
+{
+"target": "support.ninjakiwi.com",
+"type": "Url"
+},
+{
+"target": "icarusadmin.ninjakiwi.com",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "*.souparea.com",
+"type": "Wildcard"
+}
+],
 "submit_access": "account_required"
 },
 {
@@ -247,30 +1842,13 @@
 "name": "MAGNIFIC VDP",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
+"safe_harbour": true,
+"scope_in": [
 {
-"id": "11b73072-3c8c-44a4-82b2-80203a7fc6f8",
-"handle": "rampfbugbounty",
-"name": "RAMPF Bug Bounty",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "12715f4b-d10e-415f-a309-6ab042f6158a",
-"handle": "doccle",
-"name": "Doccle Bug Bounty program",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
+"target": "Magnific",
+"type": "Other"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -280,8 +1858,25 @@
 "name": "Cyber Security Coalition",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://surfenzonderzorgen.safeonweb.be",
+"type": "Url"
+},
+{
+"target": "award.cybersecuritycoalition.be",
+"type": "Url"
+},
+{
+"target": "blog.cybersecuritycoalition.be",
+"type": "Url"
+},
+{
+"target": "www.cybersecuritycoalition.be",
+"type": "Url"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -291,31 +1886,55 @@
 "name": "NVIDIA Public Bug Bounty",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "new CDI-based architecture",
+"type": "Other"
 },
 {
-"id": "1430d211-837f-446c-978f-f818eb960405",
-"handle": "newpharma",
-"name": "Newpharma",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
+"target": "All Other NVIDIA Container Toolkit Assets",
+"type": "Other"
 },
 {
-"id": "14b2f2ef-0c38-4da8-ae6d-c1e8fa663860",
-"handle": "salto-ks",
-"name": "Salto CloudWorks",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
+"target": "libNVVM API",
+"type": "Other"
+},
+{
+"target": "Nsight Systems",
+"type": "Other"
+},
+{
+"target": "NVIDIA Nsight Developer Tools",
+"type": "Other"
+},
+{
+"target": "NVRTC library",
+"type": "Other"
+},
+{
+"target": "NVCC",
+"type": "Other"
+},
+{
+"target": "nvJitLink APIs",
+"type": "Other"
+},
+{
+"target": "CUDA Runtime APIs",
+"type": "Url"
+},
+{
+"target": "CUDA Driver APIs",
+"type": "Other"
+}
+],
+"scope_out": [
+{
+"target": "CUDA Libraries",
+"type": "Other"
+}
+],
 "submit_access": "account_required"
 },
 {
@@ -324,8 +1943,41 @@
 "name": "Social Deal",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "Social Deal IOS APP",
+"type": "iOS"
+},
+{
+"target": "www.socialdeal.nl/blog/",
+"type": "Url"
+},
+{
+"target": "https://www.spontaan.nl/",
+"type": "Url"
+},
+{
+"target": "app.nl.socialdeal",
+"type": "Android"
+},
+{
+"target": "http://socialdeal.nl/inspirations/bluemonday/",
+"type": "Url"
+},
+{
+"target": "http://www.whynot.com/",
+"type": "Url"
+},
+{
+"target": "https://www.socialdeal.nl/orderlist/5e834ae0bed5c/63d772e2ed277/",
+"type": "Url"
+},
+{
+"target": "www.socialdeal.nl",
+"type": "Url"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -335,8 +1987,57 @@
 "name": "Soundtrack Technologies",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://soundtrack.io",
+"type": "Url"
+},
+{
+"target": "1114799709",
+"type": "iOS"
+},
+{
+"target": "1114800186",
+"type": "iOS"
+},
+{
+"target": "api.soundtrackyourbrand.com",
+"type": "Url"
+},
+{
+"target": "billing.api.soundtrackyourbrand.com",
+"type": "Url"
+},
+{
+"target": "builds.soundtrackyourbrand.com",
+"type": "Url"
+},
+{
+"target": "business.soundtrackyourbrand.com",
+"type": "Url"
+},
+{
+"target": "com.soundtrackyourbrand.soundtrack.player",
+"type": "Android"
+},
+{
+"target": "https://auth.api.soundtrackyourbrand.com/",
+"type": "Url"
+},
+{
+"target": "https://builds.soundtrackyourbrand.com/download/WIN32SOUNDTRACK/latest",
+"type": "Other"
+},
+{
+"target": "https://radio.api.soundtrackyourbrand.com/",
+"type": "Url"
+},
+{
+"target": "macOS app",
+"type": "Other"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -346,8 +2047,65 @@
 "name": "SBB - Swiss Federal Railways",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "Mobile Apps",
+"type": "Other"
+},
+{
+"target": "*.swisspass.ch",
+"type": "Wildcard"
+},
+{
+"target": "www.sbb.ch",
+"type": "Url"
+},
+{
+"target": "*.sbb.ch",
+"type": "Wildcard"
+},
+{
+"target": "*.event.sbb.ch",
+"type": "Wildcard"
+},
+{
+"target": "Mobile Apps",
+"type": "Other"
+},
+{
+"target": "www.elvetino.ch",
+"type": "Url"
+},
+{
+"target": "*elvetino.ch",
+"type": "Wildcard"
+},
+{
+"target": "www.sbbcargo.com",
+"type": "Url"
+},
+{
+"target": "*sbbcargo.com",
+"type": "Wildcard"
+},
+{
+"target": "www.transsicura.ch",
+"type": "Url"
+},
+{
+"target": "*transsicura.ch",
+"type": "Wildcard"
+},
+{
+"target": "All other Web and mobile APPs owned by SBB",
+"type": "Other"
+},
+{
+"target": "All other SBB owned IT assets",
+"type": "Other"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -357,30 +2115,37 @@
 "name": "DHL Group Vulnerability Disclosure Program",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.deutschepost.de",
+"type": "Wildcard"
 },
 {
-"id": "1d157658-40d2-4472-89a3-b0cab2208220",
-"handle": "coveovulnerabilitydisclosureprogram",
-"name": "Coveo VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
+"target": "*.dhl",
+"type": "Wildcard"
 },
 {
-"id": "1d422a3f-7d6c-47b7-8d65-6e118bb50e86",
-"handle": "mijnjessa",
-"name": "MijnJessa",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
+"target": "*.dhl.com",
+"type": "Wildcard"
+},
+{
+"target": "*.dhl.de",
+"type": "Wildcard"
+},
+{
+"target": "*.dpdhl.com",
+"type": "Wildcard"
+},
+{
+"target": "Any other domain from DHL Group companies",
+"type": "Other"
+},
+{
+"target": "Mobile apps owned by DHL Group companies",
+"type": "Other"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -390,8 +2155,37 @@
 "name": "Donorbox Vulnerability Disclosure Project",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://apps.apple.com/us/app/donorbox-live/id1668808097",
+"type": "iOS"
+},
+{
+"target": "https://donorbox.org/admin",
+"type": "Url"
+},
+{
+"target": "https://play.google.com/store/apps/details?id=org.donorbox.cardreader&hl=en&gl=US",
+"type": "Android"
+},
+{
+"target": "https://donorbox.org",
+"type": "Url"
+},
+{
+"target": "https://donorbox.org/embed/potato",
+"type": "Url"
+},
+{
+"target": "https://donorbox.org/org_admin",
+"type": "Url"
+},
+{
+"target": "https://donorbox.org/potato",
+"type": "Url"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -401,8 +2195,137 @@
 "name": "Flywire Vulnerability Disclose Program",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.wpm-payment.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.wpm-payment.com",
+"type": "Wildcard"
+},
+{
+"target": "*.wpm-pay.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.wpm-pay.com",
+"type": "Wildcard"
+},
+{
+"target": "*.wpm-education.co.uk",
+"type": "Wildcard"
+},
+{
+"target": "*.wpm-education.com",
+"type": "Wildcard"
+},
+{
+"target": "*.studylink.com.au",
+"type": "Wildcard"
+},
+{
+"target": "*.studylink.com",
+"type": "Wildcard"
+},
+{
+"target": "*.invoiced.com",
+"type": "Wildcard"
+},
+{
+"target": "*.simpleepay.com",
+"type": "Wildcard"
+},
+{
+"target": "*.simplee.com",
+"type": "Wildcard"
+},
+{
+"target": "*.unipaylive.com",
+"type": "Wildcard"
+},
+{
+"target": "*.onplanu.com",
+"type": "Wildcard"
+},
+{
+"target": "*.onplanhealth.com",
+"type": "Wildcard"
+},
+{
+"target": "*.myonplanhealth.com",
+"type": "Wildcard"
+},
+{
+"target": "*.flywire.io",
+"type": "Wildcard"
+},
+{
+"target": "*.ovhcinsurance.com.au",
+"type": "Wildcard"
+},
+{
+"target": "*.ovhcinsurance.com",
+"type": "Wildcard"
+},
+{
+"target": "*.oshc.info",
+"type": "Wildcard"
+},
+{
+"target": "*.oshcaustralia.com.au",
+"type": "Wildcard"
+},
+{
+"target": "*.oshcaustralia.com",
+"type": "Wildcard"
+},
+{
+"target": "*.cohortpay.com",
+"type": "Wildcard"
+},
+{
+"target": "*.cohort.link",
+"type": "Wildcard"
+},
+{
+"target": "*.cohortgo.com",
+"type": "Wildcard"
+},
+{
+"target": "*.cohortgoapp.com",
+"type": "Wildcard"
+},
+{
+"target": "*.cohortflow.com",
+"type": "Wildcard"
+},
+{
+"target": "*.cohortarrivals.com",
+"type": "Wildcard"
+},
+{
+"target": "*.chrtpy.com",
+"type": "Wildcard"
+},
+{
+"target": "*.peertransfer.com",
+"type": "Wildcard"
+},
+{
+"target": "*.myonplanu.com",
+"type": "Wildcard"
+},
+{
+"target": "*.flywire.tech",
+"type": "Wildcard"
+},
+{
+"target": "*.flywire.com",
+"type": "Wildcard"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -412,9 +2335,79 @@
 "name": "WP Engine VDP",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*. advancedcustomfields.com",
+"type": "Wildcard"
+},
+{
+"target": "*. bettersearchreplace.com",
+"type": "Wildcard"
+},
+{
+"target": "*.deliciousbrains.com",
+"type": "Wildcard"
+},
+{
+"target": "*.studiopress.com",
+"type": "Wildcard"
+},
+{
+"target": "*.wpengine.io",
+"type": "Wildcard"
+},
+{
+"target": "*.wpesvc.net",
+"type": "Wildcard"
+},
+{
+"target": "https://nitropack.io",
+"type": "Url"
+},
+{
+"target": "my.wpengine.com",
+"type": "Url"
+},
+{
+"target": "spressforumstg.wpengine.com",
+"type": "Url"
+},
+{
+"target": "studiopress.blog",
+"type": "Url"
+},
+{
+"target": "https://getflywheel.com/schedule-a-demo/",
+"type": "Url"
+},
+{
+"target": "https://wpengine.com/contact/",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "app.getflywheel.com",
+"type": "Url"
+},
+{
+"target": "getflywheel.com",
+"type": "Url"
+},
+{
+"target": "NitroPack Plugins",
+"type": "Other"
+},
+{
+"target": "WP Engine-developed WordPress Plugins and Themes",
+"type": "Other"
+},
+{
+"target": "wpengine.com",
+"type": "Url"
+}
+],
 "submit_access": "account_required"
 },
 {
@@ -423,9 +2416,103 @@
 "name": "RIPE NCC",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://access.ripe.net",
+"type": "Url"
+},
+{
+"target": "https://github.com/RIPE-NCC/rpki-core",
+"type": "Other"
+},
+{
+"target": "https://github.com/RIPE-NCC/whois",
+"type": "Other"
+},
+{
+"target": "lirportal.ripe.net",
+"type": "Url"
+},
+{
+"target": "193.0.0.0/19 and 2001:67c:2e8::/48",
+"type": "IpRange"
+},
+{
+"target": "https://github.com/RIPE-NCC/rpki-monitoring",
+"type": "Other"
+},
+{
+"target": "https://github.com/RIPE-NCC/rpki-ta-0",
+"type": "Other"
+},
+{
+"target": "Assets owned by RIPE NCC",
+"type": "Url"
+},
+{
+"target": "https://github.com/RIPE-NCC/rpki-commons",
+"type": "Other"
+},
+{
+"target": "*.anchors.atlas.ripe.net",
+"type": "Wildcard"
+},
+{
+"target": "*.probes.atlas.ripe.net",
+"type": "Wildcard"
+},
+{
+"target": "*aso.ripe.net",
+"type": "Wildcard"
+},
+{
+"target": "*nro.ripe.net",
+"type": "Wildcard"
+},
+{
+"target": "193.0.0.160/27",
+"type": "Url"
+},
+{
+"target": "2001:67c:2e8:3::/64",
+"type": "Url"
+},
+{
+"target": "Any *.ripe.net host that is located outside of the in-scope IP ranges",
+"type": "Wildcard"
+},
+{
+"target": "https://exams.ripe.net",
+"type": "Url"
+},
+{
+"target": "https://github.com/RIPE-NCC/rpki-publication-server",
+"type": "Other"
+},
+{
+"target": "https://github.com/RIPE-NCC/rsyncit",
+"type": "Other"
+},
+{
+"target": "https://labs.ripe.net",
+"type": "Url"
+},
+{
+"target": "RIPE Meeting network (2001:67c:64::/48 and 193.0.24.0/21)",
+"type": "Url"
+},
+{
+"target": "ripe[1-100].ripe.net",
+"type": "Other"
+}
+],
+"scope_out": [
+{
+"target": "*.ripe.net",
+"type": "Wildcard"
+}
+],
 "submit_access": "account_required"
 },
 {
@@ -434,20 +2521,63 @@
 "name": "Monzo Public Bug Bounty Program",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "*.monzo.com",
+"type": "Wildcard"
 },
 {
-"id": "26bdf67c-72e8-44ed-a6bb-8d62a620d76e",
-"handle": "bpostmailingmaker",
-"name": "My bpost app",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
+"target": "*.prod-ffs.io",
+"type": "Wildcard"
+},
+{
+"target": "1052238659",
+"type": "iOS"
+},
+{
+"target": "co.uk.getmondo",
+"type": "Android"
+},
+{
+"target": "www.monzo.com",
+"type": "Url"
+},
+{
+"target": "monzo.com",
+"type": "Url"
+},
+{
+"target": "*/p2p/*",
+"type": "Wildcard"
+},
+{
+"target": "*/contact-discovery/*",
+"type": "Wildcard"
+},
+{
+"target": "*/inbound-p2p/*",
+"type": "Wildcard"
+},
+{
+"target": "*.monzo.me",
+"type": "Wildcard"
+},
+{
+"target": "monzo.me",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "community.monzo.com",
+"type": "Url"
+},
+{
+"target": "login.internal.monzo.com",
+"type": "Url"
+}
+],
 "submit_access": "account_required"
 },
 {
@@ -456,9 +2586,207 @@
 "name": "Uphold",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "portal.enterprise.uphold.com",
+"type": "Url"
+},
+{
+"target": "api.portal.enterprise.uphold.com",
+"type": "Url"
+},
+{
+"target": "Uphold: Buy BTC, ETH and 300+",
+"type": "Android"
+},
+{
+"target": "wallet-sandbox.uphold.com",
+"type": "Url"
+},
+{
+"target": "api-sandbox.uphold.com",
+"type": "Url"
+},
+{
+"target": "docs.uphold.com",
+"type": "Url"
+},
+{
+"target": "api-sandbox.uphold.com/graphql",
+"type": "Url"
+},
+{
+"target": "app.sandbox.topperpay.com",
+"type": "Url"
+},
+{
+"target": "api.sandbox.topperpay.com",
+"type": "Url"
+},
+{
+"target": "graphql.sandbox.topperpay.com/graphql",
+"type": "Url"
+},
+{
+"target": "docs.topperpay.com",
+"type": "Url"
+},
+{
+"target": "www.topperpay.com",
+"type": "Url"
+},
+{
+"target": "*.topperpay.com",
+"type": "Wildcard"
+},
+{
+"target": "https://api.enterprise.sandbox.uphold.com/widgets",
+"type": "Url"
+},
+{
+"target": "https://api.enterprise.sandbox.uphold.com/trading",
+"type": "Url"
+},
+{
+"target": "https://api.enterprise.sandbox.uphold.com/market-pulse",
+"type": "Url"
+},
+{
+"target": "https://api.enterprise.sandbox.uphold.com/kyc-connector",
+"type": "Url"
+},
+{
+"target": "https://api.enterprise.sandbox.uphold.com/core",
+"type": "Url"
+},
+{
+"target": "https://api.enterprise.sandbox.uphold.com/topper",
+"type": "Url"
+},
+{
+"target": "https://api.enterprise.uphold.com/widgets",
+"type": "Url"
+},
+{
+"target": "https://api.enterprise.uphold.com/trading",
+"type": "Url"
+},
+{
+"target": "https://api.enterprise.uphold.com/market-pulse",
+"type": "Url"
+},
+{
+"target": "https://api.enterprise.uphold.com/kyc-connector",
+"type": "Url"
+},
+{
+"target": "https://api.enterprise.uphold.com/core",
+"type": "Url"
+},
+{
+"target": "https://api.enterprise.uphold.com/topper",
+"type": "Url"
+},
+{
+"target": "uatcms.optimuscards.com",
+"type": "Url"
+},
+{
+"target": "docs.optimuscards.com",
+"type": "Url"
+},
+{
+"target": "*.optimuscards.com",
+"type": "Wildcard"
+},
+{
+"target": "www.optimuscards.com",
+"type": "Url"
+},
+{
+"target": "*.uphold.com",
+"type": "Wildcard"
+},
+{
+"target": "www.uphold.com",
+"type": "Url"
+},
+{
+"target": "status.uphold.com",
+"type": "Url"
+},
+{
+"target": "www.uphodl.com",
+"type": "Url"
+},
+{
+"target": "*.uphodl.com",
+"type": "Wildcard"
+},
+{
+"target": "UpHODL",
+"type": "Android"
+},
+{
+"target": "support-staging.topperpay.com",
+"type": "Url"
+},
+{
+"target": "support-sandbox.uphold.com",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "Uphold: Buy BTC, ETH and 360+",
+"type": "iOS"
+},
+{
+"target": "api.uphold.com",
+"type": "Url"
+},
+{
+"target": "api.uphold.com/graphql",
+"type": "Url"
+},
+{
+"target": "wallet.uphold.com",
+"type": "Url"
+},
+{
+"target": "api.topperpay.com",
+"type": "Url"
+},
+{
+"target": "app.topperpay.com",
+"type": "Url"
+},
+{
+"target": "graphql.topperpay.com/graphql",
+"type": "Url"
+},
+{
+"target": "cms.optimuscards.com",
+"type": "Url"
+},
+{
+"target": "github.com/uphold/*",
+"type": "Wildcard"
+},
+{
+"target": "UpHODL",
+"type": "iOS"
+},
+{
+"target": "support.topperpay.com",
+"type": "Url"
+},
+{
+"target": "support.uphold.com",
+"type": "Url"
+}
+],
 "submit_access": "account_required"
 },
 {
@@ -467,8 +2795,69 @@
 "name": "Nexuzhealth",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "be.nexuzhealth.mobile.cpv",
+"type": "Android"
+},
+{
+"target": "be.nexuzhealth.mobile.kws",
+"type": "Android"
+},
+{
+"target": "be.nexuzhealth.mobile.mynexuz",
+"type": "Android"
+},
+{
+"target": "kws-companion/id1342124012",
+"type": "iOS"
+},
+{
+"target": "mynexuz.be",
+"type": "Url"
+},
+{
+"target": "mynexuzhealth/id1459856321",
+"type": "iOS"
+},
+{
+"target": "liquidfiles.nexuzhealth.com",
+"type": "Url"
+},
+{
+"target": "*.nexuzhealth.*",
+"type": "Wildcard"
+},
+{
+"target": "static.nexuzhealth.com",
+"type": "Url"
+},
+{
+"target": "pro.nexuzhealth.hn",
+"type": "Android"
+},
+{
+"target": "nexuzhealth.atlassian.net",
+"type": "Url"
+},
+{
+"target": "nexuzhealth-pro/id1623165353",
+"type": "iOS"
+},
+{
+"target": "media.nexuzhealth.be",
+"type": "Url"
+},
+{
+"target": "idp-contact.nexuzhealth.be",
+"type": "Url"
+},
+{
+"target": "*.nexuzhealth.pro",
+"type": "Wildcard"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -478,9 +2867,31 @@
 "name": "Dstny",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://docs.google.com/spreadsheets/d/1CzscF67guNFMy-L_v79ng2mW36dQWb2rQSbK540j-ys/edit?gid=1817816238#gid=1817816238",
+"type": "Other"
+}
+],
+"scope_out": [
+{
+"target": "https://docs.google.com/spreadsheets/d/1CzscF67guNFMy-L_v79ng2mW36dQWb2rQSbK540j-ys/edit?gid=1208823298#gid=1208823298",
+"type": "Other"
+},
+{
+"target": "https://docs.google.com/spreadsheets/d/1CzscF67guNFMy-L_v79ng2mW36dQWb2rQSbK540j-ys/edit?gid=1281087877#gid=1281087877",
+"type": "Other"
+},
+{
+"target": "https://docs.google.com/spreadsheets/d/1CzscF67guNFMy-L_v79ng2mW36dQWb2rQSbK540j-ys/edit?gid=1767553194#gid=1767553194",
+"type": "Other"
+},
+{
+"target": "https://docs.google.com/spreadsheets/d/1CzscF67guNFMy-L_v79ng2mW36dQWb2rQSbK540j-ys/edit?gid=1370437389#gid=1370437389",
+"type": "Other"
+}
+],
 "submit_access": "account_required"
 },
 {
@@ -489,8 +2900,241 @@
 "name": "European Space Agency (ESA) VDP",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://datalabs.esa.int/",
+"type": "Url"
+},
+{
+"target": "https://euclid.dataspace.esa.int/",
+"type": "Url"
+},
+{
+"target": "https://chs.cosmos.esa.int/",
+"type": "Url"
+},
+{
+"target": "https://science.esa.int",
+"type": "Url"
+},
+{
+"target": "https://cosmos.esa.int",
+"type": "Url"
+},
+{
+"target": "activities.esa.int",
+"type": "Url"
+},
+{
+"target": "astronauts.esa.int",
+"type": "Url"
+},
+{
+"target": "avamposto42.esa.int",
+"type": "Url"
+},
+{
+"target": "blogs.esa.int",
+"type": "Url"
+},
+{
+"target": "bluedocs.esa.int",
+"type": "Url"
+},
+{
+"target": "bookdiscoveresalive-acc.esa.int",
+"type": "Url"
+},
+{
+"target": "bookdiscoveresalive.esa.int",
+"type": "Url"
+},
+{
+"target": "brand.esa.int",
+"type": "Url"
+},
+{
+"target": "careers.esa.int",
+"type": "Url"
+},
+{
+"target": "comms-exhibitionmodels.esa.int",
+"type": "Url"
+},
+{
+"target": "discover-acc.esa.int",
+"type": "Url"
+},
+{
+"target": "discover.esa.int",
+"type": "Url"
+},
+{
+"target": "dlmultimedia.esa.int",
+"type": "Url"
+},
+{
+"target": "doing-business.sso.esa.int",
+"type": "Url"
+},
+{
+"target": "download.esa.int",
+"type": "Url"
+},
+{
+"target": "dst.esa.int",
+"type": "Url"
+},
+{
+"target": "eo4sd.esa.int",
+"type": "Url"
+},
+{
+"target": "eris.esa.int",
+"type": "Url"
+},
+{
+"target": "esa-p.sso.esa.int",
+"type": "Url"
+},
+{
+"target": "esamultimedia.esa.int",
+"type": "Url"
+},
+{
+"target": "esastar-ecm.sso.esa.int",
+"type": "Url"
+},
+{
+"target": "esastar-emr.sso.esa.int",
+"type": "Url"
+},
+{
+"target": "esastar-esamatch-ext.sso.esa.int",
+"type": "Url"
+},
+{
+"target": "esastar-publication-ext.sso.esa.int",
+"type": "Url"
+},
+{
+"target": "estracknow.esa.int",
+"type": "Url"
+},
+{
+"target": "financereports.esa.int",
+"type": "Url"
+},
+{
+"target": "https://github.com/ESA",
+"type": "SourceCode"
+},
+{
+"target": "industrialreturn.esa.int",
+"type": "Url"
+},
+{
+"target": "iptvdec.esoc.esa.int",
+"type": "Url"
+},
+{
+"target": "iptvenc.esoc.esa.int",
+"type": "Url"
+},
+{
+"target": "iptvenc2.esoc.esa.int",
+"type": "Url"
+},
+{
+"target": "m.esa.int",
+"type": "Url"
+},
+{
+"target": "multimedia-delivery.esa.int",
+"type": "Url"
+},
+{
+"target": "outpost42.esa.int",
+"type": "Url"
+},
+{
+"target": "pol-acc2.esa.int",
+"type": "Url"
+},
+{
+"target": "pol-ftp-xml.esoc.esa.int",
+"type": "Url"
+},
+{
+"target": "pol-ftp.esoc.esa.int",
+"type": "Url"
+},
+{
+"target": "pol-sftp-ext.esoc.esa.int",
+"type": "Url"
+},
+{
+"target": "pol-web-acc2-mfa.esoc.esa.int",
+"type": "Url"
+},
+{
+"target": "rosetta-acc.esa.int",
+"type": "Url"
+},
+{
+"target": "rosetta.esa.int",
+"type": "Url"
+},
+{
+"target": "shop.esa.int",
+"type": "Url"
+},
+{
+"target": "spacehpc.esa.int",
+"type": "Url"
+},
+{
+"target": "stockup.esa.int",
+"type": "Url"
+},
+{
+"target": "tvdownload.esa.int",
+"type": "Url"
+},
+{
+"target": "vision.esa.int",
+"type": "Url"
+},
+{
+"target": "watch-acc.esa.int",
+"type": "Url"
+},
+{
+"target": "watch.esa.int",
+"type": "Url"
+},
+{
+"target": "www-acc-adm.esa.int",
+"type": "Url"
+},
+{
+"target": "www-acc.esa.int",
+"type": "Url"
+},
+{
+"target": "www-adm.esa.int",
+"type": "Url"
+},
+{
+"target": "www-analytics.esa.int",
+"type": "Url"
+},
+{
+"target": "www.esa.int",
+"type": "Url"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -500,8 +3144,177 @@
 "name": "UZ Leuven",
 "public": "Public",
 "bounty": true,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "boekentoy.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "uz-laboboeken.web.app",
+"type": "Url"
+},
+{
+"target": "laboboeken.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "boekentoy.firebaseio.com",
+"type": "Url"
+},
+{
+"target": "uz-laboboeken.firebaseio.com",
+"type": "Url"
+},
+{
+"target": "autodiscover.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "ecrf.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "extranet-asa.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "extranet.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "liquidfiles.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "mx1.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "mx2.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "pcrstudioruzb.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "prddsplunkhf.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "sts.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "www.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "193.58.149.121,193.58.149.98,193.58.149.82,193.58.149.101,193.58.149.107,193.58.149.108,193.58.149.111",
+"type": "IpRange"
+},
+{
+"target": "wp5-truststroke.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "cardsonline.azdiest.be",
+"type": "Url"
+},
+{
+"target": "liquidfilestest.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "random.uzleuven.be/random/",
+"type": "Url"
+},
+{
+"target": "teststs.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "w1.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "cardsonlinetst.azdiest.be",
+"type": "Url"
+},
+{
+"target": "*.kwsdose.be",
+"type": "Wildcard"
+},
+{
+"target": "*.playuzleuven.be",
+"type": "Wildcard"
+},
+{
+"target": "*.uzleuven.*",
+"type": "Wildcard"
+},
+{
+"target": "*.contactallerg(y|ie).uzleuven.be",
+"type": "Wildcard"
+},
+{
+"target": "*.mir.uzleuven.be",
+"type": "Wildcard"
+},
+{
+"target": "*dev.uzleuven.be",
+"type": "Wildcard"
+},
+{
+"target": "*idp*.uzleuven.be",
+"type": "Wildcard"
+},
+{
+"target": "*stag*.uzleuven.be",
+"type": "Wildcard"
+},
+{
+"target": "files.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "kumulus.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "mijnacc.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "mirc.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "prddnighting01.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "w1.uzleuven.be/random",
+"type": "Url"
+},
+{
+"target": "ziekenhuisschool.be",
+"type": "Url"
+},
+{
+"target": "jobs.uzleuven.be",
+"type": "Url"
+},
+{
+"target": "uzleuven.atlassian.net",
+"type": "Url"
+},
+{
+"target": "vacatures.uzleuven.be",
+"type": "Url"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -511,8 +3324,29 @@
 "name": "Bitvavo VDP",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "1483903423",
+"type": "iOS"
+},
+{
+"target": "com.bitvavo.android",
+"type": "Android"
+},
+{
+"target": "https://api.bitvavo.com/v2/*",
+"type": "Wildcard"
+},
+{
+"target": "wss://ws.bitvavo.com/v2 *",
+"type": "Wildcard"
+},
+{
+"target": "https://bitvavo.com",
+"type": "Url"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -522,9 +3356,99 @@
 "name": "Tomorrowland",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "cas.tomorrowland.com",
+"type": "Url"
+},
+{
+"target": "*.weareone.world",
+"type": "Wildcard"
+},
+{
+"target": "belgium.tomorrowland.com",
+"type": "Url"
+},
+{
+"target": "brasil.tomorrowland.com",
+"type": "Url"
+},
+{
+"target": "com.tomorrowland.oneworldradio",
+"type": "Android"
+},
+{
+"target": "globaljourney.tomorrowland.com",
+"type": "Url"
+},
+{
+"target": "my.tomorrowland.com",
+"type": "Url"
+},
+{
+"target": "one-world-radio-tomorrowland/id1485778856",
+"type": "iOS"
+},
+{
+"target": "sp1y1tpaf1.execute-api.eu-west-1.amazonaws.com",
+"type": "Url"
+},
+{
+"target": "tlbe.prod.tomorrowland.com",
+"type": "Url"
+},
+{
+"target": "tlbr.prod.tomorrowland.com",
+"type": "Url"
+},
+{
+"target": "tlfr.prod.tomorrowland.com",
+"type": "Url"
+},
+{
+"target": "winter.tomorrowland.com",
+"type": "Url"
+},
+{
+"target": "www.tomorrowland.com",
+"type": "Url"
+},
+{
+"target": "store.tomorrowland.com",
+"type": "Url"
+},
+{
+"target": "brasil-store.tomorrowland.com",
+"type": "Url"
+},
+{
+"target": "*.stag.tomorrowland.com",
+"type": "Wildcard"
+},
+{
+"target": "*.stag.weareone.world",
+"type": "Wildcard"
+},
+{
+"target": "*.tomorrowland.com",
+"type": "Wildcard"
+},
+{
+"target": "components.stag.tomorrowland.com",
+"type": "Url"
+},
+{
+"target": "components.tomorrowland.com",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "winterpackages.tomorrowland.com",
+"type": "Url"
+}
+],
 "submit_access": "account_required"
 },
 {
@@ -533,8 +3457,25 @@
 "name": "Signicat Responsible Disclosure",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "ReadID",
+"type": "Other"
+},
+{
+"target": "Dokobit",
+"type": "Other"
+},
+{
+"target": "Signicat",
+"type": "Other"
+},
+{
+"target": "Signicat VideoID and SignatureID",
+"type": "Other"
+}
+],
 "scope_out": [],
 "submit_access": "account_required"
 },
@@ -544,2055 +3485,19 @@
 "name": "Online enrollment for students Bug Bounty Program",
 "public": "Public",
 "bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "2f9642bb-830b-4756-9cbe-391e44175b8a",
-"handle": "liferaydxp",
-"name": "Liferay DXP",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "30eeb8fb-6e91-4695-a6d2-e59182b8cbcc",
-"handle": "kahoot",
-"name": "Kahoot Bug Bounty Program",
-"public": "Application",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "30f445f7-ca4c-4130-9434-49add5c6ac74",
-"handle": "algemeendagblad",
-"name": "Algemeen Dagblad",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "3219ed72-e563-458d-aafd-9ce8ca4e3087",
-"handle": "vrtnv",
-"name": "VRT",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "32d93701-b082-40ee-aa05-6955c8b61d3d",
-"handle": "hyves",
-"name": "Hyves",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "36b43674-b66e-44a8-a8ea-b30a115cb2a5",
-"handle": "coolblue",
-"name": "Coolblue",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "3d1d5732-13a0-4eef-9bd2-efd874a2f2ac",
-"handle": "uitgeverijdeviant",
-"name": "Uitgeverij Deviant Bug Bounty",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "3d6dfea5-b7f6-4bca-98a3-a1c6b8a4c7dd",
-"handle": "qcvdp",
-"name": "QC VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "3e51fb18-7082-4ce5-85d0-2bd889b5ed4e",
-"handle": "VismaResponsibleDisclosure",
-"name": "Visma Responsible Disclosure",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "3f6b3170-afd4-411c-84fc-24113a562ecf",
-"handle": "kuleuvenrdp",
-"name": "KU Leuven Vulnerability Disclosure Program (VDP)",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "3f79ce72-f3f5-4ec4-9b4b-b8328d577e78",
-"handle": "qualifiedresponsibledisclosureprogram",
-"name": "Qualified Responsible Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "406fd572-83b2-49de-9200-594c484d5bb9",
-"handle": "hetparool",
-"name": "Het Parool",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "40fa9bfb-7476-44cc-bad3-846da936c672",
-"handle": "trafficjunky-bbp",
-"name": "TrafficJunky Bug Bounty Program",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "4352dcef-dfc5-4d74-8fd8-9bef5aa16f18",
-"handle": "skodaautoprivatebugbountyprogram",
-"name": "Skoda Auto Bug Bounty Program",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "43c4b274-ccbd-4ea2-8047-d40b0b4205ac",
-"handle": "libelle",
-"name": "Libelle",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "452a516e-fc32-4285-96e5-97ad5e5e9595",
-"handle": "rgfbe-vdp",
-"name": "RGF BE - VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "474db664-f7ab-4fc5-8a2d-061096bf19bf",
-"handle": "Serv-u",
-"name": "SolarWinds Serv-U BBP",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "48853273-690a-4555-8ac5-821a1c464312",
-"handle": "capitalcom",
-"name": "Capital.com",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "4914b710-2aa7-4779-a944-764ad3e2a6ce",
-"handle": "rivianvdp",
-"name": "Rivian Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "495935c2-44bf-4eb5-81b4-dac0daa38b79",
-"handle": "telenetgroup",
-"name": "Telenet - Base - Wyre - Tadaam",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "4981522f-5675-4f46-b7b7-e065d30c8d79",
-"handle": "crossborderfines",
-"name": "Cross Border Fines",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "4acc7e11-3634-4ce5-b100-d961d3f6c6f0",
-"handle": "hrsgroupvdp",
-"name": "HRS Group VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "4afd6f0f-40a3-4f6d-a332-56b5970d12a0",
-"handle": "buhlergroupvdp",
-"name": "B\u00fchler Group VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "4d41a636-c811-4757-8fd9-007d7f18e212",
-"handle": "excoscalebugbounty",
-"name": "Exoscale Bug Bounty",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "4fdf596d-6335-4568-a501-13dbfeafe059",
-"handle": "vdp",
-"name": "Posten Bring Responsible Disclosure",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "5111e2de-2d04-4ec8-9f24-c0b76cbfd38e",
-"handle": "storebrand-rd",
-"name": "Storebrand Responsible Disclosure",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "523f9195-ff18-4855-8b31-406b2c87e609",
-"handle": "fluvius",
-"name": "Fluvius",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "53a05c4a-0fc0-45a0-b158-a7562b313f79",
-"handle": "1passwordbugbountyprogram",
-"name": "1Password Bug Bounty Program",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "540e04bb-ae56-49cd-8e05-311a08ba44f7",
-"handle": "ing-responsible-disclosure",
-"name": "ING Responsible Disclosure",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "5447fd42-afb9-4119-8ed7-65d25baee1df",
-"handle": "embarkstudios",
-"name": "Embark Studios",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "55345965-24a8-4891-b978-8e2ab4ddcc17",
-"handle": "adacbugbountyprogram",
-"name": "ADAC Bug Bounty Program",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "554fc6c5-4ffa-4682-a3ba-7e86696e9b17",
-"handle": "aikido",
-"name": "Aikido Security: Bug Bounty Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "59af45f8-edaf-436c-8649-fbd88702468a",
-"handle": "globalsign",
-"name": "GlobalSign",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "5ae36363-b875-4a56-9ecc-ebb7db2fa530",
-"handle": "coveopublicbugbounty",
-"name": "Coveo Public Bug Bounty",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "5ae71f99-d61e-42d2-b74e-b218530bb3b5",
-"handle": "mobilevikings",
-"name": "Mobile Vikings",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "5aed5977-1102-4317-808e-0245a726e066",
-"handle": "pornhub-bbp",
-"name": "Pornhub Bug Bounty Program",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "5c7a8f79-a23b-4367-a2c6-63a2d48586ee",
-"handle": "hetlaatstenieuws",
-"name": "Het Laatste Nieuws",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "5cb6c4a1-0192-4ff7-a237-3f0a666c5461",
-"handle": "portofantwerpvip",
-"name": "Port of Antwerp-Bruges VIP",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "5ce94aa0-6e9b-46a6-b82e-bebb7e340afb",
-"handle": "farfetchbugbounty",
-"name": "Farfetch Bug Bounty",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "5d4636ea-c62f-4480-938c-85d5011bf0a5",
-"handle": "vcf-hypervisors",
-"name": "VMware Workstation, Fusion, and Tools",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "5e9d5fc7-2cfe-4530-94de-c55f1d8d3a8e",
-"handle": "ouravulnerabilitydisclosureprogram",
-"name": "OURA Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "5ec1446f-cf57-419b-b9bc-65dd012a1a85",
-"handle": "engel&vlkers",
-"name": "Engel & V\u00f6lkers",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "5ed6962a-7017-4d60-8805-e169b638528d",
-"handle": "sqillscorporatewebsite",
-"name": "Sqills",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "5f29e1eb-85e8-4d99-9b52-b809f06de633",
-"handle": "dummy",
-"name": "Bpost",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "602b4785-333e-457e-bff8-e7a585693099",
-"handle": "mediahuiscorporatedomains",
-"name": "Mediahuis Corporate Domains",
-"public": "Registered",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "611c246e-1bf9-42b7-a458-af832582d0d7",
-"handle": "grafanaossbbp",
-"name": "Grafana Labs",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "611efbaa-333e-4b7c-a3c0-89665abd3fe3",
-"handle": "altera",
-"name": "Altera",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "618a4498-8882-406f-bfe1-b44b9acd0146",
-"handle": "universityofbaselvdp",
-"name": "University of Basel VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "61e0e37c-19cc-4abe-af51-108a78bee995",
-"handle": "bmwgroup",
-"name": "BMW Group",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "628aafa9-b3ef-4967-a783-2fe4803be088",
-"handle": "leapsome",
-"name": "Leapsome",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "64990067-ee7f-45f0-8c75-34761f46a056",
-"handle": "solarwindsvdp",
-"name": "SolarWinds VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "64f80113-969e-4c55-9649-8a044487941c",
-"handle": "pdqcomprivate",
-"name": "PDQ bug bounty program",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "6558543a-236f-4e98-91a3-4536e39b9c1e",
-"handle": "intigriti",
-"name": "intigriti",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "67d5a491-4baa-4565-bdc9-962bcd5f5ddd",
-"handle": "humo",
-"name": "Humo",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "67f303d5-5c5b-44ec-a278-874f818fbc48",
-"handle": "nestl\u00e9vdp",
-"name": "Nestl\u00e9 VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "68787d97-06f4-4f15-952d-473aeab05e5d",
-"handle": "cariadvdp",
-"name": "CARIAD VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "694f3e58-f408-4a3f-8e2a-1b562650399a",
-"handle": "personio",
-"name": "Personio",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "69a64cbf-305d-4f48-90e5-0b7377c67bac",
-"handle": "grafanalabsvdp",
-"name": "Grafana Labs - Vulnerability Disclosure Program (VDP)",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "6beaf9ec-e307-4415-a93e-0e4262b5ee4b",
-"handle": "12build",
-"name": "12Build Bug Bounty Program",
-"public": "Application",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "6bec8ce6-1494-4bf7-89cc-416f7d584fd4",
-"handle": "probiller-bbp",
-"name": "Probiller Bug Bounty Program",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "6c8455c8-66b7-4360-bc6d-45b854c6fa85",
-"handle": "postibugbounty",
-"name": "Posti Bug Bounty ",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "6d1b587f-8d04-471f-939e-0ed401537c51",
-"handle": "zowonen",
-"name": "ZOwonen",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "6e7a62cb-e227-4280-8c34-81646485d899",
-"handle": "belfius",
-"name": "Belfius",
-"public": "Application",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "6f24c2d0-b1f2-4c31-948d-eeba16e80099",
-"handle": "attentiavdp",
-"name": "Attentia VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "6f38540e-cba1-4897-a20e-0349a6734604",
-"handle": "cokeonenorthamerica",
-"name": "Coke One North America",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "7043a1a4-76cf-4fef-98a9-d5d2c84d1f05",
-"handle": "webnode",
-"name": "Webnode",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "72251963-9df7-4fab-af7d-35d0305d63cc",
-"handle": "sqills",
-"name": "Sqills S3 Passenger",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "724ad196-90de-4ba8-bf21-dc114ab7fce4",
-"handle": "trustedfirmware",
-"name": "Trusted Firmware",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "768ad323-335b-4710-9370-6b81925c122f",
-"handle": "website",
-"name": "Kinepolis Group",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "784ffbc6-daaa-4e7e-8eba-c38a101d7b12",
-"handle": "voivulnerabilitydisclosureprogram",
-"name": "Voi Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "786344cc-f080-42d8-bb9b-b3fb919b0261",
-"handle": "nutaku-bbp",
-"name": "Nutaku Bug Bounty Program",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "7999e698-363d-49e2-bd34-4ce47556d03c",
-"handle": "water-link",
-"name": "Water-Link",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "7a233e93-7ba8-4459-a128-cc9a8ec2230c",
-"handle": "myworkandme",
-"name": "My.sdworx.com",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "7c46a970-eb8d-48b9-aa11-b52198f763c4",
-"handle": "intelvulnerabilitydisclosureprogram",
-"name": "Intel\u00ae Vulnerability Disclosure Program ",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "7ce36749-76cb-44f7-8231-082994146600",
-"handle": "tekionvdp",
-"name": "Tekion VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "7d2af06f-9f70-4561-9ba6-4c044274a94a",
-"handle": "truelayervdp",
-"name": "TrueLayer VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "7e3ebdf6-3679-418d-b3e6-faa1fc6344bb",
-"handle": "admissions-for-students",
-"name": "Admissions for Students",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "7ecdd3d1-a794-4ceb-9518-f9a016dc26a6",
-"handle": "bmwgroup-automotive",
-"name": "BMW Group Automotive",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "806f54d7-a85d-40bd-82cc-f09c1a500f28",
-"handle": "dpgmedia",
-"name": "DPG Media",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "8148a041-c41d-4128-8c73-f4727002515e",
-"handle": "spaceliftvdp",
-"name": "Spacelift VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "82be1e9b-f9ab-45e7-82fd-9ba65be37645",
-"handle": "tempo-team",
-"name": "Tempo-Team ",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "82c22bcc-73ae-4b33-bcb8-74a302fae028",
-"handle": "mediahuisnoorddomains",
-"name": "Mediahuis Noord Domains",
-"public": "Registered",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "8a5bf4a3-3183-4e2a-aa5e-20f71efe7f4b",
-"handle": "water-linkvdp",
-"name": "Water-Link VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "8a9c91c0-dd4f-4ed3-bb65-3c6b68e76b24",
-"handle": "watsons",
-"name": "Watsons",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "8ae2027e-eba1-4b17-a7f6-9da683b2f6c7",
-"handle": "saltovulnerabilitydisclosure",
-"name": "Salto Vulnerability Disclosure ",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "8bf1f259-cac9-4114-9b84-3b950897b1ec",
-"handle": "demorgen",
-"name": "De Morgen",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "8f699f26-d069-48ea-941c-dfa02ab12f73",
-"handle": "toyotamotoreurope",
-"name": "Toyota Motor Europe",
-"public": "Registered",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "8f6c92dc-1300-4f11-8284-29b6ed743378",
-"handle": "speakapresponsibledisclosure",
-"name": "Speakap Responsible Disclosure",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "910b3614-bdf4-4044-a585-6e1ddcc7f034",
-"handle": "colruytgroupidcheck",
-"name": "Colruyt Group",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "92431bf9-ab3e-4e69-9619-c59f8e5193b1",
-"handle": "voiscooters",
-"name": "Voi Scooters",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "933f224e-fbd3-4f08-a4fb-5038c2fa1a6e",
-"handle": "nmt",
-"name": "Axel Springer National Media & Tech",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "96d3f49a-4c5f-4bc8-835a-77f734eefe4e",
-"handle": "responsiblevulnerabilitydisclosureprogram",
-"name": "Citymesh Responsible Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "9745f974-3e85-40d3-aa9e-2d492245ad88",
-"handle": "odoobb",
-"name": "Odoo 19.0 Bug Bounty program",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "981f8ca2-8ddd-48e8-b710-b6a00fba35cc",
-"handle": "vtmgo",
-"name": "VTM GO",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "9889b03a-9d1e-44fd-b635-af6e8bd72950",
-"handle": "liferay-vdp",
-"name": "Liferay VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "990b3f09-de8f-44ed-9cd0-8d88abd0b1fc",
-"handle": "argenta",
-"name": "Argenta",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "9a3f850e-4387-4434-98c7-dba2827b727b",
-"handle": "revolutvdp",
-"name": "Revolut VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "9acf0f0e-f1c5-4b69-8f21-88458eb60009",
-"handle": "nxtportvdp",
-"name": "NxtPort VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "9b5d8125-aab2-4e21-95db-3ed543c003de",
-"handle": "dashlanevulnerabilitydisclosureprogram",
-"name": "Dashlane Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "9ef59fe8-d021-4d23-9521-0d7d01da03ee",
-"handle": "peoplecert",
-"name": "PeopleCert VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "9f7ba0be-8ccc-4995-8846-5bc93f573bce",
-"handle": "digi-vdp",
-"name": "DIGI Responsible Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "a057e36b-1c6a-4804-9291-76eff14cc09e",
-"handle": "vmwareclouddirector",
-"name": "VCF - VMware Cloud Director",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "a09e497e-fd75-4b56-afa0-7a6689389b76",
-"handle": "e-tracker",
-"name": "e-tracker",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "a1f02fde-436d-46ba-bf94-25222caa8342",
-"handle": "colruytgroupvip",
-"name": "Colruyt Group Registered",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "a2e25ae9-2522-4689-8ebb-bf56276589f2",
-"handle": "solarwindssaas",
-"name": "SolarWinds SaaS BBP",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "a4ade6d3-ca83-4bb1-8acc-1977945782eb",
-"handle": "toogoodtogo",
-"name": "Too Good To Go - Marketplace",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "a5158346-5add-4916-bd31-d8a5fe1e805f",
-"handle": "usz-vdp",
-"name": "Universit\u00e4tsspital Z\u00fcrich VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "a5bd8905-a802-41c7-b31d-03d5f521f876",
-"handle": "saltohomesolutions",
-"name": "Salto Home Solutions",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "a765798c-f66e-4839-8b65-6979993abd98",
-"handle": "bankvanbreda",
-"name": "Bank J.Van Breda & C\u00b0",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "a78e0210-4de1-4ced-8895-48ac98c3166d",
-"handle": "huisvesting",
-"name": "Housing Application (huisvestingsapp) Bug Bounty Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "a80f638a-58a5-4f1c-a427-9d944cabd51a",
-"handle": "adacvulnerabilitydisclosureprogram",
-"name": "ADAC Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "ac854a9a-0a69-427a-b25e-7292f98c36a2",
-"handle": "daytonabugbounty",
-"name": "Daytona Bug Bounty",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "acb142c1-ffeb-41c3-a9e7-1624054f42e4",
-"handle": "veriffbugbounty",
-"name": "Veriff Bug Bounty",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "acb632b9-2605-47ec-9195-3ffb2f0fcae6",
-"handle": "gulp",
-"name": "GULP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "accb5edd-2337-4c87-9d49-f21a500b3bc0",
-"handle": "vcf-management",
-"name": "VCF - vCenter Server",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "ad2bd496-536c-4c24-b885-ce01d66966b9",
-"handle": "marionnaud",
-"name": "Marionnaud",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "aec12d84-be07-4d86-9954-7525f151f493",
-"handle": "kauflandmarketplacebugbounty",
-"name": "Kaufland Marketplace Bug Bounty",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "afaeab02-261f-486e-8a43-4dee76fccabb",
-"handle": "rivianbugbounty",
-"name": "Rivian Bug Bounty",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "afc4415d-c004-4cf8-9a12-e0f18cde6db5",
-"handle": "wpenginebugbounty",
-"name": "WP Engine Bug Bounty",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "afeb2624-ac2e-46bc-b078-b0e018baeb62",
-"handle": "cloudways",
-"name": "Cloudways by DigitalOcean",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "b084e962-1d83-4bec-9d46-0f02c0f7bf88",
-"handle": "innogames",
-"name": "InnoGames",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "b1a1cbbb-f927-49d5-a9c8-2ea03a626270",
-"handle": "nexo",
-"name": "Nexo",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "b1be2cd1-cb7c-4456-86f4-8e541955a51a",
-"handle": "theperfumeshop",
-"name": "The Perfume Shop",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "b1d83f6f-c8a6-4082-8a86-59aa27850d06",
-"handle": "toastvdp",
-"name": "Toast VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "b2049472-b637-49c3-b9cc-077c676f093c",
-"handle": "randstad",
-"name": "Randstad",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "b31aef04-c63f-429f-b965-f92c94e5eec3",
-"handle": "dropbox-vdp",
-"name": "Dropbox Vulnerability Disclosure Program ",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "b357ef46-e0bb-4cda-98fa-0836ae214223",
-"handle": "mydirtyhobby-bbp",
-"name": "MyDirtyHobby Bug Bounty Program",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "b43c8579-c85d-4aee-8d39-61fa4831409d",
-"handle": "mlbvdp",
-"name": "MLB Vulnerability Disclosure Program",
-"public": "Registered",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "b962ecba-799e-46b7-a33e-327212bc482e",
-"handle": "exactvulnerabilitydisclosureprogram",
-"name": "Exact Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "b98261a6-2339-4325-b00b-008e24b28e88",
-"handle": "kiwavdp",
-"name": "Kiwa Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "baca9d50-2fd8-427f-bd56-e67f7f058573",
-"handle": "bmc",
-"name": "BMC",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "badcb3b0-34be-4bd1-9186-7678aa5b5d17",
-"handle": "allegrobugbounty",
-"name": "Allegro",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "bbc2d49d-6b11-40af-9746-aefa64756928",
-"handle": "yacht",
-"name": "Yacht",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "bcef9c39-8ad3-48e7-ae20-6cbc9d94b0bb",
-"handle": "onespan",
-"name": "OneSpan Transaction Cloud Platform",
-"public": "Registered",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "bd22f48d-633e-4b26-bf71-e4778d41b247",
-"handle": "datacamp",
-"name": "DataCamp",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "bdbdcb88-3242-4d0b-8926-38775bd262bf",
-"handle": "axelspringersevulnerabilitydisclosureprogram",
-"name": "Axel Springer SE Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "bdcf0f7c-1562-4a8b-9a88-1c0fb477648a",
-"handle": "ucbconverse",
-"name": "UCB -External Perimeter",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "bef9d2e2-0e7c-49f7-82e3-81fd8f133225",
-"handle": "uzbrussel",
-"name": "UZ Brussel",
-"public": "Registered",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "c12292a3-d997-406f-863b-42d223dcbae6",
-"handle": "proofvdp",
-"name": "Proof.com VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "c1a89c7e-5de0-435d-a30f-a8c16e65ccfc",
-"handle": "adobepublic",
-"name": "Adobe Public",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "c45fe6df-1e31-4701-8e75-e9f01919ea20",
-"handle": "nvidiavdp",
-"name": "NVIDIA Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "c5a9bbd6-2139-4ec9-bdcc-8e2a5082fd7e",
-"handle": "arkanenetwork",
-"name": "Venly",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "c7272420-0cef-4366-87d2-278c06591799",
-"handle": "houseofhrvulnerabilitydisclosureprogram",
-"name": "House of HR Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "c72bd9b7-72aa-43eb-854f-60cddc0effd7",
-"handle": "allekabels",
-"name": "Allekabels",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "c7b0edf5-6702-4c91-923b-d36e4518c9f1",
-"handle": "lightsparkpublicbugbounty",
-"name": "Lightspark Public Bug Bounty",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "c83024b9-1d8e-42ab-8655-18753e1ad02d",
-"handle": "dropbox-prompt2pwn",
-"name": "Dropbox - Prompt2PWN",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "cefc1013-9927-4e4a-b306-e5d57f06d34a",
-"handle": "ehealthhub&meta-hubvznkul",
-"name": "eHealth Hub VZN KUL",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "cf95261d-750a-4672-b42e-74825f0d421d",
-"handle": "VDP",
-"name": "9altitudes - Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "cfe97e43-8c31-482f-9930-637eaf68658c",
-"handle": "zimmo",
-"name": "Zimmo",
-"public": "Registered",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "d108eca8-374c-4e6f-a996-4af69c7bd079",
-"handle": "kruidvat",
-"name": "Kruidvat",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "d14eedce-607d-4233-995d-30dbc7de8f23",
-"handle": "privatebankdelen",
-"name": "Delen Private Bank",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "d3bee5a5-9107-4e71-8d94-ab5098f2005c",
-"handle": "dutchlotteryvdp",
-"name": "Dutch Lottery VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "d489d81f-6b42-4ef1-b7f8-f16d9b404621",
-"handle": "nexuzhealthvdp",
-"name": "Nexuzhealth VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "d5c4e966-a80a-44f5-91c9-2bb9487b8762",
-"handle": "eurid",
-"name": "EURid",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "d74a9b6a-0356-46e7-8346-2b9de8acc90e",
-"handle": "shopapothekesites",
-"name": "Redcare Pharmacy Sites",
-"public": "Registered",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "d89a3560-be5c-406c-8a73-e4c72b0ca4c4",
-"handle": "yahoobugbounty",
-"name": "Yahoo Bug Bounty",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "dd9dba85-e047-42f3-b59e-9328c7d49672",
-"handle": "digitalocean",
-"name": "DigitalOcean",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "df3eb13d-bbc2-4aaa-9e45-2477d64f172e",
-"handle": "challenge1126",
-"name": "Challenge 1126",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "e0f19fd6-88c1-46f3-a42f-855a9ba0294c",
-"handle": "intertoys",
-"name": "Intertoys",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "e1dc7326-0466-4c06-bd52-3c6df82370be",
-"handle": "redbull",
-"name": "Red Bull",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "e2894532-0245-49a9-9883-493a23ae7e1e",
-"handle": "brazzers-bbp",
-"name": "Brazzers Bug Bounty Program",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "e2a235f3-6a95-4134-a165-aa48e9632f47",
-"handle": "anacondavdp",
-"name": "Anaconda Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "e540980d-b56e-4956-afff-f914653a4f6e",
-"handle": "dropbox",
-"name": "Dropbox Bug Bounty",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "e54a1d91-7c4b-4295-a1be-564af02b1572",
-"handle": "nvidiatensorrt-llm",
-"name": "NVIDIA TensorRT-LLM",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "e59246b5-c4a5-4d3f-aac6-d386ecfa0e23",
-"handle": "kbc-responsibledisclosure",
-"name": "KBC - Responsible Disclosure",
-"public": "Registered",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "e6386eb8-ce59-43b5-98b6-f1590cafdceb",
-"handle": "tweakers",
-"name": "Tweakers",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "e67941f1-2087-4681-8718-3e3f4dc51798",
-"handle": "amd",
-"name": "AMD Product Security Bug Bounty Program",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "e85b4b33-7785-43b5-a5aa-5bcd226688b4",
-"handle": "heretechnologies",
-"name": "Here Technologies",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "e8b2e8ca-1fb2-4c17-933f-2a1f5cfb7da7",
-"handle": "driessenvdp",
-"name": "Driessen Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "eb340a46-b5b8-4165-b8d8-bc032493e8a6",
-"handle": "ubisoftvdp",
-"name": "Ubisoft Responsible Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "ecc515cc-c0c1-4a72-966a-ba2baef4d35f",
-"handle": "orbiavdp",
-"name": "Orbia Responsible Disclosure",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "ecf9c610-36eb-47df-8b25-bb496aff8015",
-"handle": "nexuzhealthwebpacs",
-"name": "Nexuzhealth Web PACS",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "ed04d1ef-1aa3-49dd-92f1-06f50f9756b9",
-"handle": "truelayer",
-"name": "TrueLayer",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "ee2612e7-e188-492f-9bb2-ba48651523de",
-"handle": "intergamma",
-"name": "Intergamma",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "ee730db2-80a7-4e75-a2b2-c24c7309dca3",
-"handle": "upcloud",
-"name": "UpCloud Bug Bounty",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "ef919950-9ced-48c3-b1f4-2379c43c8ec5",
-"handle": "wartsila-vdp",
-"name": "W\u00e4rtsil\u00e4 Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "efa92aaa-d683-4cf9-8834-a03cf864cc80",
-"handle": "trouw",
-"name": "Trouw",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "efd8bd86-a986-4b4a-9eda-c9a6a1a6b540",
-"handle": "cmcom",
-"name": "CM.com",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "f2a437ca-68cb-455c-81ba-3b8cd1b21cb2",
-"handle": "arboniavdpprogram",
-"name": "Arbonia VDP program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "f64faa66-b7e6-4ad7-bf56-b64a885d682a",
-"handle": "vlerickbusinessschool",
-"name": "Vlerick Business School",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "f6f576c3-c066-4be1-9d0b-f6d934d682f6",
-"handle": "iciparisxl",
-"name": "ICI PARIS XL",
-"public": "Public",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "f7f850ff-9769-4de8-827c-6b203d1b974e",
-"handle": "livepersonconversationalcloud",
-"name": "Liveperson Conversational Cloud",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "f8b4efd3-7722-40b1-8a96-faedf489c9d5",
-"handle": "zabkagroup-vdp",
-"name": "Zabka Group Vulnerability Disclosure Program",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "fa431861-6fb9-413e-bc33-04325250a2fb",
-"handle": "ivovulnerabilitydisclosureprogram",
-"name": "Ivo: AI VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "fdfddd69-ea12-4ff0-b1d1-1f9bdc42492f",
-"handle": "matecovdp",
-"name": "Mateco VDP",
-"public": "Public",
-"bounty": false,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
-"submit_access": "account_required"
-},
-{
-"id": "fe5e3c55-e83e-4848-b7f8-dc633d8e62e0",
-"handle": "fortnox",
-"name": "Fortnox Bug Bounty Program",
-"public": "Application",
-"bounty": true,
-"safe_harbour": null,
-"scope_in": [],
-"scope_out": [],
+"safe_harbour": true,
+"scope_in": [
+{
+"target": "https://webwsp.aps.kuleuven.be/sap/bc/ui5_ui5/sap/zc_oi_appl/",
+"type": "Url"
+}
+],
+"scope_out": [
+{
+"target": "https://associatie.kuleuven.be/inschrijvingen/oli_login_50000050",
+"type": "Url"
+}
+],
 "submit_access": "account_required"
 }
 ]
