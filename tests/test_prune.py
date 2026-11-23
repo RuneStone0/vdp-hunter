@@ -18,15 +18,26 @@ def _platform_row(domain):
 
 
 def test_dotless_rows_are_retired(client):
-    junk = _row("localhost", ["securitytxt"])
-    main.store.ingest([_platform_row("floqast"), junk, _platform_row("acme.com")],
-                      record_changes=False)
+    # Ingest now refuses dotless keys, so a legacy database that already holds them
+    # (built before app/domains.py existed) is the case the prune has to cover.
+    with main.store.conn() as c:
+        for d in ("localhost", "floqast"):
+            c.execute("INSERT OR REPLACE INTO programs(domain,name,sources,platforms) "
+                      "VALUES(?,?,?,?)", (d, d, '["securitytxt"]', '["hackerone"]'))
+    assert main.store.get("localhost") is not None          # legacy row really is there
     res = main.store.ingest([_platform_row("acme.com")], record_changes=True,
                             allow_removal=True, prune_dotless_platform=True)
     assert res["removed"] == 2
     assert main.store.get("floqast") is None
     assert main.store.get("localhost") is None
     assert main.store.get("acme.com") is not None
+
+
+def test_ingest_refuses_dotless_keys_so_they_never_come_back(client):
+    res = main.store.ingest([_row("localhost", ["securitytxt"]), _platform_row("acme.com")],
+                            record_changes=False)
+    assert res["seeded"] == 1
+    assert main.store.get("localhost") is None
 
 
 def test_prune_only_removes_rows_from_that_source(client):

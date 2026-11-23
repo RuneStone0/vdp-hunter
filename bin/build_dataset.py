@@ -22,6 +22,11 @@ import sys
 from datetime import date
 from urllib.parse import urlparse
 
+# canonical validators live in app/domains.py so the API can enforce the same rules
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from app.domains import (asset_domain, clean_host, is_valid as is_valid_domain,  # noqa: E402
+                         registrable as _registrable_strict)
+
 DATA = os.environ.get("VDP_DATA", "data")
 
 # second-level suffixes worth one extra label when computing "registrable domain"
@@ -36,15 +41,12 @@ PLATFORM_HOSTS = {"hackerone": "hackerone.com", "bugcrowd": "bugcrowd.com",
 
 
 def registrable(host):
-    host = (host or "").lower().strip().rstrip(".")
-    if host.startswith("www."):
-        host = host[4:]
-    labels = host.split(".")
-    if len(labels) <= 2:
-        return host
-    if ".".join(labels[-2:]) in SLD:
-        return ".".join(labels[-3:])
-    return ".".join(labels[-2:])
+    """The registrable domain, or "" when the value is not a host at all.
+
+    Kept returning str rather than None so the callers that do `if "." not in key`
+    keep working; every caller already treats "" as "skip".
+    """
+    return _registrable_strict(host) or ""
 
 
 def host_of(url):
@@ -105,16 +107,16 @@ def scope_assets(prog):
 
 
 def asset_domains(assets):
-    """The registrable domains an asset list names, so scope can filter the dataset."""
+    """The registrable domains an asset list names, so scope can filter the dataset.
+
+    Validation happens in app/domains.py: a scope entry that is scope syntax rather
+    than a host ('*.vfsglobal.(com|co.uk|ca)') contributes nothing instead of
+    inventing a key.
+    """
     domains = set()
     for asset in assets:
-        raw = asset["target"]
-        host = host_of(raw) if "://" in raw else raw.replace("*.", "").split("/")[0].split(":")[0]
-        host = (host or "").strip().lower().strip(".")
-        if not host or is_ip(host) or is_platform_host(host):
-            continue
-        key = registrable(host)
-        if key and "." in key:
+        key = asset_domain(asset.get("target"))
+        if key and not is_platform_host(key):
             domains.add(key)
     return sorted(domains)
 
@@ -254,15 +256,8 @@ def platform_domain(prog):
     for raw in candidates:
         if not raw:
             continue
-        if "://" in raw:
-            host = host_of(raw)
-        else:
-            host = raw.replace("*.", "").split("/")[0].split(":")[0].strip()
-        host = (host or "").lower().strip(".")
-        if not host or "*" in host or " " in host or is_ip(host) or is_platform_host(host):
-            continue
-        key = registrable(host)
-        if key and "." in key:
+        key = asset_domain(raw)
+        if key and not is_platform_host(key):
             return key
     return None
 
@@ -374,7 +369,10 @@ def main():
             if r.get("found_at"):
                 hits[r["domain"]] = r
     for domain, r in hits.items():
-        p = get(registrable(domain))
+        key = registrable(domain)
+        if not key:
+            continue
+        p = get(key)
         p["sources"].append(r.get("source") or "securitytxt")
         p["securitytxt_url"] = r.get("found_at")
         p["emails"] = sorted(set(p["emails"]) | set(r.get("emails") or []))

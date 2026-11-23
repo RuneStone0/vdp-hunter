@@ -13,6 +13,8 @@ import time
 from contextlib import contextmanager
 from datetime import datetime, timezone
 
+from .domains import is_valid as is_valid_domain
+
 FIELDS = ("name", "sources", "platforms", "policy", "emails", "contact_urls",
           "expires_on", "expiry", "offers_bounty", "safe_harbor",
           "securitytxt_url", "tls_verified", "in_scope_domains",
@@ -117,6 +119,15 @@ class Store:
                allow_removal: bool = False, prune_only_sources=None,
                prune_dotless_platform: bool = False) -> dict:
         """Upsert a full dataset snapshot and record the delta against the stored state."""
+        # The domain is the join key for scope, change diffs and testing permission,
+        # so a value that is not a domain never reaches the table. The builder
+        # validates as well; this is the boundary nothing can route around.
+        accepted, rejected = [], []
+        for p in programs:
+            (accepted if is_valid_domain(p.get("domain")) else rejected).append(p)
+        if rejected:
+            note = (note + f" rejected_invalid_domain={len(rejected)}").strip()
+        programs = accepted
         started = now()
         ts = started
         with self.conn() as c:
