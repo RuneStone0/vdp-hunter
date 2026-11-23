@@ -297,6 +297,44 @@ class Store:
         return {"scanned": len(rows), "noop": len(victims), "deleted": deleted,
                 "dry_run": dry_run}
 
+    def purge_invalid_domains(self, dry_run: bool = True) -> dict:
+        """Delete rows whose key is not a domain, and the history that references them.
+
+        Before app/domains.py existed, a scope string such as '(com|co.uk|ca)' or
+        '*elvetino.ch' could become a program key. Ingest now refuses new ones, but rows
+        written by an older build stay in the table: they are absent from every snapshot,
+        and platform-sourced rows are deliberately never auto-pruned. This is the explicit
+        repair, dry run by default, and it reports what it would remove by reason.
+        """
+        with self.conn() as c:
+            rows = [(r["domain"], _load(r["sources"]) or [])
+                    for r in c.execute("SELECT domain, sources FROM programs")]
+            victims = [(d,) for d, _ in rows if not is_valid_domain(d)]
+            reasons = {}
+            for d, _ in rows:
+                if is_valid_domain(d):
+                    continue
+                key = ("leading wildcard" if str(d).startswith("*")
+                       else "scope syntax" if any(ch in str(d) for ch in "|()<>{}[],  ")
+                       else "not a hostname")
+                reasons[key] = reasons.get(key, 0) + 1
+            deleted_rows = deleted_changes = 0
+            if victims and not dry_run:
+                c.executemany("DELETE FROM programs WHERE domain=?", victims)
+                deleted_rows = len(victims)
+                domains = [v[0] for v in victims]
+                for i in range(0, len(domains), 500):
+                    chunk = domains[i:i + 500]
+                    marks = ",".join("?" * len(chunk))
+                    c.execute(f"DELETE FROM changes WHERE domain IN ({marks})", chunk)
+                    deleted_changes += c.total_changes
+                c.execute("UPDATE runs SET "
+                          "added=(SELECT count(*) FROM changes ch WHERE ch.run_id=runs.id AND ch.kind='added'),"
+                          "removed=(SELECT count(*) FROM changes ch WHERE ch.run_id=runs.id AND ch.kind='removed'),"
+                          "changed=(SELECT count(*) FROM changes ch WHERE ch.run_id=runs.id AND ch.kind='changed')")
+        return {"scanned": len(rows), "invalid": len(victims), "deleted": deleted_rows,
+                "changes_deleted": deleted_changes, "by_reason": reasons, "dry_run": dry_run}
+
     def changes(self, since=None, kinds=None, domain=None, limit=200, offset=0,
                 platform_only=False):
         where, args = [], []

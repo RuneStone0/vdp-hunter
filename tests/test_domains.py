@@ -101,3 +101,22 @@ def test_builder_wrapper_returns_empty_string_for_junk():
     assert build_dataset.registrable("*skybet.com") == "skybet.com"
     # the "" contract is what keeps `if "." not in key` callers working
     assert "." not in build_dataset.registrable("0 and l\u01ddncrypt2.0")
+
+
+def test_purge_invalid_domains_spares_valid_rows(tmp_path):
+    st = store_mod.Store(str(tmp_path / "purge.db"))
+    st.ingest([{"domain": "acme.com", "name": "Acme", "sources": ["securitytxt"], "platforms": []}],
+              record_changes=True)
+    # rows written by the pre-validation builder can only be reproduced with raw SQL
+    with st.conn() as c:
+        for d in ("(com|co.uk|ca)", "*elvetino.ch", "0 and l\xddncrypt2.0"):
+            c.execute("INSERT OR REPLACE INTO programs(domain,name,sources,platforms) VALUES(?,?,?,?)",
+                      (d, d, '["hackerone"]', '["hackerone"]'))
+    dry = st.purge_invalid_domains(dry_run=True)
+    assert dry["invalid"] == 3 and dry["deleted"] == 0
+    assert st.get("(com|co.uk|ca)") is not None
+    real = st.purge_invalid_domains(dry_run=False)
+    assert real["deleted"] == 3
+    assert st.get("(com|co.uk|ca)") is None
+    assert st.get("*elvetino.ch") is None
+    assert st.get("acme.com") is not None            # a real row is never touched

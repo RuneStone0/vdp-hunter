@@ -365,6 +365,19 @@ def purge_noop_changes(dry_run: bool = True, key: dict = Depends(admin)):
     return envelope(store.purge_noop_changes(dry_run=dry_run))
 
 
+@app.post("/admin/domains/purge", tags=["admin"],
+          summary="Delete program rows whose key is not a domain")
+def purge_invalid_domains(dry_run: bool = True, key: dict = Depends(admin)):
+    """Repair for rows a pre-validation builder wrote.
+
+    Keys like '(com|co.uk|ca)', '*elvetino.ch' or '0 and lǝncrypt2.0' entered the table
+    before app/domains.py existed. Ingest now refuses them, but existing rows are absent
+    from every snapshot and platform rows are never auto-pruned, so they need an explicit
+    delete. Dry run by default.
+    """
+    return envelope(store.purge_invalid_domains(dry_run=dry_run))
+
+
 @app.post("/admin/ingest", tags=["admin"], summary="Ingest a dataset snapshot posted as JSON")
 def ingest_snapshot(payload: dict, prune_directory: bool = False, key: dict = Depends(admin)):
     """Take the snapshot over HTTP instead of reading a file.
