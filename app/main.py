@@ -353,6 +353,18 @@ def reload_dataset(prune_directory: bool = False, key: dict = Depends(admin)):
         prune_dotless_platform=prune_directory))
 
 
+@app.post("/admin/changes/purge", tags=["admin"],
+          summary="Delete change rows that report an edit which did not happen")
+def purge_noop_changes(dry_run: bool = True, key: dict = Depends(admin)):
+    """One-off repair for the /changes feed.
+
+    The change detector used to normalise the stored value and the incoming value differently,
+    so a re-scan reported a scope edit even when the targets were identical. Dry run by default;
+    `dry_run=false` deletes those rows and recomputes the per-run counters.
+    """
+    return envelope(store.purge_noop_changes(dry_run=dry_run))
+
+
 @app.post("/admin/ingest", tags=["admin"], summary="Ingest a dataset snapshot posted as JSON")
 def ingest_snapshot(payload: dict, prune_directory: bool = False, key: dict = Depends(admin)):
     """Take the snapshot over HTTP instead of reading a file.

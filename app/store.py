@@ -256,6 +256,36 @@ class Store:
         p["history"] = [_change(r) for r in hist]
         return p
 
+    def purge_noop_changes(self, dry_run: bool = True) -> dict:
+        """Delete `changed` rows that assert an edit which did not happen.
+
+        `_norm` used to compare the stored JSON string against the in-memory list without
+        canonicalising both sides, so every re-scan wrote one row per scope field even when the
+        targets were identical (963 of 1000 sampled rows on 2026-11-23). This removes exactly
+        those rows, leaves genuine changes alone, and recomputes the per-run counters so the
+        runs table stops overstating activity.
+        """
+        with self.conn() as c:
+            rows = c.execute("SELECT id, fields, before, after FROM changes "
+                             "WHERE kind='changed'").fetchall()
+            victims = []
+            for r in rows:
+                fields = _load(r["fields"]) or []
+                before = _load(r["before"]) or {}
+                after = _load(r["after"]) or {}
+                if not fields or not isinstance(before, dict) or not isinstance(after, dict):
+                    continue
+                if all(_norm(before.get(f)) == _norm(after.get(f)) for f in fields):
+                    victims.append((r["id"],))
+            deleted = 0
+            if victims and not dry_run:
+                c.executemany("DELETE FROM changes WHERE id=?", victims)
+                deleted = len(victims)
+                c.execute("UPDATE runs SET changed=(SELECT count(*) FROM changes ch "
+                          "WHERE ch.run_id=runs.id AND ch.kind='changed')")
+        return {"scanned": len(rows), "noop": len(victims), "deleted": deleted,
+                "dry_run": dry_run}
+
     def changes(self, since=None, kinds=None, domain=None, limit=200, offset=0,
                 platform_only=False):
         where, args = [], []
@@ -362,21 +392,35 @@ def _load(v):
     return v
 
 
-def _norm(v):
-    """Compare DB representation against the in-memory program dict, order-insensitively."""
+def _canon(v):
+    """Deep canonical form: neither list order nor dict key order matters."""
+    if isinstance(v, dict):
+        return {k: _canon(x) for k, x in v.items()}
     if isinstance(v, list):
-        v = sorted(v, key=str)
+        return sorted((_canon(x) for x in v), key=lambda x: json.dumps(x, sort_keys=True))
+    return v
+
+
+def _norm(v):
+    """Canonical comparison value for one field.
+
+    Both sides must take the same path. The stored value comes out of SQLite as a JSON string
+    and the incoming one is a Python object, and normalising them differently made every scope
+    list look edited on re-scan: the stored list kept its order while the incoming list was
+    sorted. Measured 2026-11-23 before the fix: 963 of 1000 sampled change rows had identical
+    before and after.
+    """
+    if isinstance(v, str) and v[:1] in "[{":
+        try:
+            v = json.loads(v)
+        except json.JSONDecodeError:
+            return v
     if isinstance(v, bool):
         v = int(v)
     if isinstance(v, (list, dict)):
-        v = json.dumps(v)
+        return json.dumps(_canon(v), sort_keys=True)
     if v is None:
         return None
-    if isinstance(v, str) and v[:1] in "[{":
-        try:
-            return json.dumps(json.loads(v), sort_keys=True)
-        except json.JSONDecodeError:
-            return v
     return v
 
 
