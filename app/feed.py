@@ -151,6 +151,12 @@ def headline(kind: str, fields: list[str], before: dict, after: dict) -> str:
     if "safe_harbor" in fields:
         return "safe harbor status changed"
     if "in_scope_domains" in fields or "out_of_scope_domains" in fields:
+        grew = (len(after.get("in_scope_domains") or []) -
+                len(before.get("in_scope_domains") or []))
+        if grew > 0:
+            return f"scope grew by {grew}"
+        if grew < 0:
+            return f"scope shrank by {-grew}"
         return "scope edited"
     if "securitytxt_url" in fields:
         return "security.txt moved"
@@ -175,12 +181,26 @@ def _fields_for(kind: str, raw_fields, before: dict, after: dict) -> list[str]:
     return [f for f in FIELD_ORDER if f in fields]
 
 
+SCOPE_FIELDS = {"in_scope_domains", "out_of_scope_domains"}
+
+
+def _count(v) -> str:
+    n = len(v) if isinstance(v, list) else (1 if v else 0)
+    return f"{n} target" + ("" if n == 1 else "s")
+
+
 def _diffs(kind: str, fields: list[str], before: dict, after: dict, locked: bool) -> list[dict]:
     out = []
     for f in fields[:4]:
         if locked and f in HIDDEN_FIELDS:
             out.append({"field": FIELD_LABEL.get(f, f), "before": None, "after": None,
                         "hidden": True})
+            continue
+        if f in SCOPE_FIELDS:
+            out.append({"field": FIELD_LABEL.get(f, f),
+                        "before": _count(before.get(f)) if kind != "added" else None,
+                        "after": _count(after.get(f)) if kind != "removed" else None,
+                        "hidden": False})
             continue
         out.append({"field": FIELD_LABEL.get(f, f),
                     "before": _short(before.get(f)) if kind != "added" else None,

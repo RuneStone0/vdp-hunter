@@ -148,6 +148,20 @@ def test_masked_name_field_does_not_leak_the_org(client):
     assert "Kliksafe" not in raw and "kliksafe" not in raw
 
 
+def test_scope_change_reads_as_a_count_not_a_wall_of_domains():
+    rows = [{
+        "id": 1, "ts": "2026-11-23T23:00:00+00:00", "kind": "changed",
+        "domain": "shopify.com", "fields": ["in_scope_domains"], "platforms": '["hackerone"]',
+        "before": json.dumps({"in_scope_domains": ["a.shopify.com", "b.shopify.com"]}),
+        "after": json.dumps({"in_scope_domains": ["a.shopify.com", "b.shopify.com",
+                                                 "c.shopify.com", "d.shopify.com"]}),
+    }]
+    item = feed.build(rows, reveal=True)[0]
+    assert item["headline"] == "scope grew by 2"
+    assert item["diffs"][0] == {"field": "in scope", "before": "2 targets",
+                                "after": "4 targets", "hidden": False}
+
+
 def test_sweep_banner_carries_the_run_numbers(client):
     with main.store.conn() as c:
         c.execute("INSERT INTO runs(started_at,finished_at,kind,probes,hits,added,changed) "
