@@ -28,6 +28,7 @@ Missing or revoked keys return `401`; over-limit returns `429`.
 | GET | `/v1/stats` | Counts, expiry distribution, coverage position |
 | GET | `/v1/sources` | Where each data source comes from and how often it refreshes |
 | GET | `/v1/runs` | Recent scan runs |
+| GET | `/feed.json` | Public preview: the 10 newest changes, no key, paid-only rows masked |
 | POST | `/admin/keys` | Issue a key (admin) |
 | DELETE | `/admin/keys?key=` | Revoke a key (admin) |
 | POST | `/admin/scan` | Run one scan cycle now (admin) |
@@ -58,6 +59,12 @@ Single-object endpoints return `{"data": {...}, "meta": {"count": 1, ...}}`.
 - `kind=changed` rows carry `fields` plus `before` / `after` objects holding only the
   fields that moved.
 - Poll with the newest `ts` you have seen. Do not diff `/v1/programs` yourself.
+
+`/feed.json` is not part of the paid API: it is the same ten rows the public `/changes`
+page renders, for the page's own polling, and it masks rows that belong to the paid
+dataset (a stable masked domain, no contact values). It accepts `kind` and `after_id`
+and returns `no-store`. Anything older, whole, or unmasked comes from `/v1/changes`
+with a key. `VDP_FEED_REVEAL=1` disables the mask for local review only.
 
 ## Cadence
 

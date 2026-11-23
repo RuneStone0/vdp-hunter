@@ -63,14 +63,18 @@ def test_program_page(client):
     assert client.get("/program/does-not-exist.example").status_code == 404
 
 
-def test_changes_page_renders_diffs(client):
+def test_changes_page_shows_public_diffs_and_masks_paid_rows(client):
     _seed()
-    main.store.ingest([dict(RICH, policy="https://zapier.com/security/new")])
+    main.store.ingest([dict(RICH, policy="https://zapier.com/security/new"),
+                       dict(PLAT, policy="https://bugcrowd.com/shopify2")])
     r = client.get("/changes")
     assert r.status_code == 200
     assert "changed" in r.text
-    assert "https://zapier.com/security/new" in r.text
-    assert "https://zapier.com/engineering/bug-bounty-submission/" in r.text
+    # a platform listing is public data, so its new value is on the page
+    assert "https://bugcrowd.com/shopify2" in r.text
+    # a self-managed program is the paid dataset: the row is there, the values are not
+    assert "zapier.com" not in r.text
+    assert "values in the paid feed" in r.text
 
 
 def test_program_page_is_escaped(client):

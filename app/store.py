@@ -357,6 +357,36 @@ class Store:
                              (*args, limit, offset)).fetchall()
         return [_change(r) for r in rows], total
 
+    def feed(self, kind=None, limit=10, after_id=None) -> list[dict]:
+        """Newest change rows, each joined with the program and the run behind it.
+
+        The public feed needs the platform list to decide what is public and what is
+        paid, and the domain is deliberately not re-validated here: a removed row has
+        no program left, and it still belongs in the feed.
+        """
+        where, args = [], []
+        if kind:
+            where.append("ch.kind=?")
+            args.append(kind)
+        if after_id:
+            where.append("ch.id>?")
+            args.append(int(after_id))
+        clause = ("WHERE " + " AND ".join(where)) if where else ""
+        with self.conn() as c:
+            rows = c.execute(
+                f"SELECT ch.*, p.platforms, p.offers_bounty, p.expiry AS program_expiry, "
+                f"r.probes AS run_probes, r.hits AS run_hits, r.added AS run_added, "
+                f"r.changed AS run_changed, r.finished_at AS run_finished "
+                f"FROM changes ch LEFT JOIN programs p ON p.domain = ch.domain "
+                f"LEFT JOIN runs r ON r.id = ch.run_id "
+                f"{clause} ORDER BY ch.id DESC LIMIT ?", (*args, limit)).fetchall()
+        out = []
+        for r in rows:
+            row = dict(r)
+            row["fields"] = _load(row["fields"]) if row.get("fields") else None
+            out.append(row)
+        return out
+
     def stats(self) -> dict:
         coverage = self.get_state("coverage_offset", "0")
         with self.conn() as c:

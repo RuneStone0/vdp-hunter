@@ -752,34 +752,163 @@ def program_page(domain: str):
                       web.program_body(p))
 
 
+def _feed_rows(kind: str = "", after_id: int = 0) -> dict:
+    """One shape for the HTML page and for /feed.json, so they cannot drift."""
+    from . import feed as feedmod
+
+    if kind not in ("added", "changed", "removed"):
+        kind = ""
+    rows = store.feed(kind=kind or None, limit=feedmod.LIMIT, after_id=after_id or None)
+    items = feedmod.build(rows)
+    for it, frag in zip(items, feedmod.fragments(items)):
+        it["html"] = frag
+    last = store.stats().get("last_run") or {}
+    return {
+        "generated_at": now(),
+        "mode": "reveal" if feedmod.REVEAL else "masked",
+        "kind": kind or "all",
+        "newest_id": items[0]["id"] if items else 0,
+        "newest_ago": items[0]["ago"] if items else "",
+        "locked": sum(1 for i in items if i["locked"]),
+        "changes": items,
+        "last_run": {k: last.get(k) for k in
+                     ("started_at", "finished_at", "probes", "hits", "added", "changed")},
+    }
+
+
+@app.get("/feed.json", include_in_schema=False)
+def feed_json(kind: str = "", after_id: int = 0):
+    """The ten newest changes, keyless, as the public page renders them.
+
+    This is a preview, not the product: paid-only rows arrive masked, and full values
+    come from /v1/changes with a key. No-store so a poll always sees the last sweep.
+    """
+    return JSONResponse(_feed_rows(kind, after_id),
+                        headers={"Cache-Control": "no-store"})
+
+
 @app.get("/changes", include_in_schema=False, response_class=HTMLResponse)
-def changes_page(kind: str = "", domain: str = "", page: int = 1):
+def changes_page(kind: str = ""):
+    from . import feed as feedmod
     from . import web
 
-    page = max(1, page)
-    rows, total = store.changes(None, [kind] if kind else None, domain or None,
-                                limit=web.PER_PAGE, offset=(page - 1) * web.PER_PAGE)
-    kinds = [("", "Any kind"), ("added", "Added"), ("changed", "Changed"), ("removed", "Removed")]
+    st = store.stats()
+    data = _feed_rows(kind)
+    items, last = data["changes"], data["last_run"]
+    shown = len(items)
+    locked = data["locked"]
+    probes = int(last.get("probes") or 0)
+    newest = data["newest_ago"] or "none yet"
+    kind = data["kind"] if data["kind"] != "all" else ""
+    label = {"added": "added", "changed": "changed", "removed": "removed"}.get(kind, "")
+
+    kind_links = "".join(
+        f'<a class="kfilter{" on" if k == kind else ""}" data-kind="{k}" '
+        f'href="/changes{("?kind=" + k) if k else ""}">{lbl}</a>'
+        for k, lbl in (("", "all"), ("added", "added"), ("changed", "changed"),
+                       ("removed", "removed")))
+
+    sample = """{
+  "data": [
+    {
+      "id": 128163,
+      "ts": "2026-11-23T22:17:40+00:00",
+      "kind": "added",
+      "domain": "example.com",
+      "after": { "sources": ["securitytxt"],
+                 "securitytxt_url": "https://example.com/.well-known/security.txt",
+                 "expiry": "valid", "emails": ["security@example.com"] }
+    }
+  ],
+  "meta": { "count": 1, "total": 1, "has_more": false }
+}"""
+    curl = ('curl -s "$VDP_BASE/v1/changes?since=' + datetime.now(timezone.utc).strftime("%Y-%m-%d") +
+            '" \\\n  -H "X-API-Key: ***"')
+
+    mask_note = (f"{locked} of {shown} rows are in the paid dataset only, so their values are "
+                 f"masked here. The same rows come back whole with a key."
+                 if locked else "Every row in this batch is public, so the values are shown.")
+
     body = f"""<p class="eyebrow">Change feed</p>
-<h1 style="font-size:clamp(1.6rem,3vw,2.2rem)">What changed, and what it was before</h1>
-<p class="lede">Every diff the scanner records, newest first. Field-level before and after, so a
-moved policy URL or an expired security.txt is visible rather than implied.</p>
-<form class="filters" method="get" action="/changes">
-  <input class="search" type="search" name="domain" value="{web.esc(domain)}" placeholder="Filter by domain">
-  <select name="kind">{web.options(kinds, kind)}</select>
-  <button class="btn btn-primary" type="submit">Filter</button>
-  <a class="btn btn-ghost" href="/changes">Reset</a>
-</form>
-<div class="summary"><span>{total:,} change records</span>
-<span><a href="/explore">&larr; explore the dataset</a></span></div>
-{web.change_list(rows) or '<p class="empty">No changes recorded for those filters yet.</p>'}
-<div class="pager">
-  {f'<a href="/changes?page={page - 1}&kind={web.esc(kind)}&domain={web.esc(domain)}">&lsaquo; prev</a>' if page > 1 else ''}
-  <span class="pager-pos">page {page}</span>
-  {f'<a href="/changes?page={page + 1}&kind={web.esc(kind)}&domain={web.esc(domain)}">next &rsaquo;</a>' if total > page * web.PER_PAGE else ''}
-</div>"""
+<h1>The dataset, <span class="accent">as it moves</span>.</h1>
+<p class="lede">Added programs, moved policy urls, expired security.txt files. Every diff the
+crawler records lands here within minutes, newest first. The API has all
+{st['changes']:,} rows, with before and after values.</p>
+
+<script>document.documentElement.classList.add('js');</script>
+<div class="fe-strip">
+  <div><b>{st['changes']:,}</b><span>changes recorded</span></div>
+  <div><b>{st['programs']:,}</b><span>programs tracked</span></div>
+  <div><b>{probes:,}</b><span>domains probed last sweep</span></div>
+  <div><b>{newest}</b><span>newest change</span></div>
+</div>
+
+<div class="fe-grid">
+  <section class="tape" id="tape" data-feed="/feed.json"
+           data-newest="{data['newest_id']}" data-kind="{kind}">
+    <header class="tape-bar">
+      <span class="dots"><i></i><i></i><i></i></span>
+      <span class="tape-name">vdp-hunter / changes</span>
+      <span class="tape-state" id="tape-state"><i class="pulse"></i>
+        <span id="tape-watch">watching</span>
+        <span class="dim" id="tape-checked">checked just now</span></span>
+      <button class="tape-replay" id="tape-replay" type="button">Replay</button>
+    </header>
+    <div class="tape-cols"><span>kind</span><span>program</span><span>what changed</span><span>when</span></div>
+    <ol class="tape-rows" id="tape-rows">{feedmod.list_html(items)}</ol>
+    <footer class="tape-foot">
+      <span>{label or "all"} changes, newest {shown} of {st['changes']:,}</span>
+      <span class="tape-filters">{kind_links}</span>
+    </footer>
+    <p class="tape-note">{mask_note}</p>
+  </section>
+
+  <aside class="fe-aside">
+    <div class="fe-api">
+      <p class="tag">The API</p>
+      <h3>This page stops at ten.</h3>
+      <p class="fe-small">Poll the delta instead of pulling the dataset. One cursor, one header,
+      only the rows that moved since you last asked.</p>
+      <div class="snippet">
+        <div class="snip-bar"><span>shell</span>
+          <button class="copy" type="button">copy</button></div>
+        <pre>{curl}</pre>
+      </div>
+      <details class="snippet-more"><summary>response</summary><pre>{web.esc(sample)}</pre></details>
+      <ul class="fe-list">
+        <li><code>since=</code> rows after a timestamp, so a poll is incremental</li>
+        <li><code>kind=</code> added, changed or removed</li>
+        <li><code>before</code> and <code>after</code> on every row, field by field</li>
+        <li>1,000 rows per call, 120 requests a minute on the free tier</li>
+      </ul>
+      <p class="fe-paid">Rows marked <span class="lock">paid</span> are programs that publish a
+      security.txt but appear on no platform. That half of the feed is what a key unlocks.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/guide">Read the docs</a>
+        <a class="btn btn-ghost" href="/pricing">Pricing</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<section>
+<h2 class="fe-how-title">How a row gets here</h2>
+<div class="fe-how">
+  <div class="fe-step"><span class="n">01</span><h3>Probe</h3>
+    <p>An RFC 9116 crawler fetches <code>/.well-known/security.txt</code> across the top million
+    domains, {probes:,} of them in the last sweep alone.</p></div>
+  <div class="fe-step"><span class="n">02</span><h3>Diff</h3>
+    <p>Each snapshot is compared to the stored record through one canonical form, so a
+    re-scan that found nothing new writes nothing at all.</p></div>
+  <div class="fe-step"><span class="n">03</span><h3>Deliver</h3>
+    <p>The delta is a row with the old and new value, available the moment the sweep
+    commits, at <code>GET /v1/changes</code>.</p></div>
+</div>
+</section>
+<script src="/assets/feed.js" defer></script>"""
     return shell_page("/changes", "Bug Hunter · change feed",
-                      "Field-level diffs for every disclosure program we track.", body)
+                      "The ten newest changes to the disclosure program dataset, and the API "
+                      "that serves the rest.", body)
 
 
 @app.get("/", include_in_schema=False, response_class=HTMLResponse)
