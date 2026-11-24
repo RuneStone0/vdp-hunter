@@ -24,6 +24,10 @@ services:
       VDP_ZONE_MINUTES: "120"
       VDP_ZONE_PAUSE: "300"
       CZDS_TOKEN: ${CZDS_TOKEN:-}
+      # optional: Bugcrowd API token as "name:secret" from
+      # tracker.bugcrowd.com/user/api_credentials. Absent means the API pull is
+      # skipped and only the daily bounty-targets-data rows are used.
+      BUGCROWD_TOKEN: ${BUGCROWD_TOKEN:-}
     volumes:
       - vdp_data:/app/data
     healthcheck:

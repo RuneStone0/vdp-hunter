@@ -9,6 +9,8 @@ from __future__ import annotations
 import html
 import json
 import os
+import subprocess
+import sys
 import urllib.error
 import urllib.request
 from urllib.parse import parse_qs
@@ -294,9 +296,9 @@ def sources(key: dict = Depends(auth)):
         {"id": "hackerone", "name": "HackerOne (via bounty-targets-data)",
          "upstream": "https://github.com/arkadiyt/bounty-targets-data",
          "cadence": "daily", "covers": "programs and in-scope assets"},
-        {"id": "bugcrowd", "name": "Bugcrowd (via bounty-targets-data)",
-         "upstream": "https://github.com/arkadiyt/bounty-targets-data",
-         "cadence": "daily", "covers": "programs and in-scope assets"},
+        {"id": "bugcrowd", "name": "Bugcrowd (API + bounty-targets-data)",
+         "upstream": "https://api.bugcrowd.com",
+         "cadence": "daily", "covers": "brief scope, reward ranges, safe harbor; upstream rows fill gaps"},
         {"id": "intigriti", "name": "Intigriti (via bounty-targets-data)",
          "upstream": "https://github.com/arkadiyt/bounty-targets-data",
          "cadence": "daily", "covers": "programs and in-scope assets"},
@@ -351,6 +353,45 @@ def reload_dataset(prune_directory: bool = False, key: dict = Depends(admin)):
         prune_only_sources=({"disclose-directory", "securitytxt"}
                             if prune_directory else None),
         prune_dotless_platform=prune_directory))
+
+
+@app.post("/admin/bugcrowd-sync", tags=["admin"],
+          summary="Pull Bugcrowd API scope, rebuild the dataset and re-ingest")
+def bugcrowd_sync(key: dict = Depends(admin)):
+    """Run the read-only Bugcrowd pull inside the container, rebuild programs.json
+    from every source, then ingest the result.
+
+    Without BUG CROWD_TOKEN the pull writes status "no_credential" and exits 0, so
+    this endpoint is safe to call on a schedule before the credential exists. A
+    rejected token returns the pull status and does not touch the dataset.
+    """
+    try:
+        pull = subprocess.run([sys.executable, str(ROOT / "bin" / "fetch_bugcrowd_api.py")],
+                              capture_output=True, text=True, timeout=1800, cwd=str(ROOT))
+    except subprocess.TimeoutExpired:
+        raise HTTPException(504, "Bugcrowd pull exceeded 1800s")
+    status = {}
+    for line in reversed((pull.stdout or "").strip().splitlines()):
+        try:
+            status = json.loads(line)
+            break
+        except json.JSONDecodeError:
+            continue
+    if status.get("status") != "ok":
+        return envelope({"status": status.get("status") or "error",
+                         "detail": status.get("detail") or (pull.stderr or "")[-300:],
+                         "ingested": False})
+    build = subprocess.run([sys.executable, str(ROOT / "bin" / "build_dataset.py")],
+                           capture_output=True, text=True, timeout=900, cwd=str(ROOT))
+    if build.returncode != 0:
+        return envelope({"status": "build_failed",
+                         "detail": (build.stderr or "")[-300:], "ingested": False})
+    dataset = ROOT / "data" / "programs.json"
+    if not dataset.exists():
+        raise HTTPException(503, "build_dataset.py produced no data/programs.json")
+    programs = json.load(open(dataset, encoding="utf-8"))
+    return envelope({"status": "ok", "pull": status,
+                     "ingest": store.ingest(programs, run_kind="bugcrowd-api")})
 
 
 @app.post("/admin/changes/purge", tags=["admin"],

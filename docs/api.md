@@ -33,6 +33,7 @@ Missing or revoked keys return `401`; over-limit returns `429`.
 | DELETE | `/admin/keys?key=` | Revoke a key (admin) |
 | POST | `/admin/scan` | Run one scan cycle now (admin) |
 | POST | `/admin/reload` | Re-ingest `data/programs.json` without crawling (admin) |
+| POST | `/admin/bugcrowd-sync` | Pull Bugcrowd API scope, rebuild the dataset, re-ingest; `no_credential` when `BUGCROWD_TOKEN` is unset (admin) |
 
 ## Response envelope
 

@@ -6,6 +6,7 @@ in `sources`, so a customer can tell a platform listing from a discovery.
 | Source | Rows | Cadence | What it adds |
 |---|---|---|---|
 | HackerOne, Bugcrowd, Intigriti, YesWeHack | 904 programs | daily | In-scope assets, bounty status, platform identity |
+| Bugcrowd API (`bin/fetch_bugcrowd_api.py`) | the engagements the token can see | daily, via `POST /admin/bugcrowd-sync` | Published brief scope with **out-of-scope groups**, per-severity reward ranges, safe harbor status, VRT exclusions |
 | disclose.io `diodb.json` | 2,433 orgs | daily | Self-hosted VDPs and safe-harbor statements |
 | disclose.io directory | 28,115 orgs | on demand (`bin/fetch_disclose_directory.py`) | The long tail the diodb feed does not carry |
 | RFC 9116 crawl (Tranco) | 6,293 programs | every 15 minutes | security.txt published outside any directory |

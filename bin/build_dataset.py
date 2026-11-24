@@ -262,6 +262,18 @@ def platform_domain(prog):
     return None
 
 
+def engagement_code(prog):
+    """The Bugcrowd engagement code from a program URL, or "".
+
+    The API rows and the bounty-targets-data rows describe the same engagement
+    under different shapes; the URL slug is the only identifier both carry.
+    """
+    url = str(prog.get("url") or "")
+    if "/engagements/" not in url:
+        return ""
+    return url.rstrip("/").rsplit("/engagements/", 1)[1].split("/")[0].split("?")[0]
+
+
 def merge_disclose_directory(programs, directory):
     """Fold directory.disclose.io orgs into the program map, in place.
 
@@ -410,11 +422,20 @@ def main():
     directory, fold_stats = fold_directory(directory)
     disclose = merge_disclose_directory(programs, directory)
 
-    # 3) platform data
+    # 3) platform data. bugcrowd_api.json comes first because it is the richer
+    # record of the same engagement (brief text, safe harbor, reward cents,
+    # out-of-scope groups with descriptions). The upstream row for a code the API
+    # already returned is skipped rather than counted twice.
+    api_codes = {engagement_code(p) for p in load_json("bugcrowd_api.json", [])}
+    api_codes.discard("")
     skipped_handles = 0
-    for fname, plat in (("hackerone_data.json", "hackerone"), ("bugcrowd_data.json", "bugcrowd"),
+    for fname, plat in (("bugcrowd_api.json", "bugcrowd"),
+                        ("hackerone_data.json", "hackerone"), ("bugcrowd_data.json", "bugcrowd"),
                         ("intigriti_data.json", "intigriti"), ("yeswehack_data.json", "yeswehack")):
         for prog in load_json(fname, []):
+            if plat == "bugcrowd" and fname == "bugcrowd_data.json" \
+                    and engagement_code(prog) in api_codes:
+                continue
             if prog.get("submission_state") not in (None, "open"):
                 continue
             if prog.get("disabled") is True or str(prog.get("status", "")).lower() in ("closed", "disabled"):
@@ -431,6 +452,10 @@ def main():
             if p["name"] == p["domain"]:
                 p["name"] = prog.get("name") or p["name"]
             p["offers_bounty"] = p["offers_bounty"] or ("yes" if prog.get("offers_bounties") else None)
+            # the platform publishes the program's own safe harbor stance; it only
+            # fills a gap, because a vendor security.txt or disclose.io entry wins
+            if prog.get("safe_harbor") and not p["safe_harbor"]:
+                p["safe_harbor"] = prog["safe_harbor"]
             ins, outs = scope_assets(prog)
             if ins or outs:
                 p["scope_in"].extend({"platform": plat, **a} for a in ins[:200])
